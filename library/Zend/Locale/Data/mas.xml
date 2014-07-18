@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="mas"/>
+	</identity>
+	<localeDisplayNames>
+		<languages>
+			<language type="ak">nkʉtʉ́k ɔ́ɔ̄ lAkan</language>
+			<language type="am">nkʉtʉ́k ɔ́ɔ̄ lAmhari</language>
+			<language type="ar">nkʉtʉ́k ɔ́ɔ̄ lmarabu</language>
+			<language type="be">nkʉtʉ́k ɔ́ɔ̄ lBelarusi</language>
+			<language type="bg">nkʉtʉ́k ɔ́ɔ̄ lBulgaria</language>
+			<language type="bn">lnkʉtʉ́k ɔ́ɔ̄ lBengali</language>
+			<language type="cs">nkʉtʉ́k ɔ́ɔ̄ lcheki</language>
+			<language type="de">nkʉtʉ́k ɔ́ɔ̄ ljerumani</language>
+			<language type="el">nkʉtʉ́k ɔ́ɔ̄ lgiriki</language>
+			<language type="en">nkʉtʉ́k ɔ́ɔ̄ nkɨ́resa</language>
+			<language type="es">nkʉtʉ́k ɔ́ɔ̄ lspania</language>
+			<language type="fa">nkʉtʉ́k ɔ́ɔ̄ lpersia</language>
+			<language type="fr">nkʉtʉ́k ɔ́ɔ̄ faransa</language>
+			<language type="ha">nkʉtʉ́k ɔ́ɔ̄ hausa</language>
+			<language type="hi">nkʉtʉ́k ɔ́ɔ̄ lmoindi</language>
+			<language type="hu">nkʉtʉ́k ɔ́ɔ̄ lhungari</language>
+			<language type="id">nkʉtʉ́k ɔ́ɔ̄ Indonesia</language>
+			<language type="ig">nkʉtʉ́k ɔ́ɔ̄ Igbo</language>
+			<language type="it">nkʉtʉ́k ɔ́ɔ̄ ltalian</language>
+			<language type="ja">nkʉtʉ́k ɔ́ɔ̄ japani</language>
+			<language type="jv">nkʉtʉ́k ɔ́ɔ̄ ljana</language>
+			<language type="km">nkʉtʉ́k ɔ́ɔ̄ lkambodia</language>
+			<language type="ko">nkʉtʉ́k ɔ́ɔ̄ lkorea</language>
+			<language type="mas">Maa</language>
+			<language type="ms">nkʉtʉ́k ɔ́ɔ̄ malay</language>
+			<language type="my">nkʉtʉ́k ɔ́ɔ̄ lBurma</language>
+			<language type="ne">nkʉtʉ́k ɔ́ɔ̄ lnepali</language>
+			<language type="nl">nkʉtʉ́k ɔ́ɔ̄ lduchi</language>
+			<language type="pa">nkʉtʉ́k ɔ́ɔ̄ lpunjabi</language>
+			<language type="pl">nkʉtʉ́k ɔ́ɔ̄ lpoland</language>
+			<language type="pt">nkʉtʉ́k ɔ́ɔ̄ lportuguese</language>
+			<language type="ro">nkʉtʉ́k ɔ́ɔ̄ lromania</language>
+			<language type="ru">nkʉtʉ́k ɔ́ɔ̄ lrusi</language>
+			<language type="rw">nkʉtʉ́k ɔ́ɔ̄ lruwanda</language>
+			<language type="so">nkʉtʉ́k ɔ́ɔ̄ lchumari</language>
+			<language type="sv">nkʉtʉ́k ɔ́ɔ̄ lswidi</language>
+			<language type="ta">nkʉtʉ́k ɔ́ɔ̄ ltamil</language>
+			<language type="th">nkʉtʉ́k ɔ́ɔ̄ ltai</language>
+			<language type="tr">nkʉtʉ́k ɔ́ɔ̄ lturuki</language>
+			<language type="uk">nkʉtʉ́k ɔ́ɔ̄ lkrania</language>
+			<language type="ur">nkʉtʉ́k ɔ́ɔ̄ lurdu</language>
+			<language type="vi">nkʉtʉ́k ɔ́ɔ̄ lvietinamu</language>
+			<language type="yo">nkʉtʉ́k ɔ́ɔ̄ lyoruba</language>
+			<language type="zh">nkʉtʉ́k ɔ́ɔ̄ lchina</language>
+			<language type="zu">nkʉtʉ́k ɔ́ɔ̄ lzulu</language>
+		</languages>
+		<territories>
+			<territory type="AD">Andora</territory>
+			<territory type="AE">Falme za Kiarabu</territory>
+			<territory type="AF">Afuganistani</territory>
+			<territory type="AG">Antigua na Barbuda</territory>
+			<territory type="AI">Anguilla</territory>
+			<territory type="AL">Albania</territory>
+			<territory type="AM">Armenia</territory>
+			<territory type="AN">Antili za Uholanzi</territory>
+			<territory type="AO">Angola</territory>
+			<territory type="AR">Ajentina</territory>
+			<territory type="AS">Samoa ya Marekani</territory>
+			<territory type="AT">Austria</territory>
+			<territory type="AU">Australia</territory>
+			<territory type="AW">Aruba</territory>
+			<territory type="AZ">Azabajani</territory>
+			<territory type="BA">Bosnia na Hezegovina</territory>
+			<territory type="BB">

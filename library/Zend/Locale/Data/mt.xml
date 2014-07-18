@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="mt"/>
+	</identity>
+	<localeDisplayNames>
+		<localeDisplayPattern>
+			<localeSeparator draft="unconfirmed">{0}, {1}</localeSeparator>
+		</localeDisplayPattern>
+		<languages>
+			<language type="aa">Afar</language>
+			<language type="ab">Abkażjan</language>
+			<language type="ace">Aċiniż</language>
+			<language type="ach">Akoli</language>
+			<language type="ada">Adangme</language>
+			<language type="ady">Adyghe</language>
+			<language type="ae">Avestan</language>
+			<language type="af">Afrikans</language>
+			<language type="afa">Afro-Asjatiku (Oħra)</language>
+			<language type="afh">Afriħili</language>
+			<language type="ain">Ajnu</language>
+			<language type="ak">Akan</language>
+			<language type="akk">Akkadjen</language>
+			<language type="ale">Aleut</language>
+			<language type="alg">Lingwi Algonqwinjani</language>
+			<language type="am">Amħariku</language>
+			<language type="an">Aragonese</language>
+			<language type="ang">Ingliż, Antik</language>
+			<language type="anp">Angika</language>
+			<language type="apa">Lingwi Apaċi</language>
+			<language type="ar">Għarbi</language>
+			<language type="ar_001">Għarbi Standard Modern</language>
+			<language type="arc">Aramajk</language>
+			<language type="arn">Arawkanjan</language>
+			<language type="arp">Arapaħo</language>
+			<language type="art">Artifiċjali (Oħra)</language>
+			<language type="arw">Arawak</language>
+			<language type="as">Assamese</language>
+			<language type="ast">Asturian</language>
+			<language type="ath">Lingwi Atabaskani</language>
+			<language type="aus">Lingwi Awstraljani</language>
+			<language type="av">Avarik</language>
+			<language type="awa">Awadħi</language>
+			<language type="ay">Ajmara</language>
+			<language type="az">Ażerbajġani</language>
+			<language type="ba">Baxkir</language>
+			<language type="bad">Banda</language>
+			<language type="bai">Lingwi Bamileke</language>
+			<language type="bal">Baluċi</language>
+			<language type="ban">Baliniż</language>
+			<language type="bas">Basa</language>
+			<language type="bat">Baltiku (Oħra)</language>
+			<language type="be">Belarussu</language>
+			<language type="bej">Beja</language>
+			<language type="bem">Bemba</language>
+			<language type="ber">Beber</language>
+			<language type="bg">Bulgaru</language>
+			<language type="bh">Biħari</language>
+			<language type="bho">Bojpuri</language>
+			<language type="bi">Bislama</language>
+			<language type="bik">Bikol</language>
+			<language type="bin">Bini</language>
+			<language type="bla">Siksika</language>
+			<language type="bm">Bambara</language>
+			<language type="bn">Bengali</language>
+			<language type="bnt">Bantu</language>
+			<language type="bo">Tibetjan</language>
+			<language type="br">Brenton</language>
+			<language type="bra">Braj</language>
+			<language type="bs">Bosnijan</language>
+			<language type="btk">Batak</language>
+			<language type="bua">Burjat</language>
+			<language type="bug">Buginiż</language>
+			<language type="byn">Blin</language>
+			<language type="ca">Katalan</language>
+			<language type="cad">Kaddo</language>
+			<language type="cai">Amerika Ċentrali (Oħra)</language>
+			<language type="car">Karib</language>
+			<language type="cau">Kawkasu (Oħra)</language>
+			<language type="cch">Atsam</language>
+			<language type="ce">Ċeċen</language>
+			<language type="ceb">Sibwano</language>
+			<language type="cel">Keltiku (Oħra)</language>
+			<language type="ch">Ċamorro</language>
+			<language type="chb">Ċibċa</language>
+			<language type="chg">Ċagataj</language>
+			<language type="chk">Ċukese</language>
+			<language type="chm">Mari</language>
+			<language type="chn

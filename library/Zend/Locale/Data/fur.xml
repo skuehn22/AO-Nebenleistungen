@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="fur"/>
+	</identity>
+	<localeDisplayNames>
+		<localeDisplayPattern>
+			<localePattern draft="unconfirmed">{0} ({1})</localePattern>
+			<localeSeparator draft="unconfirmed">{0}, {1}</localeSeparator>
+		</localeDisplayPattern>
+		<languages>
+			<language type="aa" draft="unconfirmed">afar</language>
+			<language type="ab" draft="unconfirmed">abcazian</language>
+			<language type="ae" draft="unconfirmed">avestan</language>
+			<language type="af" draft="unconfirmed">afrikaans</language>
+			<language type="am" draft="unconfirmed">amaric</language>
+			<language type="an" draft="unconfirmed">aragonês</language>
+			<language type="ang" draft="unconfirmed">vieri inglês</language>
+			<language type="apa" draft="unconfirmed">lenghe Apache</language>
+			<language type="ar" draft="unconfirmed">arap</language>
+			<language type="arc" draft="unconfirmed">aramaic</language>
+			<language type="as" draft="unconfirmed">assamês</language>
+			<language type="ast" draft="unconfirmed">asturian</language>
+			<language type="aus" draft="unconfirmed">lenghis australianis</language>
+			<language type="av" draft="unconfirmed">avar</language>
+			<language type="ay" draft="unconfirmed">aymarà</language>
+			<language type="az" draft="unconfirmed">azerbaijani</language>
+			<language type="be" draft="unconfirmed">bielorùs</language>
+			<language type="bg" draft="unconfirmed">bulgar</language>
+			<language type="bn" draft="unconfirmed">bengalês</language>
+			<language type="bo" draft="unconfirmed">tibetan</language>
+			<language type="br" draft="unconfirmed">breton</language>
+			<language type="bs" draft="unconfirmed">bosniac</language>
+			<language type="ca" draft="unconfirmed">catalan</language>
+			<language type="ce" draft="unconfirmed">cecen</language>
+			<language type="cel" draft="unconfirmed">lenghe celtiche</language>
+			<language type="ch" draft="unconfirmed">chamorro</language>
+			<language type="co" draft="unconfirmed">cors</language>
+			<language type="cop" draft="unconfirmed">coptic</language>
+			<language type="cr" draft="unconfirmed">cree</language>
+			<language type="cs" draft="unconfirmed">cec</language>
+			<language type="cu" draft="unconfirmed">sclâf de glesie</language>
+			<language type="cy" draft="unconfirmed">galês</language>
+			<language type="da" draft="unconfirmed">danês</language>
+			<language type="de" draft="unconfirmed">todesc</language>
+			<language type="de_AT" draft="unconfirmed">todesc de Austrie</language>
+			<language type="de_CH" draft="unconfirmed">alt todesc de Svuizare</language>
+			<language type="den" draft="unconfirmed">sclâf</language>
+			<language type="egy" draft="unconfirmed">vieri egjizian</language>
+			<language type="el" draft="unconfirmed">grêc</language>
+			<language type="en" draft="unconfirmed">inglês</language>
+			<language type="en_AU" draft="unconfirmed">inglês australian</language>
+			<language type="en_CA" draft="unconfirmed">inglês canadês</language>
+			<language type="en_GB" draft="unconfirmed">inglês britanic</language>
+			<language type="en_US" draft="unconfirmed">ingles merecan</language>
+			<language type="eo" draft="unconfirmed">esperanto</language>
+			<language type="es" draft="unconfirmed">spagnûl</language>
+			<language type="es_419" draft="unconfirmed">spagnûl de Americhe Latine</language>
+			<language type="es_ES" draft="unconfirmed">spagnûl iberic</language>
+			<language type="et" draft="unconfirmed">eston</language>
+			<language type="eu" draft="unconfirmed">basc</language>
+			<language type="fa" draft="unconfirmed">persian</language>
+			<language type="ff" draft="unconfirmed">fulah</language>
+			<language type="fi" draf

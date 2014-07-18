@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="ln"/>
+	</identity>
+	<localeDisplayNames>
+		<languages>
+			<language type="af" draft="unconfirmed">afrikansi</language>
+			<language type="ak">akan</language>
+			<language type="am">liamariki</language>
+			<language type="ar">lialabo</language>
+			<language type="be">libyelorisí</language>
+			<language type="bg">libiligali</language>
+			<language type="bn">libengali</language>
+			<language type="cs">litshekɛ</language>
+			<language type="de">lialemá</language>
+			<language type="de_AT" draft="unconfirmed">lialémani ya Otrish</language>
+			<language type="de_CH" draft="unconfirmed">lialémani ya Swisi</language>
+			<language type="el">ligeleki</language>
+			<language type="en">lingɛlɛ́sa</language>
+			<language type="en_CA" draft="unconfirmed">lingɛlɛ́sa ya Kanadá</language>
+			<language type="en_GB" draft="unconfirmed">lingɛlɛ́sa ya Ingɛlɛ́tɛlɛ</language>
+			<language type="es">lisipanye</language>
+			<language type="es_419" draft="unconfirmed">lispanyoli ya Ameríka Latína</language>
+			<language type="es_ES" draft="unconfirmed">lispanyoli ya Erópa</language>
+			<language type="fa">lipelésanɛ</language>
+			<language type="fr">lifalansɛ́</language>
+			<language type="fr_CA" draft="unconfirmed">lifalansɛ́ ya Kanadá</language>
+			<language type="fr_CH" draft="unconfirmed">lifalansɛ́ ya Swisi</language>
+			<language type="gsw" draft="unconfirmed">lialemaniki</language>
+			<language type="ha">hausa</language>
+			<language type="he" draft="unconfirmed">liébeleo</language>
+			<language type="hi">lihindi</language>
+			<language type="hu">liongili</language>
+			<language type="id">lindonezi</language>
+			<language type="ig">igbo</language>
+			<language type="it">litaliano</language>
+			<language type="ja">lizapɔ</language>
+			<language type="jv">lizava</language>
+			<language type="kg" draft="unconfirmed">kikɔ́ngɔ</language>
+			<language type="km">likambodza</language>
+			<language type="ko">likoreya</language>
+			<language type="la" draft="unconfirmed">latina</language>
+			<language type="ln">lingála</language>
+			<language type="lu" draft="unconfirmed">kiluba</language>
+			<language type="lua" draft="unconfirmed">ciluba</language>
+			<language type="ms">limalezi</language>
+			<language type="my">libilimá</language>
+			<language type="ne">linepalɛ</language>
+			<language type="nl">lifalamá</language>
+			<language type="pa">lipendzabi</language>
+			<language type="pl">lipolonɛ</language>
+			<language type="pt">lipulutugɛ́si</language>
+			<language type="pt_BR" draft="unconfirmed">lipulutugɛ́si ya Brazil</language>
+			<language type="pt_PT" draft="unconfirmed">lipulutugɛ́si ya Erópa</language>
+			<language type="rm" draft="unconfirmed">liromansh</language>
+			<language type="ro">liromani</language>
+			<language type="ru">lirisí</language>
+			<language type="rw">kinyarwanda</language>
+			<language type="so">lisomali</language>
+			<language type="sv">lisuwedɛ</language>
+			<language type="sw" draft="unconfirmed">kiswahíli</language>
+			<language type="ta">litamuli</language>
+			<language type="th">litaye</language>
+			<language type="tr">litiliki</language>
+			<language type="uk">likrɛni</language>
+			<language type="ur">liurdu</language>
+			<language type="vi">liviyetinámi</language>
+			<language type="yo">yoruba</language>
+			<language type="zh">lisinwa</language>
+			<language type="zu">zulu</language>
+		</languages>
+		<territories>
+			<territory type="001" draft="unconfirmed">Mabelé</territory>
+			<territory type="002" draft="unconfirmed">Afríka</territory>
+			<territory type="003" draft="unconfirmed">Ameríka ya Nola</territory>
+			<territory type="005" draft="unconfirmed">Ameríka ya Sidi</territory>
+			<territory type="011" draft="unconfirmed">Afríka ya Wɛ́sita</territory>
+			<territory type="013" draft="unconfirmed">Ameríka ya káti</territory>
+			<territory type="014" draft="unconfirmed">Afríka ya Ɛ́sita</territory>
+			<territory type="015" draft="unconfirmed">Afríka ya Nola</territory>
+			<territory type="017" draft="unconfirmed">Afríka ya Katikáti</territory>
+			<territory type="018" draft="unconfirmed">Afríka ya Sidi</territory>
+			<territory type="019" draft="unconfirmed">Ameríka</territory>
+			<territory type="030" draft="unconfirmed">Azía ya Ɛ́sita</territory>
+			<territory type="034" draft="unconfirmed">Azía ya Sidi</territory>
+			<territory type="035" draft="unconfirmed">Azía ya Sidi-Ɛ́sita</territory>
+			<territory type="039" draft="unconfirmed">Erópa ya Sidi</territory>
+			<territory type="142" draft="unconfirmed">Azía</territory>
+			<territory type="143" draft="unconfirmed">Azía ya Katikáti</territory>
+			<territory type="145" draft="unconfirmed">Azía ya Wɛ́sita</territory>
+			<territory type="150" draft="unconfirmed">Erópa</territory>
+			<territory type="151" draft="unconfirmed">Erópa ya Ɛ́sita</territory>
+			<territory type="154" draft="unconfirmed">Erópa ya Nola</territory>
+			<territory type="155" draft="unconfirmed">Erópa ya Wɛ́sita</territory>
+			<territory type="419" draft="unconfirmed">Ameríka Latína</territory>
+			<territory type="AC" draft="unconfirmed">Esenga ya Mbuta o likoló</territory>
+			<territory type="AD">Andorɛ</territory>
+			<territory type="AE">Lɛmila alabo</territory>
+			<territory type="AF">Afiganisitá</territory>
+			<territory type="AG">Antiga mpé Barbuda</territory>
+			<territory type="AI">Angiyɛ</territory>
+			<territory type="AL">Alibani</territory>
+			<territory type="AM">Amɛni</territory>
+			<territory type="AN">Antiyɛ ya Olandɛ</territory>
+			<territory type="AO">Angóla</territory>
+			<territory type="AQ">Antarctique</territory>
+			<territory type="AR">Arizantinɛ</territory>
+			<territory type="AS">Samoa ya Ameriki</territory>
+			<territory type="AT">Otilisi</territory>
+			<territory type="AU">Ositáli</territory>
+			<territory type="AW">Aruba</territory>
+			<territory type="AX" draft="unconfirmed">Bisanga Ɛland</territory>
+			<territory type="AZ">Azɛlɛbaizá</territory>
+			<territory type="BA">Bosini mpé Hezegovine</territory>
+			<territory type="BB">Barɛbadɛ</territory>
+			<territory type="BD">Bengalidɛsi</territory>
+			<territory type="BE">Beleziki</territory>
+			<territory type="BF">Bukina Faso</territory>
+			<territory type="BG">Biligari</territory>
+			<territory type="BH">Bahrɛnɛ</territory>
+			<territory type="BI">Burundi</territory>
+			<territory type="BJ">Benɛ</territory>
+			<territory type="BM">Bermuda</territory>
+			<territory type="BN">Brineyi</territory>
+			<territory type="BO">Bolivi</territory>
+			<territory type="BR">Brezílɛ</territory>
+			<territory type="BS">Bahamasɛ</territory>
+			<territory type="BT">Butáni</territory>
+			<territory type="BV" draft="unconfirmed">Esenga Buvé</territory>
+			<territory type="BW">Botswana</territory>
+			<territory type="BY">Byelorisi</territory>
+			<territory type="BZ">Belizɛ</territory>
+			<territory type="CA">Kanada</territory>
+			<territory type="CC" draft="unconfirmed">Bisanga Kokos</territory>
+			<territory type="CD">Repibiki demokratiki ya Kongó</territory>
+			<territory type="CD" alt="variant" draft="unconfirmed">Kongó-Kinsásá</territory>
+			<territory type="CF">Repibiki ya Afríka ya Káti</territory>
+			<territory type="CG">Kongo</territory>
+			<territory type="CG" alt="variant" draft="unconfirmed">Kongó-Brazzaville</territory>
+			<territory type="CH">Swisɛ</territory>
+			<territory type="CI">Kotídivualɛ</territory>
+			<territory type="CK">Bisanga bya Kookɛ</territory>
+			<territory type="CL">Síli</territory>
+			<territory type="CM">Kamɛrune</territory>
+			<territory type="CN">Sinɛ</territory>
+			<territory type="CO">Kolombi</territory>
+			<territory type="CR">Kositarika

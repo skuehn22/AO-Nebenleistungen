@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9315 $"/>
+		<generation date="$Date: 2013-09-05 11:52:00 -0500 (Thu, 05 Sep 2013) $"/>
+		<language type="chr"/>
+	</identity>
+	<localeDisplayNames>
+		<languages>
+			<language type="cay">ᎦᏳᎦ</language>
+			<language type="cho">ᎠᏣᏗ</language>
+			<language type="chr">ᏣᎳᎩ</language>
+			<language type="de">ᎠᏂᏓᏥ</language>
+			<language type="en">ᎩᎵᏏ</language>
+			<language type="es">ᏍᏆᏂ</language>
+			<language type="fr">ᎦᎸᏥ</language>
+			<language type="it">ᎬᏩᎵᏲᏥᎢ</language>
+			<language type="ja">ᏣᏩᏂᏏ</language>
+			<language type="moh">ᎼᎻᎦ</language>
+			<language type="mus">ᎠᎫᏌ</language>
+			<language type="pt">ᏉᏧᎦᎵ</language>
+			<language type="ru">ᏲᏂᎢ</language>
+			<language type="see">ᏏᏂᎦ</language>
+			<language type="und">ᏄᏬᎵᏍᏛᎾ ᎦᏬᏂᎯᏍᏗ</language>
+			<language type="zh">ᏓᎶᏂᎨ</language>
+		</languages>
+		<scripts>
+			<script type="Arab">ᎡᎳᏈᎩ</script>
+			<script type="Cher">ᏣᎳᎩ</script>
+			<script type="Cyrl">ᏲᏂᎢ ᏗᎪᏪᎵ</script>
+			<script type="Hans">ᎠᎯᏗᎨ ᏓᎶᏂᎨ</script>
+			<script type="Hant">ᎤᏦᏍᏗ ᏓᎶᏂᎨ</script>
+			<script type="Latn">ᎳᏗᎾ</script>
+			<script type="Zzzz">ᏄᏬᎵᏍᏛᎾ ᎠᏍᏓᏩᏛᏍᏙᏗ</script>
+		</scripts>
+		<territories>
+			<territory type="001">ᎡᎶᎯ</territory>
+			<territory type="003">ᏧᏴᏢ ᎠᎺᎵᎦ</territory>
+			<territory type="005">ᏧᎦᏃᏮ ᎠᎺᎵᎦ</territory>
+			<territory type="019">ᎠᎺᎵᎦᎢ</territory>
+			<territory type="AD">ᎠᏂᏙᎳ</territory>
+			<territory type="AE">ᏌᏊ ᎢᏳᎾᎵᏍᏔᏅ ᎡᎳᏈ ᎢᎹᎵᏘᏏ</territory>
+			<territory type="AF">ᎠᏫᎨᏂᏍᏖᏂ</territory>
+			<territory type="AG">ᎤᏪᏘ ᎠᎴ ᏆᏊᏓ</territory>
+			<territory type="AI">ᎠᏂᎩᎳ</territory>
+			<territory type="AL">ᎠᎵᏇᏂᏯ</territory>
+			<territory type="AM">ᎠᎵᎻᏂᎠ</territory>
+			<territory type="AO">ᎠᏂᎪᎳ</territory>
+			<territory type="AQ">ᏧᏁᏍᏓᎸ</territory>
+			<territory type="AR">ᎠᏥᏂᏘᏂᎠ</territory>
+			<territory type="AS">ᎠᎺᎵᎧ ᏌᎼᎠ</territory>
+			<territory type="AT">ᎠᏍᏟᏯ</territory>
+			<territory type="AU">ᎡᎳᏗᏜ</territory>
+			<territory type="AW">ᎠᎷᏆ</territory>
+			<territory type="AX">ᎣᎴᏅᏓ ᏚᎦᏚᏛ</territory>
+			<territory type="AZ">ᎠᏏᎵᏆᏌᏂ</territory>
+			<territory type="BA">ᏉᏏᏂᎠ ᎠᎴ ᎲᏤᎪᏫ</territory>
+			<territory type="BB">ᏆᏇᏙᏍ</territory>
+			<territory type="BD">ᏆᏂᎦᎵᏕᏍ</territory>
+			<territory type="BE">ᏇᎵᏥᎥᎻ</territory>
+			<territory type="BF">ᏋᎩᎾ ᏩᏐ</territory>
+			<territory type="BG">ᏊᎵᎨᎵᎠ</territory>
+			<territory type="BH">ᏆᎭᎴᎢᏂ</territory>
+			<territory type="BI">ᏋᎷᏂᏗ</territory>
+			<territory type="BJ">ᏆᏂᎢᏂ</territory>
+			<territory type="BL">ᎠᏥᎸᏉᏗ ᏆᏕᎳᎻ</territory>
+			<territory type="BM">ᏆᏊᏓ</territory>
+			<territory type="BN">ᏊᎾᎢ</territory>
+			<territory type="BO">ᏉᎵᏫᎠ</territory>
+			<territory type="BR">ᏆᏏᎵᎢ</territory>
+			<territory type="BS">ᎾᏍᎩ ᏆᎭᎹᏍ</territory>
+			<territory type="BT">ᏊᏔᏂ</territory>
+			<territory type="BV">ᏊᏪ ᎤᎦᏚᏛ</territory>
+			<territory type="BW">ᏆᏣᏩᎾ</territory>
+			<territory type="BY">ᏇᎳᎷᏍ</territory>
+			<territory type="BZ">ᏇᎵᏍ</territory>
+			<territory type="CA">ᎨᎾᏓ</territory>
+			<territory type="CC">ᎪᎪᏍ (ᎩᎵᏂ) ᏚᎦᏚᏛ</territory>
+			<territory type="CD">ᎧᏂᎪ</territory>
+			<territory type="CF">ᎬᎿᎨᏍᏛ ᎠᏰᏟ ᏍᎦᏚᎩ</territory>
+			

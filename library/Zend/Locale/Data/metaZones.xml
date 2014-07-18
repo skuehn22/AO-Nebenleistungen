@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE supplementalData SYSTEM "../../common/dtd/ldmlSupplemental.dtd">
+<!--
+Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<supplementalData>
+	<version number="$Revision: 8274 $"/>
+	<generation date="$Date: 2013-03-06 11:15:16 -0600 (Wed, 06 Mar 2013) $"/>
+
+	<metaZones>
+		<metazoneInfo>
+			<timezone type="Africa/Abidjan">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Accra">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Addis_Ababa">
+				<usesMetazone mzone="Africa_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Algiers">
+				<usesMetazone to="1977-10-20 23:00" mzone="Europe_Western"/>
+				<usesMetazone to="1979-10-25 23:00" from="1977-10-20 23:00" mzone="Europe_Central"/>
+				<usesMetazone to="1981-05-01 00:00" from="1979-10-25 23:00" mzone="Europe_Western"/>
+				<usesMetazone from="1981-05-01 00:00" mzone="Europe_Central"/>
+			</timezone>
+			<timezone type="Africa/Asmera">
+				<usesMetazone mzone="Africa_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Bamako">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Bangui">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Banjul">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Bissau">
+				<usesMetazone to="1975-01-01 01:00" mzone="Africa_FarWestern"/>
+				<usesMetazone from="1975-01-01 01:00" mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Blantyre">
+				<usesMetazone mzone="Africa_Central"/>
+			</timezone>
+			<timezone type="Africa/Brazzaville">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Bujumbura">
+				<usesMetazone mzone="Africa_Central"/>
+			</timezone>
+			<timezone type="Africa/Cairo">
+				<usesMetazone mzone="Europe_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Casablanca">
+				<usesMetazone to="1984-03-16 00:00" mzone="Europe_Western"/>
+				<usesMetazone to="1985-12-31 23:00" from="1984-03-16 00:00" mzone="Europe_Central"/>
+				<usesMetazone from="1985-12-31 23:00" mzone="Europe_Western"/>
+			</timezone>
+			<timezone type="Africa/Ceuta">
+				<usesMetazone to="1984-03-16 00:00" mzone="Europe_Western"/>
+				<usesMetazone from="1984-03-16 00:00" mzone="Europe_Central"/>
+			</timezone>
+			<timezone type="Africa/Conakry">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Dakar">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Dar_es_Salaam">
+				<usesMetazone mzone="Africa_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Djibouti">
+				<usesMetazone mzone="Africa_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Douala">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/El_Aaiun">
+				<usesMetazone to="1976-04-14 01:00" mzone="Africa_FarWestern"/>
+				<usesMetazone from="1976-04-14 01:00" mzone="Europe_Western"/>
+			</timezone>
+			<timezone type="Africa/Freetown">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Gaborone">
+				<usesMetazone mzone="Africa_Central"/>
+			</timezone>
+			<timezone type="Africa/Harare">
+				<usesMetazone mzone="Africa_Central"/>
+			</timezone>
+			<timezone type="Africa/Johannesburg">
+				<usesMetazone mzone="Africa_Southern"/>
+			</timezone>
+			<timezone type="Africa/Juba">
+				<usesMetazone to="2000-01-15 10:00" mzone="Africa_Central"/>
+				<usesMetazone from="2000-01-15 10:00" mzone="Africa_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Kampala">
+				<usesMetazone mzone="Africa_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Khartoum">
+				<usesMetazone to="2000-01-15 10:00" mzone="Africa_Central"/>
+				<usesMetazone from="2000-01-15 10:00" mzone="Africa_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Kigali">
+				<usesMetazone mzone="Africa_Central"/>
+			</timezone>
+			<timezone type="Africa/Kinshasa">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Lagos">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Libreville">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Lome">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Luanda">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Lubumbashi">
+				<usesMetazone mzone="Africa_Central"/>
+			</timezone>
+			<timezone type="Africa/Lusaka">
+				<usesMetazone mzone="Africa_Central"/>
+			</timezone>
+			<timezone type="Africa/Malabo">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Maputo">
+				<usesMetazone mzone="Africa_Central"/>
+			</timezone>
+			<timezone type="Africa/Maseru">
+				<usesMetazone mzone="Africa_Southern"/>
+			</timezone>
+			<timezone type="Africa/Mbabane">
+				<usesMetazone mzone="Africa_Southern"/>
+			</timezone>
+			<timezone type="Africa/Mogadishu">
+				<usesMetazone mzone="Africa_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Monrovia">
+				<usesMetazone mzone="Liberia" to="1972-05-01 00:45"/>
+				<usesMetazone mzone="GMT" from="1972-05-01 00:45"/>
+			</timezone>
+			<timezone type="Africa/Nairobi">
+				<usesMetazone mzone="Africa_Eastern"/>
+			</timezone>
+			<timezone type="Africa/Ndjamena">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Niamey">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Nouakchott">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Ouagadougou">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Porto-Novo">
+				<usesMetazone mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="Africa/Sao_Tome">
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Africa/Tripoli">
+				<usesMetazone to="1981-12-31 22:00" mzone="Europe_Eastern"/>
+				<usesMetazone to="1990-05-03 23:00" from="1981-12-31 22:00" mzone="Europe_Central"/>
+				<usesMetazone to="1996-09-29 22:00" from="1990-05-03 23:00" mzone="Europe_Eastern"/>
+				<usesMetazone to="1997-10-03 22:00" from="1996-09-29 22:00" mzone="Europe_Central"/>
+				<usesMetazone to="2012-11-10 00:00" from="1997-10-03 22:00" mzone="Europe_Eastern"/>
+				<usesMetazone from="2012-11-10 00:00" mzone="Europe_Central"/>
+			</timezone>
+			<timezone type="Africa/Tunis">
+				<usesMetazone mzone="Europe_Central"/>
+			</timezone>
+			<timezone type="Africa/Windhoek">
+				<usesMetazone to="1990-03-20 22:00" mzone="Africa_Southern"/>
+				<usesMetazone to="1994-04-02 22:00" from="1990-03-20 22:00" mzone="Africa_Central"/>
+				<usesMetazone from="1994-04-02 22:00" mzone="Africa_Western"/>
+			</timezone>
+			<timezone type="America/Adak">
+				<usesMetazone to="1983-10-30 12:00" mzone="Bering"/>
+				<!-- <usesMetazone to="1983-11-30 10:00"  from="1983-10-30 12:00" mzone="Alaska_Hawaii"/> -->
+				<usesMetazone from="1983-11-30 10:00" mzone="Hawaii_Aleutian"/>
+			</timezone>
+			<timezone type="America/Anchorage">
+				<usesMetazone to="1983-10-30 11:00" mzone="Alaska_Hawaii"/>
+				<usesMetazone to="1983-11-30 09:00" from="1983-10-30 11:00" mzone="Yukon"/>
+				<usesMetazone from="1983-11-30 09:00" mzone="Alaska"/>
+			</timezone>
+			<timezone type="America/Anguilla">
+				<usesMetazone mzone="Atlantic"/>
+			</timezone>
+			<timezone type="America/Antigua">
+				<usesMetazone mzone="Atlantic"/>
+			</timezone>
+			<timezone type="America/Araguaina">
+				<usesMetazone mzone="Brasilia"/>
+			</timezone>
+			<timezone type="America/Argentina/La_Rioja">
+				<usesMetazone to="1991-03-01 02:00" mzone="Argentina"/>
+				<usesMetazone to="1991-05-07 04:00" from="1991-03-01 02:00" mzone="Argentina_Western"/>
+				<usesMetazone to="2004-06-01 03:00" from="1991-05-07 04:00" mzone="Argentina"/>
+				<usesMetazone to="2004-06-20 04:00" from="2004-06-01 03:00" mzone="Argentina_Western"/>
+				<usesMetazone from="2004-06-20 04:00" mzone="Argentina"/>
+			</timezone>
+			<timezone type="America/Argentina/Rio_Gallegos">
+				<usesMetazone to="2004-0

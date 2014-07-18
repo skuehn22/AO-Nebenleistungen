@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9316 $"/>
+		<generation date="$Date: 2013-09-06 12:21:36 -0500 (Fri, 06 Sep 2013) $"/>
+		<language type="my"/>
+	</identity>
+	<localeDisplayNames>
+		<localeDisplayPattern>
+			<localePattern>{0} ({1})</localePattern>
+			<localeSeparator>{0}၊{1}</localeSeparator>
+			<localeKeyTypePattern>{0} ၊ {1}</localeKeyTypePattern>
+		</localeDisplayPattern>
+		<languages>
+			<language type="ab">အက္ခါဇူအန်</language>
+			<language type="af">အာဖရိကန်းစ်</language>
+			<language type="am">အန္ဟာရစ်ခ်</language>
+			<language type="ang">အင်္ဂလိပ်စာဟောင်း</language>
+			<language type="ar">အာရေဗီ</language>
+			<language type="ar_001">အရေဗီ(ပုံမှန်)</language>
+			<language type="art">အယောင်ဆောင် ဘာသာစကား</language>
+			<language type="as">အက္စမီစ်</language>
+			<language type="az">အော်ဇောဘိုင်ဂျောနီ</language>
+			<language type="ban">ဘာလီ</language>
+			<language type="bas">ဘာဆာ</language>
+			<language type="bat">ဘော်လတစ် ဘာသာစကား</language>
+			<language type="be">ဘီလာရု</language>
+			<language type="bg">ဘူဂေးရီးယား</language>
+			<language type="bn">ဘင်္ဂါလီ</language>
+			<language type="bo">တိဘက်</language>
+			<language type="bs">ဘော့စ်နီးယား</language>
+			<language type="ca">ကာတာလန်</language>
+			<language type="cai" draft="unconfirmed">အလယ်ပိုင်း အမေရိကန် အိန္ဒြိယ ဘာသာစကား</language>
+			<language type="cau">ကောက်ကေးရှပ် ဘာသာစကား</language>
+			<language type="ce">ချေချင်း</language>
+			<language type="chr">ချာရိုကီ</language>
+			<language type="cpp">ပေါ်တူဂီ အခြေခံ အနောက်အိန္ဒြိယ ကျွန်းစုသား သို့မဟုတ် ဗန်းစကား</language>
+			<language type="cr">ခရီး</language>
+			<language type="crp" draft="unconfirmed">အနောက်အိန္ဒြိယ ကျွန်းစုသား သို့မဟုတ် ဗန်းစကား</language>
+			<language type="cs">ချက်</language>
+			<language type="cy">ဝေလ</language>
+			<language type="da">ဒိန်းမတ်</language>
+			<language type="dak">ဒါကိုတာ</language>
+			<language type="de">ဂျာမန်</language>
+			<language type="de_AT">ဩစတြီးယ ဂျာမန်</language>
+			<language type="de_CH">ဆွစ် အမြင့် ဂျာမန်</language>
+			<language type="del">ဒီလာဝဲ</language>
+			<language type="dum">အလယ်ပိုင်း ဒတ်ချ်</language>
+			<language type="dz">ဒွန်ကာ</language>
+			<language type="egy">ရှေးဟောင်း အီဂျစ်</language>
+			<language type="el">ဂရိ</language>
+			<language type="en">အင်္ဂလိပ်</language>
+			<language type="en_AU">ဩစတြေးလျှ အင်္ဂလိပ်</language>
+			<language type="en_CA">ကနေဒါ အင်္ဂလိပ်</language>
+			<language type="en_GB">ဗြိတိသျှ အင်္ဂလိပ်</language>
+			<language type="en_GB" alt="short">အင်္ဂလိပ်(ယူကေ)</language>
+			<language type="en_US">အမေရိကန် အင်္ဂလိပ်</language>
+			<language type="en_US" alt="short">အင်္ဂလိပ်(ယူအက်စ်)</language>
+			<language type="enm">အလယ်ပိုင်း အင်္ဂလိပ်</language>
+			<language type="eo">အက္စပရန္တို</language>
+			<language type="es">စပိန်</language>
+			<language type="es_419">လက်တင်အမေရိက စပိန်</language>
+			<language type="es_ES">စပိန်(ဥရောပ)</language>
+			<language type="et">အက်စ်တိုးနီးရန်း</language>
+			<language type="eu">ဘစ်က္ကီ</language>
+			<language type="fa">ပါရှန်</language>
+			<language type="fi">ဖင်နစ်ရှ်</language>
+			<language type="fil">ဖိလစ်ပီနို</language>
+			<language type="fj">ဖီဂျီ</language>
+			<language type="fo">ဖာရိုအိစ်</language>
+			<language type="fr">ပြင်သစ်</language>
+			<language type="fr_CA">ကနေဒါ ပြင်သစ်</language>
+			<language type="fr_CH">ဆွစ် ပြင်သစ်</language>
+			<language type="frm">အလယ်ပိုင်းပြင်သစ်</language>
+			<language type="fro">ပြင်သစ်ဟောင်း</language>
+			<language type="frr">မြောက်ပိုင်း ဖရီစီရန်</language>
+			<language type="frs">အရှေ့ပိုင်း ဖရီစီရန်</language>
+			<language type="fy">အနောက်ပိုင်း ဖရီစီရန်</language>
+			<language type="ga">အိုင်းရစ်</language>
+			<language type="gem">ဂျာမန် အခြေခံဘာသာစကား</language>
+			<language type="gl">ဂါလာစီယံ</language>
+			<language type="gmh">အလယ်ပိုင်းအမြင့်ဂျာမန်</language>
+			<language type="gn">ဂူအာရာနီ</language>
+			<language type="grc">ရှေးဟောင်း ဂရိ</language>
+			<language type="gsw">ဆွစ် ဂျာမန်</language>
+			<language type="gu">ဂူဂျာရသီ</language>
+			<language type="ha">ဟာဥစာ</language>
+			<language type="haw">ဟာဝေယံ</language>
+			<language type="he">ဟီးဘရူး</language>
+			<language type="hi">ဟိန္ဒီ</language>
+			<language type="hr">ခရိုအေရှန်</language>
+			<language type="ht">ဟာအီတီအန်</language>
+			<language type="hu">ဟန်ဂေရီ</language>
+			<language type="hy">အာမေနီအန်</language>
+			<language type="id">အင်ဒိုနီးရှား</language>
+			<language type="ig">အစ္ဂဘို</language>
+			<language type="ii">စီချွမ် ရီ</language>
+			<language type="ine">အင်ဒို ဥရောပ ဘာသာစကား</language>
+			<language type="ira">အီရန် အခြေခံ ဘာသာစကား</language>
+			<language type="is">အိုင်စ်လန္ဒီ</language>
+			<language type="it">အီတလီ</language>
+			<language type="ja">ဂျပန်</language>
+			<language type="jpr">ဂျူဒီယို-ပါရှန်</language>
+			<language type="jrb">ဂျူဒီယို-အာရေဗျ</language>
+			<language type="jv">ဂျာဗားနီးစ်</language>
+			<language type="ka">ဂျော်ဂျီယန်</language>
+			<language type="kac">ကချင်</language>
+			<language type="kar">ကရင်</language>
+			<language type="kg">ကွန်ဂို</language>
+			<language type="kha">ခါစီ</language>
+			<language type="kk">ခါဇါခ်</language>
+			<language type="km">ခမာ</language>
+			<language type="kn">ကန္နာဒါ</language>
+			<language type="ko">ကိုးရီးယား</language>
+			<language type="ks">ကက်ရှ်မီရီ</language>
+			<language type="ku">ကဒ်</language>
+			<language type="ky">ခရူဂစ်</language>
+			<language type="la">လက်တင်</language>
+			<language type="lb">လူဇင်ဘတ်က်</language>
+			<language type="lo">လာအို</language>
+			<language type="lt">လစ္သူအာနီယံ</language>
+			<language type="lv">လက္ဘီအံ</language>
+			<language type="mg">အာလာဂါစီ</language>
+			<language type="mga">အလယ်ပိုင်း အိုင်းရစ်</language>
+			<language type="mi" draft="contributed">ေမာင္းရီ (နယူးဇီလန္ကၽြန္းရွိ ပင္ရင္းတိုင္းရင္းသားလူမ်ိဳး)</language>
+			<language type="mis">အမျိုးမျိုးသော ဘာသာစကား</language>
+			<language type="mk">မာစီဒိုနီယံ</language>
+			<language type="mkh">မွန်-ခမာ ဘာသာစကား</language>
+			<language type="ml">မလေးရာလမ်</language>
+			<language type="mn">မွန်ဂိုလီးယန်း</language>
+			<language type="mnc">မန်ချူး</language>
+			<language type="mni" draft="unconfirmed">မနိပူရီ</language>
+			<language type="mno">မနိုဘို ဘာသာစကား</language>
+			<language type="mr">မာရသီ</language>
+			<language type="ms">မလေး</language>
+			<language type="mt">မောလ္တီစ်</language>
+			<language type="mul">အကြိမ်များစွာ ဘာသာစကားများ</language>
+			<language type="my">ဗမာ</language>
+			<language type="nb">ဘွတ်မော်လ်</language>
+			<language type="nds">အနိမ့် ဂျာမန်</language>
+			<language type="ne">နီပါလီ</language>
+			<language type="nl">ဒတ်ချ်</language>
+			<language type="nl_BE">ဖလီမစ်ရှ်</language>
+			<language type="nn">နော်ဝေး နီးနော်စ်ခ်</language>
+			<language type="no">နော်ဝေး</language>
+			<language type="or">အိုရီရာ</language>
+			<language type="pa">ပန်ချာပီ</language>
+			<language type="paa">ပါပူရန် ဘာသာစကား</language>
+			<language type="peo">ပါရှန် အဟောင်း</language>
+			<language type="phi">ဖိလစ်ပိုင် ဘာသာစကား</language>
+			<language type="pi">ပါဠိ</language>
+			<language type="pl">ပိုလန်</language>
+			<language type="ps">ပါရှ်တို</language>
+			<language type="pt">ပေါ်တူဂီ</language>
+			<language type="pt_BR">ဘရာဇီး ပေါ်တူဂီ</language>
+			<language type="qu">ခက်ချ်ဝါ</language>
+			<language type="rm">ရောမ</language>
+			<language type="ro">ရိုမေနီယား</language>
+			<language type="root">မူလရင်းမြစ်</language>
+			<language type="ru">ရုရှ</language>
+			<language type="sa">သင်္သကရိုက်</language>
+			<language type="sai">တောင် အမေရိကန် အိန္ဒြိယ ဘာသာစကား</language>
+			<language type="sco">စကော့</language>
+			<language type="sd">စင်ဒီ</language>
+			<language type="sga">အိုင်းရစ် ဟောင်း</language>
+			<language type="sgn">အချက်ပြ ဘာသာစကား</language>
+			<language type="shn">ရှမ်း</language>
+			<language type="si">ဆင်ဟာလ</language>
+			<language type="sit">တရုတ်-တိဘက် ဘာသာစကား</language>
+			<language type="sk">စလိုဗက်</language>
+			<language type="sl">စလိုဗေးနီးယမ်း</language>
+			<language type="sla">စလိုဗစ် ဘာသာစကား</language>
+			<language type="sma">တောင်ပိုင်း ဆာမိ</language>
+			<language type="smi">ဆာမိ ဘာသာစကား</language>
+			<language type="so">ဆိုမာလီ</language>
+			<language type="sq">အယ်လ်ဘေးနီးယန်း</language>
+			<language type="sr">ဆားဗီးယန်း</language>
+			<language type="su">ဆူဒန်</language>
+			<language type="sv">ဆွီဒင်</language>
+			<language type="sw">ဆြာဟီလီ</language>
+			<language type="ta">တမီးလ်</language>
+			<language type="tai">တိုင် ဘာသာစကား</language>
+			<language type="te">တီလီဂု</language>
+			<language type="tg">တာဂွီခ်</language>
+			<language type="th">ထိုင်း</language>
+			<language type="ti">တီဂ်ရင်ရာ</language>
+			<language type="tk">တခ္မင်</language>
+			<language type="to">တွန်ဂါ</language>
+			<language type="tr">တာကစ်</language>
+			<language type="tt">တတာ</language>
+			<language type="tup">တူပီ ဘာသာစကား</language>
+			<language type="ug">ဝီဂါ</language>
+			<language type="uk">ယူကရိန်း</language>
+			<language type="und">မသိ သို့မဟုတ် မရှိ သော ဘာသာစကား</language>
+			<language type="ur">အော်ဒူ</language>
+			<language type="uz">ဦးဇ်ဘက်</language>
+			<language type="vi">ဗီယက်နမ်</language>
+			<language type="wo">ဝူလိုဖ်</language>
+			<language type="xh">ဇိုစာ</language>
+			<language type="yo">ရိုရုဘာ</language>
+			<language type="zgh">မိုရိုကန် တွမ်မဇိုတ် စံ</language>
+			<language type="zh">တရုတ်</language>
+			<language type="zh_Hans">ရိုးရှင်းသော တရုတ်</language>
+			<language type="zh_Hant">ရှေးရိုးစဉ်လာ တရုတ်</language>
+			<language type="zu">ဇူလူ</language>
+			<language type="zxx">ဘာသာစကား နှင့် ပတ်သက် သောအရာမရှိ</language>
+		</languages>
+		<scripts>
+			<script type="Arab">အာရေဗျ</script>
+			<script type="Armn">အာမေးနီးယား</script>
+			<script type="Beng">ဘင်္ဂါလီ</script>
+			<script type="Bopo">ဘိုပို</script>
+			<script type="Brah">ဗြဟ္မမီ</script>
+			<script type="Brai">ဘရေ</script>
+			<script type="Cyrl">စစ်ရိလစ်</script>
+			<script type="Deva">ဒီဗနာဂရီ</script>
+			<script type="Ethi">အီသီယိုးပီးယား</script>
+			<script type="Geor">ဂျော်ဂျီယန်</script>
+			<script type="Grek">ဂရိ</script>
+			<script type="Gujr">ဂုဂျာရသီ</script>
+			<script type="Guru">ဂူရူ</script>
+			<script type="Hang">ဟန်ဂူးလ်</script>
+			<script type="Hani">ဟန်</script>
+			<script type="Hans">ရိုးရှင်းသော တရုတ်</script>
+			<script type="Hans" alt="stand-alone">ရိုးရှင်းသော ဟန်</script>
+			<script type="Hant">ရှေးရိုးစဉ်လာ တရုတ်</script>
+			<script type="Hant" alt="stand-alone">ရှေးရိုးစဉ်လာဟန်</script>
+			<script type="Hebr">ဟီဗရူး</script>
+			<script type="Hira">ဟိရဂဏ</script>
+			<script type="Hrkt">ခတခဏ သို့မဟုတ် ဟိရဂဏ</script>
+			<script type="Java">ဂျာဗားနီးစ်</script>
+			<script type="Jpan">ဂျပန်</script>
+			<script type="Kali">ကယားလီ</script>
+			<script type="Kana">ခတခဏ</script>
+			<script type="Khmr">ခမာ</script>
+			<script type="Knda">ခန္နာဒါ</script>
+			<script type="Kore">ကိုးရီးယား</script>
+			<script type="Laoo">လာအို</script>
+			<script type="Latn">လက်တင်</script>
+			<script type="Mlym">မာလာရာလန်</script>
+			<script type="Mong">မွန်ဂိုလီးယား</script>
+			<script type="Mymr">မြန်မာ</script>
+			<script type="Orya">အိုရာ</script>
+			<script type="Sinh">ဆင်ဟာလ</script>
+			<script type="Sund">ဆူဒန်</script>
+			<script type="Tale">တိုင်လီ</script>
+			<script type="Taml">တမီးလ်</script>
+		<territory type="005" draft="unconfirmed">Ameríka ya Sidi</territory>
+			<territory type="011" draft="unconfirmed">Afríka ya Wɛ́sita</territory>
+			<territory type="013" draft="unconfirmed">Ameríka ya káti</territory>
+			<territory type="014" draft="unconfirmed">Afríka ya Ɛ́sita</territory>
+			<territory type="015" draft="unconfirmed">Afríka ya Nola</territory>
+			<territory type="017" draft="unconfirmed">Afríka ya Katikáti</territory>
+			<territory type="018" draft="unconfirmed">Afríka ya Sidi</territory>
+			<territory type="019" draft="unconfirmed">Ameríka</territory>
+			<territory type="030" draft="unconfirmed">Azía ya Ɛ́sita</territory>
+			<territory type="034" draft="unconfirmed">Azía ya Sidi</territory>
+			<territory type="035" draft="unconfirmed">Azía ya Sidi-Ɛ́sita</territory>
+			<territory type="039" draft="unconfirmed">Erópa ya Sidi</territory>
+			<territory type="142" draft="unconfirmed">Azía</territory>
+			<territory type="143" draft="unconfirmed">Azía ya Katikáti</territory>
+			<territory type="145" draft="unconfirmed">Azía ya Wɛ́sita</territory>
+			<territory type="150" draft="unconfirmed">Erópa</territory>
+			<territory type="151" draft="unconfirmed">Erópa ya Ɛ́sita</territory>
+			<territory type="154" draft="unconfirmed">Erópa ya Nola</territory>
+			<territory type="155" draft="unconfirmed">Erópa ya Wɛ́sita</territory>
+			<territory type="419" draft="unconfirmed">Ameríka Latína</territory>
+			<territory type="AC" draft="unconfirmed">Esenga ya Mbuta o likoló</territory>
+			<territory type="AD">Andorɛ</territory>
+			<territory type="AE">Lɛmila alabo</territory>
+			<territory type="AF">Afiganisitá</territory>
+			<territory type="AG">Antiga mpé Barbuda</territory>
+			<territory type="AI">Angiyɛ</territory>
+			<territory type="AL">Alibani</territory>
+			<territory type="AM">Amɛni</territory>
+			<territory type="AN">Antiyɛ ya Olandɛ</territory>
+			<territory type="AO">Angóla</territory>
+			<territory type="AQ">Antarctique</territory>
+			<territory type="AR">Arizantinɛ</territory>
+			<territory type="AS">Samoa ya Ameriki</territory>
+			<territory type="AT">Otilisi</territory>
+			<territory type="AU">Ositáli</territory>
+			<territory type="AW">Aruba</territory>
+			<territory type="AX" draft="unconfirmed">Bisanga Ɛland</territory>
+			<territory type="AZ">Azɛlɛbaizá</territory>
+			<territory type="BA">Bosini mpé Hezegovine</territory>
+			<territory type="BB">Barɛbadɛ</territory>
+			<territory type="BD">Bengalidɛsi</territory>
+			<territory type="BE">Beleziki</territory>
+			<territory type="BF">Bukina Faso</territory>
+			<territory type="BG">Biligari</territory>
+			<territory type="BH">Bahrɛnɛ</territory>
+			<territory type="BI">Burundi</territory>
+			<territory type="BJ">Benɛ</territory>
+			<territory type="BM">Bermuda</territory>
+			<territory type="BN">Brineyi</territory>
+			<territory type="BO">Bolivi</territory>
+			<territory type="BR">Brezílɛ</territory>
+			<territory type="BS">Bahamasɛ</territory>
+			<territory type="BT">Butáni</territory>
+			<territory type="BV" draft="unconfirmed">Esenga Buvé</territory>
+			<territory type="BW">Botswana</territory>
+			<territory type="BY">Byelorisi</territory>
+			<territory type="BZ">Belizɛ</territory>
+			<territory type="CA">Kanada</territory>
+			<territory type="CC" draft="unconfirmed">Bisanga Kokos</territory>
+			<territory type="CD">Repibiki demokratiki ya Kongó</territory>
+			<territory type="CD" alt="variant" draft="unconfirmed">Kongó-Kinsásá</territory>
+			<territory type="CF">Repibiki ya Afríka ya Káti</territory>
+			<territory type="CG">Kongo</territory>
+			<territory type="CG" alt="variant" draft="unconfirmed">Kongó-Brazzaville</territory>
+			<territory type="CH">Swisɛ</territory>
+			<territory type="CI">Kotídivualɛ</territory>
+			<territory type="CK">Bisanga bya Kookɛ</territory>
+			<territory type="CL">Síli</territory>
+			<territory type="CM">Kamɛrune</territory>
+			<territory type="CN">Sinɛ</territory>
+			<territory type="CO">Kolombi</territory>
+			<territory type="CR">Kositarika

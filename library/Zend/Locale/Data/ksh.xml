@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="ksh"/>
+	</identity>
+	<localeDisplayNames>
+		<localeDisplayPattern>
+			<localePattern draft="unconfirmed">{0} en {1}</localePattern>
+			<localeSeparator draft="unconfirmed">{0} uß {1}</localeSeparator>
+			<localeKeyTypePattern draft="unconfirmed">{0}: {1}</localeKeyTypePattern>
+		</localeDisplayPattern>
+		<languages>
+			<language type="ab" draft="unconfirmed">Abchaasesch</language>
+			<language type="af" draft="unconfirmed">Afrikaans</language>
+			<language type="am" draft="unconfirmed">Amhaaresch</language>
+			<language type="ar" draft="unconfirmed">Araabesch</language>
+			<language type="ar_001" draft="unconfirmed">Schtandatt Araabesch</language>
+			<language type="as" draft="unconfirmed">Aßameesesch</language>
+			<language type="asa" draft="unconfirmed">Pare</language>
+			<language type="ay" draft="unconfirmed">Aimaresch</language>
+			<language type="az" draft="unconfirmed">Asserbaidschaanesch</language>
+			<language type="be" draft="unconfirmed">Wiißrußesch</language>
+			<language type="bem" draft="unconfirmed">Bemba</language>
+			<language type="bez" draft="unconfirmed">Bena</language>
+			<language type="bg" draft="unconfirmed">Bulljaaresch</language>
+			<language type="bm" draft="unconfirmed">Bambara</language>
+			<language type="bn" draft="unconfirmed">Bängjaalesch</language>
+			<language type="bo" draft="unconfirmed">Tibeetesch</language>
+			<language type="brx" draft="unconfirmed">Boddo</language>
+			<language type="bs" draft="unconfirmed">Boßnesch</language>
+			<language type="ca" draft="unconfirmed">Kattalanesch</language>
+			<language type="cs" draft="unconfirmed">Tschäschesch</language>
+			<language type="cy" draft="unconfirmed">Walliisesch</language>
+			<language type="da" draft="unconfirmed">Dänesch</language>
+			<language type="de" draft="unconfirmed">Deutsch</language>
+			<language type="de_AT" draft="unconfirmed">Deutsch uß Ößterich</language>
+			<language type="de_CH" draft="unconfirmed">Deutsch uß de Schweijz</language>
+			<language type="dv" draft="unconfirmed">Divehesch</language>
+			<language type="dz" draft="unconfirmed">Butanesch</language>
+			<language type="ebu" draft="unconfirmed">Embu</language>
+			<language type="efi" draft="unconfirmed">Efik</language>
+			<language type="el" draft="unconfirmed">Jriischesch</language>
+			<language type="en" draft="unconfirmed">Änglesch</language>
+			<language type="en_AU" draft="unconfirmed">Änglesch uß Außtraalije</language>
+			<language type="en_CA" draft="unconfirmed">Änglesch uß Kanada</language>
+			<language type="en_GB" draft="unconfirmed">Änglesch uß Jruußbrettannije</language>
+			<language type="en_GB" alt="short" draft="unconfirmed">Brittesch Änglesch</language>
+			<language type="en_US" draft="unconfirmed">Amärrekaanesch Änglesch</language>
+			<language type="en_US" alt="short" draft="unconfirmed">Amärrekaanesch Änglesch</language>
+			<language type="eo" draft="unconfirmed">Esperanto</language>
+			<language type="es" draft="unconfirmed">Schpaanesch</language>
+			<language type="es_419" draft="unconfirmed">Schpaanesch uß Latting-Ammärrika</language>
+			<language type="es_ES" draft="unconfirmed">Schpaanesch uß Schpaaneje</language>
+			<language type="et" draft="unconfirmed">Äßnesch</language>
+			<language type="eu" draft="unconfirmed">Baskesch</language>
+			<language type="fa" draft="unconfirmed">Pärsesch</language>
+			<language type="fi" draft="unconfirmed">Finnesch</language>
+			<language type="fil" draft="unconfirmed">Fillipiinesch</language>
+			<language type="fj" draft="unconfirmed">Fidschesch</language>
+			<language type="fo" draft="unconfirmed">Färröeresch</language

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="ml"/>
+	</identity>
+	<localeDisplayNames>
+		<localeDisplayPattern>
+			<localePattern>{0} ({1})</localePattern>
+			<localeSeparator>{0}, {1}</localeSeparator>
+			<localeKeyTypePattern>{0}: {1}</localeKeyTypePattern>
+		</localeDisplayPattern>
+		<languages>
+			<language type="aa">അഫാർ</language>
+			<language type="ab">അബ്‌ഖാസിയൻ</language>
+			<language type="ace">അചിനീസ്</language>
+			<language type="ach">അകോലി</language>
+			<language type="ada">അഡാങ്ഗമി</language>
+			<language type="ady">അഡൈഗേ</language>
+			<language type="ae">അവസ്റ്റാൻ</language>
+			<language type="af">ആഫ്രിക്കാൻസ്</language>
+			<language type="afa">ആഫ്രോ-ഏഷ്യാറ്റിക് ഭാഷ</language>
+			<language type="afh">ആഫ്രിഹിലി</language>
+			<language type="agq">ആഘേം</language>
+			<language type="ain">അയിനു</language>
+			<language type="ak">അകാൻ</language>
+			<language type="akk">അക്കാഡിയൻ</language>
+			<language type="ale">അലൈട്ട്</language>
+			<language type="alg">അൽഗോൺക്യൻ ഭാഷ</language>
+			<language type="alt">തെക്കൻ അൾത്തായി</language>
+			<language type="am">അമാറിക്</language>
+			<language type="an">അരഗോണീസ്</language>
+			<language type="ang">പഴയ ഇംഗ്ലീഷ്</language>
+			<language type="anp">ആൻഗിക</language>
+			<language type="apa">അപ്പാചേ ഭാഷ</language>
+			<language type="ar">അറബിക്</language>
+			<language type="ar_001">ആധുനിക സ്റ്റാൻഡേർഡ് അറബിക്</language>
+			<language type="arc">അരമായഭാഷ</language>
+			<language type="arn">ആരൗകാനിയൻ</language>
+			<language type="arp">അരപാഹോ</language>
+			<language type="art">കൃത്രിമഭാഷ</language>
+			<language type="arw">അറാവക്</language>
+			<language type="as">ആസ്സാമീസ്</language>
+			<language type="asa">ആസു</language>
+			<language type="ast">ഓസ്‌ട്രിയൻ</language>
+			<language type="ath">അതപാസ്കൻ ഭാഷ</language>
+			<language type="aus">ഓസ്ട്രേലിയൻ ഭാഷ</language>
+			<language type="av">അവാരിക്</language>
+			<language type="awa">അവധി</language>
+			<language type="ay">അയ്മാറ</language>
+			<language type="az">അസർബൈജാനി</language>
+			<language type="az" alt="short">അസേരി</language>
+			<language type="ba">ബഷ്ഖിർ</language>
+			<language type="bad">ബൻഡ</language>
+			<language type="bai">ബാമിലകേ ഭാഷ</language>
+			<language type="bal">ബലൂചി</language>
+			<language type="ban">ബാലിനീസ്</language>
+			<language type="bas">ബസ</language>
+			<language type="bat">ബാൾട്ടിക് ഭാഷ</language>
+			<language type="bax">ബാമുൻ</language>
+			<language type="bbj">ഘോമാല</language>
+			<language type="be">ബൈലോറഷ്യൻ</language>
+			<language type="bej">ബേജ</language>
+			<language type="bem">ബെംബ</language>
+			<language type="ber">ബെർബർ</language>
+			<language type="bez">ബെനാ</language>
+			<language type="bfd">ബാഫട്ട്</language>
+			<language type="bg">ബൾഗേറിയൻ</language>
+			<language type="bh">ബീഹാറി</language>
+			<language type="bho">ഭോജ്‌പൂരി</language>

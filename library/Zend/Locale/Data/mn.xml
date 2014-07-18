@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="mn"/>
+	</identity>
+	<localeDisplayNames>
+		<localeDisplayPattern>
+			<localePattern>{0} ({1})</localePattern>
+			<localeSeparator>{0}, {1}</localeSeparator>
+			<localeKeyTypePattern>{0}: {1}</localeKeyTypePattern>
+		</localeDisplayPattern>
+		<languages>
+			<language type="ab">абхаз</language>
+			<language type="af">африк</language>
+			<language type="am">амхар</language>
+			<language type="ar">араб</language>
+			<language type="ar_001">стандарт араб</language>
+			<language type="as">ассам</language>
+			<language type="az">азербайжан</language>
+			<language type="be">беларусь</language>
+			<language type="bg">болгар</language>
+			<language type="bh" draft="unconfirmed">бихари хэл</language>
+			<language type="bn">бенгал</language>
+			<language type="bo">төвд</language>
+			<language type="br">бретон</language>
+			<language type="bs">босни</language>
+			<language type="ca">каталан</language>
+			<language type="cs">чех</language>
+			<language type="cy">уэлс</language>
+			<language type="da">дани</language>
+			<language type="de">герман</language>
+			<language type="de_AT">австри герман</language>
+			<language type="de_CH">швейцари герман</language>
+			<language type="el">грек</language>
+			<language type="en">англи</language>
+			<language type="en_AU">австрали англи</language>
+			<language type="en_CA">канад англи</language>
+			<language type="en_GB">британийн англи</language>
+			<language type="en_GB" alt="short">их британийн англи</language>
+			<language type="en_US">америкийн англи</language>
+			<language type="en_US" alt="short">америкийн нэгдсэн улсын англи</language>
+			<language type="eo">эсперанто</language>
+			<language type="es">испани</language>
+			<language type="es_419">латин америкийн испани</language>
+			<language type="es_ES">европын испани</language>
+			<language type="es_MX">мексикийн испани</language>
+			<language type="et">эстони</language>
+			<language type="eu">баск</language>
+			<language type="fa">перс</language>
+			<language type="fi">финлянд</language>
+			<language type="fil">филиппин</language>
+			<language type="fj">фижи</language>
+			<language type="fo">фарер</language>
+			<language type="fr">франц</language>
+			<language type="fr_CA">канад франц</language>
+			<language type="fr_CH">швейцари франц</language>
+			<language type="fy">баруун фризын</language>
+			<language type="ga">ирланд</language>
+			<language type="gd">шотланд келт</language>
+			<language type="gl">галик</language>
+			<language type="gn">гуарани</language>
+			<language type="gsw">швейцар герман</language>
+			<language type="gu">гужарати</language>
+			<language type="ha">хауса</language>
+			<language type="haw">хавай</language>
+			<language type="he">еврей</language>
+			<language type="hi">хинди</language>
+			<language type="hr">хорват</language>
+			<language type="ht">гаити</language>
+			<language type="hu">унгар</language>
+			<language type="hy">армен</language>
+			<language type="ia">интерлингво</language>
+			<language type="id">индонези</language>
+			<language type="ie">нэгдмэл хэл</language>
+			<language type="ig">игбо</language>
+			<language type="is">исланд</language>
+			<lang

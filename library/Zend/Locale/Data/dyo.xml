@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="dyo"/>
+	</identity>
+	<localeDisplayNames>
+		<languages>
+			<language type="ak">akan</language>
+			<language type="am">amharik</language>
+			<language type="ar">arab</language>
+			<language type="be">belarus</language>
+			<language type="bg">bulgaari</language>
+			<language type="bn">bengali</language>
+			<language type="cs">sek</language>
+			<language type="de">alman</language>
+			<language type="dyo">joola</language>
+			<language type="el">greek</language>
+			<language type="en">angle</language>
+			<language type="es">español</language>
+			<language type="fa">persan</language>
+			<language type="fr">franse</language>
+			<language type="ha">hausa</language>
+			<language type="hi">endu</language>
+			<language type="hu">ongrua</language>
+			<language type="id">indoneesi</language>
+			<language type="ig">igbo</language>
+			<language type="it">italien</language>
+			<language type="ja">saponee</language>
+			<language type="jv">savanee</language>
+			<language type="km">kmeer</language>
+			<language type="ko">koree</language>
+			<language type="ms">maleesi</language>
+			<language type="my">birmani</language>
+			<language type="ne">nepalees</language>
+			<language type="nl">neerlande</language>
+			<language type="pa">penjabi</language>
+			<language type="pl">polonees</language>
+			<language type="pt">portugees</language>
+			<language type="ro">rumeen</language>
+			<language type="ru">rus</language>
+			<language type="rw">ruanda</language>
+			<language type="so">somali</language>
+			<language type="sv">suedi</language>
+			<language type="ta">tamil</language>
+			<language type="th">tay</language>
+			<language type="tr">turki</language>
+			<language type="uk">ukrain</language>
+			<language type="ur">urdu</language>
+			<language type="vi">vietnam</language>
+			<language type="yo">yoruba</language>
+			<language type="zh">sinua</language>
+			<language type="zu">sulu</language>
+		</languages>
+		<territories>
+			<territory type="AD">Andorra</territory>
+			<territory type="AF">Afganistan</territory>
+			<territory type="AG">Antigua di Barbuda</territory>
+			<territory type="AI">Angiiya</territory>
+			<territory type="AL">Albani</territory>
+			<territory type="AM">Armeni</territory>
+			<territory type="AO">Angola</territory>
+			<territory type="AR">Arsantin</territory>
+			<territory type="AS">Samoa yati Amerik</territory>
+			<territory type="AT">Otris</territory>
+			<territory type="AU">Ostraalia</territory>
+			<territory type="AW">Aruba</territory>
+			<territory type="AZ">Aserbaysan</territory>
+			<territory type="BA">Bosni di Hersegovin</territory>
+			<territory type="BB">Barbad</territory>
+			<territory type="BD">Banglades</territory>
+			<territory type="BE">Belsik</territory>
+			<territory type="BF">Burukiina Faso</territory>
+			<territory type="BG">Bulgari</territory>
+			<territory type="BH">Bahrayn</territory>
+			<territory type="BI">Burundi</territory>
+			<territory type="BJ">Bene</territory>
+			<territory type="BM">Bermud</territory>
+			<territory type="BN">Buruney</territory>
+			<territory type="BO">Boliivi</territory>
+			<territory type="BR">Bresil</territory>
+			<territory type="BS">Bahama</territory>
+			<territory type="BT">Butan</territory>
+			<territory type="BW">Boswana</territory>
+			<territory type="BY">Belarus</territory>
+			<territory type="BZ">Beliis</territory>
+			<territory type="CA">Kanada</territory>
+			<territory type="CD">Mofam demokratik mati Kongo</territory>
+			<territory type="CG">Kongo</territory>
+			<territory type="CI">Koddiwar</territory>
+			<territory type="CL">Cili</territory>
+			<territory type="CM">Kamerun</territory>
+			<territory type="CN">Siin</territor

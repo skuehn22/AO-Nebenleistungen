@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="lo"/>
+	</identity>
+	<localeDisplayNames>
+		<localeDisplayPattern>
+			<localePattern>{0} ({1})</localePattern>
+			<localeSeparator>{0}, {1}</localeSeparator>
+			<localeKeyTypePattern>{0}: {1}</localeKeyTypePattern>
+		</localeDisplayPattern>
+		<languages>
+			<language type="aa">ອະຟາ</language>
+			<language type="ab">ແອບຄາຊຽນ</language>
+			<language type="ace">ແອັກຊີເນັສ</language>
+			<language type="ach">ອາໂຄລີ</language>
+			<language type="ada">ອາແດງມີ</language>
+			<language type="ady">ເອດີຮິ</language>
+			<language type="ae">ອາເວັສແຕນ</language>
+			<language type="af">ອາຟຣິການ</language>
+			<language type="afa">ພາສາ ແອໂຟຣ-ເອເຊຍຕິກ</language>
+			<language type="afh">ແອຟີຮີລີ</language>
+			<language type="agq">ອາເຮັມ</language>
+			<language type="ain">ໄອນູ</language>
+			<language type="ak">ອາການ</language>
+			<language type="akk">ອັກກາດຽມ</language>
+			<language type="ale">ອາເລີດ</language>
+			<language type="alg">ພາສາອໍກອນຄຽນ</language>
+			<language type="alt">ອານໄຕໃຕ້</language>
+			<language type="am">ອຳຮາຣິກ</language>
+			<language type="an">ອາຣາໂກເນັດ</language>
+			<language type="ang">ອັງກິດໂບຮານ</language>
+			<language type="anp">ແອນຈີກາ</language>
+			<language type="apa">ພາສາອາປາເຊ</language>
+			<language type="ar">ອາຣັບ</language>
+			<language type="ar_001">ອາຣາບິກມາດຕະຖານສະໄໝໃໝ່</language>
+			<language type="arc">ອາລາມິກ</language>
+			<language type="arn">ອາຣົວຄານຽນ</language>
+			<language type="arp">ອາຣາປາໂຮ</language>
+			<language type="art">ພາສາປະດິດ</language>
+			<language type="arw">ອາຣາແວກ</language>
+			<language type="as">ອັສຊຳມີສ</language>
+			<language type="asa">ອາຊູ</language>
+			<language type="ast">ອັສຕູຮຽນ</language>
+			<language type="ath">ພາສາອາທາພະສະຖານ</language>
+			<language type="aus">ພາສາອອດສເຕເລຍ</language>
+			<language type="av">ອາວາຣິກ</language>
+			<language type="awa">ອາວາຮິ</language>
+			<language type="ay">ອາຍມາລາ</language>
+			<language type="az">ອາເຊີໄບຈານິ</language>
+			<language type="ba">ບາຣກີ</language>
+			<language type="bad">ບານດາ</language>
+			<language type="bai">ພາສາບາມາລີກ</language>
+			<language type="bal">ບາລູຊີ</language>
+			<language type="ban">ບາລີເນັດ</language>
+			<language type="bas">ບາຊາ</language>
+			<language type="bat">ພາສາບໍຕິກ</language>
+			<language type="bax">ບາມຸນ</language>
+			<language type="bbj">ໂຄມາລາ</language>
+			<language type="be">ເບລາຣັສຊຽນ</language>
+			<language type="bej">ບີເຈ</language>
+			<language type="bem">ເບັມບາ</language>
+			<language type="ber">ເບີເບີ</language>
+			<language type="bez">ບີນາ</language>
+			<language type="bfd">ບາຟັດ</language>
+			<language type="bg">ບັງກາຣຽນ</language>
+			<language type="bh">ບິຫາລິ</language>
+			<language type="bho">ໂບພູຣິ</language>
+			<language type="bi">ບິສລະມາ</language>
+			<language type="bik">ບີຄອນ</language>
+			<language type="bin">ບີນີ</language>
+			<language type="bkm">ກົມ</language>
+			<language type="bla">ຊິກຊິກາ</language>
+			<language type="bm">ບາມບາຣາ</language>
+			<language type="bn">ເບັງກາລີ</language>
+			<language type="bnt">ບັນຕູ</language>
+			<language type="bo">ທິເບທັນ</language>
+			<language type="br">ເບຣຕັນ</language>
+			<language type="bra">ບຣາ</language>
+			<language type="brx">ໂບດູ</language>
+			<language type="bs">ບອສນຽນ</language>
+			<language type="bss">ອາຄຸດ</language>
+			<language type="btk">ບາຕັກ</language>
+			<language type="bua">ບູຣຽດ</language>
+			<language type="bug">ບູຈີເນັດ</language>
+			<language type="bum">ບູລູ</language>
+			<language type="byn">ບລິນ</language>
+			<language type="byv">ເມດູມບາ</language>
+			<language type="ca">ຄາຕາລານ</language>
+			<language type="cad">ແຄດໂດ</language>
+			<language type="cai">ພາສາອາເມລິກັນອິນເດຍກາງ</language>
+			<language type="car">ຄາຣິບ</language>
+			<language type="cau">ພາສາຄໍຄັດຊຽມ</language>
+			<language type="cay">ຄາຢູກາ</language>
+			<language type="cch">ອາດແຊມ</language>
+			<language type="ce">ຊີເຄນ</language>
+			<language type="ceb">ຊີບູໂນ</language>
+			<language type="cel">ພາສາເຊວຕິກ</language>
+			<language type="cgg">ຊີກາ</language>
+			<language type="ch">ຊາມໍໂຣ</language>
+			<language type="chb">ຊິບຊາ</language>
+			<language type="chg">ຊາກາໄຕ</language>
+			<language type="chk">ຊູເກດ</language>
+			<language type="chm">ມາຣິ</language>
+			<language type="chn">ຊີນຸກຈາກອນ</language>
+			<language type="cho">ຊອກຕິວ</language>
+			<language type="chp">ຊີພິວຢານ</language>
+			<language type="chr">ຊີໂຣກີ</language>
+			<language type="chy">ຊີເຢນນີ</language>
+			<language type="ckb">ໂຊນານີເຄີດີຊ</language>
+			<language type="cmc">ພາສາຊາມິກ</language>
+			<language type="co">ຄໍຊິກາ</language>
+			<language type="cop">ຄອບຕິກ</language>
+			<language type="cpe">ເຄຣິນພື້ນຖານອັງກິດ ຫລືພິດກິນ</language>
+			<language type="cpf">ຄີໂອຫຼືພິດຈິນທີມາຈາກພາສາຟຮັ່ງເສດ</language>
+			<language type="cpp">ຄີໂອຫຼືພິດຈິນທີມາພາສາໂປຕູເກດ</language>
+			<language type="cr">ຄີ</language>
+			<language type="crh">ຄຣີເມນເຕີຄິຊ</language>
+			<language type="crp">ຄີໂອຫຼືພິດຈິນ</language>
+			<language type="cs">ເຊກ</language>
+			<language type="csb">ກາຊູບຽນ</language>
+			<language type="cu">ໂບດສລາວິກ</language>
+			<language type="cus">ພາສາຄູຊີຕິກ</language>
+			<language type="cv">ຊູວາຊ</language>
+			<language type="cy">ເວວ</language>
+			<language type="da">ແດນິຊ</language>
+			<language type="dak">ດາໂກຕາ</language>
+			<language type="dar">ດາກວາ</language>
+			<language type="dav">ໄຕຕາ</language>
+			<language type="day">ດາຍັກ</language>
+			<language type="de">ເຢຍລະມັນ</language>
+			<language type="de_AT">ອອສຕຣຽນ ເຈີແມນ</language>
+			<language type="de_CH">ສະວິສ ໄຮ ເຈີແມນ</language>
+			<language type="del">ເດລາວາ</language>
+			<language type="den">ຊີເລັບ</language>
+			<language type="dgr">ໂດກຣິບ</language>
+			<language type="din">ດິນກາ</language>
+			<language type="dje">ຊາມາ</language>
+			<language type="doi">ດອກຣີ</language>
+			<lan

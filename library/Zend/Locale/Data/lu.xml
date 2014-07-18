@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="lu"/>
+	</identity>
+	<localeDisplayNames>
+		<languages>
+			<language type="ak">Liakan</language>
+			<language type="am">Liamhariki</language>
+			<language type="ar">Arabi</language>
+			<language type="be">Belarusi</language>
+			<language type="bg">Bulegari</language>
+			<language type="bn">Bengali</language>
+			<language type="cs">Tsheki</language>
+			<language type="de">Lizelumani</language>
+			<language type="el">Giliki</language>
+			<language type="en">Lingelesa</language>
+			<language type="es">Lihispania</language>
+			<language type="fa">Mpepajemi</language>
+			<language type="fr">Mfwàlànsa</language>
+			<language type="ha">Hausa</language>
+			<language type="hi">Hindi</language>
+			<language type="hu">Hongili</language>
+			<language type="id">Lindonezia</language>
+			<language type="ig">Igbo</language>
+			<language type="it">Litali</language>
+			<language type="ja">Liyapani</language>
+			<language type="jv">Java</language>
+			<language type="ko">Likoreya</language>
+			<language type="lu">Tshiluba</language>
+			<language type="ms">Limalezia</language>
+			<language type="ne">nepali</language>
+			<language type="nl">olandi</language>
+			<language type="pa">Lipunjabi</language>
+			<language type="pl">Mpoloni</language>
+			<language type="pt">Mputulugɛsi</language>
+			<language type="ro">Liromani</language>
+			<language type="ru">Lirisi</language>
+			<language type="rw">kinyarwanda</language>
+			<language type="so">Lisomali</language>
+			<language type="sv">Lisuwidi</language>
+			<language type="ta">Mtamuili</language>
+			<language type="th">Ntailandi</language>
+			<language type="tr">Ntuluki</language>
+			<language type="uk">Nkrani</language>
+			<language type="ur">Urdu</language>
+			<language type="vi">Liviyetinamu</language>
+			<language type="yo">Nyoruba</language>
+			<language type="zh">shinɛ</language>
+			<language type="zu">Nzulu</language>
+		</languages>
+		<territories>
+			<territory type="AD">Andore</territory>
+			<territory type="AE">Lemila alabu</territory>
+			<territory type="AF">Afuganisita</territory>
+			<territory type="AG">Antiga ne Barbuda</territory>
+			<territory type="AI">Angiye</territory>
+			<territory type="AL">Alubani</territory>
+			<territory type="AM">Ameni</territory>
+			<territory type="AN">Antiye wa Olande</territory>
+			<territory type="AO">Angola</territory>
+			<territory type="AR">Alijantine</territory>
+			<territory type="AS">Samoa wa Ameriki</territory>
+			<territory type="AT">Otilisi</territory>
+			<territory type="AU">Ositali</territory>
+			<territory type="AW">Aruba</territory>
+			<territory type="AZ">Ajelbayidja</territory>
+			<territory type="BA">Mbosini ne Hezegovine</territory>
+			<territory type="BB">Barebade</territory>
+			<territory type="BD">Benguladeshi</territory>
+			<territory type="BE">Belejiki</territory>
+			<territory type="BF">Bukinafaso</territory>
+			<territory type="BG">Biligari</territory>
+			<territory type="BH">Bahrene</territory>
+			<territory type="BI">Burundi</territory>
+			<territory type="BJ">Bene</territory>
+			<territory type="BM">Bermuda</territory>
+			<territory type="BN">Brineyi</territory>
+			<territory type="BO">Mbolivi</territory>
+			<territory type="BR">Mnulezile</territory>
+			<territory type="BS">Bahamase</territory>
+			<territory type="BT">Butani</territory>
+			<territory type="BW">Mbotswana</territory>
+			<territory type="BY">Byelorisi</territory>
+			<territory type="BZ">Belize</territory>
+			<territory type="CA">Kanada</territory>
+			<territory type="CD">Ditunga wa Kongu</territory>
+			<territory type="CF">Ditunga dya Afrika wa munkatshi</territory>
+			<territory type="CG">Kongu</territory>
+			<t

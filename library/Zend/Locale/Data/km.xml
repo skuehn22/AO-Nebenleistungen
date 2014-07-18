@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<!-- Copyright © 1991-2013 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<ldml>
+	<identity>
+		<version number="$Revision: 9287 $"/>
+		<generation date="$Date: 2013-08-28 21:32:04 -0500 (Wed, 28 Aug 2013) $"/>
+		<language type="km"/>
+	</identity>
+	<localeDisplayNames>
+		<localeDisplayPattern>
+			<localePattern>{0} ({1})</localePattern>
+			<localeSeparator>{0}, {1}</localeSeparator>
+			<localeKeyTypePattern>{0}: {1}</localeKeyTypePattern>
+		</localeDisplayPattern>
+		<languages>
+			<language type="aa">ភាសាអាហ្វារ</language>
+			<language type="ab">អាប់ខាហ៊្សាន</language>
+			<language type="ae">ភាសាអាវែស្តង់</language>
+			<language type="af">អាហ្វ្រីកាអាន</language>
+			<language type="am">អាមហារីច</language>
+			<language type="an">ភាសាអារ៉ាហ្គោន</language>
+			<language type="ar">អារ៉ាប់</language>
+			<language type="ar_001">អារ៉ាប់​ស្តង់ដារ​ទំនើប</language>
+			<language type="as">អាសាមីស</language>
+			<language type="ay">ភាសាអីម៉ារ៉ា</language>
+			<language type="az">អាហ៊្សែរបែហ្សង់</language>
+			<language type="be">បេឡារុស្ស</language>
+			<language type="bg">ប៊ុលហ្ការី</language>
+			<language type="bh">ភាសាបិហារ</language>
+			<language type="bm">ភាសាបាម្បារា</language>
+			<language type="bn">បង់ក្លាដែស</language>
+			<language type="bo">ទីបេ</language>
+			<language type="br" draft="unconfirmed">ប្រីស្តុន</language>
+			<language type="bs">បូស្នី</language>
+			<language type="ca">កាតាឡាន</language>
+			<language type="cs">ឆេក</language>
+			<language type="cy">វេល</language>
+			<language type="da">ដាណឺម៉ាក</language>
+			<language type="de">អាល្លឺម៉ង់</language>
+			<language type="de_AT">អាល្លឺម៉ង់ អូទ្រីស</language>
+			<language type="de_CH">អាល្លឺម៉ង់ ស្វីស</language>
+			<language type="dz">ភាសាប៊ូតាន</language>
+			<language type="el">ក្រិច</language>
+			<language type="en">អង់គ្លេស</language>
+			<language type="en_AU">អង់គ្លេស អូស្ត្រាលី</language>
+			<language type="en_CA">អង់គ្លេស កាណាដា</language>
+			<language type="en_GB">អង់គ្លេស ចក្រភព​អង់គ្លេស</language>
+			<language type="en_GB" alt="short">អង់គ្លេស (ច.អ.)</language>
+			<language type="en_US">អង់គ្លេស អាមេរិក</language>
+			<language type="en_US" alt="short">អង់គ្លេស (ស.រ.អា.)</language>
+			<language type="eo">អេស្ពេរ៉ាន់តូ</language>
+			<language type="es">អេស្ប៉ាញ</language>
+			<language type="es_419">អេស្ប៉ាញ អាមេរីកឡាតាំង</language>
+			<language type="es_ES">អេស្ប៉ាញ អឺរ៉ុប</language>
+			<language type="et">អេស្តូនី</language>
+			<language type="eu">បាស្កេ</language>
+			<language type="fa">ភឺសៀន</language>
+			<language type="fi">ហ្វាំងឡង់</language>
+			<language type="fil">ហ្វីលីពីន</language>
+			<language type="fj">ហ៊្វីជី</language>
+			<language type="fo">ហ្វារូស</language>
+			<language type="fr">បារាំង</language>
+			<language type="fy">ហ្វ្រីស៊ានខាងលិច</language>
+			<language type="ga">អៀរឡង់</language>
+			<language type="gd">ភ
