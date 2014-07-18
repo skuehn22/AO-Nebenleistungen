@@ -1,0 +1,66 @@
+<html>
+	<head>
+
+        <style type="text/css">
+            .myFocusClass { border: solid 1px green; }
+        </style>
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Herden Studienreisen Adminbereich</title>
+		<link rel="stylesheet" type="text/css" href="/blueprint/admin.css" media="screen, projection">
+		<link rel="stylesheet" type="text/css" href="/extjs/resources/css/ext-all.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/admin.css"/>
+
+
+        <script type="text/javascript" src="/underscore/underscore-min.js"></script>
+    	<script type="text/javascript" src="/extjs/adapter/ext/ext-base.js"></script>
+    	<script type="text/javascript" src="/extjs/ext-all-debug.js"></script>
+    	<script type="text/javascript" src="/extjs/src/locale/ext-lang-de.js"></script>
+
+    	<script type="text/javascript" src="/extjs/tools.js"></script>
+        <script type="text/javascript" src="/javascript/datumsBerechnung.js"></script>
+    	<script type="text/javascript" src="/tpl/Admin_Navigation.js"></script>
+
+    	<?php $navi = new nook_Adminnavigation(); ?>
+
+    	<script type="text/javascript">
+
+    		var programme = [<?php echo $navi->getProgramme(); ?>];
+            var uebernachtung = [<?php echo $navi->getHotel(); ?>];
+    		var admin = [<?php echo $navi->getAdmin(); ?>];
+
+    		Ext.onReady(function(){
+    			Ext.QuickTips.init();
+    	    	Ext.BLANK_IMAGE_URL = '/extjs/resources/images/default/s.gif';
+
+        	});
+
+            function gridAn(){
+                Ext.select("#main").addClass('showgrid');
+            }
+
+            function gridAus(){
+                Ext.select("#main").removeClass("showgrid");
+            }
+
+    	</script>
+
+	</head>
+	<body style="background-color: #EFF9FC; padding-left: 75px; padding-top: 20px; padding-right: 50px;">
+		<div id='main' style="border: 1px solid blue; background-color: #ffffff; min-height: 1300px;">
+			<div class='span-32' id='navigation'></div>
+			<div class="span-32" id='content' style="padding-left: 10px;">
+				<?php echo $this->content; ?>
+			</div>
+            <div class="span-32">&nbsp;</div>
+            <div class="span-32">
+                <br> &nbsp;&nbsp; Alle Felder mit * sind Pflichtfelder !
+            </div>
+            <div class="span-32">&nbsp;</div>
+            <div class="span-32">
+                <?php echo Zend_Registry::get('debugModus'); ?>
+            </div>
+		</div>
+	</body>
+</html>

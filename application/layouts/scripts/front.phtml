@@ -1,0 +1,272 @@
+<html>
+<head>
+    <title>Herden Online Booking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+
+    <link rel="stylesheet" href="/css/reset.css" type="text/css" media="screen"/>
+
+    <!--[if gt IE 6]>
+    <link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen"/>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/css/ie7.css" type="text/css" media="screen"/>
+    <![endif]-->
+
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="/css/ie6.1.1.css" media="screen, projection">
+    <![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+
+    <!-- CSS JQuery -->
+    <link rel="stylesheet" type="text/css" href="/jquery_navigation/service.css">
+    <link rel="stylesheet" href="/jquery_form_validation/css/validationEngine.jquery.css" type="text/css"/>
+    <link type="text/css" href="/jquery_ui/css/noko/jquery-ui-1.8.17.custom.css" rel="Stylesheet"/>
+
+    <!-- CSS allgemein -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/blueprint/grid.css" media="screen, projection">
+
+    <!-- Modal Lightbox -->
+    <link rel="stylesheet" type="text/css" href="/simpleModal/modal.css" media="screen">
+
+    <!-- Javascript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <script src="/jquery_template/jquery.loadTemplate-1.4.4.min.js"></script>
+
+    <script src="/jquery_form_validation/jquery.validationEngine-<?php echo Zend_Registry::get('language');  ?>.js"
+            type="text/javascript" charset="utf-8"></script>
+
+    <script src="/jquery_form_validation/jquery.validationEngine_2_6.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Underscore JS -->
+    <script type="text/javascript" src="/underscore/underscore-min.js"></script>
+
+    <!-- Bilder Rotation -->
+    <script src="/jquery_cycle/jquery.cycle.all.min.js"></script>
+
+    <!-- Sprache -->
+    <script type='text/javascript'>
+        var language = '<?php echo Zend_Registry::get('language');  ?>';
+    </script>
+
+    <!-- allgemeines Javascript -->
+    <script type="text/javascript" src="/javascript/main.js"></script>
+
+
+</head>
+<body>
+<script type="text/javascript">
+    var infoTextSuchfeld = '<?php echo translate('suche'); ?>';
+</script>
+<div id="bereich_oben">
+    <!-- kein Javascript -->
+    <noscript>
+        <div style="background-color: #F9CFB8; padding: 20px; border: solid 1px red;">
+            Es ist kein Javascript aktiviert !
+            <br>
+            Bitte schalten sie Javascript ein
+        </div>
+    </noscript>
+
+    <!-- Beginn Kopfbereich -->
+    <div class="span-24" id="header">
+        <table class="span-24" style="margin-bottom: 0px;">
+            <tr>
+                <td>
+                    <a href="/front/login/">
+                        <img src="/img/logo/HOB_Logo.png" style="width:272px; height: 94px;" alt="Herden Olnine Booking">
+                    </a>
+                </td>
+                <td>
+                    <a href="http://www.herden.de/st/" target="_blank">
+                        <img src="/img/logo/HSB_Logo.png" style="width:151px; height: 52px;" alt='Herden Studienreisen'>
+                    </a>
+                </td>
+                <td>
+                    <a target="_blank" href="http://www.herden.de/va/">
+                        <img src="/img/logo/VA_Logo.png" style="width:151px; height: 52px;" alt="Herden Veranstaltungen">
+                    </a>
+                </td>
+                <td style="vertical-align: bottom; width: 275px; height: 100px;">
+
+		            <div id="claim" style=" width: 170px; height: 35px; float: right; font-weight: bold; font-size: 14px; margin-bottom: 13px;">
+						<p align="right;" style="color: black;"><?php echo translate('TelMail'); ?></p>
+		            </div>
+
+                    <div id="login" style="height: 80px; float: right; margin-bottom: 15px;">
+                        <form method='post' class="form" action='/front/login/index/'>
+                        <table>
+                            <tr>
+                                <td><?php echo translate('Mail - Adresse'); ?>:</td>
+                                <td><input type="text" class="input span-4" value="" placeholder="E-Mail" name='username'></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo translate('Passwort'); ?>:</td>
+                                <td><input type="password" class="input span-4" value="" placeholder="Passwort" name='password'></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" name="login" class="submit_navigation_mini" value="<?php echo translate('anmelden'); ?>"></form>
+                                    <?php echo linkAdministration(); ?>
+                                    <?php echo linkVormerkung(); ?>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- oberer Bereich -->
+    <div class='span-24' id='nav' style="height: 30px;">
+
+        <!-- Navigation -->
+        <ul>
+            <li><a href="#"><?php echo translate('Städte'); ?></a>
+                <ul>
+                    <?php echo Zend_Registry::get('nav'); ?>
+                </ul>
+            </li>
+            <li><a href="/front/firma"><?php echo translate("wie es funktioniert"); ?></a></li>
+            <li>
+                 <?php
+                $anzahl = Zend_Registry::get('countShoppingCart');
+                if($anzahl > 0){
+                    echo "<a href='/front/warenkorb/index/'>";
+                    echo translate('Warenkorb');
+                    echo ' : ';
+                    echo $anzahl." ";
+                    echo translate('Artikel');
+                    echo "</a>";
+                }
+                 ?>
+            </li>
+            <li>
+                <?php echo $this->crumb1; ?> <?php echo $this->crumb2; ?> <?php echo $this->crumb3; ?>
+            </li>
+            <li>
+                <?php
+                    $vormerkungen = trim(Zend_Registry::get('vormerkungen'));
+                    if(!empty($vormerkungen))
+                        echo "<a href='/front/vormerkung/'>".translate('Vormerkungen')."</a>";
+                ?>
+            </li>
+
+            <li>
+                <?php echo nook_Tool::buildServiceArea(); ?>
+            </li>
+
+            <li>
+                <?php echo linkBuchungen(); ?>
+            </li>
+            <li>
+                <?php
+                    $kundenName = nook_ToolBenutzername::getBenutzerName();
+                    if(empty($kundenName))
+                        $kundenName = translate('Kundendaten');
+
+                    echo linkKundendaten($kundenName);
+                ?>
+            </li>
+            <li>
+                <?php echo linkOfflinebucher(); ?>
+            </li>
+            <li>
+                <?php echo linkAdministration(); ?>
+            </li>
+        </ul>
+        <ul style="float: right; psition: relative; top: 3px;">
+            <li style="padding-top: 5px;">
+                <form method="get" action="/front/programmstart/programm-suche">
+                <input type="text" id="suchfeldProgramm" name="suche" class="input span-3">
+                </form>
+            </li>
+            <li>
+                <?php echo navigationLoginLogout(); ?>
+            </li>
+            <li style="padding-top: 10px;">
+                <form>
+                <input type='image' name='language_ger' src='/flags/ger.png'>
+                <input type='image' name='language_eng' src='/flags/eng.png'>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Contentbereich -->
+    <div class='span-24 offers'><?php echo $this->content; ?></div>
+
+</div>
+
+<!-- Fussbereich unten links-->
+<div id="unten_links">
+    <div style="float: right;">
+        <ul class="align-right">
+            <li><span class="separator">|</span><a href="/front/datenschutz"><?php echo translate("Datenschutz"); ?></a><span class="separator">|</span></li>
+            <li><a href="/front/impressum/"><?php echo translate("Impressum"); ?></a><span class="separator">|</span></li>
+            <li><a href="/front/agb/"><?php echo translate("AGB"); ?></a><span class="separator">|</span></li>
+            <li><a href="/front/service/"><?php echo translate("Service"); ?></a><span class="separator">|</span></li>
+        </ul>
+    </div>
+</div>
+<!-- Fussbereich unten rechts -->
+<div id="unten_rechts">
+    &nbsp;
+</div>
+
+<!-- Beginn Debugblock -->
+<div id='additional' class="span-24">
+    <?php
+        echo Zend_Registry::get('debugModus');
+    ?>
+</div>
+<!-- Ende Debugblock -->
+
+<!-- Popup -->
+<div id="mask"></div>
+
+<table class="infoWarnung" id="layoutPopup" style="visibility: hidden;">
+    <tr>
+        <td colspan="2" id="layoutPopupText" style="padding: 10px;">
+            <?php echo translate('Achtung: Es befinden sich nicht gespeicherte Programmpunkte im Warenkorb.<br><br> Soll die Auswahl vor dem abmelden gespeichert werden?'); ?>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+        <td align="center" style="padding-bottom: 10px;">
+            <form action="#" id="layoutPopupForm" class="form">
+                <input type="submit" class="submit" value="Ja">
+            </form>
+        </td>
+        <td align="center" style="padding-bottom: 10px;">
+            <form class="form" action="/front/login/index/logout/logout/">
+                <input class="layoutPopupNo submit" type="submit" value="Nein">
+            </form>
+        </td>
+    </tr>
+</table>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.herden.de/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</body>
+</html>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RQ_AssdBookInfo docId="1389795959N1C4" docCount="4" docNr="1" TimeStamp="2014-01-15T13:25:59 01:00" sendOk="0"
+                 docFilePathName="J:\Autoupdate_VSP\herden_assd_bookinfolist\bin\x86\Debug\XML\table_result_2014-01-15_N1C4.xml">
+    <Cols rowCountAll="2106" rowCountDocStart="1" rowCountDocEnd="600">
+        <Col>LASTNAME</Col>
+        <Col>FIRSTNAME</Col>
+        <Col>GUEST</Col>
+        <Col>NAME1</Col>
+        <Col>NAME2</Col>
+        <Col>NAME3</Col>
+        <Col>STREET</Col>
+        <Col>ZIP</Col>
+        <Col>CITY</Col>
+        <Col>STATE</Col>
+        <Col>NATION1</Col>
+        <Col>NATION2</Col>
+        <Col>COUNTRY</Col>
+        <Col>LANGUAGE</Col>
+        <Col>PHONE</Col>
+        <Col>PHONE2</Col>
+        <Col>FAX</Col>
+        <Col>EMAIL</Col>
+        <Col>GUESTCODE</Col>
+        <Col>STAYS</Col>
+        <Col>LAST_STAY</Col>
+        <Col>CDATE</Col>
+        <Col>WDATE</Col>
+        <Col>ARRIVAL</Col>
+        <Col>DEPARTURE</Col>
+        <Col>NUMBER</Col>
+        <Col>REGCODE</Col>
+        <Col>BOARDTYPE</Col>
+        <Col>ROOM</Col>
+        <Col>angelegt_assd</Col>
+        <Col>letztebearb_ma</Col>
+        <Col>anfragevom</Col>
+        <Col>TYPE</Col>
+        <Col>FIRMC</Col>
+    </Cols>
+    <Tr nr="1">
+        <Td>Alpetour Touristische GmbH</Td>
+        <Td>NULL</Td>
+        <Td>7000020</Td>
+        <Td>NULL</Td>
+        <Td>Alpetour Touristische GmbH</Td>
+        <Td>NULL</Td>
+        <Td>Josef-Jaegerhuber-Str. 6</Td>
+        <Td>82319</Td>
+        <Td>Starnberg</Td>
+        <Td>BAY</Td>
+        <Td>D</Td>
+        <Td>DE</Td>
+        <Td>NULL</Td>
+        <Td>D</Td>
+        <Td>08151 775192</Td>
+        <Td>NULL</Td>
+        <Td>0815177523113</Td>
+        <Td>info@alpetour.de</Td>
+        <Td>04</Td>
+        <Td>139</Td>
+        <Td>08.08.2013 00:00:00</Td>
+        <Td>13.12.2013 13:18:45</Td>
+        <Td>07.08.2008 15:54:32</Td>
+        <Td>10.03.2014 00:00:00</Td>
+        <Td>14.03.2014 00:00:00</Td>
+        <Td>68</Td>
+        <Td>21</Td>
+        <Td>19</Td>
+        <Td>NULL</Td>
+        <Td>14.01.2014 09:20:09</Td>
+        <Td>14.01.2014 09:20:09</Td>
+        <Td>01.01.0001 00:00:00</Td>
+        <Td>1</Td>
+        <Td>021</Td>
+    </Tr>
+    <Tr nr="2">
+        <Td>Alpetour Touristische GmbH</Td>
+        <Td>NULL</Td>
+        <Td>7000020</Td>
+        <Td>NULL</Td>
+        <Td>Alpetour Touristische GmbH</Td>
+        <Td>NULL</Td>
+        <Td>Josef-Jaegerhuber-Str. 6</Td>
+        <Td>82319</Td>
+        <Td>Starnberg</Td>
+        <Td>BAY</Td>
+        <Td>D</Td>
+        <Td>DE</Td>
+        <Td>NULL</Td>
+        <Td>D</Td>
+        <Td>08151 775192</Td>
+        <Td>NULL</Td>
+        <Td>0815177523113</Td>
+        <Td>info@alpetour.de</Td>
+        <Td>04</Td>
+        <Td>139</Td>
+        <Td>08.08.2013 00:00:00</Td>
+        <Td>13.12.2013 13:18:45</Td>
+        <Td>07.08.2008 15:54:32</Td>
+        <Td>10.03.2014 00:00:00</Td>
+        <Td>14.03.2014 00:00:00</Td>
+        <Td>7</Td>
+        <Td>21</Td>
+        <Td>19</Td>
+        <Td>NULL</Td>
+        <Td>14.01.2014 09:20:09</Td>
+        <Td>14.01.2014 09:20:09</Td>
+        <Td>01.01.0001 00:00:00</Td>
+        <Td>1</Td>
+        <Td>021</Td>
+    </Tr>
+
+    ...
+
+</RQ_AssdBookInfo>
