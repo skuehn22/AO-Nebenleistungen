@@ -1,0 +1,60 @@
+<RoomStay>
+ <RoomType IsRoom="true" NumberOfUnits="125" RoomTypeCode="DZ ens">
+  <RoomDescription Name="DZ"/>
+ </RoomType>
+ <RoomRates>
+  <RoomRate NumberOfUnits="125" RoomTypeCode="DZ ens" RatePlaneCode="DZ DU/WC">
+   <Rates>
+    <Rate EffectiveDate="2012-09-21">
+     <BaseCurrencyCode CurrencyCode="EUR" AmountAfterTax="18750.00"/>
+    </Rate>
+   </Rates>
+   <Total AdditionalFeesExcludeIndicator="false" DecimalPlaces="2" CurrencyCode="EUR" AmountAfterTax="18750.00"/>
+  </RoomRate>
+ </RoomRates>
+ <GuestCounts IsPerRoom="false">
+  <GuestCount AgeQualifyingCode="10" Count="250"/>
+ </GuestCounts>
+ <TimeSpan End="2012-09-21" Start="2012-09-21"/>
+ <BasicPropertyInfo HotelCode="AOB3"/>
+</RoomStay>
+<RoomStay>
+ <RoomType IsRoom="true" NumberOfUnits="10" RoomTypeCode="DZ ens">
+  <RoomDescription Name="DZ"/>
+ </RoomType>
+ <RoomRates>
+  <RoomRate NumberOfUnits="10" RoomTypeCode="DZ ens" RatePlaneCode="DZ DU/WC">
+   <Rates>
+    <Rate EffectiveDate="2012-09-22">
+     <BaseCurrencyCode CurrencyCode="EUR" AmountAfterTax="1500.00"/>
+    </Rate>
+   </Rates>
+   <Total AdditionalFeesExcludeIndicator="false" DecimalPlaces="2" CurrencyCode="EUR" AmountAfterTax="1500.00"/>
+  </RoomRate>
+ </RoomRates>
+ <GuestCounts IsPerRoom="false">
+  <GuestCount AgeQualifyingCode="10" Count="20"/>
+ </GuestCounts>
+ <TimeSpan End="2012-09-22" Start="2012-09-22"/>
+ <BasicPropertyInfo HotelCode="AOB3"/>
+</RoomStay>
+<RoomStay>
+ <RoomType IsRoom="true" NumberOfUnits="15" RoomTypeCode="DZ ens">
+  <RoomDescription Name="DZ"/>
+ </RoomType>
+ <RoomRates>
+  <RoomRate NumberOfUnits="15" RoomTypeCode="DZ ens" RatePlaneCode="DZ DU/WC">
+   <Rates>
+    <Rate EffectiveDate="2012-09-23">
+     <BaseCurrencyCode CurrencyCode="EUR" AmountAfterTax="2250.00"/>
+    </Rate>
+   </Rates>
+   <Total AdditionalFeesExcludeIndicator="false" DecimalPlaces="2" CurrencyCode="EUR" AmountAfterTax="2250.00"/>
+  </RoomRate>
+ </RoomRates>
+ <GuestCounts IsPerRoom="false">
+  <GuestCount AgeQualifyingCode="10" Count="30"/>
+ </GuestCounts>
+ <TimeSpan End="2012-09-23" Start="2012-09-23"/>
+ <BasicPropertyInfo HotelCode="AOB3"/>
+</RoomStay>

@@ -1,0 +1,135 @@
+<script type="text/javascript">
+<!--
+	var grid;
+	var gridStore;
+	var checkboxSel;
+	var hotelId;
+
+	var condition_hotel_new = '1';
+	var condition_hotel_passiv = '2';
+	var condition_hotel_aktiv = '3';
+
+	Ext.onReady(function(){
+
+		gridStore = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hauptschalter/view/",
+	        id: 'jsonStore',
+	        fields: ['id','property_name','property_code','aktiv']
+	    });
+		
+		grid = new Ext.grid.GridPanel({
+			autoHeight: true,
+	        stripeRows: true,
+	        loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true
+	        },
+	        listeners: {
+				dblclick: function(){
+					var record = grid.getSelectionModel().getSelected();
+					changeAktivStatusHotel(record.data);
+				}
+	        },
+			autoExpandColumn: 'company',
+	        store: gridStore,
+	        width: 500,
+	        id: 'activationCompany',
+	        title: 'Übernachtungsbetriebe aktiv / passiv Schaltung',
+	        
+		    columns: [{
+                    xtype: 'gridcolumn',
+                    dataIndex: 'id',
+                    header: 'Id',
+                    width: 50
+                },{
+                    xtype: 'gridcolumn',
+                    dataIndex: 'property_name',
+                    header: 'Hotel',
+                    width: 200
+                },{
+                    xtype: 'gridcolumn',
+                    dataIndex: 'property_code',
+                    header: 'Hotel Code',
+                    width: 150
+                },{
+                    xtype: 'gridcolumn',
+                    dataIndex: 'aktiv',
+                    header: 'aktiv',
+                    width: 50,
+                    renderer: rendererAktivHotel
+                }],
+            bbar: [{
+                xtype: 'paging',
+                store: gridStore,
+                id: 'paging',
+                pageSize: 20,
+                displayMsg: "Anzeige: {0} - {1} von {2} ",
+                displayInfo: true
+            }]
+		});
+			
+	    grid.render('grid');
+	    gridStore.load();
+		
+	});
+
+	function changeAktivStatusHotel(data){
+			hotelId = data.id;
+		
+			if(data.aktiv == condition_hotel_new)
+				data.aktiv = condition_hotel_passiv;
+			else if(data.aktiv == condition_hotel_passiv)
+				data.aktiv = condition_hotel_aktiv;
+			else
+				data.aktiv = condition_hotel_passiv;
+
+		
+			Ext.Ajax.request({
+			   url: '/admin/hauptschalter/edit/',
+			   params: {
+				   hotelId: hotelId,
+				   status: data.aktiv
+			   },
+			   success: function(response){
+					showMsgBox("Hotel: " + data.property_name + " geändert");
+					grid.store.load();
+			   },
+			   failure: function(){
+				   showMsgBox("Update Status Hotel fehlgeschlagen");
+			   }
+			});
+		
+		return;
+	}
+
+	function rendererAktivHotel(val){
+		var icon = '';
+		if(val == condition_hotel_new)
+			icon = "<img src='/buttons/exclamation.png' ext:qtip='neu angelegtes Hotel'>";
+		else if(val == condition_hotel_passiv)
+			icon = "<img src='/buttons/cancel.png' ext:qtip='Hotel ist passiv'>";
+		else if(val == condition_hotel_aktiv)
+			icon = "<img src='/buttons/accept.png' ext:qtip='Hotel ist aktiv'>";
+		
+		return icon;
+	}
+	
+
+-->
+</script>
+<div class='span-32' id='info' style='height: 100px;'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue" align="center">Übersicht der bereits angelegten Hotels</h3>
+    <br>
+    In der Übersicht der bereits angelegten Hotels können<br>
+    einzelne Hotels per Click aktiv oder passiv geschaltet werden.<br>
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class="span-32">
+	<div id='grid' class='span-19'></div>
+</div>

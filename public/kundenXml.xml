@@ -1,0 +1,13 @@
+<PersonName>
+ <GivenName>Stephan</GivenName>
+ <SurName>Krauß</SurName>
+</PersonName>
+<Telephone PhoneNumber="01632058844"/>
+<Email>info@stephankrauss.de</Email>
+<Address>
+ <StreetNumbr>An der alten Schäferei 34</StreetNumbr>
+ <CityName>Langenweißbach</CityName>
+ <PostalCode>08134</PostalCode>
+ <CountryName>Deutschland</CountryName>
+ <CompanyName>NoName</CompanyName>
+</Address>

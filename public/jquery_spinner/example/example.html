@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>jQuery UI Spinner Examples</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/start/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.js"></script>
+		<script type="text/javascript" src="../ui.spinner.js"></script>
+		<script type="text/javascript" src="http://jqueryui.com/themeroller/themeswitchertool/"></script>
+		<script type="text/javascript">
+			jQuery().ready(function($) {
+				$("#switcher").themeswitcher();
+
+				$('#spinner').spinner({ min: -100, max: 100 });
+				$('#spinnerfast').spinner({ min: -1000, max: 1000, increment: 'fast' });
+				$('#spinnerhide').spinner({ min: 0, max: 100, showOn: 'both' });
+				$('#spinnernull').spinner({ min: -100, max: 100, allowNull: true });
+				$('#spinnerdisable').spinner({ min: -100, max: 100 });
+				$('#spinnermaxlen').spinner();
+				$('#spinner5').spinner();
+				$('#spinnercurrency').spinner({prefix: '$', group: ',', step: 0.01, largeStep: 1, min: -1000000, max: 1000000});
+
+				$('#spinnerconfig').spinner({min: -1000, max: 1000, step: 1, increment: 'fast'});
+				$('#spinnermax').spinner().change(function() {$('#spinnerconfig').spinner('option', 'max', parseInt($(this).val()));});
+				$('#spinnermin').spinner().change(function() {$('#spinnerconfig').spinner('option', 'min', parseInt($(this).val()));});
+				$('#spinnerstep').spinner().change(function() {$('#spinnerconfig').spinner('option', 'step', parseInt($(this).val()));});
+				$('#spinnerspeed').change(function() {$('#spinnerconfig').spinner('option', 'increment', $(this).val());});
+				$('#spinnermousewheel').change(function() {$('#spinnerconfig').spinner('option', 'mouseWheel', $(this).is(':checked'));});
+
+				$('#enable').click(function() { $('#spinnerdisable').spinner('enable'); });
+				$('#disable').click(function() { $('#spinnerdisable').spinner('disable'); });
+				$('#getValue').click(function() { alert($('#spinner').spinner('value')); });
+				$('#destroy').click(function() { $('#spinner').spinner('destroy'); });
+			});
+		</script>
+	</head>
+	<body class="ui-widget ui-priority-secondary" style="font-size: 10pt;">
+		<div id="main" class="ui-widget-content ui-corner-all">
+			<div class="ui-widget-header">
+				<h1 class="ui-state-hover">
+					jQuery UI Spinner Examples
+				</h1>
+				<p>
+					Version : 1.24
+					<br/>
+					Download : <a href="http://github.com/jogep/jquery.ui.spinner">Github</a>
+					<br/>
+					Theme : <span id="switcher"></span>
+				</p>
+			</div>
+			<div id="example" class="ui-widget-content">
+				<h2>
+					Examples :
+				</h2>
+				<p>This is a simple example/test page for my jQuery UI 1.8.5 Spinner Widget v1.24.  You can find the current release version online at <a href="http://github.com/jogep/jquery.ui.spinner">GitHub</a>.</p>
+
+
+
+				<h3>Here is an example of a spinner based editor</h3>
+				<p><input type="text" id="spinner" value="0" /> <input type="button" id="getValue" value="Get Value" /> <input type="button" id="destroy" value="Destroy" /></p>
+
+				<h3>Here is a fast spinner</h3>
+				<p><input type="text" id="spinnerfast" value="0" /></p>
+
+				<h3>Here is an example of one that hides</h3>
+				<p><input type="text" id="spinnerhide" value="0" /> with some text after it</p>
+
+				<h3>Here is an example of one that allows nulls</h3>
+				<p><input type="text" id="spinnernull" /></p>
+
+				<h3>Here is a disabled example</h3>
+				<p><input type="text" id="spinnerdisable" value="0" disabled="disabled" /><br /><button id="enable">Enable</button><button id="disable">Disable</button></p>
+
+				<h3>Here is an example with maxlength</h3>
+				<p><input type="number" id="spinnermaxlen" value="0" maxlength="3" /></p>
+
+				<h3>Here is an example with HTML5 attributes</h3>
+				<p><input type="number" id="spinner5" maxlength="2" value="0" min="0" max="100" step="5" /></p>
+
+				<h3>Here is a currency spinner</h3>
+				<p><input type="number" id="spinnercurrency" /></p>
+
+				<table class="grid ui-state-highlight ui-corner-all">
+					<tr><td>Configurable spinner:</td>
+						<td><input type="text" id="spinnerconfig" value="0" /></td></tr>
+					<tr><td>Maximum:</td>
+						<td><input type="text" id="spinnermax" value="1000" /></td></tr>
+					<tr><td>Minimum:</td>
+						<td><input type="text" id="spinnermin" value="-1000" /></td></tr>
+					<tr><td>Step:</td>
+						<td><input type="text" id="spinnerstep" value="1" /></td></tr>
+					<tr><td>Speed:</td>
+						<td><select id="spinnerspeed">
+								<option value="slow">Slow</option>
+								<option selected="selected" value="fast">Fast</option>
+							</select></td></tr>
+					<tr><td>Mouse Wheel:</td>
+						<td><input type="checkbox" id="spinnermousewheel" checked="checked" /></td></tr>
+				</table>
+			</div>
+
+			<div id="footer" class="ui-widget-header ui-corner-all">
+				<p>
+					Please report bugs
+					<a href="http://github.com/jogep/jquery.ui.spinner/issues">here</a>
+				</p>
+				<a href="http://www.jgeppert.com/">Java, J2EE and Web Programming</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,344 @@
+<script type="text/javascript">
+	var gridHotel;
+	var gridProducts;
+
+	var storeGridHotel;
+	var storeGridProducts;
+
+	var memoryHotelId;
+	var memoryProductId;
+
+	var condition_new = '1';
+	var condition_passiv = '2';
+	var condition_aktiv = '3';
+
+    var condition_touristische_grundleistung = 2;
+    var condition_keine_touristische_grundleistung = 1;
+
+	Ext.onReady(function(){
+
+		storeGridHotel = new Ext.data.JsonStore({
+            id: 'storeGridHotel',
+            root: 'data',
+            url: '/admin/hotelproducts/gethotels/',
+            totalProperty: 'anzahl',
+            method: 'post',
+            autoLoad: true,
+            fields: [{
+                    name: 'id'
+                },{
+                    name: 'property_name'
+                },{
+                    name: 'property_code'
+                },{
+                    name: 'aktiv'
+                }]
+		});
+
+		storeGridProducts = new Ext.data.JsonStore({
+            id: 'storeGridProducts',
+            totalProperty: 'anzahl',
+            root: 'data',
+            url: '/admin/hotelproducts/getproductsfromhotel/',
+            method: 'post',
+            fields: [{
+                    name: 'id'
+                },{
+                    name: 'product_name'
+                },{
+                    name: 'price'
+                },{
+                    name: 'vat'
+                },{
+					name: 'aktiv'
+                },{
+                    name: 'typ'
+                },{
+                    name: 'standardProduct'
+            }]
+		});
+		
+		gridHotel = new Ext.grid.GridPanel({
+		    title: 'vorhandene Hotels',
+		    store: storeGridHotel,
+		    width: 500,
+		    autoHeight: true,
+		    stripeRows: true,
+		    loadMask: true,
+		    columnLines: true,
+		    autoExpandColumn: 'property_name',
+		    renderTo: 'panelGridHotel',
+		    id: 'gridHotel',
+		    viewConfig: {
+				forceFit: true,
+                scrollOffset: 0
+	        },
+	        listeners: {
+		        rowdblclick: function(){
+					findProductsFromHotel();
+	        	}
+		    },
+		    columns: [{
+	                xtype: 'gridcolumn',
+	                dataIndex: 'id',
+	                header: 'Id',
+	                width: 50,
+	                id: 'idHotel'
+	            },{
+	                xtype: 'gridcolumn',
+	                dataIndex: 'property_name',
+	                header: 'Hotelname',
+	                width: 200,
+	                id: 'property_name'
+	            },{
+	                xtype: 'gridcolumn',
+	                dataIndex: 'property_code',
+	                header: 'Hotel Code',
+	                width: 75,
+	                id: 'property_code'
+	            },{
+	                xtype: 'gridcolumn',
+	                dataIndex: 'aktiv',
+	                header: 'aktiv',
+	                width: 50,
+	                id: 'aktivHotel',
+	                renderer: renderer_aktiv
+	        }],
+	        bbar: [{
+	            xtype: 'paging',
+	            store: storeGridHotel,
+	            id: 'pagingHotelsGrid',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	        }],
+            buttons: [{
+                text: 'Produkte eines Hotels anzeigen',
+                handler: function(){
+                    findProductsFromHotel();
+                }
+            }]
+		});
+
+		gridProducts =new Ext.grid.GridPanel({
+		    title: 'Produkte eines Hotels',
+		    store: storeGridProducts,
+		    width: 600,
+		    autoHeight: true,
+		    stripeRows: true,
+		    loadMask: true,
+		    columnLines: true,
+		    renderTo: 'panelGridProducts',
+		    id: 'gridHotel',
+		    viewConfig: {
+				forceFit: true,
+                scrollOffset: 0
+	        },
+            listeners: {
+                rowdblclick: function(){
+                    fillAdminHotelproductsIndexProdukt();
+                }
+            },
+		    columns: [{
+	                xtype: 'gridcolumn',
+	                dataIndex: 'id',
+	                header: 'Id',
+	                width: 50,
+	                id: 'idProduct'
+	            },{
+	                xtype: 'gridcolumn',
+	                dataIndex: 'product_name',
+	                header: 'Produktname',
+	                width: 100,
+	                id: 'product_name'
+	            },{
+	                xtype: 'gridcolumn',
+	                dataIndex: 'price',
+	                header: 'Preis',
+	                width: 75,
+	                id: 'price',
+	                renderer: renderer_euro
+	            },{
+	                xtype: 'gridcolumn',
+	                dataIndex: 'vat',
+	                header: 'Mehrwertsteuer',
+	                width: 75,
+	                id: 'vat',
+	                renderer: renderer_mwst
+		        },{
+	                xtype: 'gridcolumn',
+	                dataIndex: 'aktiv',
+	                header: 'aktiv',
+	                width: 50,
+	                id: 'aktivProduct',
+	                renderer: renderer_aktiv
+	        	},{
+	        	    xtype: 'gridcolumn',
+	        	    header: 'Verrechnung',
+	        	    dataIndex: 'typ',
+	        	    width: 100,
+	        	    id: 'typProduct',
+	        	    renderer: renderer_typProduct
+	        	},{
+                    xtype: 'gridcolumn',
+                    dataIndex: 'standardProduct',
+                    header: 'Standard',
+                    width: 50,
+                    renderer: renderer_touristischeGrundleistung
+                }],
+	        	bbar: [{
+                    xtype: 'paging',
+                    store: storeGridProducts,
+                    id: 'pagingHotelProducts',
+                    pageSize: 10,
+                    displayMsg: "Anzeige: {0} - {1} von {2} ",
+                    displayInfo: true
+                }],
+	        	buttons: {
+                    height: 30,
+                    items: [{
+                        xtype: 'button',
+                        text: 'neues Produkt',
+                        handler: function(){
+                            var selectedRowHotel = gridHotel.getSelectionModel();
+                            if(!selectedRowHotel.hasSelection()){
+                                showMsgBox('Bitte Hotel wählen');
+
+                                return;
+                            }
+
+                            buildNewProductForHotel();
+                        },
+                        tooltip: 'neues Produkt oder Leistung anlegen'
+                    },{
+                        text: 'Produktbeschreibung ändern',
+                        handler: function(){
+                            fillAdminHotelproductsIndexProdukt();
+                        }
+                    }]
+	        }
+		});
+	});
+
+	function findProductsFromHotel(){
+
+        var selectedHotel = gridHotel.getSelectionModel();
+        if(!selectedHotel.hasSelection()){
+            showMsgBox('Bitte Hotel auswählen');
+
+            return;
+        }
+
+
+		var recordHotel = selectedHotel.getSelected();
+		memoryHotelId = recordHotel.data.id;
+
+		storeGridProducts.setBaseParam('hotelId', memoryHotelId);
+		storeGridProducts.load();
+
+		return;
+	}
+
+    function renderer_touristischeGrundleistung(val){
+
+        if(val == condition_keine_touristische_grundleistung)
+            icon = "<img src='/buttons/cog_add.png' ext:qtip='keine touristische Grundleistung'>";
+
+        if(val == condition_touristische_grundleistung)
+            icon = "<img src='/buttons/cog.png' ext:qtip='touristische Grundleistung'>";
+
+        return icon;
+    }
+
+	function renderer_aktiv(val){
+		var icon = "<img src='/buttons/cancel.png' ext:qtip='passiv'>";
+
+		if(val == condition_new)
+			icon = "<img src='/buttons/exclamation.png' ext:qtip='neu'>";
+		else if(val == condition_passiv)
+			icon = "<img src='/buttons/cancel.png' ext:qtip='passiv'>";
+		else if(val == condition_aktiv)
+			icon = "<img src='/buttons/accept.png' ext:qtip='aktiv'>";
+		
+		return icon;
+	}
+
+	function buildNewProductForHotel(){
+
+        Ext.Ajax.request({
+           url: '/admin/hotelproducts/newhotelproduct/',
+           success: function(){
+                storeGridProducts.load();
+                showMsgBox("Produkt angelegt");
+           },
+           failure: function(){
+                showMsgBox("kein neues Produkt angelegt");
+           },
+           params: {
+                hotelId: memoryHotelId
+           }
+        });
+	    
+	}
+
+	function renderer_mwst(val){
+
+	    if(val)
+	        val = val + " %";
+
+	    return val;
+	}
+
+	function renderer_euro(val){
+
+	    if(val){
+            val = (Math.round(val * 100) / 100).toString();
+            val += (val.indexOf('.') == -1)? '.00' : '00';
+            val = val.substring(0, val.indexOf('.') + 3);
+
+	        val = val.replace(/\./g , ",");
+	        val = val + " €";
+	    }
+
+	    return val;
+	}
+
+	function renderer_typProduct(typ){
+	    var textProductTyp = ' ';
+
+	    if(typ == 1)
+	        textProductTyp = 'je Person';
+	    if(typ == 2)
+	        textProductTyp = 'je Zimmer';
+	    if(typ == 3)
+	        textProductTyp = 'je Person / Nacht';
+	    if(typ == 4)
+	        textProductTyp = 'Anzahl';
+        if(typ == 5)
+            textProductTyp = 'Stück / Nacht';
+        if(typ == 6)
+            textProductTyp = 'Stück / Datum';
+
+	    return textProductTyp;
+	}
+
+</script>
+<!-- extensions -->
+<script type="text/javascript" src="/tpl/Admin_Hotelproducts_IndexProdukt.js"></script>
+
+
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue">Produkte und Leistungen eines Hotels</h3>
+    <br>
+    Der Verantwortliche des Hotels kann neue Produkte und Leistungen anlegen.<br>
+    Es kann eine deutsche und eine englische Beschreibung der Leistungen anlegen angelegt werden.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-15' id='panelGridHotel'></div>
+<div class='span-15' id='panelGridProducts'></div>
+
+<div class='span-32'>&nbsp;</div>
+
+<div class='span-30' id='panelFormProduct'></div>

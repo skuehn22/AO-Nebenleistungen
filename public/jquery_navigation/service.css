@@ -1,0 +1,96 @@
+/* Basic code - don't modify */
+ 
+ #service {
+     display: block;
+     margin: 0;
+     padding: 0;
+     z-index: 1000;
+ }
+
+ #service li {
+     display: block;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     float: left;
+     position: relative;
+ }
+
+ #service a {
+     display: block;
+ }
+
+ #service ul {
+     display: none;
+     position: absolute;
+     left: 0;
+     margin: 0;
+     padding: 0;
+ }
+
+ * html #service ul { line-height: 0; } /* IE6 "fix" */
+#service ul a { zoom: 1; } /* IE6/7 fix */
+#service ul li { float: none; }
+#service ul ul { top: 0; }
+
+/* Essentials - configure this */
+
+#service ul {
+    width: 130px;
+}
+
+#service ul ul {
+    left: 131px;
+}
+
+/* Everything else is theming */
+
+#service *:hover {
+    background-color: none;
+}
+
+#service a {
+    color: #77746e;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+    height: 20px;
+    padding: 6px 5px 4px;
+    text-decoration: none;
+}
+
+#service a.hover{
+    color: #fff;
+}
+
+#service li.hover{
+    background-color: #fff;
+}
+
+#service li.hover a {
+    background-color: #76B82A;
+    display: block;
+}
+
+#service ul {
+    top: 25px;
+}
+
+#service ul li a {
+    background-color: #76B82A;
+    color: #fff;
+    display: block;
+    background: url(/img/nav-arrow.png) no-repeat 7px 9px;
+}
+
+#service ul a.hover {
+    color: #76B82A;
+    background: url(/img/nav-arrow-active.png) no-repeat 7px 9px;
+    padding-left: 15px;
+}
+
+#service ul a {
+    border-bottom: 1px solid white;
+    border-right: none;
+    padding-left: 15px;
+}

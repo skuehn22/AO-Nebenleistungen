@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Programmbuchung BuchungstabelleId="18" Angelegt="2012-04-23 11:52:29" Buchungstyp="1" Buchungsnummer="22">
+ <Buchungsbereich>1</Buchungsbereich>
+ <Buchungsnummer>22</Buchungsnummer>
+ <Rechnungsnummer>0</Rechnungsnummer>
+ <SessionId>9o9luhlep1mnasd0ba0d75ivt1</SessionId>
+ <KundeId>0</KundeId>
+ <Einkaufspreis>14.1300</Einkaufspreis>
+ <Verkaufspreis Personenpreis="true">15.7000</Verkaufspreis>
+ <Mehrwertsteuer MehrwertsteuerCode="B">1.07</Mehrwertsteuer>
+ <GerechneteVerkaufspreis>16.8</GerechneteVerkaufspreis>
+ <Buchungsfrist>5</Buchungsfrist>
+ <Stornofrist>3</Stornofrist>
+ <ProgrammId>10</ProgrammId>
+ <Beschreibung>
+  <Programmname>EAST-SIDE-TOUR</Programmname>
+  <Programmbeschreibung>Während sich die City-Spreefahrten auf die touristischen Highlights im Berliner Stadtzentrum konzentrieren, zeigt die neue EAST-SIDE-TOUR darüber hinaus den Wandel des Ostens an der Spree. Die EAST-SIDE-TOUR folgt einem Teil des ehemaligen Grenzverlaufs zwischen Friedrichshain und Kreuzberg. Im Schatten der East-Side-Gallery ist viel passiert. Das Radialsystem V und das Energieforum sind neu entstanden, dazu der Ostbahnhof und der Postbahnhof, die O2-World und die Oberbaum-City – und das sind nur einige Beispiele des Wandels. Die Tour zeigt auch die Veränderungen im ehemaligen Osthafen Berlins. Universal, MTV und die Modecenter Label I und II, das Badeschiff der ARENA Treptow und die Molecule Men. Nicht zu vergessen die wohl schönste Brücke Berlins: die Oberbaumbrücke. Ein Symbol der Wiedervereinigung zwischen Ost und West, zwischen Friedrichshain und Kreuzberg.&lt;BR&gt;</Programmbeschreibung>
+  <Programmbild>C:\xampp\htdocs\hob\public/images/program/midi/10.jpg</Programmbild>
+ </Beschreibung>
+ <Firma>
+  <Firmenname FirmenId="20">BWSG Berliner Wassersport- und Service GmbH &amp; Co Betriebs KG</Firmenname>
+  <AnsprechpartnerAnrede>Herr</AnsprechpartnerAnrede>
+  <AnsprechpartnerName>Westphal</AnsprechpartnerName>
+  <FirmaStadt>Berlin</FirmaStadt>
+  <FirmaStrasse>Wendenschloßstr.</FirmaStrasse>
+  <FirmaHausnummer>350-354</FirmaHausnummer>
+  <FirmaMail>info@bwsg-berlin.de</FirmaMail>
+ </Firma>
+ <Durchfuehrung>
+  <Datum>2012-04-28</Datum>
+  <Stadt StadtId="1">Berlin</Stadt>
+  <Zeit>10:10:00</Zeit>
+  <TreffpunktText>5864 Wendisch-Rietz</TreffpunktText>
+  <Personenanzahl>6</Personenanzahl>
+  <Sprache SpracheId="1">deutsch</Sprache>
+ </Durchfuehrung>
+ <Optionen>
+  <Information></Information>
+ </Optionen>
+ <Global>
+  <Status>1</Status>
+ </Global>
+</Programmbuchung>
