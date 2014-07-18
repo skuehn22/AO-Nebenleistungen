@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OTA_HotelAvailNotifRQ MessageContentCode="3" EchoToken="Autoupdate-PMS" Version="1.001"
+                       TimeStamp="2014-02-24T10:28:24 01:00" TransactionIdentifier="1393238004"
+                       schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelAvailNotifRQ.xsd"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xmlns="http://www.opentravel.org/OTA/2003/05">
+    <Authentication>
+        <UserName></UserName>
+        <Password></Password>
+    </Authentication>
+    <AvailStatusMessages HotelCode="AOATW1" AvailStatMessCount="4">
+        <AvailStatusMessage BookingLimitMessageType="SetLimit" BookingLimit="7">
+            <StatusApplicationControl RatePlanCode="6er" InvTypeCode="6er ens" Fri="1" Start="2014-04-04"
+                                      End="2014-04-04"/>
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimitMessageType="SetLimit" BookingLimit="3">
+            <StatusApplicationControl RatePlanCode="6er" InvTypeCode="6er ens" Tue="1" Start="2014-06-03"
+                                      End="2014-06-03"/>
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimitMessageType="SetLimit" BookingLimit="1">
+            <StatusApplicationControl RatePlanCode="6er" InvTypeCode="6er ens" Weds="1" Start="2014-06-04"
+                                      End="2014-06-04"/>
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimitMessageType="SetLimit" BookingLimit="4">
+            <StatusApplicationControl RatePlanCode="6er" InvTypeCode="6er ens" Thur="1" Start="2014-06-05"
+                                      End="2014-06-05"/>
+        </AvailStatusMessage>
+    </AvailStatusMessages>
+</OTA_HotelAvailNotifRQ>

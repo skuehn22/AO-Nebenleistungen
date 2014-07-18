@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<OTA_HotelAvailNotifRS xmlns='http://www.opentravel.org/OTA/2003/05' TimeStamp='2012-04-18T17:27:28+0200' PrimaryLangID='de-DE' Version='4.000' EchoToken='987654321'>
+<success/>
+</OTA_HotelAvailNotifRS>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<OTA_HotelAvailNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelAvailNotifRQ.xsd" Version="1.001" EchoToken="987654321"
+TransactionIdentifier="938383" TimeStamp="2011-11-01T09:30:47-05:00" MessageContentCode="3">
+    <AvailStatusMessages HotelCode="AOB3">
+        <AvailStatusMessage BookingLimit="8" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="2012-11-01" End="2012-12-01" InvTypeCode="DZ ens" RatePlanCode="DZ DU/WC" Mon="1" Tue="1" Weds="1" Thur="1" Fri="1" Sat="1" Sun="1">
+            </StatusApplicationControl>
+            <LengthsOfStay>
+                <LengthOfStay MinMaxMessageType="SetMinLOS" Time="2" TimeUnit="Day">
+                </LengthOfStay>
+            </LengthsOfStay>
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimit="8" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="2012-11-01" End="2012-12-01" InvTypeCode="EZ ens" RatePlanCode="EZ DU/WC" Mon="1" Tue="1" Weds="1" Thur="1" Fri="1" Sat="1" Sun="1">
+            </StatusApplicationControl>
+            <LengthsOfStay>
+                <LengthOfStay MinMaxMessageType="SetMinLOS" Time="2" TimeUnit="Day">
+                </LengthOfStay>
+            </LengthsOfStay>
+        </AvailStatusMessage>
+    </AvailStatusMessages>
+</OTA_HotelAvailNotifRQ>
