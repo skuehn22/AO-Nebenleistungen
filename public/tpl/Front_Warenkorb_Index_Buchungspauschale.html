@@ -1,0 +1,17 @@
+<!-- Buchungspauschale -->
+{if condition="$buchungspauschale"}
+<div class='block_gray block block_unten block_oben span-24 last' style="float: left;">
+    <div class="span-5 prepend-1">
+        &nbsp;
+    </div>
+    <div class="span-12">
+        <p class="teilueberschrift_gruen">{function="translate('Buchungspauschale')"}</p>
+
+        <p>{$buchungspauschale.preisvarianteName}</p>
+
+        {function="translate('Preis')"}: {$buchungspauschale.preis} €<br>
+        {function="translate('Anzahl')"}: {$buchungspauschale.anzahl}<br><br>
+        {function="translate('Gesamtpreis für diese Programmvariante')"}: {$buchungspauschale.gesamtpreis} €
+    </div>
+</div>
+{/if}

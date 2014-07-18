@@ -1,0 +1,84 @@
+<script type="text/javascript" src="/tpl/Front_VormerkenAnmelden_Index.js"></script>
+<script type="text/javascript">
+    var mailAdresseVorhanden = "{function="translate('Mailadresse bereits vorhanden')"}";
+    var mailAdresseNichtVorhanden = "{function="translate('Mailadresse nicht vorhanden')"}";
+</script>
+
+<div class="span-24 block_oben block block_unten">
+    <div style="padding-left: 40px;" class="span-10 ueberschrift_gruen">{function="translate('Anmelden zur Vormerkung')"}</div>
+    <div class="span-10">
+        {function="translate('Bitte notieren Sie sich Ihr Passwort !')"}<br>
+    </div>
+</div>
+
+<div class="24">&nbsp;</div>
+
+<div class="span-12">
+    <div style="padding-left: 40px;" class="teilueberschrift block_oben block_unten block">
+        {function="translate('Anmeldung zur Vormerkung')"}<br>
+        <span class="standardtext">{function="translate('text vormerkung')"}</span>
+    </div>
+    <div class="block block_unten" style="min-height: 200px; padding-left: 40px;">
+        <form class="formular form" id="formPersonalData" name="formPersonalData" method="post" action="/front/vormerken-anmelden/save/">
+        <table>
+            <tr>
+                <td width="110"><label for="email1">{function="translate('E-Mail')"} * :</label></td>
+                <td><input type="text" name="email1" id="email1" class='validate[required,custom[email]] input span-4'value=""></td>
+            </tr>
+            <tr>
+                <td><label for="email2">{function="translate('wiederholen E-Mail')"} * :</label></td>
+                <td><input class="validate[required,custom[email],equals[email1]] input span-4" type="text" name="email2" id="email2"></td>
+            </tr>
+            <tr>
+                <td><label for="passwort1">{function="translate('Passwort')"} * :</td>
+                <td><input class="validate[required,minSize[6]] input span-4" type="password" name="passwort1" id="passwort1"></td>
+            </tr>
+            <tr>
+                <td><label for="passwort2">{function="translate('wiederholen Passwort')"} * :</td>
+                <td><input class="validate[required,minSize[6],equals[passwort1]] input span-4" type="password" name="passwort2" id="passwort2"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" class="submit" name="anmelden" value="{function="translate('Anmeldung zur Vormerkung')"}"></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</div>
+
+
+
+<div style="float: left; width: 470px;">
+    <div class="teilueberschrift block_oben block_unten block" style="padding-left: 10px;">
+        {function="translate('Informationen zur Anmeldung')"}
+    </div>
+    <div class="block_unten block_links_rechts" style="padding-left: 10px; padding-top: 10px; padding-right: 10px; padding-bottom: 4px; min-height: 200px;">
+        {function="translate('Wir brauchen eine E-mailadresse und ein Passwort mit dem Sie später auf Ihre vorgemerkten Buchungswünsche zurückgreifen können')"}<p></p>
+        {function="translate('Ihre Vorgemerkten Buchungswünsche können Sie jederzeit aktualieren und bearbeiten indem Sie sich mit Ihrer E-mailadresse und Ihrem Passwort bei Herden Online Booking einloggen.')"}<p></p>
+        <p>{function="translate('Bitte merken Sie sich Ihr Passwort! Bei uns wird es verschlüsselt und wir haben keine Möglichkeit es zu rekonstruieren.')"}</p>
+        {function="translate('Wenn sie sich bereits angemeldet haben verwenden sie bitte das Login-Formular')"}
+
+
+    </div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="span-12">
+    <div style="padding-left: 40px;" class="teilueberschrift block_oben block_unten block">
+        {function="translate('Anmeldung zur Buchung')"}<br>
+        <span class="standardtext">{function="translate('sobald Sie buchen möchten brauchen wir noch ein paar Informationen mehr')"}</span>
+    </div>
+    <div class="block block_unten" style="padding-left: 40px;">
+        <table>
+            <tr>
+                <td width="110">&nbsp;</td>
+                <td><a href="/front/registrierung/index/" class="button_link">{function="translate('Anmeldung zur Buchung')"}</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+{include="Front_VormerkenAnmelden_Index_Login"}

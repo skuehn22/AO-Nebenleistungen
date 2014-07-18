@@ -1,0 +1,109 @@
+<script type="text/javascript" src='/tpl/Front_Orderdata_Index.js'></script>
+<form class='formular form' id="formOrderData" method='post' action='#'>
+    <table>
+        <!-- Gruppenname -->
+        <tr>
+            <td><span style="font-size: 12px; font-weight: 700;">{function="translate('Wenn vorhanden Gruppenname')"}:</span>
+                &nbsp;</td>
+            <td><img src="/buttons/help.png" description="" id="gruppenname" name="gruppenname"></td>
+            <td><input type="text" name="gruppenname" id="gruppenname" class="input input_action" style="width: 385px;"></td>
+        </tr>
+
+        {if condition="$anzahlRatenHotelbuchung > 0"}
+        <!-- Hinweistext Hotelbuchung -->
+        <tr>
+            <td colspan="2">&nbsp;</td>
+            <td>
+                {function="translate('Hinweis Hotelbuchung')"}
+            </td>
+        </tr>
+
+        <!-- Schüler / Kinder männlich -->
+        <tr>
+            <td>
+                <span style="font-size: 12px; font-weight: 700;">{function="translate('Schüler / Jungen')"}:</span> &nbsp;
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                <input type="text" name="maennlichSchueler" id="maennlichSchueler" class="input input_action" style="width: 50px;" value="0">
+            </td>
+        </tr>
+
+        <!-- Schülerinnen / Kinder weiblich -->
+        <tr>
+            <td>
+                <span style="font-size: 12px; font-weight: 700;">{function="translate('Schülerinnen / Mädchen')"}:</span> &nbsp;
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                <input type="text" name="weiblichSchueler" id="weiblichSchueler" class="input input_action" style="width: 50px;" value="0">
+            </td>
+        </tr>
+
+        <!-- Lehrer / Erwachsene männlich -->
+        <tr>
+            <td>
+                <span style="font-size: 12px; font-weight: 700;">{function="translate('Lehrer / Begleitpersonen')"}:</span> &nbsp;
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                <input type="text" name="maennlichLehrer" id="maennlichLehrer" class="input input_action" style="width: 50px;" value="0">
+            </td>
+        </tr>
+
+        <!-- Lehrer / Erwachsene weiblich -->
+        <tr>
+            <td>
+                <span style="font-size: 12px; font-weight: 700;">{function="translate('Lehrerinnen / Begleitpersonen')"}:</span> &nbsp;
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                <input type="text" name="weiblichLehrer" id="weiblichLehrer" class="input input_action" style="width: 50px;" value="0">
+            </td>
+        </tr>
+
+        <!-- Busfahrer / Guide -->
+        <tr>
+            <td>
+                <span style="font-size: 12px; font-weight: 700;">{function="translate('Busfahrer / Guide')"}:</span> &nbsp;
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                <input type="text" name="sicherstellung" id="sicherstellung" class="input input_action" style="width: 50px;" value="0">
+            </td>
+        </tr>
+        {/if}
+
+        <tr>
+            <td style="vertical-align: top;"><span style="font-size: 12px; font-weight: 700;">{function="translate('Hinweis zur Buchung:')"}</span>
+            </td>
+            <td style="vertical-align: top;"><img src="/buttons/help.png" description="" id="buchungshinweis"></td>
+            <td><textarea style="width: 385px; height: 150px;" class="input input_action" name="buchungshinweis"></textarea></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td align="right">
+                <input type='checkbox' name='newsletter' id='newsletter' value="newsletter" class="checkbox">
+            </td>
+            <td>{function="translate('Ich möchte weitere Informationen durch einen Newsletter beziehen')"}</td>
+        </tr>
+    </table>
+
+    <table style="float: right;">
+        <tr>
+            <td>
+                <a href="/front/warenkorb" class="button_link">{function="translate('bearbeiten')"}</a>
+            </td>
+            <td>
+                <a class="submit_weiter input" href="javascript:buchenAgbAnzeigen()">
+                    {if condition="$buchungsnummerZaehler > 0"}
+                        {function="translate('Buchung ändern')"}
+                    {else}
+                        {function="translate('kostenpflichtg buchen')"}
+                    {/if}
+                </a>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</form>

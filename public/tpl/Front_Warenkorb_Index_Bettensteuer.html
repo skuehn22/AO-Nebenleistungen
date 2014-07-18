@@ -1,0 +1,17 @@
+{if condition="count(value.raten) > 0"}
+    <div class="span-22">&nbsp;</div>
+    <div class="span-22 block_oben block_unten block_gray block" style="padding-left: 40px; padding-right: 40px;">
+        {$zimmerZusatztext}<br>
+        {if condition="$bettensteuer"}
+            <br>
+                {loop="bettensteuer"}
+                    <p>
+                        <span class="teilueberschrift_gruen">{$value.title}</span>
+                        <br>
+                        {$value.kurztext}
+                    </p>
+                {/loop}
+            </p>
+        {/if}
+    </div>
+{/if}

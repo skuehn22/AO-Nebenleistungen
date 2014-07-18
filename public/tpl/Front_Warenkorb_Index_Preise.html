@@ -1,0 +1,13 @@
+<div class="span-12 prepend-1">
+   {if condition="$counterToOrder > 0"}
+       <span class="teilueberschrift_grau">
+           {function="translate('Gesamtpreis aller Buchungen')"}: {function="translatePricing($totalPrice)"} € <br>
+               {if condition="$gesamtRabattWarenkorb > 0"}
+                   {function="translate('Rabatt ihrer Buchung')"}: {function="translatePricing($gesamtRabattWarenkorb)"} € <br>
+                   {function="translate('neuer Preis')"}: {function="translatePricing($neuerPreis)"} €
+               {/if}
+       </span>
+   {else}
+   &nbsp;
+   {/if}
+</div>

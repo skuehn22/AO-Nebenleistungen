@@ -1,0 +1,138 @@
+<table style="width: 100%; margin-left: 40px;">
+    <tr>
+        <td class="span-5">
+            <label for="title">{function="translate('Anrede')"}: </label>
+        </td>
+        <td class="span-8" colspan="2">
+            <select name="title" size="1" id="title" class="input span-3">
+                {loop="titles"}
+                {if condition="$value.checked == 0"}
+                    <option value="{$value.title}"> {$value.title}</option>
+                {else}
+                    <option value="{$value.title}" selected> {$value.title}</option>
+                {/if}
+                {/loop}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="firstname">{function="translate('Vorname')"}: </label></td>
+        <td colspan="2">
+            <input type='text' name='firstname' id='firstname' class='input span-5' value="{$personalData.firstname}">
+        </td>
+    </tr>
+    <tr>
+        <td><label for="lastname">{function="translate('Nachname')"} *: </label></td>
+        <td colspan="2">
+            <input type='text' name='lastname' id='lastname' class='validate[required,minSize[2]] input span-5' value="{$personalData.lastname}">
+        </td>
+    </tr>
+    <tr>
+        <td><label for="company">{function="translate('Firma / Schule')"} : </label></td>
+        <td colspan="2">
+            <input type='text' name='company' id='company' class='input span-5' value="{$personalData.company}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="country">{function="translate('Land')"} *: </label>
+        </td>
+        <td  colspan="2">
+            <select name="country" size="1" class='input span-5'>
+                {loop name="country"}
+                    {if condition="$value.checked > 0"}
+                        <option value="{$value.id}" selected>{$value.Name}</option>
+                    {else}
+                        <option value="{$value.id}">{$value.Name}</option>
+                    {/if}
+                {/loop}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="street">{function="translate('Straße / Hausnummer')"} *: </label>
+        </td>
+        <td colspan="2">
+            <input type='text' name='street' id='street' class='validate[required,minSize[2]] input' style="width: 248px;" value="{$personalData.street}">
+        </td>
+    </tr>
+    <tr>
+        <td><label for="zip">{function="translate('PLZ / Stadt')"} *: </label></td>
+
+        <td colspan="2">
+            <input type='text' name='zip' id='zip' class='validate[required,minSize[2]] input span-2' value="{$personalData.zip}">
+            <input type='text' name='city' id='city' class='validate[required,minSize[2]] input span-5' value="{$personalData.city}">
+        </td>
+    </tr>
+    {if condition="$mail_insert"}
+        <tr>
+            <td>&nbsp; {function="translate('E-Mail')"}: </td>
+            <td  colspan="2">{$personalData.email}</td>
+        </tr>
+    {else}
+        <tr>
+            <td>
+                <label for="email">{function="translate('E-Mail')"} *: </label>
+            </td>
+            <td colspan="2">
+                <input type='text' name='email' id='email' class='validate[required,custom[email]] input span-5' value="{$personalData.email}" autocomplete="off">
+                <div id='mail_info' name='mail_info'></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email_repeat">{function="translate('E-Mail wiederholen')"} *: </label>
+            </td>
+            <td colspan="2">
+                <input type='text' name='email_repeat' id='email_repeat' class='validate[required,equals[email],custom[email]] input span-5' value="{$personalData.email}" autocomplete="off">
+            </td>
+        </tr>
+    {/if}
+    <tr>
+        <td>
+            <label for="password">{function="translate('Passwort')"} *: </label>
+        </td>
+        <td>
+            <input type='password' name='password' id='password' class='validate[required,minSize[8]] input span-5' autocomplete="off">
+        </td>
+        <td rowspan="3" class="span-8">
+            <div style="width: 240px;">
+                {function="translate('Bitte geben Sie hier ein Passwort Ihrer Wahl ein. Sie können sich mit Ihrer E-Mail und dem Passwort später wieder als Kunde bei uns einloggen.')"}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="password_repeat">{function="translate('Passwort wiederholen')"} *: </label>
+        </td>
+        <td>
+            <input type='password' name='password_repeat' id='password_repeat' class='validate[required,equals[password],minSize[8]] input span-5' autocomplete="off">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="phonenumber">{function="translate('Telefonnummer')"}: </label>
+        </td>
+        <td>
+            <input type='text' name='phonenumber' id='phonenumber' class='validate[minSize[3],custom[onlyNumberSp]] input span-5' value="{$personalData.phonenumber}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="schriftwechsel">{function="translate('Schriftwechselsprache')"} *: </label>
+        </td>
+        <td colspan="2">
+            <select name="schriftwechsel" id='schriftwechsel' size="1" class='input span-5'>
+                <option value="1" selected>{function="translate('deutsch')"}</option>
+                <option value="2">{function="translate('englisch')"}</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td colspan="2">
+            <input type='submit' class="submit" value="{function=" translate('speichern')"}" name='submitPersonaldata' id='personaldata'><span id="informationOfflinekunde"></span>
+        </td>
+    </tr>
+</table>

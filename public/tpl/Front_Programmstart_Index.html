@@ -1,0 +1,79 @@
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+
+<!-- Ablaufleiste -->
+<!--<div id='ablaufleiste' class="span-24">
+   <div class="block block_oben block_unten" style="padding: 0px 0px 0px 40px;">{$breadcrumb}</div>
+</div>     -->
+
+<div class="span-24">&nbsp;</div>
+
+
+
+
+<div class="span-24">&nbsp;</div>
+
+<div class='span-22 last'>
+
+	{loop name="cityEvents"}
+    <!-- Kopf -->
+    <div class='span-22 ueberschrift block_oben block' style="padding-left: 40px;">
+        <div class="span-12">{if condition="$cityId == 0"} {$value.ort}: {/if} {$value.progname} &nbsp;</div>
+
+
+    </div>
+
+    <!-- Programmblock -->
+    <div class="span-22 block_unten block" style="padding-left: 40px; min-height: 50px;">
+
+
+        <div class='span-9'>
+            {$value.txt} <a href="/front/programmdetail/index/city/{$value.cityId}/programId/{$value.id}">{function="translate('mehr')"}</a>
+            <span class="standardgruen">
+                {if condition="$value.languages"}{function="translate('Sprachen')"}:  {loop name="$value.languages"} <img src='/flags/{$value.flag}.png'> {/loop}<br>{/if}
+            </span>
+        </div>
+
+        <div class="span-3">
+            {include="Front_Programmstart_Buchungstyp"}
+        </div>
+        <div class="span-3 push-3 standardtext">
+            {function="translate('Preis ab')"}:  {function="translatePricing($value.werbepreis)"} €
+        </div>
+        <div class="span-2">
+            <form method='post' class="form" action='/front/programmdetail/index/city/{$value.cityId}/programId/{$value.id}'><input type='submit' class="submit" value='{function="translate('buchen')"}...'></form>
+        </div>
+    </div>
+    <div class="span-15">&nbsp;</div>
+	{/loop}
+
+</div>
+
+
+<!-- Paginator -->
+{if condition="$paginator"}
+<div class='span-24 block_oben block block_unten'>
+
+    <div style="float: left; width: 50px; margin-top: 10px; margin-left: 40px;">
+        {if condition="$paginator"}
+            {function="translate('Seiten')"} :
+        {else}
+            &nbsp;
+        {/if}
+    </div>
+
+    <!-- Paginator -->
+    <div class="span-6">
+        {if condition="$paginator"}
+            {loop name="paginator"}
+                <div class="kreis">
+                    <a class="{$value.class}" href='/{$value.module}/{$value.controller}/{$value.action}/seite/{$value.seite}/city/{$value.cityId}'>{$value.anzeige}</a>
+                </div>
+            {/loop}
+        {else}
+            &nbsp;
+        {/if}
+    </div>
+
+</div>
+{/if}

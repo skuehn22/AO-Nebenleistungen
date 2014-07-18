@@ -1,0 +1,80 @@
+<script type="text/javascript">
+    $( document ).ready(function(){
+        anzeigeMaxbildKategorie();
+    });
+</script>
+{loop name="value.raten"}
+    <div class="span-24 block_unten block_gray block">
+
+        <div class="span-5 prepend-1">
+            <!-- Bild -->
+            <img src="{function="findKategorieImage($value.kategorieBildId)"}" class="bild basic-modal-kategorie" title="" width='150' id="bild7_{$value.kategorieBildId}">
+
+            <br><br>
+
+        </div>
+
+        <div class="span-12">
+            <span class="teilueberschrift_gruen">{$value.categoryName}</span><p><p>
+
+            {function="translate('Datum der Anreise')"}: {$value.startDate}<br>
+            {function="translate('Anzahl Übernachtungen')"}: {$value.nights}<br>
+            {function="translate('Anzahl Personen')"}: {$value.personen}<br>
+            {function="translate('Anzahl Zimmer')"}: {$value.zimmeranzahl}<p>
+
+            {if condition="$value.personenpreis == 0"}
+                {function="translate('Zimmerpreis pro Übernachtung')"}: {function="translatePricing($value.preis)"} €
+            {else}
+                {function="translate('Preis pro Person und Übernachtung')"}: {function="translatePricing($value.preis)"} €
+            {/if}
+            <p></p>
+            {function="translate('Gesamtpreis')"}: {function="translatePricing($value.gesamtpreis)"} €
+        </div>
+
+        <div class="span-6 last">
+            {if condition="$flag_show_buttons"}
+            <table style="float: right;">
+                <tr>
+                   <td style="padding-right: 30px;">
+                       <!--
+                       {if condition="$value.status == 1"}
+                       <form class="form clearSingleProduct" action="#" method="post">
+                            <input type="submit" class="hotelbuchung_loeschen singleRateButton" value="{function="translate('löschen')"}" id="{$value.id}">
+                        </form>
+                       {elseif condition="$value.status == 6"}
+                            <div class="input_action" style="padding: 10px;">ausgebucht</div>
+                       {else}
+                       <form class="form clearSingleProduct" action="#" method="post">
+                           <input type="submit" class="submit clearSingleProductButton" value="{function="translate('stornieren')"}" id="{$value.id}">
+                       </form>
+                       {/if}
+                       -->
+                       &nbsp;
+                   </td>
+                    <td>
+                        {if condition="$kundenId > 0"}
+                            <td>
+                                {if condition="$aktualisierung > 1"}
+                                <form class="form" action="/front/buchungsuebersicht/index/" method="post">
+                                {else}
+                                <form class="form" action="#" method="post">
+                                {/if}
+                                </form>
+                            </td>
+                            {else}
+                            <td>
+                                {if condition="$aktualisierung > 1"}
+                                <form class="form" action="/front/personaldata/index/" method="post">
+                                {else}
+                                <form class="form" action="#" method="post">
+                                {/if}
+                                </form>
+                            </td>
+                        {/if}
+                    </td>
+                </tr>
+            </table>
+            {/if}
+        </div>
+    </div>
+{/loop}

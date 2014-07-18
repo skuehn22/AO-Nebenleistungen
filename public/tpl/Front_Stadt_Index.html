@@ -1,0 +1,77 @@
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+<script type="text/javascript" src="/tooltipImage/tooltip.image.js"></script>
+
+<div id='ablaufleiste' class="span-24 last">
+    <div class="block block_oben block_unten ueberschrift_gruen" style="padding-left: 40px;">{$breadcrumb}</div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="span-12">
+    <table width="100%">
+        <tr>
+            <td style="height: 100px;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td align="center">
+                <form class="form" method="post" action="/front/hotelsearch/index/city/{$cityId}">
+                    <input type='submit' name='senden' class="submit" value="{function="translate('Übernachtung auswählen')"}" style="width: 400px; height: 40px; font-size: 20px;">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td align="center">
+                <form class="form" method="post" action="/front/programmstart/index/city/{$cityId}">
+                    <input type='submit' name='senden' class="submit" value="{function="translate('Programm auswählen')"}"  style="width: 400px; height: 40px; font-size: 20px;">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+
+        <!-- Überschrift Premiumprogramme -->
+        {if condition="$premiumProgrammeEinerStadt"}
+        <tr>
+            <td style="padding-top: 100px; padding-bottom: 20px;">
+                <span class="ueberschrift_gruen">{function="translate('empfohlene Programme')"}</span>
+            </td>
+        </tr>
+        {/if}
+
+        <!-- Premiumprogramme -->
+        {loop="premiumProgrammeEinerStadt"}
+        <tr>
+            <td>
+                <a href="/front/programmdetail/index/city/{$cityId}/programId/{$value.id}" class="none">
+                <div class='block_oben block_unten block' style="padding-left: 40px; float: left;">
+                    <span class="ueberschrift">{$value.progname}</span><br>
+                    <div class="span-4">{function="anzeigenBilder($value.id,1,150,1,0)"}</div>
+
+                    {$value.txt}
+                </div>
+                <div>&nbsp;</div>
+                </a>
+            </td>
+        </tr>
+        {/loop}
+    </table>
+</div>
+
+<div class="span-12 last">
+    <div class="ueberschrift block_oben block block_unten" style="padding-left: 10px;">
+        {$cityname}
+    </div>
+    <div class="block_unten block_links_rechts" style="padding: 10px; min-height: 200px;">
+        <div style="width: 440; float: left; padding: 5px 0px 0px 5px; margin: 0px 5px 20px 0px;" class="bildrahmen">
+            {function="anzeigenBilder($cityId,10,430, 1)"}
+        </div>
+            {if condition="$citybeschreibung"}
+                {$citybeschreibung}
+            {/if}
+    </div>
+</div>

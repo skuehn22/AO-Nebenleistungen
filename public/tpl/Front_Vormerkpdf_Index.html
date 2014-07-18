@@ -1,0 +1,223 @@
+<style type="text/css">
+<!--
+body{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 8px;
+}
+
+table{
+  background-color: white;
+}
+
+td{
+ font-size: 14px;
+}
+
+.ueberschrift{
+  font-size: 22px;
+  font-weight: bolder;
+  color: #17469e;
+}
+
+.teilueberschrift{
+  font-size: 18px;
+  font-weight: bold;
+  color: #17469e;
+}
+
+.halbAbstand{
+    height: 2mm;
+}
+
+.vollAbstand{
+    height: 10mm;
+}
+-->
+</style>
+<page backtop="40mm" backbottom="10mm" backleft="15mm" backright="15mm">
+    <page_header>
+        <table border="0">
+            <tr>
+                <td style="width: 100mm;">&nbsp;</td>
+                <td style="width: 130mm;"><img src="../pdf/LogoNameMini.jpg"></td>
+            </tr>
+        </table>
+    </page_header>
+
+    <table border="0" style="width: 100%;">
+        <col style="width: 80mm">
+        <col style="width: 20mm">
+        <col style="width: 80mm">
+        <tr><td colspan="3" class="vollAbstand">&nbsp;</td></tr>
+        <tr>
+            <td>{$adresse.company}</td>
+            <td>&nbsp;</td>
+            <td align="right">{function="translate('Auswahl erstellt am:')"} {function="formatiereDatumSprache($detail.erstelltAm)"}</td>
+        </tr>
+        <tr>
+            <td colspan="3">{$adresse.name}</td>
+        </tr>
+        <tr>
+            <td colspan="3">{$adresse.street}<br /><br /></td>
+        </tr>
+        <tr>
+            <td colspan="3">{$adresse.ort}</td>
+        </tr>
+        <tr><td colspan="3" class="vollAbstand">&nbsp;</td></tr>
+        <tr><td colspan="3" align="center" class="ueberschrift vollAbstand">{function="translate('Ihre Vormerkung Nr.')"}{$detail.registrierungsNummer}</td></tr>
+
+        {if condition="$programme"}
+            <tr><td colspan="3" align="left" class="teilueberschrift halbAbstand">{function="translate('vorgemerkte Programme')"}: <br><br></td></tr>
+            {loop="$programme"}
+                <tr>
+                    <td colspan="3">
+                            {if condition="$value.komplettesDatum"}
+                                {$value.komplettesDatum}
+                            {/if}
+                            {if condition="$value.zeit"}
+                                {if condition="$value.zeit != ' '"}
+                                    ,&nbsp;{$value.zeit} {function="translate('Uhr')"}
+                                {/if}
+                            {/if}
+                    </td>
+                </tr>
+                <tr><td colspan="3"><b>{$value.programmname}</b></td></tr>
+                <tr><td colspan="3">{$value.preisvariante}</td></tr>
+                {if condition="$value.programmSprache"}
+                    <tr><td colspan="3">{function="translate('gewählte Programmsprache')"}: {$value.programmSprache}</td></tr>
+                {/if}
+                <tr><td colspan="3">{function="translate('Einzelpreis')"}:  {function="translatePricing($value.programmpreis)"} €</td></tr>
+                <tr><td colspan="3">{function="translate('Anzahl gewählter Programme')"}: {$value.anzahl}</td></tr>
+                <tr><td colspan="3">{function="translate('Gesamtpreis')"}: {function="translatePricing($value.summeProgrammPreis)"} €</td></tr>
+
+                {if condition="$value.stornofristen"}
+                    <tr><td colspan="3">&nbsp;</td></tr>
+                    <tr><td colspan="3">{function="translate('Stornobedingungen')"}:</td></tr>
+
+                    {loop="$value.stornofristen"}
+                        {if condition="$value2.tage == 999"}
+                            <tr><td colspan="3">{function="translate('Bei einer Buchung ist keine Stornierung möglich')"}.</td></tr>
+                        {else}
+                            <tr><td colspan="3">{$counter + 1}. {function="translate('Stornofrist: weniger als')"}: {$value2.tage} {function="translate('Tag(e)')"} {$value2.prozente}% {function="translate('Stornierungskosten')"}</td></tr>
+                        {/if}
+                    {/loop}
+                {/if}
+
+                {if condition="$value.vertragspartner"}
+                    <tr><td colspan="3">&nbsp;</td></tr>
+                    <tr><td colspan="3">{function="translate('Vertragspartner für diese Leistung ist:')"}</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            {$value.vertragspartner.company}, {$value.vertragspartner.street}, {$value.vertragspartner.zip} {$value.vertragspartner.city} <br>
+                            {$value.vertragspartner.country}
+                        </td>
+                    </tr>
+                {/if}
+                <tr><td colspan="3">&nbsp;</td></tr>
+            {/loop}
+        {/if}
+
+        {if condition="$preisBuchungsPauschalen"}
+            <tr><td colspan="3">{function="translate('Buchungspauschale')"}: {function="translatePricing($preisBuchungsPauschalen)"} €</td></tr>
+            <tr><td colspan="3">&nbsp;</td></tr>
+        {/if}
+
+        {if condition="$hotelbuchungen"}
+            <tr><td colspan="3" align="left" class="teilueberschrift halbAbstand">{function="translate('vorgemerkte Übernachtungen')"}: <br><br></td></tr>
+            {loop="$hotelbuchungen"}
+                <tr><td colspan="3">{function="translate('Anreisedatum')"}: {$value.komplettesAnreiseDatum}</td></tr>
+                <tr><td colspan="3"><b>{function="translate($value.stadt)"}, {$value.hotelName}</b></td></tr>
+                <tr><td colspan="3">{function="translate('Zimmer')"}: {$value.kategorieName}</td></tr>
+                <tr><td colspan="3">{function="translate('Übernachtungen')"}: {$value.uebernachtungen}</td></tr>
+                <tr><td colspan="3">{function="translate('Anzahl Zimmer')"}: {$value.anzahl}</td></tr>
+                <tr><td colspan="3">{function="translate('Zimmerpreis')"}:  {function="translatePricing($value.roomPrice)"} €</td></tr>
+                <tr><td colspan="3">{function="translate('Gesamtpreis Zimmer')"}: {function="translatePricing($value.summeZimmerPreis)"} €</td></tr>
+                <tr><td colspan="3">&nbsp;</td></tr>
+            {/loop}
+        {/if}
+
+        {if condition="$hotelprodukte"}
+            <tr><td colspan="3" align="left" class="teilueberschrift halbAbstand">{function="translate('vorgemerkte Hotelprodukte')"}: <br><br></td></tr>
+            {loop="$hotelprodukte"}
+                <tr><td colspan="3"><b>{function="translate($value.stadt)"}, {$value.property_name}</b></td></tr>
+                <tr><td colspan="3">{function="translate('Produkt Bezeichnung')"}: {$value.product_name}</td></tr>
+                <tr><td colspan="3">{function="translate('Anzahl Produkte')"}: {$value.anzahl}</td></tr>
+                <tr><td colspan="3">{function="translate('Preis')"}:  {function="translatePricing($value.price)"} €</td></tr>
+                <tr><td colspan="3">
+                    {function="translate('Verrechnungsvariante')"}:
+
+                    {if condition="$value.typ == 1"}
+                        {function="translate('pro Person')"}
+                    {elseif condition="$value.typ == 2"}
+                        {function="translate('pro Zimmer')"}
+                    {elseif condition="$value.typ == 3"}
+                        {function="translate('pro Person und Nacht')"}
+                    {elseif condition="$value.typ == 4"}
+                        {function="translate('nach Anzahl')"}
+                    {elseif condition="$value.typ == 5"}
+                        {function="translate('pro Anzahl und Nacht')"}
+                    {/if}
+                </td></tr>
+                <tr><td colspan="3">{function="translate('Gesamtpreis Produkt')"}: {function="translatePricing($value.summeProduktPreis)"} €</td></tr>
+                <tr><td colspan="3">&nbsp;</td></tr>
+            {/loop}
+        {/if}
+
+        {if condition="$gruppenRabatt"}
+
+            {if condition="$gesamtRabattWarenkorb"}
+                <tr><td colspan="3" align="left" class="teilueberschrift halbAbstand">{function="translate('gewährte Freiplätze')"} <br></td></tr>
+            {/if}
+
+            {loop name="$gruppenRabatt"}
+            {if condition="$value.freiplaetze > 0"}
+                <tr>
+                    <td colspan="3" align="left">
+                        {if condition="$value.freiplaetze > 1"}
+                            {$value.freiplaetze} {function="translate('Freiplätze im')"}
+                        {else}
+                            {$value.freiplaetze} {function="translate('Freiplatz im')"}
+                        {/if}
+
+                        {$value.hotelName}:
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        {$value.freiplaetze} {function="translate('Person(en) im')"} {$value.categorieName}
+                        {function="translate('am')"} {function="formatiereDatumIso($value.datum)"}, {function="translate('Rabatt')"} {function="translatePricing($value.rabatt)"} €
+                    </td>
+                </tr>
+            {/if}
+            {/loop}
+        {/if}
+
+        <tr><td colspan="3" class="halbAbstand">&nbsp;</td></tr>
+        <tr><td colspan="3" class="teilueberschrift">{function="translate('Preis aller vorgemerkten Artikel')"}</td></tr>
+
+        {if condition="$gesamtRabattWarenkorb > 0"}
+            <tr><td colspan="3">{function="translate('ursprünglicher Preis')"}: {function="translatePricing($listenpreis)"} €</td></tr>
+        {/if}
+
+        {if condition="$gesamtRabattWarenkorb > 0"}
+            <tr><td colspan="3">{function="translate('Rabatt')"}: {function="translatePricing($gesamtRabattWarenkorb)"} €</td></tr>
+        {/if}
+
+        <tr><td colspan="3">{function="translate('Endpreis')"}: {function="translatePricing($endpreis)"} €</td></tr>
+
+        {if condition="$textBettensteuer"}
+            <tr><td colspan="3" class="halbAbstand">&nbsp;</td></tr>
+            {loop="$textBettensteuer"}
+                <tr><td colspan="3" class="teilueberschrift">{$value.title}</td></tr>
+                <tr><td colspan="3">{$value.kurztext}</td></tr>
+                <tr><td colspan="3">&nbsp;</td></tr>
+            {/loop}
+        {/if}
+
+        {if condition="$zusatz"}
+            <tr><td colspan="3" class="halbAbstand">&nbsp;</td></tr>
+            <tr><td colspan="3">{$zusatz.vormerkung}</td></tr>
+        {/if}
+
+    </table>
+</page>

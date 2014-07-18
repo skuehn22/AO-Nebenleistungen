@@ -1,0 +1,23 @@
+<script type="text/html" id="template">
+    <div data-content="author"></div>
+    <div data-content="date"></div>
+    <div data-content="post"></div>
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $.ajax({
+            method: 'post',
+            url: '/front/reisekorb/read/',
+            success: function(response){
+                var post = JSON.parse(response);
+                $("#reisekorb").loadTemplate($("#template"),post);
+            }
+        });
+
+
+    });
+</script>
+
+<div id="reisekorb"></div>
