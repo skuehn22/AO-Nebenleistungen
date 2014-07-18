@@ -1,0 +1,36 @@
+.mole{
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+    background-image: url("/buttons/pencil.png");
+    background-repeat: no-repeat;
+}
+
+.blockDescription{
+    background-color: #F3F5F7;
+    font-family: arial;
+    font-size: 12;
+    margin-top: 10px;
+    padding:  5px;
+    z-index: 10;
+}
+
+.blockDescriptionHeadline{
+    color: #15428B;
+    font-family: arial;
+    font-size: 16;
+}
+
+.x-form-focus, textarea.x-form-focus{
+    border: 2px solid;
+    border-color: blue;
+}
+
+.readOnly{
+    background: #E6ECF5;
+    border: 1px #99BBE8 solid;
+}
+
+#main{
+    min-height: 600px;
+}

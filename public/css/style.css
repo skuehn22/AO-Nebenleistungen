@@ -1,0 +1,1186 @@
+/* ---------------------------------------------------- */
+/*		Grundeinstellung Text
+/* ---------------------------------------------------- */
+body{
+    line-height: 16.5px;
+    font-size: 12px;
+    color: #52504D;
+    font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+/* ---------------------------------------------------- */
+/*
+/*		definierte Bloecke
+/* ---------------------------------------------------- */
+
+
+.block_oben{
+  border-top: solid 1px #e26902;
+}
+
+.block_unten{
+  border-bottom: solid 1px #e26902;
+}
+
+.block{
+    padding-top: 10px;
+    padding-bottom: 4px;
+    border-left: solid 1px #e26902;
+    border-right: solid 1px #e26902;
+    background-color: #F3F3F3;
+    line-height: 16.5px;
+    font-size: 12px;
+    color: #52504D;
+    font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.block_leer{
+    line-height: 16.5px;
+    font-size: 11px;
+    color: #52504D;
+    font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.block_links_rechts{
+  border-left: solid 1px #e26902;
+  border-right: solid 1px #e26902;
+}
+
+.block_gray{
+  background-color: #fbfbfb;
+}
+
+.block_leer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 16.5px;
+    font-size: 11px;
+    color: #52504D;
+    font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+    .block_leer h1{
+        line-height: 26px;
+        font-size: 24px;
+    }
+
+/* ---------------------------------------------------- */
+/*		Basic Elements
+/* ---------------------------------------------------- */
+
+html {
+	font: 11px Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #52504d;
+    background-image: url(/buttons/background_oben.jpg);
+    background-repeat: repeat-x;
+}
+
+#bereich_oben{
+    margin-bottom: 10px;
+    margin: 0 auto;
+    background-image: url(/buttons/background_oben.jpg);
+    background-repeat: repeat-x;
+    width: 960px;
+}
+
+hr {
+	background: #fff;
+	color: #fff;
+	border: 0;
+	border-bottom: 1px solid #e3e1d9;
+	height: 2px;
+}
+	/* Webkit Fix */
+	@media screen and (-webkit-min-device-pixel-ratio:0){hr {height: 1px;}}
+
+dl { margin: 0 0 10px; }
+	
+	dt {
+		font-weight: bold;
+		margin-right: 3px;
+	}
+	
+		dd { margin: 0 0 1px; }
+
+/* ---------------------------------------------------- */
+/*		Generic Classes
+/* ---------------------------------------------------- */
+
+.align-center { margin: 0 auto; text-align: center; }
+
+.align-left {
+    float: left;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.align-right {
+    float: right;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* ---------------------------------------------------- */
+/*		Misc Classes
+/* ---------------------------------------------------- */
+
+hr.full {
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+ul.arrow { list-style: none; }
+
+	ul.arrow li { margin: 0; }
+
+		ul.arrow li a {
+			background: url(/img/categories-arrow.png) no-repeat 0 5px;
+			display: block;
+			padding: 0 0 0 12px;
+		}
+
+dl.horizontal dd {
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+	dd .separator { font-weight: bold; }
+
+/* ---------------------------------------------------- */
+/*		Startseite
+/* ---------------------------------------------------- */
+
+.slogan{;
+  font-size: 17px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  margin-left: 10px;
+  font-weight: 700;
+  padding: 20px 10px 0px 10px;
+}
+
+    .slogan .sloganWort{
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      color: #52504d;
+    }
+
+.foto{
+    width: 242px;
+    padding: 5px;
+    background-color: #ffffff;
+    float: left;
+    z-index: 1;
+    text-decoration: none;
+}
+
+    .foto a{
+      text-decoration: none;
+    }
+
+  .foto div{
+     width: 242px;
+     z-index: 2;
+  }
+
+    .foto div p{
+      z-index: 4;
+      display: none;
+      width: 200px;
+      background-color: #ffffff;
+      margin-left: 15px;
+      padding: 3px;
+      opacity: 0.8;
+    }
+
+.fotoStadt{
+   color: #76B729;
+   font-size: 14px;
+   font-weight: bolder;
+   padding-top: 5px;
+   text-decoration: none;
+}
+
+.fotoText{
+    text-decoration: none;
+    color: #1D3A8F;
+    font-size: 14px;
+}
+
+/* ---------------------------------------------------- */
+/*		Formular
+/* ---------------------------------------------------- */
+
+.input {
+	background: #f2f2f2 url(/img/input-bg.png) repeat-x;
+	border: 1px solid #e0d9d9;
+	color: #b2a8a8;
+	font: 12px Arial,Helvetica,sans-serif;
+	height: 18px;
+}
+
+/** Eingabefelder Kunde **/
+.input_action {
+	background: #f2f2f2 url(/img/input-bg.png) repeat-x;
+	border: 1px solid #76B729;
+	color: black;
+	font: 12px Arial,Helvetica,sans-serif;
+	height: 18px;
+}
+
+.textarea{
+  	background: #f2f2f2 url(/img/input-bg.png) repeat-x;
+	border: 1px solid #e0d9d9;
+	color: #b2a8a8;
+	font: 12px Arial,Helvetica,sans-serif;
+}
+
+.input:focus {
+    color: #77746E;
+    border: 1px solid #c7c1c1;
+}
+
+.checkbox_gross{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -webkit-transform: scale(1.2,1.2);
+  -moz-transform: scale(1.2,1.2);
+  -o-transform: scale(1.2,1.2);
+}
+
+
+
+/* --------------------------------------
+*  Button
+---------------------------------------*/
+
+.button {
+    background: #f3f3f3 url(../img/button-bg.png) repeat-x;
+    border: 1px solid #e1dddd;
+    color: #797474;
+    font-weight: bold;
+    height: 10px;
+    padding: 7px 15px;
+    text-decoration: none !important;
+}
+
+.button_link{
+    background: #b5b5b5;
+    border: 4px solid #0066b3;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-weight: bold;
+    height: 26px;
+    padding: 0px 8px;
+    margin: 0px 0px 0px 0px;
+    vertical-align:central;
+    text-decoration: none;
+}
+
+    .button_link:hover{
+      color: #6a6a6a;
+    }
+
+    .submit {
+    	background: #b5b5b5;
+    	border: 4px solid #0066b3;
+    	color: #fff;
+    	cursor: pointer;
+    	font-size: 13px;
+        font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    	font-weight: bold;
+    	height: 26px;
+		padding: 0px 8px;
+        margin: 0px 0px 0px 0px;
+		vertical-align:central;
+        text-decoration: none;
+    }
+
+      .submit:hover{
+        color: #6a6a6a;
+      }
+
+    .submit_warnung {
+    	background: #b5b5b5;
+    	border: 4px solid #E2000B;
+    	color: #fff;
+    	font-size: 13px;
+        font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    	font-weight: bold;
+    	height: 26px;
+		padding: 0px 8px;
+        margin: 0px;
+		vertical-align:central;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+        .submit_warnung:hover{
+          color: #6a6a6a;
+        }
+
+
+    .submit_navigation {
+    	background: #0066b3;
+    	border: 0;
+    	color: #fff;
+        font-size: 13px;
+        font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    	font-weight: bold;
+    	height: 26px;
+		padding: 0px 8px;
+        margin: 0px;
+		vertical-align:central;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+      .submit_navigation:hover{
+        color: #fff;
+      }
+
+
+    .submit_navigation_mini {
+    	background-color: #0066b3;
+        color: #ffffff;
+        font-size: 13px;
+        border: 0px;
+        font-size: 13px;
+        font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    	font-weight: bold;
+    	height: 26px;
+		padding: 0px 8px;
+        margin: 0px;
+		vertical-align:central;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .submit_navigation_mini:hover{
+      color: #fff;
+    }
+
+    .submit_rot {
+    	background: #005caa;
+    	border: 0px solid #005caa;
+    	color: #fff;
+        font-size: 13px;
+        font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    	font-weight: bold;
+    	height: 26px;
+		padding: 0px 8px;
+        margin: 0px;
+		vertical-align:central;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .submit_weiter {
+    	background: #0066b3;
+    	border: 4px solid #0066b3;
+    	color: #fff;
+    	font-size: 13px;
+        font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    	font-weight: bold;
+    	height: 26px;
+		padding: 0px 8px;
+        margin: 0px 0px 0px 0px;
+		vertical-align:central;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+      a.submit_weiter{
+          color: #ffffff;
+      }
+
+      a.submit_weiter:hover{
+        color: #fff;
+      }
+
+      a.submit_weiter:visited{
+        color: #fff;
+      }
+
+    .submit2{
+          background: none repeat scroll 0 0 #0066b3;
+          border: 0 none;
+          color: #FFFFFF;
+          cursor: pointer;
+          font-size: 13px;
+          font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+          height: 22px;
+          padding: 0px 8px 2px;
+    }
+
+        .submit2:hover{
+             color: #fff;
+        }
+
+    .submit_passiv {
+    	background: #b5b5b5;
+    	color: #fff;
+    	cursor: pointer;
+    	font-size: 13px;
+    	font-weight: bold;
+        font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    	height: 26px;
+		padding: 0px 8px;
+        margin: 0px 0px 0px 0px;
+		vertical-align:central;
+        text-decoration: none;
+    }
+
+    .submit_hinweis{
+        background: #E2000B;
+    	border: 0;
+    	color: #FFFFFF;
+    	cursor: pointer;
+    	font: 11px Arial,Helvetica,sans-serif;
+    	font-weight: bold;
+    	height: 22px;
+    	margin-left: 6px;
+    	padding: 0px 8px 2px;
+    }
+
+        .submit_hinweis:hover{
+             color: #fff;
+        }
+
+    .input_text{
+        background: url("/img/textarea-bg.png") repeat-x scroll 0 0 #F9F9F9;
+    	height: 195px;
+    	margin-bottom: -5px;
+    	padding: 5px 6px;
+    	border: 1px solid #D9D9D9;
+    	color: #77746E;
+    	width: 285px;
+    	font: 12px/1.7 Arial,Helvetica,sans-serif;
+    }
+
+    /**
+    * Formular als Dialogfenster
+    **/
+
+    .infoDialog{
+      position: absolute;
+      top: 700px;
+      left: 800px;
+      width: 200px;
+      height: 100px;
+      z-index: 1000;
+      border: solid 3px #0066b3;
+      background-color: #FBFBFB;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .infoWarnung{
+      position: absolute;
+      top: 700px;
+      left: 800px;
+      width: 200px;
+      height: 100px;
+      z-index: 1000;
+      border: solid 3px #E30613;
+      background-color: #FBFBFB;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+        #mask {
+          position:absolute;
+          top:0;
+          left:0;
+          z-index:999;
+          background-color:#000;
+          display:none
+        }
+
+/* ---------------------------------------------------- */
+/*		Tabelle
+/* ---------------------------------------------------- */
+
+td{
+  padding: 3px;
+  line-height: 16.5px;
+    font-size: 12px;
+    color: #52504D;
+    font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+label{
+  padding: 3px;
+}
+
+.gitter td{
+    border: solid 1px black;
+}
+
+.blank{
+  padding: 0px;
+  margin: 0px
+}
+
+/* ---------------------------------------------------- */
+/*		Claim / Slogan
+/* ---------------------------------------------------- */
+
+#claim{
+    color: #17469e;
+    line-height: 22px;
+    font-size: 20px;
+}
+
+/* ---------------------------------------------------- */
+/*		Header
+/* ---------------------------------------------------- */
+
+#header {
+    padding-top: 10px;
+/*	border-top: 1px solid #fff; */
+	overflow: hidden;
+/*    background-color: #FBFBFB; */
+/*    border-bottom: 1px solid #e3e1d9; */
+    padding-bottom: 5px;
+}
+
+    .logo_mini{
+      margin-top: 0px;
+    }
+
+#breadcrumb{
+  margin-top: 6px;
+}
+
+#language{
+    margin-top: 5px;
+}
+
+/* ---------------------------------------------------- */
+/*		Passwort
+/* ---------------------------------------------------- */
+
+#passwort{
+    padding-top: 5px;
+}
+
+/* ---------------------------------------------------- */
+/*		Search
+/* ---------------------------------------------------- */
+
+	#search {
+		float: right;
+		margin: 7px 0 0 0;
+	}
+
+		#search .input {
+			background: #f2f2f2 url(../img/input-bg.png) repeat-x;
+			border: 1px solid #e0d9d9;
+			color: #b2a8a8;
+			font: 11px/1.7 Arial,Helvetica,sans-serif;
+			height: 15px;
+			padding: 5px 8px 5px;
+			width: 280px;
+		}
+
+			#search .input:focus {
+				color: #77746E;
+				border: 1px solid #c7c1c1;
+			}
+
+		#search .submit {
+			background: #0066b3;
+			border: 0;
+			color: #fff;
+			cursor: pointer;
+			font: 12px/1.7 Arial,Helvetica,sans-serif;
+			font-weight: bold;
+			height: 22px;
+			margin-left: 6px;
+			padding: 0 8px 2px;
+		}
+
+#spacer {
+
+	height: 120px;
+	margin-bottom: -105px;
+}
+
+/* ---------------------------------------------------- */
+/*		Stadtbild
+/* ---------------------------------------------------- */
+
+#cityImage{
+  padding: 5px;
+/*  border: solid #D8D8D8 1px; */
+  margin: 5px 0px 10px 0px;
+  width: 940px;
+}
+
+/* ---------------------------------------------------- */
+/*		Navigation
+/* ---------------------------------------------------- */
+
+#nav {
+/*    background-color: #fbfbfb; */
+    margin-bottom: 20px;
+/*	background: url(/img/nav-bg.png) repeat-x; */
+/*	border-bottom: 1px solid #d8d8d8; */
+	height: 25px;
+	margin-top:0px;
+	position: relative;
+	z-index: 999;
+}
+
+	#nav ul {
+		float: left;
+		list-style: none;
+		margin: 0 0 0 0;
+		position: relative;
+		z-index: 999;
+	}
+
+		#nav li {
+			float: left;
+			margin: 0 5px 0 0;
+			position: relative;
+		}
+
+			#nav li.active { margin: 0 15px 0 10px; }
+
+			#nav li:first-child { margin-left: 0; }
+
+			#nav li a {
+			    font-size: 13px;
+                font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+				color: #77746e;
+				display: block;
+				font-weight: bold;
+				height: 20px;
+				padding: 6px 5px 4px;
+				text-decoration: none;
+			}
+
+				#nav li.active a, #nav li a:hover, #nav li.hover a {
+					background: #0066b3;
+					color: #fff;
+                    font-weight: bold;
+					display: block;
+				}
+
+			/** Dropdowns **/
+
+			#nav ul li:hover > ul { display: block; }
+
+			#nav ul ul {
+				background-color: #0066b3;
+				display: none;
+				left: 0;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				top: 30px;
+				width: 175px;
+				z-index: 999;
+			}
+
+				#nav ul ul li {
+					display: block;
+					float: none;
+					height: auto;
+					margin: 0;
+					padding: 0;
+				}
+
+					#nav ul ul li a, #nav li.active ul ul li a {
+                        background-color: #0066b3;
+                        background-image: url(/img/nav-arrow.png);
+                        background-repeat: no-repeat;
+                        background-position: 12px 12px;
+						color: #fff;
+						display: block;
+						font-size: 13px;
+						font-weight: normal;
+						height: auto;
+						line-height: 20px;
+						min-height: 20px;
+						padding: 5px 5px 5px 26px;
+					}
+
+						#nav ul ul li a:hover, #nav li.active ul ul li a:hover {
+                            background-color: #d5ddcc;
+                            background-image: url(/img/nav-arrow-active.png);
+                            background-repeat: no-repeat;
+                            background-position: 12px 12px;
+							color: #0066b3 !important;
+							font-weight: bold !important;
+						}
+
+				/* Submenu */
+
+				#nav ul ul ul {
+					left: 155px;
+					top: 5px;
+				}
+
+/* ---------------------------------------------------- */
+/* markierter Schritt im Ablauf / Paginator / Kreisbutton
+/* ---------------------------------------------------- */
+
+.aktiveStep{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #0066b3;
+  font-size: 12px;
+}
+
+.passivStep{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #52504d;
+  font-size: 12px;
+}
+
+     .linkKategorien{
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+     }
+
+.zurueckStep{
+  color: #4e4d4a;
+}
+
+.vorStep{
+  color: #52504d;
+}
+
+  .kreis{
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border: solid 1px #4e4d4a;
+    margin: 5px;
+  }
+
+  .kreis a{
+    position: relative;
+    top: 6px;
+    left: 11px;
+    text-decoration: none;
+    font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+/* ---------------------------------------------------- */
+/*		Footer - Bottom
+/* ---------------------------------------------------- */
+#unten_links{
+    padding-top: 10px;
+    background: #FBFBFB url(/img/footer-bottom-bg.png) repeat-x;
+    background-repeat: repeat-x;
+    height: 30px;
+    float: left;
+    width: 70%;
+}
+
+	#unten_links ul {
+		list-style: none;
+		margin: 0;
+	}
+
+		#unten_links li {
+            color: #fff;
+			float: left;
+			margin: 0;
+		}
+
+			#unten_links li a {
+			    color: #fff;
+				text-decoration: none;
+			}
+
+				#unten_links li a:hover {
+				    text-decoration: underline;
+                }
+
+			    #unten_links li .separator {
+			        margin: 0 4px;
+                }
+
+#unten_rechts{
+    background: #FBFBFB url(/img/footer-bottom-bg.png) repeat-x;
+    background-repeat: repeat-x;
+    height: 40px;
+    float: left;
+    width: 30%;
+}
+
+/* ---------------------------------------------------- */
+/*		Categories
+/* ---------------------------------------------------- */
+
+
+	#categories {
+		list-style: none;
+		margin: 0 0 0 4px;
+	}
+
+		#categories li { margin: 0 0 10px; }
+
+			#categories li a {
+				background: url(../img/categories-arrow.png) no-repeat 0 5px;
+				display: block;
+				padding: 0 0 0 12px;
+				text-decoration: none;
+			}
+
+				#categories li a:hover {
+					font-weight: bold;
+					text-decoration: underline;
+				}
+
+	#news { list-style: none; }
+
+		#news li { margin: 0; }
+
+			#news li .user {
+				font-weight: bold;
+				text-decoration: none;
+			}
+
+				#news li .user:hover { text-decoration: underline; }
+
+				#news li .tweet { margin: 0 0 10px; }
+
+/* ---------------------------------------------------- */
+/*		Grundaufbau Subtemplate
+/* ---------------------------------------------------- */
+
+.standardtext{
+	font: 11px Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #52504d;
+}
+
+.standardtext_buchstabe{
+  font-family: "Clicker Script","Helvetica Neue";
+  font-size: 17px;
+  font-weight: bolder;
+  color: red;
+}
+
+.standardtextfett{
+    font: 13px Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #52504d;
+    font-weight: bolder;
+}
+
+.standardgruen{
+    font: 11px Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #0066b3;
+}
+
+.standardrot{
+    font: 11px Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #E30613;
+}
+
+.offers{
+  margin-bottom: 30px;
+  min-height: 400px;
+}
+
+.inhalt{
+  border-left: solid 1px #d8d8d8;
+  border-right: solid 1px #d8d8d8;
+}
+
+.info{
+  background-color: #fbfbfb;
+  padding: 10px;
+  border: solid 1px #d8d8d8;
+  min-height: 400px;
+}
+
+/* ---------------------------------------------------- */
+/*		Überschriften
+/* ---------------------------------------------------- */
+h3{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #4e4d4a;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+h5{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #4e4d4a;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 13px;
+}
+
+.ueberschrift{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #4e4d4a;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.ueberschrift_MH{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 18px;
+}
+.ueberschrift_gruen{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #0066b3;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.ueberschrift_rot{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #e30613;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.tabellenueberschrift_gruen{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #0066b3;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.teilueberschrift_gruen{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #0066b3;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.teilueberschrift_rot{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #E2000B;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.teilueberschrift_passiv{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #CBFA8E;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.teilueberschrift_grau{
+  font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: #4e4d4a;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.teilueberschrift{
+    font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #4e4d4a;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 21px;
+}
+
+/*-----------------------------------*/
+/* Link
+/*-----------------------------------*/
+a {
+	color: #0066b3;
+}
+
+	a:hover {
+	  color: #5e5c5c;
+    }
+
+    a.pdf{
+      line-height: 16.5px;
+      font-size: 12px;
+      font-family: arial,"Helvetica Neue",Helvetica,sans-serif;
+    }
+
+    /* Link ohne Gestaltung */
+    a.none{
+      text-decoration: none;
+    }
+
+/*-----------------------------------*/
+/* Bilder
+/*-----------------------------------*/
+.bild{
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+  .bildrahmen{
+    border: 1px solid black;
+  }
+
+.special_gray{
+  background-color: #ebebeb;
+  border: solid 1px #d8d8d8;
+  padding: 10px;
+}
+
+/* ---------------------------------------------------- */
+/*		Facebook Container
+/* ---------------------------------------------------- */
+
+#fb-text{
+    float: right;
+    position: absolute;
+    top: 45px;
+    left: 1055px;
+    margin-top:10px;
+	margin-right:10px;
+	float:right;
+	background: url(/img/fb-text.png) no-repeat;
+	width:96px;
+	height:34px;
+}
+
+/* ---------------------------------------------------- */
+/*		Slider
+/* ---------------------------------------------------- */
+
+#slider {
+	margin: 0 0 0px;
+	position: relative;
+	z-index: 1;
+}
+
+	#slider ul {
+		background: #fff;
+		border: 1px solid #d8d8d8;
+		list-style: none;
+	}
+
+		#slider li {
+			height: 330px;
+			margin: 0;
+			padding: 4px;
+			position: relative;
+		}
+
+			#slider li .slide-info {
+				background: url('../php/rgba.php/rgba(28, 28, 27, 0.6)') repeat; /* For IE */
+				background: rgba(28,28,27,0.6);
+				bottom: 19px;
+				color: #fff;
+				right: 19px;
+				padding: 15px 10px;
+				position: absolute;
+				width: 265px;
+			}
+
+				#slider li .slide-info h2 {
+					letter-spacing: -1px;
+					line-height: 29px;
+					margin: 0;
+				}
+
+					#slider li .slide-info h2 a {
+						color: #fff;
+						text-decoration: none;
+					}
+
+						#slider li .slide-info h2 a:hover { text-decoration: underline; }
+
+
+				#slider li .slide-info .slider-button {
+					background: url('../php/rgba.php/rgba(144, 195, 116, 0.8)') repeat; /* For IE */
+					background: rgba(144, 195, 116, 0.8);
+					color: #fff;
+					float: right;
+					font-weight: bold;
+					height: 10px;
+					padding: 5px 10px 10px;
+					text-decoration: none;
+				}
+
+					#slider li .slide-info .slider-button:hover { text-decoration: underline; }
+
+	#sliderNav {
+		bottom: 50px;
+		position:absolute;
+		left: 20px;
+		z-index:99;
+	}
+
+		#sliderNav a {
+			background: url('../php/rgba.php/rgba(28, 28, 27, 0.6)') repeat; /* For IE */
+			background: rgba(28,28,27,0.6);
+			color: #fff;
+			display: block;
+			float: left;
+			font-size: 12px;
+			font-weight: bold;
+			margin-left: 6px;
+			padding: 3px 8px 3px 9px;
+			text-decoration: none;
+		}
+
+			#sliderNav a.activeSlide {
+				background: url('../php/rgba.php/rgba(144, 195, 116, 0.8)') repeat; /* For IE */
+				background: rgba(144, 195, 116,0.8);
+			}
+
+
+/* ---------------------------------------------------- */
+/*		Lightbox
+/* ---------------------------------------------------- */
+#lightboxTabelle{
+  background-color: #e3e3e3;
+}
+
+#lightboxBild{
+  padding: 10px;
+}
+
+#lightboxBildInformation{
+  font-size: 12px;
+  color: #000000;
+  background-color: #e3e3e3;
+  padding: 0px;
+  line-height: 14px;
+  padding-bottom: 6px;
+}
+
+/* ---------------------------------------------------- */
+/* Tooltip Image
+/* ---------------------------------------------------- */
+
+#tooltipImage{
+	position:absolute;
+	border:1px solid #333;
+	background:#f7f5d1;
+	padding:2px 5px;
+	color:#333;
+	display:none;
+}

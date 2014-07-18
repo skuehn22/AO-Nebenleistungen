@@ -1,0 +1,4 @@
+2014-06-02 10:34 # URL Erweiterung fehlt # C:\xampp\htdocs\HOB\library\nook\ToolMeiningerServeranfrage.php # 98
+2014-06-02 11:25 # Im Pimple fehlt: 0 # C:\xampp\htdocs\HOB\application\modules\front\models\MeiningerEintragenVerfuegbarkeit.php # 105
+2014-06-02 11:27 # Im Pimple fehlt: 0 # C:\xampp\htdocs\HOB\application\modules\front\models\MeiningerEintragenVerfuegbarkeit.php # 105
+2014-06-02 11:28 # Im Pimple fehlt: 0 # C:\xampp\htdocs\HOB\application\modules\front\models\MeiningerEintragenVerfuegbarkeit.php # 105

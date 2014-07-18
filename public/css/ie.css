@@ -1,0 +1,4 @@
+/* Misc */
+div { zoom: 1; }
+#trips-viewer .trips-container, #trips-viewer .trips-nav { margin-top: -1px; }
+#comment-form .input_block input { padding: 3px 6px 7px; }

@@ -1,0 +1,119 @@
+#main{
+	border: solid 1px red;
+	width: 960px;
+	min-height: 1000px;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -480px;
+	
+}
+
+/* Header */
+#logo{
+	border: solid 1px #ffd700;
+	height: 60px;
+}
+
+#suche{
+	border: solid 1px #b22222;
+	height: 60px;
+}
+
+#login{
+	border: solid 1px olive;
+	height: 60px;
+}
+
+/* Navigation */
+#navigation{
+	border: solid 1px blue;
+}
+
+
+/* Hauptbereich */
+#infos{
+	border: solid 1px #daa520;
+	min-height: 100px;
+}
+
+#items{
+	border: solid 1px #d8bfd8;
+	min-height: 500px;
+}
+
+#details{
+	border: solid 1px #ff6347;
+	min-height: 500px;
+}
+
+/* Zusatzbereich */
+#additional{
+	border: solid 1px #32cd33;
+	min-height: 100px;
+}
+
+/* Impressumsbereich */
+#bottom{
+	border: solid 1px;
+	border-bottom-color: #d2691e;
+	height: 50px;
+}
+
+/*** Formular ***/
+input.short{
+	width: 100px;
+}
+
+input.long{
+	width: 170px;
+}
+
+/*** Links ***/
+a.activ{
+	font-weight: bolder;
+}
+
+a.pasiv{
+	font-weight: normal;
+}
+
+/*** Steps Warenkorb ***/
+.aktiveStep{
+	font-weight: bolder;
+}
+
+/*** Karteireiter ***/
+.reiter_aktiv{
+	background-color: #ffdead;
+}
+
+.reiter_passiv{
+	background-color: #ffebcd;
+}
+
+/*** Images ***/
+.image_mini{
+	padding: 3px;
+	border: solid 1px red;
+}
+
+/*** Front_Programmdetail_Index ***/
+#programmdetail{
+	background-color: white;
+	padding: 10px;
+}
+
+#programmbezeichnung{
+	background-color: #ffebcd;
+}
+
+.midiBild{
+	margin: 10px;
+	float: left;
+}
+
+#zusatzinformation{
+	background-color: #deb887;
+	min-height: 50px;
+}

@@ -1,0 +1,13 @@
+.test{
+    color: #FF0066; 
+;
+  color: #66FF66;
+}
+
+  .test .haupt{
+    background-color: #FFFF66;
+  }
+
+#main{
+    border: solid 1px red;
+}
