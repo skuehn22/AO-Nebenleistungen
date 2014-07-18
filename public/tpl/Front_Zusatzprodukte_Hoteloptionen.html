@@ -1,0 +1,26 @@
+<tr>
+    <td>
+        <input type="radio" name="verpflegung" id="verpflegung{$value.id}" value="{$value.id}" class="verpflegung"{if condition="$value.verpflegungGewaehlt == 2"} checked {/if}>
+    </td>
+    <td>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="hidden" name="{$value.id}" value="0">
+        <input type="text" disabled id='{$value.id}' value="{$value.personenanzahl}" class="zusatzprodukt validate[custom[integer]] span-2">
+        {function="translate('Personen * Übernachtungen')"}
+    </td>
+    <td>
+        {$value.name}
+    </td>
+    <td>
+        <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}">
+    </td>
+    <td>
+        {include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translatePricing($value.price)"} €
+    </td>
+    <td>
+        <span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €
+    </td>
+    <td>
+        <img src='{function="findProductImage($value.id)"}'>
+    </td>
+</tr>

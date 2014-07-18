@@ -1,0 +1,169 @@
+<script type="text/javascript" src='/tpl/Front_Warenkorb_Personaldata.js'></script>
+<script type='text/javascript'>
+	var doubleEmail = ' {function="translate('E-Mailadresse wird schon verwendet ! Bitte anmelden.')"} ';
+</script>
+
+<div class='span-23 block block_oben block_gray teilueberschrift'>
+    <span id='step1' class='{$aktiveStep1}'>{function="translate('Warenkorb Übersicht')"}</span> |
+    <span id='step2'class='{$aktiveStep2}'>{function="translate('Kundendaten')"}</span> |
+    <span id='step3'class='{$aktiveStep3}'>{function="translate('Buchung oder Vormerken')"}</span>
+</div>
+
+
+<div class="span-23 block block_unten block_gray teilueberschrift">
+    {function="translate('Kundennummer')"}: {$kundenId}
+</div>
+
+<div class="span-23">&nbsp;</div>
+
+<div class='span-23 block block_unten block_oben block_gray'>
+    <div class="span-4"><b><a href='/front/warenkorb/index/'><< {function="translate('Warenkorb')"}</a></b></div>
+    <div class="span-7 teilueberschrift_gruen prepend-2">{function="translate('Bitte notieren Sie unbedingt ihr Passwort !')"}</div>
+</div>
+
+<div class="span-23">&nbsp;</div>
+
+<div class='span-23' style="padding: 10px;">
+
+    {if condition="$doubleMailAdress == 2"}
+        {function="translate('Diese Mailadresse wird bereits verwendet.')"}<br>
+        {function="translate('Bitte melden Sie sich an oder verwenden sie.')"}<br>
+        {function="translate('eine andere Mailadresse.')"}<p>
+    {/if}
+</div>
+
+<div class="span-23 block_oben block" id='personaldata'>
+    <div class="span-12 prepend-2">
+        <form class='formular form' id="formPersonalData" method='post' action='/front/warenkorb/personaldata/'>
+            <table>
+                <tr>
+                    <td class="span-4"><label for="title">{function="translate('Anrede')"}: </label></td>
+                    <td class="span-8">
+                        <select name="title" size="1" class="input span-3">
+                            {loop="titles"}
+                                {if condition="$value.checked == 0"}
+                                    <option value ="{$value.title}"> {$value.title} </option>
+                                {else}
+                                    <option value = "{$value.title}"  selected> {$value.title} </option>
+                                {/if}
+                            {/loop}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="firstname">{function="translate('Vorname')"} *: </label></td>
+                    <td><input type='text' name='firstname' id='firstname' class='validate[required,minSize[2]] input span-5'  value="{$personalData.firstname}"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname">{function="translate('Nachname')"} *: </label></td>
+                    <td><input type='text' name='lastname' id='lastname' class='validate[required,minSize[2]] input span-5' value="{$personalData.lastname}"></td>
+                </tr>
+                <tr>
+                    <td><label for="dateofbirth_year">{function="translate('Geburtsdatum')"} *: </label></td>
+                    <td>
+                        <select name="dateofbirth_day" id='dateofbirth_day' size="1" class='input span-2'>
+                            {loop="dateofbirth_day"}
+                                {if condition="$value.checked > 0"}
+                                    <option value = {$value.day} selected> {$value.day} </option>
+                                {else}
+                                    <option value = {$value.day}> {$value.day} </option>
+                                {/if}
+                            {/loop}
+                        </select>
+
+                        <select name="dateofbirth_month" id='dateofbirth_month' size="1" class='input span-2'>
+                            {loop="dateofbirth_month"}
+                                {if condition="$value.checked > 0"}
+                                    <option value = {$value.month} selected> {$value.month} </option>
+                                {else}
+                                    <option value = {$value.month}> {$value.month} </option>
+                                {/if}
+                            {/loop}
+                        </select>
+
+                        <select name="dateofbirth_year" id='dateofbirth_year' size="1" class='input span-2'>
+                            {loop="dateofbirth_year"}
+                                {if condition="$value.checked > 0"}
+                                    <option value = {$value.year} selected> {$value.year} </option>
+                                {else}
+                                    <option value = {$value.year}> {$value.year} </option>
+                                {/if}
+                            {/loop}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="company">{function="translate('Firma')"} : </label></td>
+                    <td><input type='text' name='company' id='company' class='input span-5' value="{$personalData.company}"></td>
+                </tr>
+                <tr>
+                    <td><label for="country">{function="translate('Land')"} *: </label></td>
+                    <td>
+                        <select name="country" size="1" class='input span-5'>
+                            {loop name="country"}
+                                {if condition="$value.checked > 0"}
+                                    <option value="{$value.id}" selected>{$value.Name}</option>
+                                {else}
+                                    <option value="{$value.id}">{$value.Name}</option>
+                                {/if}
+                            {/loop}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="region">{function="translate('Region')"} : </label></td>
+                    <td><input type='text' name='region' id='region' class='input span-5' value="{$personalData.region}"></td>
+                </tr>
+                <tr>
+                    <td><label for="city">{function="translate('Stadt')"} *: </label></td>
+                    <td><input type='text' name='city' id='city' class='validate[required,minSize[2]] input span-5' value="{$personalData.city}"></td>
+                </tr>
+                <tr>
+                    <td><label for="zip">{function="translate('Postleitzahl')"} *: </label></td>
+                    <td><input type='text' name='zip' id='zip'class='validate[required,minSize[2]] input span-5' value="{$personalData.zip}"></td>
+                </tr>
+                <tr>
+                    <td><label for="street">{function="translate('Straße / Hausnummer')"} *: </label></td>
+                    <td>
+                        <input type='text' name='street' id='street' class='validate[required,minSize[2]] input span-5' value="{$personalData.street}">
+                        <input type='text' name='housenumber' id='housenumber' class='validate[required,minSize[1]] input span-2' value="{$personalData.housenumber}">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="email">{function="translate('E-Mail')"} *: </label></td>
+                    <td>
+                        <input type='text' name='email' id='email' class='validate[required,custom[email]] input span-5' value="{$personalData.email}" autocomplete="off">
+                        <div id='mail_info' name='mail_info'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="email_repeat">{function="translate('E-Mail wiederholen')"} *: </label></td>
+                    <td><input type='text' name='email_repeat' id='email_repeat'  class='validate[required,equals[email]] input span-5' value="{$personalData.email}" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">{function="translate('Passwort')"} *: </label></td>
+                    <td><input type='password' name='password' id='password' class='validate[required,minSize[8]] input span-5' autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><label for="email_repeat">{function="translate('Passwort wiederholen')"} *: </label></td>
+                    <td><input type='password' name='password_repeat' id='password_repeat'  class='validate[required,equals[password]] input span-5' autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><label for="phonenumber">{function="translate('Telefonnummer')"} *: </label></td>
+                    <td><input type='text' name='phonenumber' id='phonenumber' class='validate[required,minSize[2]] input span-5' value="{$personalData.phonenumber}"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type='submit' class="submit" value="{function="translate('speichern')"}" name='submitPersonaldata' id='personaldata'></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+	
+	<div class='span-23 block block_unten'>
+		<div class="span-6"><b><a href='/front/warenkorb/index/'><< {function="translate('Warenkorb')"}</a></b></div>
+		<div class='span-14'></div>
+		<div class="span-2">&nbsp;</div>
+	</div>
+</div>

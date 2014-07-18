@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    DocumentRoot C:/xampp/htdocs/HOB/public
+    ServerName hob.hob.de
+    ErrorLog "logs/php_error.log"
+    ##CustomLog "logs/dummy-host2.localhost-access.log" combined
+	
+	<Directory C:/xampp/htdocs/HOB/public>
+        DirectoryIndex index.php
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
