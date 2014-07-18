@@ -1,0 +1,105 @@
+<script type="text/javascript">
+    var informationGruppenname = "{function="translate(informationGruppenname)"}";
+    var informationBuchungshinweis = "{function="translate(informationBuchungshinweis)"}";
+
+    var buttonFarbVariante = '{$buttonFarbVariante}';
+</script>
+<script type="text/javascript" src="/tpl/Front_Warenkorb_Index.js"></script>
+<script type="text/javascript" src="/tpl/Front_Warenkorb_Buttonfarbe.js"></script>
+
+<!-- Lightbox und Bild Tooltip -->
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.kategorie.js"></script>
+
+<!-- Darstellung der Statusanzeige -->
+{include="Front_Warenkorb_Index_Statusanzeige"}
+
+<div class="span-24">&nbsp;</div>
+
+<!-- wenn keine Artikel im Warenkorb -->
+{if condition="$counterToOrder == 0"}
+<div class="span-24 teilueberschrift" style="height: 200px;">
+    {function="translate('keine Produkte im Warenkorb')"}!
+</div>
+{/if}
+
+<!-- Button oben -->
+<div id='allgemein' class="span-24 block_oben block_unten block">
+
+    <!-- Überschrift des Warenkorbes -->
+    <div class="span-12 prepend-1">
+        {if condition="$flag_show_buttons"}
+            {if condition="$flagStornierung == 2"}
+                <span class=" ueberschrift_rot">{function="translate('Stornierung')"}</span>
+            {else}
+                <span class=" ueberschrift_gruen">{function="translate('Warenkorb')"}</span>
+            {/if}
+        {else}
+            <span class=" ueberschrift_gruen">{function="translate('Bestelliste')"}</span>
+        {/if}
+    </div>
+
+    <!-- Button des Warenkorbes -->
+    {include="Front_Warenkorb_Index_Button"}
+</div>
+
+<div id="errorMessage" class="span-24" style="margin-top: 10px;">
+    {if condition="$errorMessage != ''"}
+        <span class=" ueberschrift_rot">{function="translate($errorMessage)"}</span>
+    {/if}
+</div>
+
+ <!-- Bestandsbuchung von Programmen -->
+{if condition="$blockGebuchteProgramme"}
+    <div class="span-24">&nbsp;</div>
+    {include="Front_Warenkorb_Index_BestandsbuchungProgramme"}
+{/if}
+
+<div class="span-24">&nbsp;</div>
+
+<!-- Hotelbuchungen -->
+{include="Front_Warenkorb_Index_Uebernachtungen"}
+
+<div class="span-24">&nbsp;</div>
+
+<!-- Programmbuchungen -->
+{include="Front_Warenkorb_Index_Programme"}
+
+<div class="span-24">&nbsp;</div>
+
+ <!-- Buchungspauschale -->
+{include="Front_Warenkorb_Index_Buchungspauschale"}
+
+ <!-- Bettensteuer -->
+{include="Front_Warenkorb_Index_Bettensteuer"}
+
+<!-- Gruppenrabatt -->
+{include="Front_Warenkorb_Index_Gruppenrabatt"}
+
+<div class="span-24">&nbsp;</div>
+
+<!-- Button unten und Preis -->
+<div id='gesamtpreis' class='span-24 block block_oben block_unten'>
+
+    <!-- Preise -->
+    {include="Front_Warenkorb_Index_Preise"}
+
+    <!-- Button des Warenkorbes -->
+    {include="Front_Warenkorb_Index_Button"}
+</div>
+
+
+<!-- Orderdata -->
+{if condition="$flagOrderData"}
+    <div class='span-24'>&nbsp;</div>
+
+    <div id='orderdata' class="span-22 block block_oben block_unten" style="padding-right: 40px; padding-left: 40px;">
+
+    {include="Front_Warenkorb_Index_Orderdata"}
+
+    </div>
+{/if}
+
+<!-- Bestätigungsfenster -->
+{include="Front_Warenkorb_Index_Fenster"}

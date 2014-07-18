@@ -1,0 +1,54 @@
+<div style="width: 228px; float: left;">
+    <div class="block block_oben ueberschrift" style="padding-left: 10px;">
+        {function="translate('Suchparameter')"}:
+    </div>
+    <div class="block block_unten" style="padding-left: 10px;">
+        <table width="100%">
+            <tr>
+                <td>
+                    {function="translate('Stadt')"}:
+                </td>
+                <td>
+                    {$city}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Anreisedatum')"}:
+                </td>
+                <td>
+                    {function="formatiereDatumMitMonat($parameter.from)"}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Abreisedatum')"}:
+                </td>
+                <td>
+                    {function="formatiereDatumMitMonat($parameter.to)"}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Übernachtungen')"}:
+                </td>
+                <td>
+                    {$parameter.days}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Personen')"}:
+                </td>
+                <td>
+                    {$parameter.adult}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <a href="/front/hotelsearch/index/city/{$ort}">{function="translate('zurück zur Suche Übernachtung')"}</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

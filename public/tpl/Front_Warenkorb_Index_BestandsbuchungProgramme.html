@@ -1,0 +1,14 @@
+<div class="span-24 block_oben block_unten block">
+    <div style="margin-left: 40px;">
+        {loop name="blockGebuchteProgramme"}
+            {$value}<br>
+        {/loop}
+        {if condition="$blockBuchungshinweis"}
+        <br>
+        {function="translate('Buchungshinweis')"}:<br>
+            {loop name="blockBuchungshinweis"}
+                {$value}<br>
+            {/loop}
+        {/if}
+    </div>
+</div>

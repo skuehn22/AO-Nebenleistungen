@@ -1,0 +1,30 @@
+<script type="text/javascript" src="/tpl/Admin_Stadtbeschreibung_Index.js"></script>
+
+{if condition="$user == 7"}
+    <script type="text/javascript">
+        Ext.onReady(function(){
+            adminFormular();
+        });
+    </script>
+{/if}
+
+{if condition="$user == 10"}
+    <script type="text/javascript">
+        Ext.onReady(function(){
+            adminFormular();
+        });
+    </script>
+{/if}
+
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue">Eingabe der Beschreibungstexte der Stadt</h3>
+    <br>
+    Der Administrator und der Redakteur können zu einzelnen Städten<br>
+    Hinweistexte eingeben. Es kann ein allgemeiner Stadttext,<br>
+    sowie Erläuterungstexte zu Programmen und Übernachtungen<br>
+    in der Stadt eingegeben werden.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-13' id='formular'></div>

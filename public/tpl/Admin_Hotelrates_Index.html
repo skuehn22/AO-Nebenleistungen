@@ -1,0 +1,608 @@
+<script type="text/javascript">
+
+	var jsonStoreHotels;
+	var jsonStoreRates;
+	var categoryStore;
+	var jsonStoreProducts;
+
+    var checkboxSel;
+	
+	var gridHotels;
+	var gridRates;
+    var gridProducts;
+
+	var tabs;
+	var formRatesHotel;
+
+	var memoryHotelId = false;
+	var memoryRateId = false;
+
+	var condition_hotel_new = '1';
+	var condition_hotel_passiv = '2';
+	var condition_hotel_aktiv = '3';
+
+	var condition_rate_aktiv = 3;
+	var condition_rate_passiv = 2;
+
+	var condition_product_passiv = 1;
+	var condition_product_aktiv = 2;
+
+	
+
+	Ext.onReady(function(){
+
+		jsonStoreHotels = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hotelkategories/tabelitemshotels/",
+	        id: 'jsonStoreHotels',
+	        fields: ['id','property_name','property_code', 'aktiv']
+	    });
+        
+		jsonStoreRates = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hotelrates/gethotelrates/",
+	        id: 'jsonStoreRates',
+	        fields: ['id','rate_code','name', 'aktiv', 'categorie_name']
+	    });
+
+		categoryStore = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hotelrates/getcategoriesfromhotel/",
+	        id: 'jsonStoreCategories',
+	        fields: ['id','categorie_name']
+	    });
+
+		jsonStoreProducts = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hotelrates/getproductsfromhotel/",
+	        id: 'jsonStoreProducts',
+	        fields: ['checker','id','product_name', 'price', 'vat'],
+            listeners: {
+                load: function(store, data, options){
+                    var select = new Array();
+                    var i = 0;
+                    for(var j=0; j < data.length; j++){
+                        var control = data[j].data.checker;
+                        if(control == 'true'){
+                            select[i] = j;
+                            i++;
+                        }
+                    }
+                   
+                    checkboxSel.selectRows(select);
+                }
+            }
+	    });
+
+        checkboxSel = new Ext.grid.CheckboxSelectionModel();
+
+		gridHotels = new Ext.grid.GridPanel({
+			autoHeight: true,
+	        stripeRows: true,
+	        loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true
+	        },
+			autoExpandColumn: 'property_name',
+	        store: jsonStoreHotels,
+	        width: 450,
+	        id: 'hotelsGrid',
+	        title: 'vorhandene Hotels',
+		    columns: [{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'id',
+		                header: 'Id',
+		                width: 50,
+		                id: 'id'
+		            },{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'property_name',
+		                header: 'Name',
+		                width: 200,
+		                id: 'property_name'
+		            },{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'property_code',
+		                header: 'Hotel Code',
+		                id: 'property_code',
+		                width: 100
+		   			},{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'aktiv',
+		                header: 'Hotel aktiv / passiv',
+		                id: 'aktiv',
+		                width: 100,
+		                renderer: renderer_aktiv
+		   			}],
+		   bbar: [{
+	            xtype: 'paging',
+	            store: jsonStoreHotels,
+	            id: 'pagingHotels',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	        }]
+		});
+
+		gridHotels.getSelectionModel().on('rowselect', function(sm, rowIndex, record){
+
+			disableAllTabs();
+			
+			memoryHotelId = record.data.id;
+			formRatesHotel.getForm().reset();
+            
+            jsonStoreProducts.setBaseParam('hotelId', 0);
+            jsonStoreProducts.setBaseParam('rateId', 0);
+            jsonStoreProducts.load();
+
+			memoryRateId = false;
+
+			gridRates.store.load({
+				params: {
+					id: record.data.id
+				}
+			});
+			
+		});
+        
+		gridRates = new Ext.grid.GridPanel({
+			autoHeight: true,
+	        stripeRows: true,
+	        loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true
+	        },
+			autoExpandColumn: 'name',
+	        store: jsonStoreRates,
+	        width: 500,
+	        id: 'ratesGrid',
+	        title: 'vorhandene Raten eines Hotels',
+            listeners: {
+                rowclick: function(){
+                    showRatesItems();
+                }
+            },
+		    columns: [{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'id',
+		                header: 'Id der Rate',
+		                width: 50,
+		                id: 'id'
+		            },{
+		            	xtype: 'gridcolumn',
+		                dataIndex: 'aktiv',
+		                header: 'aktiv / passiv',
+		                width: 50,
+		                id: 'aktiv',
+		                renderer: renderer_aktiv
+		   			},{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'rate_code',
+		                header: 'Raten Code',
+		                width: 50,
+		                id: 'rate_code1'
+		            },{
+		            	xtype: 'gridcolumn',
+		                dataIndex: 'name',
+		                header: 'Raten Name',
+		                width: 100,
+		                id: 'name'
+		   			},{
+                        xtype: 'gridcolumn',
+                        dataIndex: 'categorie_name',
+                        header: 'Kategorie Name',
+                        width: 100,
+                        id: 'categorie_name'
+            }],
+		   bbar: [{
+	            xtype: 'paging',
+	            store: jsonStoreRates,
+	            id: 'pagingRates',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	        }],
+			buttons: [{
+				text: 'neue Rate anlegen',
+                tooltip: 'anlegen einer neuen Rate für ein Hotel',
+                id: 'myTestButton',
+				handler: function (){
+					
+					var selectedHotel = gridHotels.getSelectionModel();
+					if(!selectedHotel.hasSelection()){
+						showMsgBox('Bitte ein Hotel auswählen');
+
+						return;
+					}
+
+                    gridRates.getSelectionModel().clearSelections();
+                    memoryRateId = 0;
+					
+					var record = selectedHotel.getSelected();
+					memoryHotelId = record.data.id;
+				
+					showFormRatesHotelAndProducts();
+				}
+			},{
+                text: 'aktiv / passiv',
+                tooltip: 'aktivieren der Rate',
+                handler: function(){
+                    changeStatusRate();
+                }
+            },{
+				text: 'deutsch',
+                tooltip: 'Beschreibung der Rate in deutsch',
+				handler: function(){
+					showSprache('de');
+				}
+			},{
+				text: 'englisch',
+                tooltip: 'Beschreibung der Rate in englisch',
+				handler: function(){
+					showSprache('en');
+				}
+			}]
+		});
+
+        gridProducts = new Ext.grid.GridPanel({
+            title: 'Produkte eines Hotels',
+            store: jsonStoreProducts,
+            autoHeight: true,
+            autoWidth: true,
+            stripeRows: true,
+            loadMask: true,
+            columnLines: true,
+            id: 'productsGrid',
+            autoExpandColumn: 'productName',
+            sm: checkboxSel,
+            listeners:{
+                sortchange: function(){
+                    console.log('wechsel');
+                }
+            },
+            viewConfig: {
+			    forceFit: true
+	        },
+            columns: [
+                checkboxSel,
+            {
+                xtype: 'gridcolumn',
+                dataIndex: 'id',
+                header: 'ID',
+                sortable: true,
+                width: 50,
+                id: 'id'
+            },{
+                xtype: 'gridcolumn',
+                header: 'Name des Produkts',
+                sortable: true,
+                width: 100,
+                dataIndex: 'product_name',
+                id: 'productName'
+            },{
+                xtype: 'gridcolumn',
+                header: 'Preis des Produkts',
+                sortable: true,
+                width: 100,
+                dataIndex: 'price',
+                id: 'price'
+            },{
+                xtype: 'gridcolumn',
+                header: 'Mehrwertsteuer',
+                sortable: true,
+                width: 100,
+                dataIndex: 'vat',
+                id: 'vat'
+            }]
+        });
+
+
+		formRatesHotel = new Ext.form.FormPanel({
+		    title: 'Stammdaten Hotel - Rate',
+		    autoHeight: true,
+		    padding: 10,
+		    width: 400,
+	        id: 'formStammdatenKategorie',
+	        url: '/admin/hotelrates/savenewrate/',
+	        method: 'post',
+		    items: [{
+		                xtype: 'textfield',
+		                fieldLabel: 'Rate Code',
+		                width: 100,
+		                id: 'rate_code',
+                        helpText: 'eindeutiger Code der Rate eines Hotels',
+		                allowBlank: false
+		            },{
+		                xtype: 'textfield',
+		                fieldLabel: 'Rate Name',
+		                width: 200,
+		                id: 'name',
+                        helpText: 'Name der Rate',
+		                allowBlank: false
+		            },{
+						xtype: 'combo',
+						fieldLabel: 'Zimmertypen des Hotels',
+						width: 200,
+						id: 'categorie_name',
+       	                allowBlank: false,
+       	                forceSelection: true,
+       					triggerAction: 'all',
+       					displayField: 'categorie_name',
+       					valueField: 'id',
+       					hiddenName: 'categorie_id',
+       					store: categoryStore,
+                        helpText: 'vorhandene Zimmertypen des Hotels'
+			        },{
+                        xtype: 'checkbox',
+                        fieldLabel: 'Rate zur Berechnung der Bettenzahl',
+                        id: 'calculatingCapacity',
+                        helpText: 'Rate zur Berechnung der Bettenkapazität',
+                        value: '2'
+            }],
+		   	buttons: [{
+				text: 'neue Rate eintragen',
+				handler: function(){
+					saveNewRate();
+		   		}
+			}]
+		});
+        
+		tabs = new Ext.TabPanel({
+		    activeTab: 0,
+		    renderTo: 'tabs',
+		    padding: 10,
+		    autoHeight: true,
+		    items: [{
+		                xtype: 'panel',
+		                title: 'Rate Stammdaten',
+		                height: 500,
+		                id: 'tabKategorieStammdaten',
+		                disabled: true,
+		                layout: 'column',
+		                items: [{
+		                	columnWidth: 0.5,
+		                	border: false,
+		                	items: [formRatesHotel]
+		                },{
+		                	columnWidth: 0.5,
+		                	border: false,
+                            items: [gridProducts]
+			            }]
+		            },{
+		                xtype: 'panel',
+		                title: 'Sprache',
+		                disabled: true,
+		                id: 'tabSprache',
+		                height: 500
+		            }]
+		});
+		
+		gridHotels.render('gridHotel');
+		jsonStoreHotels.load();
+		gridRates.render('gridRates');
+	});
+
+	function showRatesItems(){
+		disableAllTabs();
+        tabs.setActiveTab(0);
+
+		var recordData = gridRates.getSelectionModel().getSelected();
+		memoryRateId = recordData.data.id;
+
+		formRatesHotel.load({
+			url: '/admin/hotelrates/loadrateform/',
+			method: 'post',
+			params: {
+				rateId: memoryRateId,
+				hotelId: memoryHotelId
+			},
+			success: function(form, action){
+				showProductsFromRate();
+			}
+		});
+
+		return;
+	}
+
+	function renderer_aktiv(val){
+		var icon = '';
+		if(val == condition_hotel_new)
+			icon = "<img src='/buttons/exclamation.png'>";
+		else if(val == condition_hotel_passiv)
+			icon = "<img src='/buttons/cancel.png'>";
+		else if(val == condition_hotel_aktiv)
+			icon = "<img src='/buttons/accept.png'>";
+		
+		return icon;
+	}
+
+	function showFormRatesHotelAndProducts(){
+		disableAllTabs();
+
+		var rateTab = Ext.getCmp('tabKategorieStammdaten');
+		rateTab.setDisabled(false);
+		rateTab.show();
+
+		formRatesHotel.getForm().reset();
+		
+		categoryStore.setBaseParam('hotelId', memoryHotelId);
+		categoryStore.load();
+
+        jsonStoreProducts.setBaseParam('hotelId', memoryHotelId);
+        jsonStoreProducts.setBaseParam('rateId', memoryRateId);
+        jsonStoreProducts.load();
+
+		return;
+	}
+
+	function disableAllTabs(){
+		Ext.getCmp('tabKategorieStammdaten').setDisabled(true);
+		Ext.getCmp('tabSprache').setDisabled(true);
+		
+		return;
+	}
+	
+	function showSprache(language){
+		// Hotel
+		var selectedHotel = gridHotels.getSelectionModel();
+		if(!selectedHotel.hasSelection()){
+			showMsgBox('Bitte ein Hotel auswählen');
+
+			return;
+		}
+		
+		var recordHotel = selectedHotel.getSelected();
+		memoryHotelId = recordHotel.data.id;
+
+		// Rate
+		var selectedRate = gridRates.getSelectionModel();
+		if(!selectedRate.hasSelection()){
+			showMsgBox('Bitte eine Rate auswählen');
+
+			return;
+		}
+		
+		var recordRate = selectedRate.getSelected();
+		memoryRateId = recordRate.data.id;
+
+		// Tab
+		showMsgBox('Sprache ' + language);
+
+		var spracheTab = Ext.getCmp('tabSprache');
+		spracheTab.setDisabled(false);
+		spracheTab.show();
+		
+		return;
+	}
+
+	function changeStatusRate(){
+
+        if(!gridRates.getSelectionModel().hasSelection()){
+            showMsgBox("Bitte Rate auswählen");
+
+            return;
+        }
+
+
+		var recordData = gridRates.getSelectionModel().getSelected();
+		var check = condition_rate_passiv;
+
+		memoryRateId = recordData.data.id;
+		
+		if(recordData.data.aktiv == condition_rate_passiv)
+			check = condition_rate_aktiv;
+
+		Ext.Ajax.request({
+		   url: '/admin/hotelrates/sethotelrateaktiv/',
+		   params: {
+			   rateId: recordData.data.id,
+			   check: check
+		   },
+		   success: function(response){
+				recordData.set('aktiv', check);
+				showMsgBox("Rate mit der ID: " + recordData.data.id + " geändert");
+				showRateMasterData();
+		   },
+		   failure: function(){
+			   showMsgBox("Update Rate fehlgeschlagen");
+		   }
+		});
+
+		return;
+	}
+
+	function rendrerer_money(val){
+		var money = '';
+
+		if(val){
+			money = val.replace('.',',');
+			money = money + ' Euro';
+		}
+		
+		return money;
+	}
+
+	function renderer_checkProducts(val){
+		if(val == 1)
+			return "<input type='checkbox'>";
+		else
+			return "<input type='checkbox' checked>";
+	}
+
+	function showProductsFromRate(){
+		jsonStoreProducts.removeAll();
+		jsonStoreProducts.setBaseParam('rateId', memoryRateId);
+		jsonStoreProducts.setBaseParam('hotelId', memoryHotelId);
+		jsonStoreProducts.load();
+		
+		return;
+	}
+
+	function saveNewRate(){
+
+		var checked = gridProducts.getSelectionModel().getSelections();
+		var products = new Array();
+        var checkedProducts = '';
+		
+		var j = 0;
+		for(var i=0; i < checked.length; i++){
+            products[j] = checked[i].data.id;
+            j++;
+		}
+
+        if(products.length > 0){
+            checkedProducts = Ext.util.JSON.encode(products);
+        }
+
+		var form = formRatesHotel.getForm();
+
+		form.submit({
+    		params: {
+				hotelId: memoryHotelId,
+				products: checkedProducts
+    		},
+			success: function(form,action){
+				showMsgBox('neue Rate angelegt');
+				disableAllTabs();
+
+                jsonStoreRates.setBaseParam('id', memoryHotelId);
+				jsonStoreRates.load();
+			},
+            failure: function(form,action){
+                showMsgBox('Raten Code schon vorhanden');
+                Ext.getCmp('rate_code').setValue('');
+            }
+		});	
+		
+	}
+
+</script>
+<div class='span-32' id='info' style='height: 150px; border: solid black 1px;'>
+    <div class="blockDescription span-15 push-5">
+    <h3 style="color: blue" align="center">bilden der Raten eines Hotels</h3>
+    <br>
+    Anlegen und darstellen der Raten eines Hotels.<br>
+    Durch Auswahl einer Kategorie eines Hotels und dem zuordnen von Hotelprodukten<br>
+    können neue Raten gebildet werden. Ein editieren oder löschen von Raten ist nicht möglich.<br>
+    Durch die Kennzeichnung von Stammraten können Überbuchungen verhindert werden.
+    </div>
+
+</div>
+
+<div class='span-32'>
+	<div class='span-15' id='gridHotel' style='border: red 1px blue;'></div>
+	<div class='span-15' id='gridRates' style='border: red 1px green;'></div>
+	<div class='span-31' style='height: 10px; border: solid black 1px;'></div>
+</div>
+
+<div class='span-32' id='tabs'></div>

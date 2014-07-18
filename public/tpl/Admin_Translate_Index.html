@@ -1,0 +1,288 @@
+<script type="text/javascript">
+
+    var gridTranslate;
+    var jsonstoreTranslate;
+    var formUebersetzung;
+    var memoryIdDesDatensatzes;
+    var selModel;
+    var sucheBaustein = null;
+    var sucheBegriff =  null;
+    var sucheId = null;
+    var buttonUebersetzungsmodus = null;
+
+	Ext.onReady(function(){
+
+        // explicitly create a Container
+        buttonUebersetzungsmodus = new Ext.Container({
+            title: 'Übersetzung ins englische',
+            frame: true,
+            renderTo: 'buttonUebersetzungsmodusContainer',
+            style:{
+                padding: '10px'
+            },
+            items: [{
+                    xtype: 'tbtext',
+                    text: 'wechselt den Anzeigemodus der Übersetzung in den Bausteinen des Frontend'
+
+                },{
+                xtype: 'button',
+                text: 'wechsel Anzeige Übersetzungsmodus',
+                handler: function(){
+                    wechselUeberstzungsmodus();
+                }
+            }]
+        });
+
+        selModel = new Ext.grid.CheckboxSelectionModel();
+
+        jsonstoreTranslate = new Ext.data.JsonStore({
+            url: '/admin/translate/gettranslate/',
+            root: 'data',
+            baseParams: {
+                baustein: sucheBaustein,
+                begriff: sucheBegriff,
+                translateId: sucheId
+            },
+            totalProperty: 'anzahl',
+            fields: [{
+                name: 'platzhalter'
+            },{
+                name: 'id'
+            },{
+                name: 'de'
+            },{
+                name: 'eng'
+            },{
+                name: 'module'
+            },{
+                name: 'controller'
+            }]
+        });
+
+        gridTranslate = new Ext.grid.GridPanel({
+            autoHeight: true,
+            title: 'Übersetzungen',
+            columnLines: true,
+            stripeRows: true,
+            sm: selModel,
+            store: jsonstoreTranslate,
+            viewConfig: {
+                scrollOffset: 0,
+                forceFit: true
+            },
+            listeners: {
+               rowclick: holeUebersetzungswerte
+            },
+            columns: [
+                selModel,
+            {
+                xtype: 'gridcolumn',
+                dataIndex: 'id',
+                header: 'ID',
+                width: 50
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'de',
+                header: 'deutsch',
+                sortable: true,
+                width: 200
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'eng',
+                header: 'englisch',
+                id: 'translateEng',
+                sortable: true,
+                width: 200
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'module',
+                header: 'Bereich',
+                sortable: true,
+                width: 75
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'controller',
+                header: 'Baustein',
+                sortable: true,
+                width: 75
+            }],
+            tbar: [{
+                xtype: 'tbspacer',
+                width: 20
+            },{
+                xtype: 'tbseparator'
+            },{
+                text: 'ID: '
+            },{
+                xtype: 'numberfield',
+                width: 50,
+                id: 'idSuche'
+            },{
+                xtype: 'tbseparator'
+            },{
+                text: 'Baustein:'
+            },{
+                xtype: 'textfield',
+                width: 150,
+                id: 'bausteinsuche',
+                minLength: 3
+            },{
+                xtype: 'tbseparator'
+            },{
+                text: 'Such nach einem Begriff:'
+            },{
+                xtype: 'textfield',
+                width: 150,
+                id: 'stringsuche',
+                minLength: 3
+            },{
+                xtype: 'button',
+                text: 'suchen',
+                tooltip: 'sucht nach einem Begriff',
+                handler: function(){
+                    sucheNachEinemBegriff();
+                }
+            },{
+                xtype: 'tbseparator'
+            }],
+            bbar: {
+                xtype: 'paging',
+	            store: jsonstoreTranslate,
+	            pageSize: 20,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+            },
+            fbar: [{
+                xtype: 'button',
+                text: 'löschen',
+                tooltip: 'löschen der ausgewählten Übersetzungen',
+                handler: function(){
+                    loschenUebersetzung();
+                }
+            }]
+        });
+
+        formUebersetzung = new Ext.form.FormPanel({
+            title: 'Übersetzung ins englische',
+            frame: true,
+            url: '/admin/translate/setuebersetzung/',
+            method: 'post',
+            labelAlign: 'top',
+            items:[{
+                xtype: 'textfield',
+                disabled: true,
+                fieldLabel: 'Platzhaltertext',
+                id: 'platzhalter'
+            },{
+                xtype: 'textarea',
+                id: 'de',
+                height: 91,
+                width: 348,
+                fieldLabel: 'deutsch'
+            },{
+                xtype: 'textarea',
+                id: 'eng',
+                height: 91,
+                width: 348,
+                fieldLabel: 'englisch'
+            }],
+            buttons: [{
+                text: 'Datensatz eintragen',
+                handler: eintragenUebersetzung,
+                tooltip: 'abspeichern der englischen Übersetzung'
+            }]
+        });
+
+        gridTranslate.render('tabelleUebersetzung');
+        jsonstoreTranslate.load();
+        formUebersetzung.render('eingabeMaskeEnglischeSprache');
+
+
+    });
+
+    function holeUebersetzungswerte(grid, number, event){
+        formUebersetzung.getForm().reset();
+        
+        var row = grid.getSelectionModel().getSelected();
+        memoryIdDesDatensatzes = row.data.id;
+
+        formUebersetzung.getForm().loadRecord(row);
+    }
+
+    function eintragenUebersetzung(){
+        if(!memoryIdDesDatensatzes){
+            showMsgBox('Bitte Übersetzung auswählen');
+            return;
+        }
+
+        formUebersetzung.getForm().submit({
+            params: {
+                id: memoryIdDesDatensatzes
+            },
+            success: function(){
+                jsonstoreTranslate.load();
+            }
+        });
+    }
+
+    function loschenUebersetzung(){
+        var selected = gridTranslate.getSelectionModel().getSelections();
+        var stringSelectedId = '';
+
+        if(selected.length > 0){
+            for(var i = 0; i < selected.length; i++){
+                stringSelectedId += selected[i].data.id + ",";
+            }
+
+            Ext.Ajax.request({
+                    url: '/admin/translate/delete/',
+                    method: 'post',
+                    params: {
+                        deleteId: stringSelectedId
+                },
+                success: function(response, ajax){
+                    showMsgBox('Übersetzungen gelöscht');
+                    jsonstoreTranslate.load();
+                }
+            });
+
+        }
+    }
+
+    function wechselUeberstzungsmodus()
+    {
+        Ext.Ajax.request({
+                url: '/admin/translatesingle/edit/',
+                method: 'post',
+                success: function(response, ajax){
+                    showMsgBox('wechsel des Übersetzungmodus erfolgt');
+                }
+        });
+    }
+
+    function sucheNachEinemBegriff(){
+        sucheBegriff = Ext.getCmp('stringsuche').getValue();
+        sucheBaustein = Ext.getCmp('bausteinsuche').getValue();
+        sucheId = Ext.getCmp('idSuche').getValue();
+
+        jsonstoreTranslate.setBaseParam('baustein', sucheBaustein);
+        jsonstoreTranslate.setBaseParam('begriff', sucheBegriff);
+        jsonstoreTranslate.setBaseParam('translateId', sucheId);
+        jsonstoreTranslate.load();
+    }
+
+</script>
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+        <h3 style="color: blue">Übersetzung der deutschen Textteile in das englische.</h3>
+        <br>
+        Übersetzungswerkzeug.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-32' id='inhalt' style='border: red 1px blue;'>
+    <div class="span-20" id="tabelleUebersetzung"></div>
+    <div class="span-11" id='eingabeMaskeEnglischeSprache'></div>
+    <div class="span-11">&nbsp;</div>
+    <div class="span-11" id="buttonUebersetzungsmodusContainer"></div>
+</div>

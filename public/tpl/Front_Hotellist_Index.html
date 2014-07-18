@@ -1,0 +1,55 @@
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+
+<div class="span-24 block block_oben block_unten">
+    <div style="margin-left: 40px;" >{$breadcrumb}</div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="span-24 block block_oben ueberschrift">
+    <div style="margin-left: 40px;" class="ueberschrift_gruen">{function="translate('Bitte Hotel in')"} {$city} {function="translate('auswählen')"}</div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="span-24">
+
+    {if condition="$hotels"}
+    {loop="hotels"}
+        <div class="span-18">&nbsp;</div>
+
+        <div class="span-18 block block_oben block_unten">
+            <div class="span-5" style="padding-left: 40px;">
+                {function="anzeigenBilder($value.id,6,150)"}
+            </div>
+            <div class="span-10">
+                <span class="ueberschrift">{$value.ueberschrift}</span><p></p>
+                {$value.description}<p></p>
+                <form action="/front/hotelreservation/index/propertyId/{$value.id}" method="post" class="form">
+                    <input type="submit" class="submit" value="{function="translate('verfügbare Zimmer anzeigen')"}">
+                </form>
+            </div>
+        </div>
+
+        <!-- Maxi Bild -->
+        <img src="/images/propertyImages/maxi/{$value.id}.jpg" style="display: none; max-height: 90%;" id="{$value.id}_maxi">
+
+        {if condition="$counter == 0"}
+            {include="Front_Hotellist_Index_Suchparameter"}
+        {/if}
+
+    {/loop}
+    {else}
+        <div class="span-24 block block_oben block_unten">
+            <div style="padding-left: 40px;">
+                {function="translate('Leider brachte ihre Suche nach Übernachtungen in')"} {$city} {function="translate('kein Ergebnis.')"}<br>
+                {function="translate('Bitte ändern Sie die Details der Suchanfrage')"}<br>
+                {function="translate('Bitte überprüfen sie die Suchparameter und beachten sie')"}<br>
+                <u>{function="translate('die Mindestgruppenstärke von 10 Personen')"}</u><br><br>
+                <a href="/front/hotelsearch/index/city/{$parameter.city}">{function="translate('Zurück zur Suche nach Übernachtungen')"}</a><br>
+            </div>
+        </div>
+    {/if}
+
+</div>

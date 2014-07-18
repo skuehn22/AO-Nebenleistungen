@@ -1,0 +1,319 @@
+<!-- extensions -->
+<script type="text/javascript" src="/tpl/Admin_Hotels_IndexStammdaten.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotels_IndexPersonaldaten.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotels_IndexBeschreibung.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotels_IndexZahlungsfristen.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotels_IndexStornofristen.js"></script>
+
+<script type="text/javascript">
+
+    var showCloseButton = {$showCloseButton};
+
+	var jsonStore;
+	var storeAktiv;
+	var jsonStoreRegion;
+    var jsonStorePropertyCity
+
+	var grid;
+    var panel;
+	var formHotelPersonal;
+	var memoryHotelId = false;
+    var memoryHotelName = null;
+	var tabs;
+    var columnsHotelliste;
+
+	var condition_hotel_new = '1';
+	var condition_hotel_passiv = '2';
+	var condition_hotel_aktiv = '3';
+
+	Ext.onReady(function(){
+
+		jsonStore = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hotels/tabelitems/",
+	        id: 'jsonStore',
+	        fields: ['id','property_name','property_code','aktiv']
+	    });
+
+	    jsonStoreRegion = new Ext.data.JsonStore({
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hotels/getcountryregions/",
+	        id: 'jsonStoreRegion',
+	        fields: ['region']
+	    });
+
+	    jsonStoreCity = new Ext.data.JsonStore({
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hotels/getcountrycities/",
+	        id: 'jsonStoreCity',
+	        fields: ['city','cityId'],
+            autoLoad: true
+	    });
+
+        jsonStorePropertyCity = new Ext.data.JsonStore({
+            root: 'data',
+	        method: 'post',
+	        url: "/admin/hotels/getcities/",
+	        id: 'jsonStorePropertyCity',
+	        fields: ['id','city']
+        });
+
+	    storeAktiv = new Ext.data.SimpleStore({
+			fields: ['id', 'aktiv'],
+			data: [
+					['1', 'neu'],
+					['2', 'passiv'],
+					['3', 'aktiv']
+				]
+		});
+
+        var buttonPanel = new Ext.Panel({
+            layout: 'table',
+            defaultType: 'button',
+            baseCls: 'x-plain',
+            cls: 'btn-panel',
+            renderTo: 'buttons',
+            menu: undefined,
+            split: false,
+            layoutConfig: {
+                columns: 3
+            },
+            defaults: {
+                style: 'margin: 3px;',
+                width: 120
+            },
+            items: [
+                {if="$showBlock"}
+                {
+                text: 'neues Hotel',
+                id: 'hotelNeu',
+                handler: function(){
+                    Ext.Ajax.request({
+                       url: '/admin/hotels/hotelneu/',
+                       success: function(){
+
+                           //laden und markieren Datensatz
+                           jsonStore.load({
+                                callback: function(){
+                                    Ext.getCmp('hotelsGrid').getSelectionModel().selectFirstRow();
+                                    fillStammdaten();
+                                }
+                           });
+
+                           var antwort = Ext.util.JSON.decode(arguments[0].responseText);
+                           memoryHotelId = antwort.hotelId;
+                       },
+                       failure: function(){
+                           showMsgBox('Hotel konnte nicht angelegt werden !');
+                       }
+                    });
+                }
+            },{
+                text: 'Stammdaten Hotel',
+                handler: function(){
+                    fillStammdaten();
+                }
+            },{
+                text: 'Verantwortlicher Hotel',
+                handler: function(){
+                    fillPersonaldaten();
+                }
+            },{
+                text: 'deutsch',
+                handler: function(){
+                    fillTemplate('de');
+                },
+                tooltip: 'anzeigen und ändern der deutschen Hotelbeschreibung'
+            },{
+                text: 'englisch',
+                handler: function(){
+                    fillTemplate('en');
+                },
+                tooltip: 'anzeigen und ändern der englischen Hotelbeschreibung'
+            },{
+                text: 'Zahlungsfristen Hotel',
+                handler: function(){
+                    fillZahlungsfristenHotel();
+                }
+            },{
+                text: 'Stornofristen Hotel',
+                handler: function(){
+                    fillStornofristenHotel();
+                }
+            }
+            {else}
+                {
+                    text: 'Hotel bearbeiten',
+                    handler: function(){
+                        fillStammdaten();
+                    }
+                }
+            {/if}
+            ]
+        });
+
+		grid = new Ext.grid.GridPanel({
+			autoHeight: true,
+	        stripeRows: true,
+	        loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true
+	        },
+			autoExpandColumn: 'property_name',
+	        store: jsonStore,
+	        width: 500,
+	        id: 'hotelsGrid',
+	        title: 'vorhandene Hotels',
+            listeners: {
+                dblclick: function(){
+                    if(!grid.getSelectionModel().hasSelection()){
+                        showMsgBox('Hotel auswählen');
+
+                        return;
+                    }
+
+                    if(!memoryHotelId){
+                        showMsgBox('Hotel auswählen');
+                        return;
+                    }
+
+                    var templateUrl = '/admin/hotels/gettemplate/hotelId/' + memoryHotelId + '/sprache/de/';
+
+                    panel.setTitle('Hotel ID: ' + memoryHotelId);
+
+                    panel.load({
+                        url: templateUrl,
+                        text: 'lade Ansicht'
+                    });
+                }
+            },
+           columns: [{
+            xtype: 'gridcolumn',
+            dataIndex: 'id',
+            header: 'Id',
+            width: 50,
+            id: 'id'
+        },{
+            xtype: 'gridcolumn',
+            dataIndex: 'property_name',
+            header: 'Name',
+            width: 200,
+            id: 'property_name'
+        },{
+            xtype: 'gridcolumn',
+            dataIndex: 'property_code',
+            header: 'Hotel Code',
+            id: 'property_code',
+            width: 100
+        },{
+           xtype: 'gridcolumn',
+           dataIndex: 'aktiv',
+           header: 'aktiv',
+           width: 50,
+           id: 'aktiv',
+           renderer: renderer_aktiv
+        }],
+		   bbar: [{
+	            xtype: 'paging',
+	            store: jsonStore,
+	            id: 'paging',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	       }],
+           tbar: {
+                id: 'sucheHotel',
+                items: [{
+                        text: 'Hotelsuche :'
+                    },{
+                        xtype: 'textfield',
+                        id: 'sucheEinzelnesHotel',
+                        minLength: 3,
+                        emptyText: 'Bitte Name eingeben'
+                    },{
+                        xtype: 'tbseparator'
+                    },{
+                        xtype: 'button',
+                        text: 'suche',
+                        icon: '/buttons/arrow_right.png',
+                        handler: function(){
+                            var suchWert = Ext.getCmp('sucheEinzelnesHotel').getValue();
+                            jsonStore.setBaseParam('hotelSuche', suchWert);
+                            jsonStore.load();
+
+                            return;
+                        }
+                }]
+           }
+		});
+
+
+
+        panel = new Ext.Panel({
+            width: 700,
+            autoHeight: true,
+            id: 'templatePanel',
+            title: 'Hotelbeschreibung: &nbsp;',
+            padding: 10,
+            renderTo: 'panel'
+        });
+
+        grid.on('rowclick',function(grid, rowIndexNumber, event){
+            var selectedRow = grid.getSelectionModel().getSelected();
+            memoryHotelId = selectedRow.data.id;
+            memoryHotelName = selectedRow.data.property_name;
+
+            return;
+        });
+
+	    grid.render('grid');
+		jsonStore.load();
+		
+	});
+
+
+
+	function renderer_aktiv(val){
+		var icon = '';
+		if(val == condition_hotel_new)
+			icon = "<img src='/buttons/exclamation.png' ext:qtip='neu angelegtes Hotel'>";
+		else if(val == condition_hotel_passiv)
+			icon = "<img src='/buttons/cancel.png' ext:qtip='passiv'>";
+		else if(val == condition_hotel_aktiv)
+			icon = "<img src='/buttons/accept.png' ext:qtip='aktiv'>";
+		
+		return icon;
+	}
+
+    function findeHotel(){
+        var suchfeld = Ext.getCmp('sucheEinzelnesHotel');
+        var suchfeldInhalt = suchfeld.getValue();
+
+        if(suchfeldInhalt.length < 3){
+            showMsgBox('min. 3 Zeichen');
+
+            return;
+        }
+
+        return;
+    }
+
+</script>
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+        <h3 style="color: blue">Anlegen und bearbeiten eines Hotels</h3>
+        <br>
+            Programm zur Bearbeitung der Stammdaten eines Hotels,<br>
+            Eingabe der Hotelbeschreibung in deutsch und englisch und<br>
+            Eingabe der Daten des Ansprechpartners im Hotel.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-16' id='grid'></div>
+<div class="span-15" id='panel'></div>
+<div class='span-16' id='buttons'></div>

@@ -1,0 +1,34 @@
+<script type="text/javascript" src="/tpl/Front_Login_Index.js"></script>
+{if condition="$errorMessage"}
+<div style='height: 100px; padding: 20px;'>
+    {function="translate('Uuuups ! Leider ist ein Fehler aufgetreten. <br>Bitte wenden Sie sich an unseren Support')"}<br>
+    {function="translate('Fehlernummer')"}: {$errorMessage}<p>
+
+    <p>
+       <a href="/front/login/">{function="translate('zurück zum Start')"}</a>
+    </p>
+</div>
+{/if}
+
+<div class='span-24'>
+    <!-- Einbau der Sätze / Claimbereich -->
+    {if condition="$flagSlogan"}
+
+    <!-- <div class="block_oben block_unten block slogan span-18" style="float: left; margin-left: 110px; margin-bottom: 20px;">
+           <p align="center">{function="translate('Klassenfahrten und Gruppenreisen planen - vormerken - buchen. <br />Verbindliche Preise und Verfügbarkeiten in Echtzeit. Ihr detailliertes Angebot - sofort')"}</p>
+    </div>  -->
+    {/if}
+    <div class='span-23 ueberschrift block_unten block_oben block' >
+         <p>
+        <div style="line-height: 24px; width:550px; margin-left:245px; font-size:18px; text-align:;">
+        <br><br>     <br><br>
+         <div><h1>Programmauswahl für Stadt:</h1></div>
+         {loop name="service.city"}
+             <a href="/front/programmstart/index/city/{$value.cityId}">{$value.city}</a>  <br>
+         {/loop}
+         <br><br><br>
+         </div>
+        </p>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+<!-- extensions -->
+
+
+<script type="text/javascript">
+    var memoryBuchungsfehlerId = null;
+    var memoryKundenId = null;
+    var memoryBuchungsnummerId = null;
+
+    var memoryAdminTroubleKontakt = null;
+    var memoryAdminTroubleHotelbuchung = null;
+
+</script>
+
+<script type="text/javascript" src="/tpl/Admin_Trouble_Kontakt.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Trouble_Hotelbuchung.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Trouble_Hotelprodukte.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Trouble_Programme.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Trouble_FehlerGrid.js"></script>
+
+<div class='span-20 blockDescription' id='info'>
+    Darstellung der 'mißglückten' Buchungen.
+    Entsprechend des Fehlerprotokolles werden die Buchungen eines Kunden dargestellt.
+    Es werden bereits getätigte Hotelbuchungen, Buchungen der Zusatzprodukte der Hotels sowie die gebuchten Programme dargestellt.
+    Mit den Kundendaten kann durch den Telefonsupport eine Klärung des problems begonnen werden.
+</div>
+<div class="span-32">&nbsp;</div>
+
+<div class="span-32">
+    <div class="span-32">
+        <div class="span-15" id="fehlerGrid">&nbsp;</div>
+        <div class="span-15" id='kontakt'>&nbsp;</div>
+    </div>
+    <div class="span-32" style="border: solid 1px black;" id='hotelbuchung'>&nbsp;</div>
+    <div class="span-32" style="border: solid 1px black;" id='hotelprodukte'></div>
+    <div class="span-32" style="border: solid 1px black;" id='programme'></div>
+</div>

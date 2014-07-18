@@ -1,0 +1,82 @@
+<div class="span-23">
+    <form method="post" action="/front/offlinebuchung/suchen-benutzer/">
+        <table>
+            <tr><td colspan="2">&nbsp;&nbsp;<span class="tabellenueberschrift_gruen">{function="translate('Firmensuche')"}:</span></td></tr>
+            <tr>
+                <td><label for="hob">{function="translate('HOB Nummer')"}: </label></td>
+                <td><input type='text' name='hobNummer' id='hobNummer' class='input span-5' value="{$personalData.hobNummer}">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hob">{function="translate('Adress Id')"}: </label></td>
+                <td><input type='text' name='id' id='id' class='input span-5' value="{$personalData.id}">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="lastname">{function="translate('Name')"}: </label></td>
+                <td><input type='text' name='lastname' id='lastname' class='input span-5'
+                           value="{$personalData.lastname}"></td>
+            </tr>
+            <tr>
+                <td><label for="company">{function="translate('Firma / Schule')"} : </label></td>
+                <td><input type='text' name='company' id='company' class='input span-5' value="{$personalData.company}"></td>
+            </tr>
+            <tr>
+                <td><label for="email">{function="translate('E-Mail')"}: </label></td>
+                <td>
+                    <input type='text' name='email' id='email' class='input span-5' value="{$personalData.email}">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">{function="translate('E-Mail Offline')"}: </label></td>
+                <td>
+                    <input type='text' name='email_offline' id='email_offline' class='input span-5' value="{$personalData.email_offline}">
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type='submit' class="submit" value="{function=" translate('suchen')"}" name='submitSuchen' id='submitSuchen'>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <br>
+
+    {if condition="$benutzer"}
+    <table style="width: 100%" class="gitter">
+        <tr>
+            <td colspan="10" style="padding-top: 5px; padding-top: 5px;">&nbsp;&nbsp;<span class="tabellenueberschrift_gruen">{function="translate('gefundene Personen')"}</span></td>
+        </tr>
+        <tr>
+            <td>{function=" translate('Vorname')"}</td>
+            <td>{function=" translate('Nachname')"}</td>
+            <td>{function=" translate('Firma / Schule')"}</td>
+            <td>{function=" translate('Straße / Hausnummer')"}</td>
+            <td>{function=" translate('PLZ')"}</td>
+            <td>{function=" translate('Stadt')"}</td>
+            <td>{function=" translate('E-Mail')"}</td>
+            <td>{function=" translate('Telefonnr. geschäftlich')"}</td>
+            <td>{function=" translate('Telefonnr. privat')"}</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr><td colspan="10" style="height: 7px;"></td></tr>
+        {loop="benutzer"}
+        <tr>
+            <td>{$value.firstname}</td>
+            <td>{$value.lastname}</td>
+            <td>{$value.company}</td>
+            <td>{$value.street}</td>
+            <td>{$value.zip}</td>
+            <td>{$value.city}</td>
+            <td>{$value.email}</td>
+            <td>{$value.phonenumber}</td>
+            <td>{$value.mobile}</td>
+            <td><form class="form" method="post" action="/front/offlinebuchung/uebernahme-benutzer/"><input type="hidden" name="id" value="{$value.id}"><input type="submit" class="submit" name="umschreiben" value="{function=" translate('übernehmen')"}"></form></td>
+        </tr>
+        {/loop}
+    </table>
+    {/if}
+</div>
+
+

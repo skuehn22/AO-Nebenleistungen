@@ -1,0 +1,37 @@
+<div class='span-24'>
+    <div class="block_oben block block_unten ueberschrift_gruen" style="padding-left: 40px;">
+        {function="translate('Vormerkung des Warenkorbes')"}
+    </div>
+
+    <div>&nbsp;</div>
+
+    <div style="padding-left: 40px; min-height: 200px; padding-top: 10px;" class="block_oben block_links_rechts block_unten">
+        {if condition="$existBuchungen"}
+            {function="translate('Der Inhalt des Warenkorbes wurde vorgemerkt')"}!<br><br>
+
+            {function="translate('Sie können diesen Warenkorb wieder aufrufen.')"}<br>
+            {function="translate('Melden Sie sich dazu mit ihrer Mailadresse und dem Passwort an.')"}<br>
+            {function="translate('Alle Preise und Verfügbarkeiten sind veränderlich.')"}<br>
+            {function="translate('Daher wird bei jedem neuen Aufruf des Warenkorbes die Verfügbarkei neu bestimmt und der Preis neu angezeigt.')"}<br>
+            {function="translate('Eine Vormerkung ist keine Reservierung und keine verbindliche Zusge.')"}<br>
+            {function="translate('Insbesondere bei kurzfristigen Buchungen können sich die Preise ändern.')"}<br>
+
+            <p>
+                {function="translate('Bitte merken Sie sich ihr Passwort! Passwörter werden bei uns verschlüsselt und wir haben keine Möglichkeit es zu rekonstruieren.')"}
+            </p>
+        {/if}
+    </div>
+</div>
+<div class="block block_unten span-24" style="float: left;">
+    {if condition="$existBuchungen"}
+        <table style="margin-bottom: 0px; float: right; margin-right: 40px;">
+            <tr>
+                <td>
+                   <form method="post" action="/front/login/">
+                       <input type="submit" class="submit" value="{function="translate('Startseite')"}">
+                   </form>
+                </td>
+            </tr>
+        </table>
+    {/if}
+</div>

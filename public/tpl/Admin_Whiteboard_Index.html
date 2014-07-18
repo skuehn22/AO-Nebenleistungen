@@ -1,0 +1,24 @@
+<script type="text/javascript" src="/tpl/Admin_whiteboard_index.js"></script>
+<script type="text/javascript">
+    Ext.onReady(function(){
+        {if condition="$rolleId > 7"}
+            whiteboardFragenAdmin();
+        {/if}
+    });
+
+</script>
+<div class='span-24' id='info'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue">allgemeine Systeminformationen</h3>
+    <br>
+    Darstellung allgemeiner Systeminformationen.
+    </div>
+</div>
+<div class='span-24'>&nbsp;</div>
+<div class="span-10 blockDescription">
+    {$personendaten.title} {$personendaten.firstname} {$personendaten.lastname} <br>
+	{$rolle}
+</div>
+<div class="span-24">&nbsp;</div>
+<div id='offeneFragen' class="span-22"></div> 
+<div id='einzelneFrage' class="span-5"></div>

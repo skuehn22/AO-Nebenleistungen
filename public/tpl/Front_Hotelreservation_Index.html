@@ -1,0 +1,185 @@
+{if="$showBlock"}
+<script type="text/javascript" src='/tpl/Front_Hotelreservation_Index.js'></script>
+<script type="text/javascript" src='/tpl/Front_Hotelreservation_Rabatt.js'></script>
+
+<!-- Maxi Bild und Tooltip Bild -->
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+
+<!-- Maxi Bild Kategorie -->
+<script type="text/javascript" src="/simpleModal/steuerung.modal.kategorie.js"></script>
+
+<script type="text/javascript">
+
+    var propertyId = {$propertyId};
+    var roomlimitUeberbuchung = {$roomlimitUeberbuchung};
+    var buttonUpdate = "{function="translate('zum Warenkorb')"}";
+    var personenanzahlSuchformular = {$hotelbeschreibung.personenanzahl};
+    var uebernachtungen = {$hotelbeschreibung.uebernachtungen};
+
+    var counterAnzeigeZuwenig = "{function="translate('fehlende Personen')"}";
+    var counterAnzeigeZuviel = "<span style='color:red'>{function="translate('Personen zuviel')"}</span>";
+    var counterAnzeigeMindestanzahlGruppe = "{function="translate('Mindestanzahl der Gruppe 10 Personen')"}";
+
+    var infoZimmerbelegung = "{function="translate('Mehrbettzimmer müssen mit mindestens 75% ausgelastet sein')"}";
+    var infoZimmerbelegungDoppelzimmer = "{function="translate('Doppelzimmer müssen zu 100% ausgelastet sein')"}";
+
+    var infoZimmerbeschreibung = "{function="translate('anzeigen der Zimmerbeschreibung')"}";
+    var infoKapazitaet = "{function="translate('In diesem Zimmertyp stehen nicht ausreichend Betten zur Verfügung')"}";
+    var infoKeineZimmer = "{function="translate('Leider stehen für diesen Zimmertyp keine Zimmer zur Verfügung')"}";
+    var infoFuerEingabe = "{function="translate('Bitte überprüfen sie die Anzahl in der Eingabe')"}";
+
+    var submitButtonZusatzprodukte = "{function="translate('weiter zu den Angeboten des Hotels')"}";
+    var submitButtonWarenkorb = "{function="translate('weiter zum Warenkorb')"}";
+
+    var personenIm = "{function="translate('Personen im')"}";
+
+    var flagUpdate = {$flagUpdate};
+
+
+</script>
+
+<div class="span-24" id='hotelDescription'>
+{/if}
+
+    <div id='ablaufleiste'>
+        <div class="block block_oben block_unten" style="padding-left: 40px;">{$breadcrumb}</div>
+    </div>
+
+    <div>&nbsp;</div>
+
+    <div class="block block_oben ueberschrift_gruen" style="padding-left: 40px;">
+        {function="translate('Bitte Zimmer im ')"} {$hotelbeschreibung.ueberschrift} {function="translate('auswählen')"}
+        <div class="stupidcat" editor='textfield' label='Slogan' id="ueberschrift"></div>
+    </div>
+
+
+{if="$showBlock"}
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="block block_unten block_oben span-16" style="padding-left: 40px;">
+{/if}
+    <div class="span-5">
+        {function="anzeigenBilder($hotelbeschreibung.hotelId,6,150)"}
+        <div class="stupidcat" editor='upload' label='Hotelbild' id="bild"></div>
+    </div>
+
+    <div class="span-9">
+        {$hotelbeschreibung.hotelbeschreibung}
+        <div class="stupidcat" label='Hotelbeschreibung' editor='htmleditor' id="txt">&nbsp;</div>
+    </div>
+</div>
+
+{if="$showBlock"}
+<div class="block block_oben ueberschrift" style="padding-left: 10px; width: 256px; float: left;">
+    {function="translate('eingegebene Suchparameter')"}:
+</div>
+<div class="block block_unten" style="padding-left: 10px; width: 256px; float: left;">
+    {function="translate('Anreisetag')"} {function="formatiereDatumIso($hotelbeschreibung.anreisetag)"}<br>
+    {function="translate('Abreisetag')"} {function="formatiereDatumIso($hotelbeschreibung.abreisetag)"}<br>
+    {function="translate('Übernachtungen')"}: {$hotelbeschreibung.uebernachtungen}<br>
+    {function="translate('Personenanzahl')"}: <span id="personenAnzahlSuchParameter">{$hotelbeschreibung.personenanzahl}</span>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="span-24" id='hotelReservationDetails'>
+
+    <form id="formID" method="post" action="#" class="form">
+    <table border="0" cellpadding="0" cellspacing="0" class="gitter span-18">
+        <tr>
+            <td colspan="7">&nbsp;&nbsp;<span class="tabellenueberschrift_gruen">{function="translate('Übernachtungen buchen')"}:</span></td>
+        </tr>
+        <tr>
+            <td class="span-4" align="center"> {function="translate('Anzahl Personen')"}  </td>
+            <td class="span-5" align="center"> {function="translate('Zimmertyp')"} </td>
+            <td class="span-3" align="center"> {function="translate('Anzahl Betten pro Zimmer')"} </td>
+            <td class="span-3" align="center"> {function="translate('Anzahl freie Zimmer')"} </td>
+            <td class="span-3" align="center"> {function="translate('Preis pro Nacht')"} </td>
+            <td class="span-2" align="center"> {function="translate('Preis der Zimmer pro Nacht')"} </td>
+            <td class="span-4" align="center">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="7"><input type="hidden" name="propertyId" value="{$propertyId}"></td>
+        </tr>
+
+        {loop="zimmer"}
+            <tr>
+                <td align="center">
+                    <input type="text" style="width: 50px;" value="{$value.personenanzahl}" class="personenanzahl input_action" id="{$value.ratenId}" name="{$value.ratenId}"> {function="translate('Personen im')"}
+                </td>
+                <td>
+                     &nbsp; {$value.categorie_name}<br>
+                     &nbsp; <a href="#"  onclick="getZimmerbeschreibung('{$value.rate_code}')"> {function="translate('Zimmerbeschreibung')"} </a>
+                </td>
+                <td>
+                    <span id="bettenanzahl_{$value.ratenId}">{$value.bettenanzahl}</span>
+
+                    {if condition="$value.personenpreis == 'false'"}
+                        <span id="preistyp_{$value.ratenId}" style="visibility: hidden;">zimmerpreis</span>
+                    {else}
+                        <span id="preistyp_{$value.ratenId}" style="visibility: hidden;">personenpreis</span>
+                    {/if}
+                </td>
+                <td>
+                    <span id="roomlimit_{$value.ratenId}">{$value.roomlimit}</span>
+                </td>
+
+                {if condition="$value.personenpreis == 'false'"}
+                    <td><span id="preis_{$value.ratenId}">{$value.preis}</span> € {function="translate('für das Zimmer')"}</td>
+                {else}
+                    <td><span id="preis_{$value.ratenId}">{$value.preis}</span> € {function="translate('je Person')"}</td>
+                {/if}
+
+                <td><span id='zimmerPreis_{$value.ratenId}' class="gesamtpreisZimmer">0</span> €</td>
+
+                <td><div id="zimmerbelegung_{$value.ratenId}" class="zimmerbelegung" style="padding-left: 10px; color: red;"> </div></td>
+            </tr>
+        {/loop}
+        
+        <tr>
+            <td>{function="translate('Preis für einen Tag')"}: </td>
+            <td colspan="3"> &nbsp; <span id='tagesPreis'>0</span> €</td>
+            <td id="information" colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>{function="translate('mittlerer Preis pro Person für den Zeitraum')"}: </td>
+            <td colspan="3"> &nbsp; <span id='mittlererPersonenPreis'>0</span> €</td>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>{function="translate('Gruppenrabatt für den Zeitraum')"}: </td>
+            <td colspan="3"> &nbsp; <span id='gruppenRabatt'>0</span> €</td>
+            <td colspan="4">
+                {function="translate('Freiplätze')"}:<br>
+                <span id='freiPlaetze'>&nbsp;</span>
+            </td>
+        </tr>
+        <tr>
+            <td>{function="translate('Preis für ')"}<span id='tage'> {$hotelbeschreibung.uebernachtungen}</span> {function="translate('Übernachtungen')"}: </td>
+            <td colspan="3"> &nbsp; <span id='gesamtPreisAllerUebernachtungen'>0</span> €</td>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td colspan="7" align="center">
+                <a id='zurueckZurSuche' href="/front/hotelsearch/index/city/{$cityId}">{function="translate('Zurück zur Hotelliste')"}</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" id='pruefen' class="submit" name="pruefen" value="{function="translate('prüfen')"}">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" id='submitForm' class="submit_passiv" name="senden" value="">
+            </td>
+        </tr>
+    </table>
+    </form>
+
+</div>
+{/if}
+
+{if="$showBlock"}
+<div class="span-20" id='zimmerbeschreibung'></div>
+<a name="zimmerbeschreibung"></a>
+<div class="span-20" id="move">&nbsp;</div>
+{/if}
