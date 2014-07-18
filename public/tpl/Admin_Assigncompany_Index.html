@@ -1,0 +1,437 @@
+<script type="text/javascript">
+
+	var gridExistingCompany;
+    var gridExistingPrograms;
+    var gridProgramsOfCompany;
+    var gridProgramsFromCompany;
+
+    var storeExistingCompany;
+    var storeExistingPrograms;
+    var storeExistingCities;
+    var storeProgramsFromCompany;
+
+    var pagingExistingPrograms;
+
+    var memoryCitySearchKeyword = '';
+    var memoryProgramSearchKeyword = '';
+    var memoryCompanyId;
+
+	Ext.onReady(function(){
+
+        storeExistingCompany = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/assigncompany/getexistingcompanies/",
+	        id: 'jsonStoreHotels',
+	        fields: ['id','company','city']
+	    });
+
+        storeExistingPrograms = new Ext.data.JsonStore({
+            storeId: 'programs',
+            url: '/admin/assigncompany/getexistingprograms/',
+            root: 'data',
+            totalProperty: 'anzahl',
+            baseParams: {
+                citySearchKeyword: memoryCitySearchKeyword,
+                programSearchKeyword: memoryProgramSearchKeyword
+            },
+            fields: [{
+                    name: 'id'
+                },{
+                    name: 'progname'
+                },{
+                    name: 'company'
+                },{
+                    name: 'city'
+                }]
+        });
+
+        storeExistingCities = new Ext.data.JsonStore({
+            storeId: 'searchCity',
+            url: '/admin/assigncompany/getexistingcities/',
+            root: 'data',
+            method: 'post',
+            autoLoad: true,
+            fields: [{
+                    name: 'id'
+                },{
+                    name: 'city'
+            }]
+        });
+
+        storeProgramsFromCompany = new Ext.data.JsonStore({
+            url: '/admin/assigncompany/programsfromcopmpany/',
+            root: 'data',
+            storeId: 'idStoreProgramsFromCompany',
+            fields: [{
+                    name: 'id'
+                },{
+                    name: 'progname'
+                },{
+                    name: 'city'
+                },{
+                    name: 'company'
+                },{
+                    name: 'street'
+                },{
+                    name: 'plz'
+                },{
+                    name: 'region'
+            }]
+        });
+
+
+        gridExistingCompany = new Ext.grid.GridPanel({
+            title: 'vorhandene Firmen',
+            width: 400,
+            stripeRows: true,
+            loadMask: true,
+            columnLines: true,
+            autoExpandColumn: 'company',
+            autoHeight: true,
+            id: 'gridExistingCompany',
+            store: storeExistingCompany,
+            viewConfig: {
+				forceFit: true
+	        },
+            listeners: {
+                rowclick: function(){
+                    var hotelData = gridExistingCompany.getSelectionModel().getSelected();
+                    memoryCompanyId = hotelData.data.id;
+
+                    storeProgramsFromCompany.setBaseParam('hotelId', memoryCompanyId);
+                    storeProgramsFromCompany.load();
+                }
+            },
+            columns: [{
+                xtype: 'gridcolumn',
+                dataIndex: 'id',
+                header: 'Id',
+                sortable: true,
+                width: 100,
+                id: 'id'
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'company',
+                header: 'Firma',
+                sortable: true,
+                width: 150,
+                id: 'company'
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'city',
+                header: 'Stadt',
+                sortable: true,
+                width: 150,
+                id: 'city'
+            }],
+            tbar:{
+                xtype: 'toolbar',
+                items: [{
+                    xtype: 'tbtext',
+                    text: 'Firmenname: '
+                },{
+                    xtype: 'tbspacer',
+                    width: 10
+                },{
+                            xtype: 'tbseparator'
+                },{
+                    xtype: 'textfield',
+                    width: 100,
+                    minLength: 3,
+                    id: 'searchCompanyInput'
+                },{
+                    xtype: 'tbspacer',
+                    width: 10
+                },{
+                    xtype: 'button',
+                    text: 'suchen',
+                    id: 'searchCompanyButton',
+                    listeners:{
+                        click: function(){
+                            var search = Ext.getCmp('searchCompanyInput').getValue();
+
+                            storeExistingCompany.setBaseParam('search', search);
+                            storeExistingCompany.load();
+                        }
+                    }
+                },{
+                    xtype: 'tbseparator'
+                }]
+            },
+            bbar:{
+                xtype: 'paging',
+	            store: storeExistingCompany,
+	            id: 'pagingExistingCompanies',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+            }
+        });
+
+        selGridExistingPrograms = new Ext.grid.CheckboxSelectionModel();
+
+        gridExistingPrograms = new Ext.grid.GridPanel({
+            title: 'vorhandene Programme',
+            store: storeExistingPrograms,
+            stripeRows: true,
+            loadMask: true,
+            columnLines: true,
+            autoHeight: true,
+            width: 500,
+            sm: selGridExistingPrograms,
+            autoExpandColumn: 'progname',
+            viewConfig: {
+                forceFit: true
+	        },
+            columns: [
+                selGridExistingPrograms,
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'id',
+                    header: 'Id',
+                    sortable: true,
+                    width: 50,
+                    id: 'id'
+                },{
+                    xtype: 'gridcolumn',
+                    dataIndex: 'progname',
+                    header: 'Programmname',
+                    sortable: true,
+                    width: 200,
+                    id: 'progname'
+                },{
+                    xtype: 'gridcolumn',
+                    dataIndex: 'company',
+                    header: 'Firma',
+                    sortable: true,
+                    width: 200,
+                    id: 'company'
+            }],
+            bbar: {
+                xtype: 'paging',
+	            store: storeExistingPrograms,
+	            id: 'pagingExistingPrograms',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+            },
+            tbar: {
+                xtype: 'toolbar',
+                items: [{
+                    xtype: 'tbtext',
+                    text: 'suchen eines Programmes: '
+                },{
+                    xtype: 'textfield',
+                    id: 'searchProgram',
+                    minLength: 3
+                },{
+                    xtype: 'spacer',
+                    width: 5
+                },{
+                    xtype: 'combo',
+	                width: 150,
+	                id: 'searchCity',
+	                forceSelection: true,
+					triggerAction: 'all',
+					displayField: 'city',
+					valueField: 'id',
+					hiddenName: 'citySearch',
+					store: storeExistingCities,
+					lazyRender:true,
+					typeAhead: true
+                },{
+                    xtype: 'tbspacer',
+                    width: 10
+                },{
+                    xtype: 'button',
+                    text: 'suchen',
+                    listeners: {
+                        click: function(){
+                           searchProgramsByKeywords();
+                        }
+                    }
+                }]
+            },
+            buttons:[{
+                text: 'zur Firma zuordnen',
+                listeners: {
+                    click: function(){
+                        assignProgramToCompany();
+                    }
+                }
+            }]
+        });
+
+    selGridProgramsFromCompany = new Ext.grid.CheckboxSelectionModel();
+
+    gridProgramsFromCompany = new Ext.grid.GridPanel({
+        title: 'Programme einer Firma',
+        store: storeProgramsFromCompany,
+        stripeRows: true,
+        loadMask: true,
+        columnLines: true,
+        autoHeight: true,
+        sm: selGridProgramsFromCompany,
+        width: 950,
+        autoExpandColumn: 'progname',
+        viewConfig: {
+            forceFit: true
+        },
+        columns: [
+            selGridProgramsFromCompany,
+            {
+                xtype: 'gridcolumn',
+                dataIndex: 'id',
+                header: 'Id',
+                sortable: true,
+                width: 50,
+                id: 'id'
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'progname',
+                header: 'Programmname',
+                sortable: true,
+                width: 200,
+                id: 'progname'
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'company',
+                header: 'Firma',
+                sortable: true,
+                width: 200,
+                id: 'company'
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'region',
+                header: 'Region',
+                sortable: true,
+                width: 200,
+                id: 'region'
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'city',
+                header: 'Stadt',
+                sortable: true,
+                width: 100,
+                id: 'city'
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'plz',
+                header: 'PLZ',
+                sortable: true,
+                width: 100,
+                id: 'plz'
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'street',
+                header: 'Strasse',
+                sortable: true,
+                width: 100,
+                id: 'strasse'
+            }],
+        buttons: [{
+            text: 'Programme abwählen',
+            listeners: {
+                click: function(){
+                    removeProgramsFromCompany();
+                }
+            }
+        }]
+    });
+
+
+        gridExistingCompany.store.load();
+        gridExistingCompany.render('existingCompany');
+
+        gridExistingPrograms.store.load();
+        gridExistingPrograms.render('existingPrograms');
+
+        gridProgramsFromCompany.render('programsOfCompany');
+    });
+
+    function searchProgramsByKeywords(){
+        memoryCitySearchKeyword = Ext.getCmp('searchCity').getValue();
+        memoryProgramSearchKeyword = Ext.getCmp('searchProgram').getValue();
+
+        storeExistingPrograms.setBaseParam('citySearchKeyword', memoryCitySearchKeyword);
+        storeExistingPrograms.setBaseParam('programSearchKeyword', memoryProgramSearchKeyword);
+        storeExistingPrograms.load();
+    }
+
+    function assignProgramToCompany(){
+        var programsArray = new Array();
+        if(!memoryCompanyId){
+            showMsgBox('Bitte Firma wählen');
+            return;
+        }
+
+        var programRows = gridExistingPrograms.getSelectionModel().getSelections();
+
+        for(var i = 0; i < programRows.length; i++){
+            programsArray[i] = programRows[i].data.id;
+        }
+
+        var programs = Ext.util.JSON.encode(programsArray);
+
+        if(i == 0){
+            showMsgBox('Bitte Programme wählen');
+            return;
+        }
+
+        Ext.Ajax.request({
+           url: '/admin/assigncompany/setprogramstocompany/',
+           success: function(){
+               storeProgramsFromCompany.load();
+               storeExistingPrograms.load();
+           },
+           failure: function(){
+
+           },
+           params: {
+               hotelId: memoryCompanyId,
+               programs: programs
+           }
+        });
+    }
+
+    function removeProgramsFromCompany(){
+        var removeId = new Array();
+        var selected = gridProgramsFromCompany.getSelectionModel().getSelections();
+        for(var i=0; i < selected.length; i++){
+            removeId[i] = selected[i].data.id;
+        }
+
+        var faId = Ext.util.JSON.encode(removeId);
+
+         Ext.Ajax.request({
+           url: '/admin/assigncompany/removeprogramsfromcompany/',
+           success: function(){
+               storeProgramsFromCompany.load();
+               storeExistingPrograms.load();
+           },
+           failure: function(){
+                showMsgBox('Fehler');
+           },
+           params: {
+               hotelId: memoryCompanyId,
+               faId: faId
+           }
+        });
+
+    }
+
+</script>
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+        <h3 style="color: blue">Zuordnung einzelner Programme zu einer Firma</h3>
+        <br>
+        Durch den Administrator können Programme einer Firma zugeordnet werden.
+    </div>
+</div>
+<div class='span-32'>&nbsp;</div>
+<div class='span-15' id='existingCompany'></div>
+<div class='span-15' id='existingPrograms'></div>
+<div class='span-32'>&nbsp;</div>
+<div class='span-32' id="programsOfCompany"></div>
