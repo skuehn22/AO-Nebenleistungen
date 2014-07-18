@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rates>
+ <rate>
+  <category_id>17</category_id>
+  <category_name>Doppelzimmer Du/WC</category_name>
+  <category_code>DZ ens</category_code>
+  <rate_id>7</rate_id>
+  <rate_name>DZ ens</rate_name>
+  <rate_code>AOB2-DZ</rate_code>
+ </rate>
+ <rate>
+  <category_id>16</category_id>
+  <category_name>Einzelzimmer Du/WC</category_name>
+  <category_code>EZ ens</category_code>
+  <rate_id>8</rate_id>
+  <rate_name>EZ ens</rate_name>
+  <rate_code>AOB2-EZ</rate_code>
+ </rate>
+ <rate>
+  <category_id>18</category_id>
+  <category_name>4er Familienzimmer Du/WC</category_name>
+  <category_code>4er-FA ens</category_code>
+  <rate_id>9</rate_id>
+  <rate_name>4er-FA</rate_name>
+  <rate_code>AOB2-4erFA</rate_code>
+ </rate>
+ <rate>
+  <category_id>19</category_id>
+  <category_name>6er Familienzimmer Du/WC</category_name>
+  <category_code>6er-FA ens</category_code>
+  <rate_id>10</rate_id>
+  <rate_name>6er-FA</rate_name>
+  <rate_code>AOB2-6erFA</rate_code>
+ </rate>
+ <rate>
+  <category_id>20</category_id>
+  <category_name>4er Mehrbettzimmer Du/WC</category_name>
+  <category_code>4er ens</category_code>
+  <rate_id>11</rate_id>
+  <rate_name>4er ens</rate_name>
+  <rate_code>AOB2-4er</rate_code>
+ </rate>
+ <rate>
+  <category_id>21</category_id>
+  <category_name>6er Mehrbettzimmer Du/WC</category_name>
+  <category_code>6er ens</category_code>
+  <rate_id>12</rate_id>
+  <rate_name>6er ens</rate_name>
+  <rate_code>AOB2-6er</rate_code>
+ </rate>
+ <rate>
+  <category_id>22</category_id>
+  <category_name>6er Mehrbettzimmer Etagendusche</category_name>
+  <category_code>6er</category_code>
+  <rate_id>13</rate_id>
+  <rate_name>6er</rate_name>
+  <rate_code>AOB2-6erEt</rate_code>
+ </rate>
+ <rate>
+  <category_id>23</category_id>
+  <category_name>8er Mehrbettzimmer Du/WC</category_name>
+  <category_code>8er ens</category_code>
+  <rate_id>14</rate_id>
+  <rate_name>8er ens</rate_name>
+  <rate_code>AOB2-8er</rate_code>
+ </rate>
+ <rate>
+  <category_id>24</category_id>
+  <category_name>8er Mehrbettzimmer Etagendusche</category_name>
+  <category_code>8er</category_code>
+  <rate_id>15</rate_id>
+  <rate_name>8er</rate_name>
+  <rate_code>AOB2-8erEt</rate_code>
+ </rate>
+ <rate>
+  <category_id>25</category_id>
+  <category_name>10er Mehrbettzimmer Du/WC</category_name>
+  <category_code>10er ens</category_code>
+  <rate_id>16</rate_id>
+  <rate_name>10er ens</rate_name>
+  <rate_code>AOB2-10er</rate_code>
+ </rate>
+ <rate>
+  <category_id>26</category_id>
+  <category_name>10er Mehrbettzimmer Etagendusche</category_name>
+  <category_code>10er</category_code>
+  <rate_id>17</rate_id>
+  <rate_name>10er</rate_name>
+  <rate_code>AOB2-10erEt</rate_code>
+ </rate>
+ <rate>
+  <category_id>16</category_id>
+  <category_name>Einzelzimmer Du/WC</category_name>
+  <category_code>EZ ens</category_code>
+  <rate_id>19</rate_id>
+  <rate_name>EZ</rate_name>
+  <rate_code>EZ</rate_code>
+ </rate>
+ <rate>
+  <category_id>17</category_id>
+  <category_name>Doppelzimmer Du/WC</category_name>
+  <category_code>DZ ens</category_code>
+  <rate_id>20</rate_id>
+  <rate_name>DZ</rate_name>
+  <rate_code>DZ</rate_code>
+ </rate>
+ <rate>
+  <category_id>18</category_id>
+  <category_name>4er Familienzimmer Du/WC</category_name>
+  <category_code>4er-FA ens</category_code>
+  <rate_id>21</rate_id>
+  <rate_name>4er-FA</rate_name>
+  <rate_code>4er-FA</rate_code>
+ </rate>
+ <rate>
+  <category_id>19</category_id>
+  <category_name>6er Familienzimmer Du/WC</category_name>
+  <category_code>6er-FA ens</category_code>
+  <rate_id>22</rate_id>
+  <rate_name>6er-FA</rate_name>
+  <rate_code>6er-FA</rate_code>
+ </rate>
+ <rate>
+  <category_id>20</category_id>
+  <category_name>4er Mehrbettzimmer Du/WC</category_name>
+  <category_code>4er ens</category_code>
+  <rate_id>23</rate_id>
+  <rate_name>4er</rate_name>
+  <rate_code>4er</rate_code>
+ </rate>
+ <rate>
+  <category_id>21</category_id>
+  <category_name>6er Mehrbettzimmer Du/WC</category_name>
+  <category_code>6er ens</category_code>
+  <rate_id>24</rate_id>
+  <rate_name>6er</rate_name>
+  <rate_code>6er</rate_code>
+ </rate>
+ <rate>
+  <category_id>22</category_id>
+  <category_name>6er Mehrbettzimmer Etagendusche</category_name>
+  <category_code>6er</category_code>
+  <rate_id>25</rate_id>
+  <rate_name>6er Etage</rate_name>
+  <rate_code>6er Etage</rate_code>
+ </rate>
+ <rate>
+  <category_id>23</category_id>
+  <category_name>8er Mehrbettzimmer Du/WC</category_name>
+  <category_code>8er ens</category_code>
+  <rate_id>26</rate_id>
+  <rate_name>8er</rate_name>
+  <rate_code>8er</rate_code>
+ </rate>
+ <rate>
+  <category_id>24</category_id>
+  <category_name>8er Mehrbettzimmer Etagendusche</category_name>
+  <category_code>8er</category_code>
+  <rate_id>27</rate_id>
+  <rate_name>8er Etage</rate_name>
+  <rate_code>8er Etage</rate_code>
+ </rate>
+ <rate>
+  <category_id>25</category_id>
+  <category_name>10er Mehrbettzimmer Du/WC</category_name>
+  <category_code>10er ens</category_code>
+  <rate_id>28</rate_id>
+  <rate_name>10er</rate_name>
+  <rate_code>10er</rate_code>
+ </rate>
+ <rate>
+  <category_id>26</category_id>
+  <category_name>10er Mehrbettzimmer Etagendusche</category_name>
+  <category_code>10er</category_code>
+  <rate_id>29</rate_id>
+  <rate_name>10er Etage</rate_name>
+  <rate_code>10er Etage</rate_code>
+ </rate>
+ <rate>
+  <category_id>16</category_id>
+  <category_name>Einzelzimmer Du/WC</category_name>
+  <category_code>EZ ens</category_code>
+  <rate_id>30</rate_id>
+  <rate_name>EZ</rate_name>
+  <rate_code>EZ</rate_code>
+ </rate>
+ <rate>
+  <category_id>17</category_id>
+  <category_name>Doppelzimmer Du/WC</category_name>
+  <category_code>DZ ens</category_code>
+  <rate_id>31</rate_id>
+  <rate_name>DZ</rate_name>
+  <rate_code>DZ</rate_code>
+ </rate>
+ <rate>
+  <category_id>18</category_id>
+  <category_name>4er Familienzimmer Du/WC</category_name>
+  <category_code>4er-FA ens</category_code>
+  <rate_id>32</rate_id>
+  <rate_name>4er-FA</rate_name>
+  <rate_code>4er-FA</rate_code>
+ </rate>
+ <rate>
+  <category_id>19</category_id>
+  <category_name>6er Familienzimmer Du/WC</category_name>
+  <category_code>6er-FA ens</category_code>
+  <rate_id>33</rate_id>
+  <rate_name>6er-FA</rate_name>
+  <rate_code>6er-FA</rate_code>
+ </rate>
+ <rate>
+  <category_id>20</category_id>
+  <category_name>4er Mehrbettzimmer Du/WC</category_name>
+  <category_code>4er ens</category_code>
+  <rate_id>34</rate_id>
+  <rate_name>4er</rate_name>
+  <rate_code>4er</rate_code>
+ </rate>
+ <rate>
+  <category_id>21</category_id>
+  <category_name>6er Mehrbettzimmer Du/WC</category_name>
+  <category_code>6er ens</category_code>
+  <rate_id>35</rate_id>
+  <rate_name>6er</rate_name>
+  <rate_code>6er</rate_code>
+ </rate>
+</rates>

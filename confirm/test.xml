@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Authentication>
+    <UserName></UserName>
+    <Password></Password>
+</Authentication>
+<BookingConfirmations>
+    <BookingConfirmation HotelCode="AOKA1" ResId_Value="188-103" ConfNr="35"/>
+</BookingConfirmations>

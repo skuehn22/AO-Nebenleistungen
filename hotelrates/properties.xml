@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+ <property>
+  <id>49</id>
+  <propertyname>1</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>50</id>
+  <propertyname>2</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>51</id>
+  <propertyname>3</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>52</id>
+  <propertyname>4</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>53</id>
+  <propertyname>5</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>54</id>
+  <propertyname>6</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>4</id>
+  <propertyname>A&amp;O Berlin am Zoo</propertyname>
+  <propertycode>AOB2</propertycode>
+ </property>
+ <property>
+  <id>2</id>
+  <propertyname>A&amp;O Berlin Friedrichshain</propertyname>
+  <propertycode>AOB1</propertycode>
+ </property>
+ <property>
+  <id>20</id>
+  <propertyname>A&amp;O Berlin Hauptbahnhof</propertyname>
+  <propertycode>AOB4</propertycode>
+ </property>
+ <property>
+  <id>3</id>
+  <propertyname>A&amp;O Berlin Mitte</propertyname>
+  <propertycode>AOB3</propertycode>
+ </property>
+ <property>
+  <id>5</id>
+  <propertyname>A&amp;O Dortmund Hauptbahnhof</propertyname>
+  <propertycode>AODO1</propertycode>
+ </property>
+ <property>
+  <id>6</id>
+  <propertyname>A&amp;O Dresden Hauptbahnhof</propertyname>
+  <propertycode>AODD1</propertycode>
+ </property>
+ <property>
+  <id>7</id>
+  <propertyname>A&amp;O Düsseldorf</propertyname>
+  <propertycode>AOD1</propertycode>
+ </property>
+ <property>
+  <id>11</id>
+  <propertyname>A&amp;O Hamburg City Süd</propertyname>
+  <propertycode>AOHH4</propertycode>
+ </property>
+ <property>
+  <id>8</id>
+  <propertyname>A&amp;O Hamburg Hammer Kirche</propertyname>
+  <propertycode>AOHH1</propertycode>
+ </property>
+ <property>
+  <id>9</id>
+  <propertyname>A&amp;O Hamburg Hauptbahnhof</propertyname>
+  <propertycode>AOHH2</propertycode>
+ </property>
+ <property>
+  <id>10</id>
+  <propertyname>A&amp;O Hamburg Reeperbahn</propertyname>
+  <propertycode>AOHH3</propertycode>
+ </property>
+ <property>
+  <id>13</id>
+  <propertyname>A&amp;O Köln Dom (Hbf.)</propertyname>
+  <propertycode>AOK2</propertycode>
+ </property>
+ <property>
+  <id>12</id>
+  <propertyname>A&amp;O Köln Neumarkt</propertyname>
+  <propertycode>AOK1</propertycode>
+ </property>
+ <property>
+  <id>14</id>
+  <propertyname>A&amp;O Leipzig Hauptbahnhof</propertyname>
+  <propertycode>AOL1</propertycode>
+ </property>
+ <property>
+  <id>16</id>
+  <propertyname>A&amp;O München Hackerbrücke</propertyname>
+  <propertycode>AOM2</propertycode>
+ </property>
+ <property>
+  <id>15</id>
+  <propertyname>A&amp;O München Hauptbahnhof</propertyname>
+  <propertycode>AOM1</propertycode>
+ </property>
+ <property>
+  <id>17</id>
+  <propertyname>A&amp;O Nürnberg Hauptbahnhof</propertyname>
+  <propertycode>AON1</propertycode>
+ </property>
+ <property>
+  <id>18</id>
+  <propertyname>A&amp;O Prag Holesovice</propertyname>
+  <propertycode>AOCZP1</propertycode>
+ </property>
+ <property>
+  <id>19</id>
+  <propertyname>A&amp;O Wien Stadthalle</propertyname>
+  <propertycode>AOATW1</propertycode>
+ </property>
+ <property>
+  <id>47</id>
+  <propertyname>A1 Hostel Nürnberg</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>48</id>
+  <propertyname>Bed'n Budget Hannover</propertyname>
+  <propertycode></propertycode>
+ </property>
+ <property>
+  <id>44</id>
+  <propertyname>Cityherberge Dresden</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>46</id>
+  <propertyname>DHJ City-Hostel Düsseldorf </propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>23</id>
+  <propertyname>EastSeven Berlin Hostel</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>41</id>
+  <propertyname>Estrell Hotel Berlin</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>22</id>
+  <propertyname>Generator Berlin</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>36</id>
+  <propertyname>Generator Hostel Hamburg</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>26</id>
+  <propertyname>Hotel Bogota Berlin</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>38</id>
+  <propertyname>Hotel Pension Augusta</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>31</id>
+  <propertyname>JGH Adolph Kolping Dortmund</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>42</id>
+  <propertyname>Meininger BBI Airport</propertyname>
+  <propertycode>Meininger BBI Airport</propertycode>
+ </property>
+ <property>
+  <id>24</id>
+  <propertyname>Meininger Berlin Hallesches Ufer</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>25</id>
+  <propertyname>Meininger Berlin Hauptbahnhof</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>28</id>
+  <propertyname>Meininger Berlin Mitte Humboldthaus</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>43</id>
+  <propertyname>Meininger Berlin Prenzlauer Berg</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>27</id>
+  <propertyname>Meininger Berlin Tempelhofer Ufer</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>37</id>
+  <propertyname>Meininger Hamburg City Center</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>33</id>
+  <propertyname>Meininger Köln City Center</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>34</id>
+  <propertyname>Meininger München City Center</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>40</id>
+  <propertyname>Meininger Wien Downtown Sissi</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>45</id>
+  <propertyname>Sleepy Lion Hostel Leipzig</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>35</id>
+  <propertyname>Station Hostel Köln</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>39</id>
+  <propertyname>Westend City Hostel Wien</propertyname>
+  <propertycode> </propertycode>
+ </property>
+ <property>
+  <id>32</id>
+  <propertyname>Wombats City Hostel München</propertyname>
+  <propertycode> </propertycode>
+ </property>
+</properties>

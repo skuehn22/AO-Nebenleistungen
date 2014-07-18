@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><OTA_HotelResRQ><HotelReservations><HotelReservation ResStatus="NU" RoomStayReservation="true" LastModifyDateTime="2013-06-03 15:24:07"><RoomStays><RoomStay>
+ <RoomType IsRoom="true" NumberOfUnits="5" RoomTypeCode="EZ ens">
+  <RoomDescription Name="EZ"/>
+ </RoomType>
+ <RoomRates>
+  <RoomRate NumberOfUnits="5" RoomTypeCode="EZ ens" RatePlanCode="EZ">
+   <Rates>
+    <Rate EffectiveDate="2013-07-17">
+     <Base CurrencyCode="EUR" AmountAfterTax="274.50"/>
+    </Rate>
+    <Rate EffectiveDate="2013-07-18">
+     <Base CurrencyCode="EUR" AmountAfterTax="274.50"/>
+    </Rate>
+    <Rate EffectiveDate="2013-07-19">
+     <Base CurrencyCode="EUR" AmountAfterTax="279.00"/>
+    </Rate>
+    <Rate EffectiveDate="2013-07-20">
+     <Base CurrencyCode="EUR" AmountAfterTax="279.00"/>
+    </Rate>
+   </Rates>
+   <Total AdditionalFeesExcludeIndicator="false" CurrencyCode="EUR" AmountAfterTax="1107.00"/>
+  </RoomRate>
+ </RoomRates>
+ <GuestCounts IsPerRoom="false">
+  <GuestCount AgeQualifyingCode="10" Count="5"/>
+ </GuestCounts>
+ <TimeSpan End="2013-07-21" Start="2013-07-17"/>
+</RoomStay>
+<RoomStay>
+ <RoomType IsRoom="true" NumberOfUnits="5" RoomTypeCode="DZ ens">
+  <RoomDescription Name="DZ"/>
+ </RoomType>
+ <RoomRates>
+  <RoomRate NumberOfUnits="5" RoomTypeCode="DZ ens" RatePlanCode="DZ">
+   <Rates>
+    <Rate EffectiveDate="2013-07-17">
+     <Base CurrencyCode="EUR" AmountAfterTax="351.00"/>
+    </Rate>
+    <Rate EffectiveDate="2013-07-18">
+     <Base CurrencyCode="EUR" AmountAfterTax="351.00"/>
+    </Rate>
+    <Rate EffectiveDate="2013-07-19">
+     <Base CurrencyCode="EUR" AmountAfterTax="360.00"/>
+    </Rate>
+    <Rate EffectiveDate="2013-07-20">
+     <Base CurrencyCode="EUR" AmountAfterTax="360.00"/>
+    </Rate>
+   </Rates>
+   <Total AdditionalFeesExcludeIndicator="false" CurrencyCode="EUR" AmountAfterTax="1422.00"/>
+  </RoomRate>
+ </RoomRates>
+ <GuestCounts IsPerRoom="false">
+  <GuestCount AgeQualifyingCode="10" Count="10"/>
+ </GuestCounts>
+ <TimeSpan End="2013-07-21" Start="2013-07-17"/>
+</RoomStay>
+</RoomStays><Supplements><Supplement>
+ <SupplementTypes>
+  <SupplementType SuppTypeCode="Lunchpaket" NumberOfUnits="15" Bt="true">
+   <SupplementDescription Name="Lunchpaket" LastModifyDateTime="2013-06-03 15:22:02"/>
+  </SupplementType>
+ </SupplementTypes>
+ <SupplementRates>
+  <SupplementRate SuppTypeCode="Lunchpaket" NumberOfUnits="15">
+   <Rates>
+    <Rate EffectiveDate="2013-07-18">
+     <Base AmountAfterTax="67.50" CurrencyCode="EUR"/>
+    </Rate>
+    <Rate EffectiveDate="2013-07-19">
+     <Base AmountAfterTax="67.50" CurrencyCode="EUR"/>
+    </Rate>
+    <Rate EffectiveDate="2013-07-20">
+     <Base AmountAfterTax="67.50" CurrencyCode="EUR"/>
+    </Rate>
+    <Rate EffectiveDate="2013-07-21">
+     <Base AmountAfterTax="67.50" CurrencyCode="EUR"/>
+    </Rate>
+   </Rates>
+   <Total AmountAfterTax="270.00" CurrencyCode="EUR" AdditionalFeesExcludedIndicator="false"/>
+  </SupplementRate>
+ </SupplementRates>
+</Supplement>
+<Supplement>
+ <SupplementTypes>
+  <SupplementType SuppTypeCode="W-LAN 24" NumberOfUnits="5">
+   <SupplementDescription Name="W-LAN 24Std." LastModifyDateTime="2013-06-03 15:22:02"/>
+  </SupplementType>
+ </SupplementTypes>
+ <SupplementRates>
+  <SupplementRate SuppTypeCode="W-LAN 24" NumberOfUnits="5">
+   <Rates>
+    <Rate EffectiveDate="2013-07-17">
+     <Base AmountAfterTax="25.00"/>
+    </Rate>
+   </Rates>
+   <Total AmountAfterTax="25.00" CurrencyCode="EUR" AdditionalFeesExcludedIndicator="false"/>
+  </SupplementRate>
+ </SupplementRates>
+</Supplement>
+</Supplements><ResGuests><ResGuest><Profiles><ProfileInfo><Profile><Customer><PersonName>
+ <GivenName>Stephan</GivenName>
+ <SurName>Krauß</SurName>
+</PersonName>
+<Telephone PhoneNumber=""/>
+<Email>admin@herden.de</Email>
+<Address>
+ <StreetNumbr>An der alten Schäferei 34</StreetNumbr>
+ <CityName>Langenweißbach</CityName>
+ <PostalCode>08134</PostalCode>
+ <CountryName></CountryName>
+ <CompanyName></CompanyName>
+</Address>
+</Customer></Profile></ProfileInfo></Profiles></ResGuest></ResGuests><ResGlobalInfo><GuestCounts IsPeerRoom='false'><GuestCount Count='15' /></GuestCounts><TimeSpan Start='2013-07-17' End='2013-07-21' /><Comments><Comment><Text></Text></Comment></Comments><Total AdditionalFeesExcludedIndicator='false' CurrencyCode='EUR' AmountAfterTax='2824.00' /><HotelReservationIDs><HotelReservationID ResID_Value='100-220' ResID_Date='2013-06-03 15:24:07' /></HotelReservationIDs><TPA_Extensions><Herden ReservationType='STD' /></TPA_Extensions></ResGlobalInfo></HotelReservation></HotelReservations></OTA_HotelResRQ>

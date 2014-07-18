@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Categories>
+ <Category CategoryId="17" CategoryName="Doppelzimmer Du/WC" CategoryCode="DZ ens">
+  <Rates>
+   <Rate RateId="7" RateName="DZ ens" RateCode="AOB2-DZ"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="16" CategoryName="Einzelzimmer Du/WC" CategoryCode="EZ ens">
+  <Rates>
+   <Rate RateId="8" RateName="EZ ens" RateCode="AOB2-EZ"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="18" CategoryName="4er Familienzimmer Du/WC" CategoryCode="4er-FA ens">
+  <Rates>
+   <Rate RateId="9" RateName="4er-FA" RateCode="AOB2-4erFA"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="19" CategoryName="6er Familienzimmer Du/WC" CategoryCode="6er-FA ens">
+  <Rates>
+   <Rate RateId="10" RateName="6er-FA" RateCode="AOB2-6erFA"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="20" CategoryName="4er Mehrbettzimmer Du/WC" CategoryCode="4er ens">
+  <Rates>
+   <Rate RateId="11" RateName="4er ens" RateCode="AOB2-4er"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="21" CategoryName="6er Mehrbettzimmer Du/WC" CategoryCode="6er ens">
+  <Rates>
+   <Rate RateId="12" RateName="6er ens" RateCode="AOB2-6er"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="22" CategoryName="6er Mehrbettzimmer Etagendusche" CategoryCode="6er">
+  <Rates>
+   <Rate RateId="13" RateName="6er" RateCode="AOB2-6erEt"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="23" CategoryName="8er Mehrbettzimmer Du/WC" CategoryCode="8er ens">
+  <Rates>
+   <Rate RateId="14" RateName="8er ens" RateCode="AOB2-8er"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="24" CategoryName="8er Mehrbettzimmer Etagendusche" CategoryCode="8er">
+  <Rates>
+   <Rate RateId="15" RateName="8er" RateCode="AOB2-8erEt"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="25" CategoryName="10er Mehrbettzimmer Du/WC" CategoryCode="10er ens">
+  <Rates>
+   <Rate RateId="16" RateName="10er ens" RateCode="AOB2-10er"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="26" CategoryName="10er Mehrbettzimmer Etagendusche" CategoryCode="10er">
+  <Rates>
+   <Rate RateId="17" RateName="10er" RateCode="AOB2-10erEt"/>
+  </Rates>
+ </Category>
+ <Category CategoryId="19" CategoryName="6er Familienzimmer Du/WC" CategoryCode="6er-FA ens">
+  <Rates>
+   <Rate RateId="18" RateName="test" RateCode="DZ"/>
+  </Rates>
+ </Category>
+</Categories>
