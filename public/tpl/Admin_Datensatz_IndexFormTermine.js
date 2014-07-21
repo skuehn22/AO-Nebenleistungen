@@ -27,19 +27,17 @@ function fillTermine(){
             helpText: 'dem Kunden wird eine Eingabefeld für die Startzeit angezeigt, Datum kann gewählt werden'
         },{
             xtype: 'radio',
+            fieldLabel: 'Startzeiten',
+            name: 'programmzeiten',
+            inputValue: 3,
+            helpText: 'dem Kunden wird eine Auswahl der Startzeiten angezeigt, Datum kann gewählt werden'
+        },{
+            xtype: 'radio',
             fieldLabel: 'kein Datum, keine Zeiten',
             name: 'programmzeiten',
             inputValue: 4,
             helpText: 'dem Programm ist kein datum, keine Öffnungszeit und keine Startzeit zugeordnet'
         },{
-           xtype: 'textarea',
-            fieldLabel: 'Abfahrtszeiten',
-            name: 'abfahrzeiten',
-            hideLabel: false,
-            width: 150,
-            height: 50
-        },{
-
             xtype: 'tbspacer',
             height: 20
         },{
@@ -279,6 +277,12 @@ function fillTermine(){
                 width: 150,
                 height: 50,
                 id: 'hinweisDeutsch'
+            },{
+                xtype: 'textarea',
+                hideLabel: true,
+                width: 150,
+                height: 50,
+                id: 'hinweisPol'
             },{
                 xtype: 'label',
                 text: 'Hinweis zur Dauer in englisch'
