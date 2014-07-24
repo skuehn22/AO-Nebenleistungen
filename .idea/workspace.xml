@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="" />
+    <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" />
+    </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,28 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DatensatzController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="0" selection-start="4722" selection-end="4722" vertical-scroll-proportion="-5.745098" vertical-offset="2308" max-vertical-offset="19210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Programmdetail.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmdetail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="0" selection-start="5988" selection-end="5988" vertical-scroll-proportion="0.5982609" vertical-offset="2733" max-vertical-offset="12699">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Datensatz.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="234" column="0" selection-start="6994" selection-end="6994" vertical-scroll-proportion="53.115383" vertical-offset="5359" max-vertical-offset="15198">
+            <state line="128" column="7" selection-start="4091" selection-end="4091" vertical-scroll-proportion="-5.730769" vertical-offset="2027" max-vertical-offset="15198">
               <folding>
                 <marker date="1406203912423" expanded="true" signature="15259:15362" placeholder="SELECT `id` ..." />
                 <marker date="1406203912423" expanded="true" signature="23553:23606" placeholder="select id, d..tbl_prog_sprache..." />
@@ -54,71 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolProgrammBasisAngaben.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/nook/ToolProgrammBasisAngaben.php">
+      <file leaf-file-name="Admin_Datensatz_IndexFormTermine.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="29" selection-start="3265" selection-end="3265" vertical-scroll-proportion="-12.461538" vertical-offset="1750" max-vertical-offset="2601">
-              <folding>
-                <element signature="e#7#212#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToolProgrammeInEinerStadt.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/nook/ToolProgrammeInEinerStadt.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="247" column="0" selection-start="7640" selection-end="7640" vertical-scroll-proportion="-20.26923" vertical-offset="3672" max-vertical-offset="5542">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToolProgrammdetails.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/nook/ToolProgrammdetails.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="0" selection-start="3501" selection-end="3501" vertical-scroll-proportion="-84.34615" vertical-offset="0" max-vertical-offset="3842">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToolProgrammbilder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/nook/ToolProgrammbilder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="901">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tool.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/nook/Tool.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="272.65384" vertical-offset="7089" max-vertical-offset="10659">
-              <folding>
-                <marker date="1405694599799" expanded="true" signature="13138:13166" placeholder="select de fr..tbl_translate..." />
-                <marker date="1405694599799" expanded="true" signature="16187:16262" placeholder="select `tbl_..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="templateExtensions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/nook/templateExtensions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="30" selection-start="493" selection-end="493" vertical-scroll-proportion="44.46154" vertical-offset="1428" max-vertical-offset="11441">
-              <folding>
-                <marker date="1400749754000" expanded="false" signature="15338:15357" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToolProgramm.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/nook/ToolProgramm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="26.115385" vertical-offset="832" max-vertical-offset="1445">
+            <state line="33" column="10" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.5409091" vertical-offset="204" max-vertical-offset="7854">
               <folding />
             </state>
           </provider>
@@ -148,6 +71,7 @@
         <option value="$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php" />
         <option value="$PROJECT_DIR$/library/nook/ToolProgrammBasisAngaben.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" />
+        <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" />
       </list>
     </option>
   </component>
@@ -247,38 +171,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nook" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -487,11 +379,6 @@
           <url>file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php</url>
           <line>118</line>
           <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php</url>
-          <line>131</line>
-          <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php</url>
@@ -941,13 +828,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../phpinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../AO/t3lib/class.t3lib_svbase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="667" column="0" selection-start="16606" selection-end="16606" vertical-scroll-proportion="0.49379653" vertical-offset="10732" max-vertical-offset="11135">
@@ -1211,7 +1091,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="24" selection-start="0" selection-end="17172" vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="7582">
           <folding>
-            <element signature="e#6#696#0" expanded="true" />
+            <element signature="e#6#696#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1248,7 +1128,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="30" selection-start="493" selection-end="493" vertical-scroll-proportion="44.46154" vertical-offset="1428" max-vertical-offset="11441">
           <folding>
-            <marker date="1400749754000" expanded="false" signature="15338:15357" placeholder="..." />
+            <marker date="1400749754000" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1271,8 +1151,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="272.65384" vertical-offset="7089" max-vertical-offset="10659">
           <folding>
-            <marker date="1405694599799" expanded="true" signature="13138:13166" placeholder="select de fr..tbl_translate..." />
-            <marker date="1405694599799" expanded="true" signature="16187:16262" placeholder="select `tbl_..." />
+            <marker date="1405694599799" expanded="true" signature="-1:-1" placeholder="select de fr..tbl_translate..." />
+            <marker date="1405694599799" expanded="true" signature="-1:-1" placeholder="select `tbl_..." />
           </folding>
         </state>
       </provider>
@@ -1281,7 +1161,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="122" column="29" selection-start="3265" selection-end="3265" vertical-scroll-proportion="-12.461538" vertical-offset="1750" max-vertical-offset="2601">
           <folding>
-            <element signature="e#7#212#0" expanded="true" />
+            <element signature="e#7#212#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1293,9 +1173,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmdetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="0" selection-start="5988" selection-end="5988" vertical-scroll-proportion="-6.745098" vertical-offset="2733" max-vertical-offset="12699">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="0" selection-start="6994" selection-end="6994" vertical-scroll-proportion="53.115383" vertical-offset="5359" max-vertical-offset="15198">
+        <state line="128" column="7" selection-start="4091" selection-end="4091" vertical-scroll-proportion="-5.730769" vertical-offset="2027" max-vertical-offset="15198">
           <folding>
             <marker date="1406203912423" expanded="true" signature="15259:15362" placeholder="SELECT `id` ..." />
             <marker date="1406203912423" expanded="true" signature="23553:23606" placeholder="select id, d..tbl_prog_sprache..." />
@@ -1304,9 +1191,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmdetail.php">
+    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="0" selection-start="5988" selection-end="5988" vertical-scroll-proportion="0.5982609" vertical-offset="2733" max-vertical-offset="12699">
+        <state line="33" column="10" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.5409091" vertical-offset="204" max-vertical-offset="7854">
           <folding />
         </state>
       </provider>
