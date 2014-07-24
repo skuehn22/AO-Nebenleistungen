@@ -15,18 +15,26 @@ var adminDatensatzIndexReception = function(){
             fieldLabel: 'Zusatzinformation Rezeption',
             name: 'informationRezeption',
             id: 'informationRezeption'
+        },{
+            fieldLabel: 'Bild2',
+            xtype: 'textfield',
+            inputType: 'file',
+            frame: true,
+            border: false,
+            autoWidth: true,
+            name: 'miniBild2',
+            helpText: 'Bitte Bild 150px * 100px auswählen'
         }],
         buttons: [{
             text: 'eintragen',
             cls: 'x-btn-text-icon',
             handler: function(){
-                var test = 123;
-
                 formular.getForm().submit({
                     url: "/admin/reception/update/",
                     method: 'post',
                     params: {
-                        programmId: programmId
+                        programmId: programmId,
+                        miniBild2: "shskajfhskjfhskjfh"
                     },
                     success: function(){
                         Ext.getCmp('adminDatensatzIndexReceptionFenster').close();

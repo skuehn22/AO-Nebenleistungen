@@ -169,7 +169,7 @@ class Front_Model_Programmdetail extends nook_Model_model
     private function _getProgramDetails()
     {
 
-        $sql = "select progname, txt, OePNV as opnv, buchungstext from tbl_programmbeschreibung where programmdetail_id = '" . $this->_programId . "' and sprache = '" . $this->_selectLanguage . "'";
+        $sql = "select progname , txt, OePNV as opnv_de, treffpunkt as treffpunkt_de, buchungstext from tbl_programmbeschreibung where programmdetail_id = '" . $this->_programId . "' and sprache = '" . $this->_selectLanguage . "'";
         $db = Zend_Registry::get('front');
         $programDetails = $db->fetchRow($sql);
         if (!empty($programDetails['noko_lang'])) {

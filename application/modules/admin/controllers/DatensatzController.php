@@ -18,6 +18,7 @@ class Admin_DatensatzController extends Zend_Controller_Action
     {
         $request = $this->getRequest();
         $this->realParams = $request->getParams();
+        
     }
 
     /**
@@ -149,7 +150,9 @@ class Admin_DatensatzController extends Zend_Controller_Action
             $model->setProgramId($params['programId']);
             $programDetails = $model->getProgramDetails();
 
-            echo "{success: true, data: " . json_encode($programDetails) . "}";
+            echo "{
+                success: true, data: " . json_encode($programDetails) . "
+            }";
 
         } catch (Exception $e) {
             $e = nook_ExceptionRegistration::registerException($e, 1, $this->realParams);
@@ -195,6 +198,7 @@ class Admin_DatensatzController extends Zend_Controller_Action
 
             $model = new Admin_Model_Datensatz();
             $model->setValueDescriptionProgramm($params);
+
 
             // Bild
             if (!empty($_FILES['miniBild']['name'])) {

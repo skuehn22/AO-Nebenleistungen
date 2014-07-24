@@ -496,6 +496,9 @@ class Admin_Model_Datensatz extends nook_Model_model
         $where = "programmdetail_id = " . $__params['programmId'] . " and sprache = '" . $__params['sprache'] . "'";
         $this->_db->update('tbl_programmbeschreibung', $update, $where);
 
+        // Treffpunkte und Öpnv
+        $this->_updateTreffpunktUndOpnv($__params['programmId'], $__params);
+
         return;
     }
 
@@ -639,8 +642,6 @@ class Admin_Model_Datensatz extends nook_Model_model
         // allgemeine Programmdetails des Programmes
         $standardInformationenDiverses = $this->_findDiversesProgrammdetails($__programmId);
 
-        // Treffpunkt und Öpnv
-        $opnvAndMeetingpoint = $this->_findOpnvAndMeetingpoint($__programmId);
         $gesamtDiverses = array_merge($standardInformationenDiverses, $opnvAndMeetingpoint);
 
         // Textbausteine Bestätigungstexte

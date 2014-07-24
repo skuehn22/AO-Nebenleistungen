@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Nebenlesitungen">
+    <serverData>
+      <paths name="Nebenlesitungen">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="Nebenleistungen" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
+

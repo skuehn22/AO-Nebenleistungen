@@ -31,7 +31,6 @@ function fillTemplate(sprache){
     }
 
     var templateUrl = '/admin/datensatz/gettemplate/programId/' + programmId + '/city/' + cityId + '/sprache/' + sprache;
-
     var programmNummer = programmId;
 
     if(sprache == '1')
@@ -121,8 +120,8 @@ function fillTemplate(sprache){
                 frame: true,
                 border: false,
                 autoWidth: true,
-                name: 'treffpunkt',
-                id: 'treffpunkt',
+                name: 'treffpunkt_de',
+                id: 'treffpunkt_de',
                 allowBlank: false,
                 helpText: 'Treffpunkt der Veranstaltung'
             },{
@@ -132,8 +131,8 @@ function fillTemplate(sprache){
                 frame: true,
                 border: false,
                 autoWidth: true,
-                name: 'oepnv',
-                id: 'oepnv',
+                name: 'opnv_de',
+                id: 'opnv_de',
                 allowBlank: false
             }
         ]

@@ -33,6 +33,16 @@ class Admin_ReceptionController extends Zend_Controller_Action
                 ->setZusatzinformationReception($params['informationRezeption'])
                 ->steuerungReception();
 
+            $test = $_FILES['miniBild2']['name'];
+
+            // Bild
+            if (!empty($_FILES['miniBild']['name'])) {
+                break;
+                $kontrolle = $this->_uploadImage($params);
+            } else {
+                $kontrolle = true;
+            }
+
             echo "{success: true}";
         }
         catch(Exception $e){
@@ -41,14 +51,47 @@ class Admin_ReceptionController extends Zend_Controller_Action
         }
     }
 
+    private function _uploadImage($params)
+    {
+        try {
+            if (!empty($_FILES['miniBild2'])) {
+                $image = $_FILES['miniBild2'];
+                $imageName = $params['programmId'];
+                $imagePath = ABSOLUTE_PATH . "/images/program/midi/";
+
+                $uploadImage = nook_upload::getInstance();
+                $kontrolleImageTyp = $uploadImage->setImage($image)->setImagePath($imagePath)->setImageName(
+                    $imageName
+                )->checkImageTyp();
+                if ($kontrolleImageTyp) {
+                    $kontrolleMove = $uploadImage->moveImage();
+                    if ($kontrolleMove) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+
+            return true;
+        } catch (Exception $e) {
+            $e = nook_ExceptionRegistration::registerException($e, 1, $this->realParams);
+            echo "{success: false, message: 'Serverfehler !<br>Bitte Logdatei kontrollieren'}";
+        }
+    }
+
+
     /**
      * Holt die Zusatzangaben eines Programmes für den Rezeptionisten aus 'tbl_reception'
      */
     public function readAction(){
         $params = $this->realParams;
-
         $this->_helper->viewRenderer->setNoRender();
         $this->_helper->layout->disableLayout();
+
+
 
         try{
             $adminModelReception = new Admin_Model_Reception();
@@ -60,6 +103,7 @@ class Admin_ReceptionController extends Zend_Controller_Action
             $response = array(
                 'informationRezeption' => $receptionZusatzinformation
             );
+
 
             echo "{success: true, data: ".json_encode($response)."}";
         }
