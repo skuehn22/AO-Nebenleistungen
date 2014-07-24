@@ -31,8 +31,12 @@ Icon
 # Thumbnails
 ._*
 
+
+
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
 
 /application/configs/application.ini
+application/configs/application.ini
+

@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Nebenleistungen.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/admin/models/Datensatz.php" afterPath="$PROJECT_DIR$/application/modules/admin/models/Datensatz.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Zend/Json.php" afterPath="$PROJECT_DIR$/library/Zend/Json.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" afterPath="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/admin/models/Reception.php" afterPath="$PROJECT_DIR$/application/modules/admin/models/Reception.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/nook/ToolProgrammBasisAngaben.php" afterPath="$PROJECT_DIR$/library/nook/ToolProgrammBasisAngaben.php" />
-    </list>
+    <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="" />
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,7 +35,7 @@
       <file leaf-file-name="Programmdetail.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmdetail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="0" selection-start="5579" selection-end="5579" vertical-scroll-proportion="0.3321739" vertical-offset="2733" max-vertical-offset="12699">
+            <state line="181" column="0" selection-start="5988" selection-end="5988" vertical-scroll-proportion="0.5982609" vertical-offset="2733" max-vertical-offset="12699">
               <folding />
             </state>
           </provider>
@@ -1323,7 +1306,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmdetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="0" selection-start="5579" selection-end="5579" vertical-scroll-proportion="0.3321739" vertical-offset="2733" max-vertical-offset="12699">
+        <state line="181" column="0" selection-start="5988" selection-end="5988" vertical-scroll-proportion="0.5982609" vertical-offset="2733" max-vertical-offset="12699">
           <folding />
         </state>
       </provider>
