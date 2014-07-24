@@ -47,9 +47,9 @@ class price
 //    private $_db_groups_database = 'db1154036-schnittstelle';
 
     // Mail Adressen
-    private $_error_mail_adresse = 'suppenterrine@gmail.com';
-    private $_error_mail_from = 'info@guideberlin.com';
-    private $mailAdresseStephan = "suppenterrine@gmail.com";
+    private $_error_mail_adresse = 'kuehn.sebastian@gamil.com';
+    private $_error_mail_from = 'kuehn.sebastian@gamil.com';
+    private $mailAdresseStephan = "kuehn.sebastian@gamil.com";
 
     private $_XMLReader = null;
     private $_furtherProcessing = true;
