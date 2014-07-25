@@ -572,6 +572,7 @@ class Admin_Model_Datensatz extends nook_Model_model
 			    , `maxDuration`
 			    , `stornofrist`
 			    , `hinweisDeutsch`
+			    , `abfahrtszeit`
                 , `hinweisEnglisch`
 			    , DATE_FORMAT(`valid_from`, '%Y-%m-%d') AS valid_from
 			    , DATE_FORMAT(`valid_thru`, '%Y-%m-%d') AS valid_thru

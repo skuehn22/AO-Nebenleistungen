@@ -32,6 +32,13 @@ function fillTermine(){
             inputValue: 4,
             helpText: 'dem Programm ist kein datum, keine Öffnungszeit und keine Startzeit zugeordnet'
         },{
+           xtype: 'textarea',
+            fieldLabel: 'Abfahrtszeiten',
+            name: 'abfahrtszeit',
+            hideLabel: false,
+            width: 150,
+            height: 150
+        },{
 
             xtype: 'tbspacer',
             height: 20
