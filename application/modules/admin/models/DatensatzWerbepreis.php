@@ -108,6 +108,8 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
         $data['mwst_ek'] = $rows[0]['mwst_ek'];
         $data['durchlaeuferId'] = $rows[0]['rechnung_durchlaeufer_id'];
         $data['werbepreistyp'] = $rows[0]['werbepreistyp'];
+        $data['freiplatzregel'] = $rows[0]['freiplatzregel'];
+        $data['personenzahlregel'] = $rows[0]['personenzahlregel'];
 
         return $data;
     }
