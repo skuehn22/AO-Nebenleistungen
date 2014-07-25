@@ -21,13 +21,12 @@ var adminDatensatzIndexPreisvarianten = function (){
     var preisvarianteId = null;
     var preisvarianteName = null;
 
-    var jsonStoreGridPreisVarianten = new Ext.data.JsonStore({
-        totalProperty: 'anzahl',
-        root: 'data',
-        method: 'post',
-        url: '/admin/datensatz/getpreisvarianten/',
-        fields: ['id', 'preisvariante_de', 'preisvariante_en', 'verkaufspreis', 'einkaufspreis', 'mwst']
-    });
+    var werbepreisTyp = [
+        ['pro Gruppe'],
+        ['pro Person']
+    ];
+
+
 
     var jsonStoreVariantenDurchlaeufer = new Ext.data.JsonStore({
         method: 'post',
@@ -37,6 +36,14 @@ var adminDatensatzIndexPreisvarianten = function (){
         url: '/admin/preisposten/index/',
         fields: ['durchlaeuferId', 'durchlaeufer'],
         id: 'jsonStoreVariantenDurchlaeufer'
+    });
+
+    var jsonStoreGridPreisVarianten = new Ext.data.JsonStore({
+        totalProperty: 'anzahl',
+        root: 'data',
+        method: 'post',
+        url: '/admin/datensatz/getpreisvarianten/',
+        fields: ['id', 'preisvariante_de', 'preisvariante_en', 'verkaufspreis', 'einkaufspreis', 'mwst']
     });
 
     var wandlePreis = function(value){
@@ -251,7 +258,7 @@ var adminDatensatzIndexPreisvarianten = function (){
 
         tabellePreisVarianten: new Ext.grid.GridPanel({
             autoHeight: true,
-            width: 450,
+            width: 500,
             stripeRows: true,
             columnLines: true,
             autoExpandColumn: 'variantenname',
@@ -314,20 +321,74 @@ var adminDatensatzIndexPreisvarianten = function (){
             }]
         }),
 
+        preiseBeschreibung: new Ext.form.FormPanel({
+            title: 'Zusätzliche Erläuterungen',
+            method: 'post',
+            url: '/admin/datensatz/preisbeschreibung-View',
+            id: 'adminDatensatzPreisvariantePreisbeschreibung',
+            padding: 10,
+            items: [{
+                xtype: 'textarea',
+                width: 375,
+                height: 45,
+                fieldLabel: 'Erläuterung zur Preisvariante',
+                name: 'confirm_1_de'
+            }],
+            buttons: [{
+                text: 'speichern',
+                handler: function(){
+
+                    var row = ermittelnMarkiertePreisvariante();
+                    if(!row)
+                        return;
+
+                    preiseBeschreibung.getForm().submit({
+                        method: 'post',
+                        url: '/admin/datensatz/preisbeschreibung-Edit',
+                        params: {
+                            programmId: ProgrammId,
+                            preisvarianteId: row.data.id
+                        }
+                    });
+                }
+            }]
+        }),
+
         besonderheitenPreisvariante: new Ext.form.FormPanel({
             title: 'Besonderheiten',
             autoHeight: true,
-            width: 450,
+            width: 500,
             method: 'post',
             url: '/admin/datensatz/besonderheiten-preisvariante/',
             labelWidth: 170,
             padding: 10,
             items: [{
-                xtype: 'textfield',
-                width: 75,
-                name: 'werbepreis',
+                xtype: 'compositefield',
+                labelWidth: 100,
                 fieldLabel: 'Werbepreis Brutto *',
-                maskRe: /^[0-9\,]$/
+                items: [{
+                    xtype: 'textfield',
+                    width: 75,
+                    name: 'werbepreis',
+                    maskRe: /^[0-9\,]$/
+                },{
+                    xtype: 'combo',
+                    fieldLabel: 'Werbepreistyp',
+                    hiddenName: 'werbepreistyp',
+                    name: 'werbepreistyp',
+                    width: 120,
+                    store: new Ext.data.SimpleStore({
+                        fields: ['number'],
+                        data : werbepreisTyp
+                    }),
+                    displayField: 'number',
+                    typeAhead: true,
+                    mode: 'local',
+                    triggerAction: 'all',
+                    emptyText:'Werbepreis-Typ',
+                    selectOnFocus:true
+
+                }]
             },{
                 id: 'comboDurchlaeufer',
                 fieldLabel: 'Durchläufer *',
@@ -371,6 +432,18 @@ var adminDatensatzIndexPreisvarianten = function (){
                 fieldLabel: 'Buchungspauschale',
                 name: 'buchungspauschale',
                 value: '2'
+            },{
+                xtype: 'textarea',
+                width: 302,
+                height: 45,
+                fieldLabel: 'Freiplatzregelung',
+                name: 'freiplatzregel'
+            },{
+                xtype: 'textarea',
+                width: 302,
+                height: 45,
+                fieldLabel: 'Personenzahl',
+                name: 'personenzahlregel'
             }],
             buttons: [{
                 text: 'speichern',
@@ -398,44 +471,7 @@ var adminDatensatzIndexPreisvarianten = function (){
             return;
         },
 
-        preiseBeschreibung: new Ext.form.FormPanel({
-            title: 'Bestätigungstexte einer Preisvariante',
-            method: 'post',
-            url: '/admin/datensatz/preisbeschreibung-View',
-            id: 'adminDatensatzPreisvariantePreisbeschreibung',
-            padding: 10,
-            items: [{
-                xtype: 'textarea',
-                width: 250,
-                height: 100,
-                fieldLabel: 'Bestätigungstext deutsch',
-                name: 'confirm_1_de'
-            },{
-                xtype: 'textarea',
-                width: 250,
-                height: 100,
-                fieldLabel: 'Bestätigungstext englisch',
-                name: 'confirm_1_en'
-            }],
-            buttons: [{
-                text: 'speichern',
-                handler: function(){
 
-                    var row = ermittelnMarkiertePreisvariante();
-                    if(!row)
-                        return;
-
-                    preiseBeschreibung.getForm().submit({
-                        method: 'post',
-                        url: '/admin/datensatz/preisbeschreibung-Edit',
-                        params: {
-                            programmId: ProgrammId,
-                            preisvarianteId: row.data.id
-                        }
-                    });
-                }
-            }]
-        }),
 
 
 
@@ -471,14 +507,14 @@ var adminDatensatzIndexPreisvarianten = function (){
             tabelle = this.tabellePreisVarianten;
             this.fenster.add(this.tabellePreisVarianten);
 
+            preiseBeschreibung = this.preiseBeschreibung;
+            this.fenster.add(this.preiseBeschreibung);
+
             besonderheitenPreisvarianteForm = this.besonderheitenPreisvariante;
             this.fenster.add(besonderheitenPreisvarianteForm);
 
             formular = this.formularPreisvariante;
             this.fenster.add(this.formularPreisvariante);
-
-            preiseBeschreibung = this.preiseBeschreibung;
-            this.fenster.add(this.preiseBeschreibung);
 
             this.besonderheitenLaden();
 

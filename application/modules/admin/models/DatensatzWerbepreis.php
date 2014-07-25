@@ -72,10 +72,13 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
     {
         $cols = array(
             'werbepreis',
+            'werbepreistyp',
             'buchungspauschale',
             'mwst',
             'mwst_ek',
-            'rechnung_durchlaeufer_id'
+            'rechnung_durchlaeufer_id',
+            'freiplatzregel',
+            'personenzahlregel'
         );
 
         $select = $this->_tabelleProgrammeDetails->select();
@@ -89,6 +92,12 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
         if($rows[0]['werbepreis'] == null)
             $rows[0]['werbepreis'] = '';
 
+        if($rows[0]['werbepreistyp'] == 1)
+        $rows[0]['werbepreistyp'] = 'pro Person';
+
+        if($rows[0]['werbepreistyp'] == 2)
+            $rows[0]['werbepreistyp'] = 'pro Gruppe';
+
         $data = array();
         $data['werbepreis'] = str_replace('.',',',$rows[0]['werbepreis']);
 
@@ -98,6 +107,7 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
         $data['mwst'] = $rows[0]['mwst'];
         $data['mwst_ek'] = $rows[0]['mwst_ek'];
         $data['durchlaeuferId'] = $rows[0]['rechnung_durchlaeufer_id'];
+        $data['werbepreistyp'] = $rows[0]['werbepreistyp'];
 
         return $data;
     }
@@ -117,11 +127,20 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
         $werbepreis = (float) $werbepreis;
         $werbepreis = number_format($werbepreis,2);
 
+        if($params['werbepreistyp'] == "pro Person")
+            $werbepreistyp = '1';
+
+        if($params['werbepreistyp'] == "pro Gruppe")
+            $werbepreistyp = '2';
+
         $update = array(
             'werbepreis' => $werbepreis,
             'mwst' => $params['mwst'],
             'mwst_ek' => $params['mwst_ek'],
-            'rechnung_durchlaeufer_id' => $params['rechnung_durchlaeufer_id']
+            'rechnung_durchlaeufer_id' => $params['rechnung_durchlaeufer_id'],
+            'freiplatzregel' => $params['freiplatzregel'],
+            'werbepreistyp' => $werbepreistyp,
+            'personenzahlregel' => $params['personenzahlregel'],
         );
 
         if(isset($params['buchungspauschale'])){
