@@ -487,10 +487,9 @@ class Admin_Model_Datensatz extends nook_Model_model
 
         // entfernen von überflüssigen Tags
         // erlaubt sind <b> <u> <br> <p> <a>
-        $__params['txt'] = strip_tags($__params['txt'], "<b><a><br><p><u><i><span>");
-
+        $__params['txt'] = strip_tags($__params['txt'], "<b><a><br><p><u><i><span><ul><li>");
         $update = array();
-        $update['txt'] = $__params['txt'];
+        $update['txt'] =  $__params['txt'];
         $update['progname'] = $__params['progname'];
 
         $where = "programmdetail_id = " . $__params['programmId'] . " and sprache = '" . $__params['sprache'] . "'";
