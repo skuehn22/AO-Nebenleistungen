@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php" afterPath="$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php" />
+      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\public\images\program\midi\903.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/nook/upload.php" afterPath="$PROJECT_DIR$/library/nook/upload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,87 +32,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Admin_Datensatz_Reception.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="40" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="1615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/nook/upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="1" selection-start="2418" selection-end="2418" vertical-scroll-proportion="-5.117647" vertical-offset="1422" max-vertical-offset="1802">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Datensatz.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="584" column="37" selection-start="17367" selection-end="17369" vertical-scroll-proportion="-3.6078432" vertical-offset="9744" max-vertical-offset="15198">
-              <folding>
-                <marker date="1406278284322" expanded="true" signature="15267:15370" placeholder="SELECT `id` ..." />
-                <marker date="1406278284322" expanded="true" signature="15306:15453" placeholder="SELECT `id` ..." />
-                <marker date="1406278284322" expanded="true" signature="23585:23638" placeholder="select id, d..tbl_prog_sprache..." />
-                <marker date="1406278284322" expanded="true" signature="23800:23851" placeholder="select * fro..tbl_bundeslaender..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Admin_Datensatz_IndexPreisvarianten.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="441" column="15" selection-start="13285" selection-end="13285" vertical-scroll-proportion="-9.76" vertical-offset="7253" max-vertical-offset="9333">
+            <state line="167" column="44" selection-start="5228" selection-end="5228" vertical-scroll-proportion="-18.807692" vertical-offset="2350" max-vertical-offset="15198">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatensatzPreisvarianten.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php">
+      <file leaf-file-name="Reception.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Reception.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="34" selection-start="3197" selection-end="3198" vertical-scroll-proportion="-1.6078432" vertical-offset="1533" max-vertical-offset="5202">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="87.88461" vertical-offset="2285" max-vertical-offset="2669">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatensatzWerbepreis.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php">
+      <file leaf-file-name="Admin_Datensatz_IndexFormTermine.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="64" selection-start="3379" selection-end="3379" vertical-scroll-proportion="0.75308645" vertical-offset="1375" max-vertical-offset="2737">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Admin_Datensatz_IndexOeffnungszeiten.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexOeffnungszeiten.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="10" selection-start="1809" selection-end="2408" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="3893">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatensatzPreisbeschreibung.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisbeschreibung.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="49.03846" vertical-offset="1275" max-vertical-offset="2533">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatensatzController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="713" column="37" selection-start="23934" selection-end="23934" vertical-scroll-proportion="-7.423077" vertical-offset="11928" max-vertical-offset="19210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Programmzeiten.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="5" selection-start="4224" selection-end="4224" vertical-scroll-proportion="-2.745098" vertical-offset="2563" max-vertical-offset="9078">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Programmdetail.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmdetail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="0" selection-start="4387" selection-end="4387" vertical-scroll-proportion="-7.6923075" vertical-offset="2095" max-vertical-offset="12699">
+            <state line="19" column="27" selection-start="486" selection-end="486" vertical-scroll-proportion="0.37662336" vertical-offset="178" max-vertical-offset="7667">
               <folding />
             </state>
           </provider>
@@ -114,7 +80,43 @@
       <file leaf-file-name="Admin_Datensatz_IndexFormEditor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="24" selection-start="2868" selection-end="2871" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="4556">
+            <state line="88" column="27" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.0" vertical-offset="3886" max-vertical-offset="4488">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatensatzController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="231" column="52" selection-start="7354" selection-end="7354" vertical-scroll-proportion="39.23077" vertical-offset="4947" max-vertical-offset="19261">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReceptionController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="0" selection-start="1883" selection-end="1883" vertical-scroll-proportion="-4.923077" vertical-offset="892" max-vertical-offset="1479">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="front.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/front.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2108">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/admin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="697">
               <folding />
             </state>
           </provider>
@@ -135,30 +137,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/modules/admin/models/Reception.php" />
-        <option value="$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php" />
-        <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js" />
-        <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
         <option value="$PROJECT_DIR$/library/Zend/Json.php" />
         <option value="$PROJECT_DIR$/library/Zend/Console/Getopt.php" />
-        <option value="$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php" />
         <option value="$PROJECT_DIR$/library/nook/ToolProgrammBasisAngaben.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" />
         <option value="$PROJECT_DIR$/price/index.php" />
         <option value="$PROJECT_DIR$/library/nook/ToolErrorMail.php" />
         <option value="$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/CartProgramme.php" />
-        <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" />
         <option value="$PROJECT_DIR$/application/modules/admin/models/Datensatz.php" />
         <option value="$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" />
         <option value="$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php" />
+        <option value="$PROJECT_DIR$/application/modules/admin/models/Reception.php" />
+        <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
+        <option value="$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php" />
+        <option value="$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php" />
+        <option value="$PROJECT_DIR$/library/nook/upload.php" />
+        <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js" />
+        <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" />
       </list>
     </option>
   </component>
@@ -179,10 +179,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1040" />
+    <option name="x" value="-1448" />
+    <option name="y" value="-168" />
+    <option name="width" value="1456" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -195,7 +195,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="1" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -271,21 +271,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="price" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,36 +308,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -407,7 +367,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.lastSelected" value="Configurable.PHP.Debug" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -472,9 +432,9 @@
     </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="PHP Remote Debug.nebenleistungen" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Script.Reception.php" />
-      <item index="2" class="java.lang.String" itemvalue="PHP Script.ReceptionController.php" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.Nebenleistungen" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Nebenleistungen" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.Reception.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.ReceptionController.php" />
     </list>
     <recent_temporary>
       <list size="2">
@@ -530,28 +490,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1296" height="1040" extended-state="6" />
+    <frame x="-1448" y="-168" width="1456" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2639485" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29453126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2639485" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26180556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43440595" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43548387" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -569,9 +529,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30390626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -590,11 +550,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php</url>
-          <line>38</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/modules/admin/models/DatensatzProgrammbild.php</url>
           <line>33</line>
@@ -639,11 +594,6 @@
           <url>file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php</url>
           <line>118</line>
           <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php</url>
-          <line>149</line>
-          <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php</url>
@@ -1095,21 +1045,11 @@
           <line>595</line>
           <option name="timeStamp" value="260" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php</url>
-          <line>83</line>
-          <option name="timeStamp" value="283" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php</url>
-          <line>91</line>
-          <option name="timeStamp" value="284" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="285" />
+      <option name="time" value="346" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -1119,79 +1059,9 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Request/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="353" column="0" selection-start="7622" selection-end="7622" vertical-scroll-proportion="-10.115385" vertical-offset="5432" max-vertical-offset="5848">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Response/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="0" selection-start="4116" selection-end="4116" vertical-scroll-proportion="-5.5" vertical-offset="2288" max-vertical-offset="13328">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action/Helper/ViewRenderer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="672" column="0" selection-start="20499" selection-end="20499" vertical-scroll-proportion="-5.1538463" vertical-offset="10967" max-vertical-offset="16643">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action/HelperBroker/PriorityStack.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1594" selection-end="1594" vertical-scroll-proportion="-5.1538463" vertical-offset="359" max-vertical-offset="4539">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action/Helper/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="1913" selection-end="1913" vertical-scroll-proportion="-5.3076925" vertical-offset="678" max-vertical-offset="2431">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action/HelperBroker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="309" column="0" selection-start="8437" selection-end="8437" vertical-scroll-proportion="-5.1538463" vertical-offset="4796" max-vertical-offset="6256">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Layout/Controller/Action/Helper/Layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="0" selection-start="4599" selection-end="4599" vertical-scroll-proportion="-7.5" vertical-offset="2525" max-vertical-offset="2941">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="361" column="0" selection-start="9326" selection-end="9326" vertical-scroll-proportion="-5.3076925" vertical-offset="5693" max-vertical-offset="13362">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Loader/Autoloader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="0" selection-start="2455" selection-end="2455" vertical-scroll-proportion="-5.1538463" vertical-offset="1141" max-vertical-offset="9792">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="515" column="0" selection-start="16589" selection-end="16589" vertical-scroll-proportion="-5.423077" vertical-offset="8308" max-vertical-offset="13362">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Reception.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="7" selection-start="857" selection-end="857" vertical-scroll-proportion="18.961538" vertical-offset="1173" max-vertical-offset="2669">
           <folding />
         </state>
       </provider>
@@ -1203,25 +1073,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="492" selection-end="492" vertical-scroll-proportion="0.44012946" vertical-offset="0" max-vertical-offset="1598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="4.576923" vertical-offset="765" max-vertical-offset="2142">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/ProgrammvariantenController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/admin/models/ProgrammeAnzeigen.php">
@@ -1240,16 +1094,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="618">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="618" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Test/PHPUnit/ControllerTestCase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="52.96154" vertical-offset="1377" max-vertical-offset="20485">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="52.96154" vertical-offset="1377" max-vertical-offset="20485" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Json/Decoder.php">
@@ -1268,9 +1118,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Json/Server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="9.807693" vertical-offset="255" max-vertical-offset="9452">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="9.807693" vertical-offset="255" max-vertical-offset="9452" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Service/Rackspace/Servers.php">
@@ -1282,11 +1130,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Json.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="24" selection-start="0" selection-end="17172" vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="7582">
-          <folding>
-            <element signature="e#6#696#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="34" column="24" selection-start="0" selection-end="17172" vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="7582" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Json/Expr.php">
@@ -1312,18 +1156,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/ToolProgrammbilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/templateExtensions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="30" selection-start="493" selection-end="493" vertical-scroll-proportion="44.46154" vertical-offset="1428" max-vertical-offset="11441">
-          <folding>
-            <marker date="1400749754000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="23" column="30" selection-start="493" selection-end="493" vertical-scroll-proportion="44.46154" vertical-offset="1428" max-vertical-offset="11441" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/ToolProgramm.php">
@@ -1343,27 +1181,18 @@
     <entry file="file://$PROJECT_DIR$/library/nook/Tool.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="272.65384" vertical-offset="7089" max-vertical-offset="10659">
-          <folding>
-            <marker date="1405694599799" expanded="true" signature="-1:-1" placeholder="select de fr..tbl_translate..." />
-            <marker date="1405694599799" expanded="true" signature="-1:-1" placeholder="select `tbl_..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/ToolProgrammBasisAngaben.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="29" selection-start="3265" selection-end="3265" vertical-scroll-proportion="-12.461538" vertical-offset="1750" max-vertical-offset="2601">
-          <folding>
-            <element signature="e#7#212#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="122" column="29" selection-start="3265" selection-end="3265" vertical-scroll-proportion="-12.461538" vertical-offset="1750" max-vertical-offset="2601" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/ToolErrorMail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="48" selection-start="1982" selection-end="1982" vertical-scroll-proportion="-15.230769" vertical-offset="777" max-vertical-offset="1411">
-          <folding />
-        </state>
+        <state line="75" column="48" selection-start="1982" selection-end="1982" vertical-scroll-proportion="-15.230769" vertical-offset="777" max-vertical-offset="1411" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Db/Statement/Pdo.php">
@@ -1375,9 +1204,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/abfahrtsorteProgramme.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3128">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3128" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/Model/model.php">
@@ -1389,12 +1216,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/price/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="14" selection-start="729" selection-end="729" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="18479">
-          <folding>
-            <marker date="1406213931599" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1406213931599" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-          </folding>
-        </state>
+        <state line="30" column="14" selection-start="729" selection-end="729" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="18479" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
@@ -1408,7 +1230,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="603" column="13" selection-start="21256" selection-end="21256" vertical-scroll-proportion="-5.352941" vertical-offset="9978" max-vertical-offset="12053">
           <folding>
-            <element signature="e#6#245#0" expanded="true" />
+            <element signature="e#6#245#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1416,13 +1238,6 @@
     <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="159" column="5" selection-start="4224" selection-end="4224" vertical-scroll-proportion="-2.745098" vertical-offset="2563" max-vertical-offset="9078">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="553" selection-end="553" vertical-scroll-proportion="0.5054773" vertical-offset="0" max-vertical-offset="7973">
           <folding />
         </state>
       </provider>
@@ -1436,42 +1251,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexOeffnungszeiten.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="10" selection-start="1809" selection-end="2408" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="3893">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="24" selection-start="2868" selection-end="2871" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="4556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="713" column="37" selection-start="23934" selection-end="23934" vertical-scroll-proportion="-7.423077" vertical-offset="11928" max-vertical-offset="19210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="584" column="37" selection-start="17367" selection-end="17369" vertical-scroll-proportion="-3.6078432" vertical-offset="9744" max-vertical-offset="15198">
-          <folding>
-            <marker date="1406278284322" expanded="true" signature="15267:15370" placeholder="SELECT `id` ..." />
-            <marker date="1406278284322" expanded="true" signature="15306:15453" placeholder="SELECT `id` ..." />
-            <marker date="1406278284322" expanded="true" signature="23585:23638" placeholder="select id, d..tbl_prog_sprache..." />
-            <marker date="1406278284322" expanded="true" signature="23800:23851" placeholder="select * fro..tbl_bundeslaender..." />
-          </folding>
-        </state>
+        <state line="81" column="10" selection-start="1809" selection-end="2408" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="3893" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="441" column="15" selection-start="13285" selection-end="13285" vertical-scroll-proportion="-9.76" vertical-offset="7253" max-vertical-offset="9333">
-          <folding />
-        </state>
+        <state line="441" column="15" selection-start="13285" selection-end="13285" vertical-scroll-proportion="-9.76" vertical-offset="7253" max-vertical-offset="9333" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php">
@@ -1490,7 +1275,107 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="64" selection-start="3379" selection-end="3379" vertical-scroll-proportion="0.75308645" vertical-offset="1375" max-vertical-offset="2737">
+        <state line="83" column="0" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.32142857" vertical-offset="1137" max-vertical-offset="2737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/File/Transfer/Adapter/Http.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="437" column="17" selection-start="13396" selection-end="13396" vertical-scroll-proportion="0.35400516" vertical-offset="6986" max-vertical-offset="8075" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/File/Transfer/Adapter/Abstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="14" selection-start="2664" selection-end="2664" vertical-scroll-proportion="0.23784722" vertical-offset="1257" max-vertical-offset="26486" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/HotelkategoriesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="25" selection-start="5549" selection-end="5549" vertical-scroll-proportion="0.22395833" vertical-offset="2693" max-vertical-offset="3740" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Validate/File/Upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="28" selection-start="4581" selection-end="4581" vertical-scroll-proportion="2.8726656" vertical-offset="263" max-vertical-offset="4063" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Hotelproducts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="121" selection-start="4997" selection-end="4997" vertical-scroll-proportion="-7.6923075" vertical-offset="2520" max-vertical-offset="5287" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="13" selection-start="8044" selection-end="8044" vertical-scroll-proportion="0.35416666" vertical-offset="2754" max-vertical-offset="4046" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="44" selection-start="5228" selection-end="5228" vertical-scroll-proportion="-18.807692" vertical-offset="2350" max-vertical-offset="15198">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="52" selection-start="7354" selection-end="7354" vertical-scroll-proportion="39.23077" vertical-offset="4947" max-vertical-offset="19261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Reception.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="87.88461" vertical-offset="2285" max-vertical-offset="2669">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/nook/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="1" selection-start="2418" selection-end="2418" vertical-scroll-proportion="-5.117647" vertical-offset="1422" max-vertical-offset="1802">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="27" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.0" vertical-offset="3886" max-vertical-offset="4488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="40" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="1615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="0" selection-start="1883" selection-end="1883" vertical-scroll-proportion="-4.923077" vertical-offset="892" max-vertical-offset="1479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/front.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2108">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="27" selection-start="486" selection-end="486" vertical-scroll-proportion="0.37662336" vertical-offset="178" max-vertical-offset="7667">
           <folding />
         </state>
       </provider>

@@ -11,30 +11,29 @@ var adminDatensatzIndexReception = function(){
         items: [{
             xtype: 'textarea',
             width: 400,
-            height: 400,
+            height: 200,
             fieldLabel: 'Zusatzinformation Rezeption',
             name: 'informationRezeption',
             id: 'informationRezeption'
         },{
-            fieldLabel: 'Bild2',
-            xtype: 'textfield',
-            inputType: 'file',
-            frame: true,
-            border: false,
-            autoWidth: true,
-            name: 'miniBild2',
-            helpText: 'Bitte Bild 150px * 100px auswählen'
+            xtype: 'textarea',
+            width: 400,
+            height: 55,
+            fieldLabel: 'Zusatzdokumente',
+            name: 'zusatzdokumente',
+            id: 'zusatzdokumente'
         }],
         buttons: [{
             text: 'eintragen',
             cls: 'x-btn-text-icon',
             handler: function(){
+                var test = 123;
+
                 formular.getForm().submit({
                     url: "/admin/reception/update/",
                     method: 'post',
                     params: {
-                        programmId: programmId,
-                        miniBild2: "shskajfhskjfhskjfh"
+                        programmId: programmId
                     },
                     success: function(){
                         Ext.getCmp('adminDatensatzIndexReceptionFenster').close();
@@ -80,6 +79,8 @@ var adminDatensatzIndexReception = function(){
             return;
         }
     }
+    // Kontrolle ob Bild vorhanden ist
+    checkImage();
     // Ende public
 }
 

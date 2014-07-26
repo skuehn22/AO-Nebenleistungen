@@ -223,11 +223,14 @@ class Admin_DatensatzController extends Zend_Controller_Action
     {
         try {
             if (!empty($_FILES['miniBild'])) {
-                $image = $_FILES['miniBild'];
-                $imageName = $params['programmId'];
-                $imagePath = ABSOLUTE_PATH . "/images/program/midi/";
 
                 $uploadImage = nook_upload::getInstance();
+                $image = $_FILES['miniBild'];
+                $imageName = $image['name'];
+                $uploadImage->create_dir("files/".$params['programmId']);
+                //$imageName = $params['programmId'];
+                $imagePath = ABSOLUTE_PATH . "/files/".$params['programmId']."/";
+
                 $kontrolleImageTyp = $uploadImage->setImage($image)->setImagePath($imagePath)->setImageName(
                     $imageName
                 )->checkImageTyp();

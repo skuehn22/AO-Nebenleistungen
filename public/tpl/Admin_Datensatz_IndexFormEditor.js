@@ -96,23 +96,19 @@ function fillTemplate(sprache){
             },{
                 fieldLabel: 'Programmbeschreibung',
                 xtype: 'htmleditor',
-                width: 700,
-                frame: true,
-                border: false,
-                autoWidth: true,
                 name: 'txt',
                 id: 'txt',
                 allowBlank: false,
                 helpText: 'Bitte Text editieren'
             },{
-                fieldLabel: 'Bild',
+                fieldLabel: 'Zusatzdokumente',
                 xtype: 'textfield',
                 inputType: 'file',
                 frame: true,
                 border: false,
                 autoWidth: true,
                 name: 'miniBild',
-                helpText: 'Bitte Bild 150px * 100px auswählen'
+                helpText: 'Zusatzdokumente für die Rezeption'
             },{
                 fieldLabel: 'Adresse/Treff',
                 xtype: 'htmleditor',

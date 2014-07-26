@@ -46,7 +46,7 @@ class nook_upload {
     }
 
     public function checkImageTyp(){
-        if(($this->_image['type'] == 'image/jpeg') or ($this->_image['type'] == 'image/pjpeg')){
+        if(($this->_image['type'] == 'image/jpeg') or ($this->_image['type'] == 'image/pjpeg') or ($this->_image['type'] == 'application/pdf')){
             $this->_checkImageTyp = true;
         }
         elseif(($this->_image['type'] == 'image/x-png') or ($this->_image['type'] == 'image/png')){
@@ -60,7 +60,15 @@ class nook_upload {
     public function moveImage(){
         $kontrolle = false;
 
-        $newImage = $this->_imagePath . $this->_imageName . ".jpg";
+       if($this->_image['type'] == 'image/jpeg'){
+            $newImage = $this->_imagePath . $this->_imageName;
+        }
+
+        if($this->_image['type'] == 'application/pdf'){
+            $newImage = $this->_imagePath . $this->_imageName;
+        }
+
+
         $kontrolle = move_uploaded_file($this->_image['tmp_name'], $newImage);
 
         return $kontrolle;
@@ -72,5 +80,21 @@ class nook_upload {
         imagedestroy($image);
 
         return;
+    }
+
+    function create_dir($path,$chmod=0777) {
+        mkdir ($path,$chmod);
+    }
+
+    public function readFiles($id){
+        $alledateien = scandir('files/'.$id.'/'); //Ordner "files" auslesen
+
+        foreach ($alledateien as $datei) { // Ausgabeschleife
+           if ($datei!="." AND $datei!=".."){
+                $files = $files.$datei."\n";
+           }
+        };
+
+        return $files;
     }
 }

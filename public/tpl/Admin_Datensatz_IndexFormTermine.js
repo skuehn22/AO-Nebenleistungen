@@ -14,29 +14,11 @@ function fillTermine(){
     });
 
     var programmzeiten = [{
-            xtype: 'radio',
-            fieldLabel: 'keine Öffnungszeiten und Termine zugeordnet',
-            name: 'programmzeiten',
-            inputValue: 1,
-            helpText: 'Dem Programm sind keine Öffnungszeiten und Termine zugeordnet, Datum kann gewählt werden'
-        },{
-            xtype: 'radio',
-            fieldLabel: 'Programmzeiten durch Kunde',
-            name: 'programmzeiten',
-            inputValue: 2,
-            helpText: 'dem Kunden wird eine Eingabefeld für die Startzeit angezeigt, Datum kann gewählt werden'
-        },{
-            xtype: 'radio',
-            fieldLabel: 'kein Datum, keine Zeiten',
-            name: 'programmzeiten',
-            inputValue: 4,
-            helpText: 'dem Programm ist kein datum, keine Öffnungszeit und keine Startzeit zugeordnet'
-        },{
-           xtype: 'textarea',
-            fieldLabel: 'Abfahrtszeiten',
+           xtype: 'htmleditor',
+
             name: 'abfahrtszeit',
-            hideLabel: false,
-            width: 150,
+            hideLabel: true,
+            width: 450,
             height: 150
         },{
 
@@ -304,7 +286,7 @@ function fillTermine(){
         labelWidth: 120,
         border: false,
         items: [{
-                width: 350,
+                width: 330,
                 layout: 'form',
                 border: false,
                 padding: 10,
@@ -370,8 +352,8 @@ function fillTermine(){
             autoHeight: true,
             items: [{
                 xtype: 'fieldset',
-                title: 'Programmzeiten',
-                labelWidth: 290,
+                title: 'Abfahtszeit',
+                labelWidth: 220,
                 items: programmzeiten
             }]
         }]
