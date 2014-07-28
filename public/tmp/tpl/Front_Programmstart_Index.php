@@ -6,20 +6,26 @@
    <div class="block block_oben block_unten" style="padding: 0px 0px 0px 40px;"><?php echo $breadcrumb;?></div>
 </div>     -->
 
+<div class="span-24">&nbsp;</div>
 
-<div class='span-23 last'>
+
+
+
+<div class="span-24">&nbsp;</div>
+
+<div class='span-22 last'>
 
 	<?php $counter1=-1; if( isset($cityEvents) && is_array($cityEvents) && sizeof($cityEvents) ) foreach( $cityEvents as $key1 => $value1 ){ $counter1++; ?>
 
     <!-- Kopf -->
-    <div class='span-23 ueberschrift block_oben block' style="padding-left: 40px;">
+    <div class='span-22 ueberschrift block_oben block' style="padding-left: 40px;">
         <div class="span-12"><?php if( $cityId == 0 ){ ?> <?php echo $value1["ort"];?>: <?php } ?> <?php echo $value1["progname"];?> &nbsp;</div>
 
 
     </div>
 
     <!-- Programmblock -->
-    <div class="span-23 block_unten block" style="padding-left: 40px; min-height: 50px;">
+    <div class="span-22 block_unten block" style="padding-left: 40px; min-height: 50px;">
 
 
         <div class='span-9'>
@@ -84,5 +90,3 @@
 
 </div>
 <?php } ?>
-
-

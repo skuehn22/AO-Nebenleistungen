@@ -9,9 +9,9 @@
     var fromMonat = {$bookingdetails.fromMonat};
     var fromTag = {$bookingdetails.fromTag};
 
-    var toJahr = {$bookingdetails.toJahr};
-    var toMonat = {$bookingdetails.toMonat};
-    var toTag = {$bookingdetails.toTag};
+	var toJahr = {$bookingdetails.toJahr};
+	var toMonat = {$bookingdetails.toMonat};
+	var toTag = {$bookingdetails.toTag};
 
     var sperrtage = new Array({$sperrtage});
     var geschaeftstage = new Array({$geschaeftstage});
@@ -35,326 +35,312 @@
 </script>
 {/if}
 
-<div id='ablaufleiste' class="span-24 lastblock block_oben block_unten block">
-    <div style="margin-left: 40px;">{$breadcrumb}</div>
-</div>
+
 
 <div class="span-24 last">&nbsp;</div>
 
 <div class='span-24' id='programmdetail'>
 
-{if condition="$buchungsDetailShow"}
-<form id="formID" class="form formular" method="post" action="/front/programmdetail/update-programmbuchung/">
-{else}
-<form id="formID" class="form formular" method="post" action="/front/programmdetail/insert-programmbuchung/">
-{/if}
+    {if condition="$buchungsDetailShow"}
+        <form id="formID" class="form formular" method="post" action="/front/programmdetail/update-programmbuchung/">
+    {else}
+        <form id="formID" class="form formular" method="post" action="/front/programmdetail/insert-programmbuchung/">
+    {/if}
 
-{if condition="$blockInformationBestandsbuchungProgramme"}
-<div class='block block_oben block_unten span-24 last'>
-    <div style="margin-left: 40px;" class="text">
-        {$blockInformationBestandsbuchungProgramme}
-    </div>
-</div>
-
-<div class='span-24 last'>&nbsp;</div>
-{/if}
-
-
-<div class='block block_oben ueberschrift block_unten span-24 last'>
-    <div style="margin-left: 40px;">{$bookingdetails.Stadtname} - <span class="stupidcat" editor='textfield' id='progname' label='Programmname'>{$programmdetails.progname}</span></div>
-</div>
-
-<div class="span-17">&nbsp;</div>
-
-<!-- neue Programmbuchung -->
-<div id='programmbeschreibung' class="block block_oben block_unten" style="padding: 40px; width: 610px; float: left;">
-
-    <div style="float: left; width: 150px; margin-right: 20px; margin-bottom: 10px;">
-        {function="anzeigenBilder($bookingdetails.ProgrammId,1,150)"}
+    {if condition="$blockInformationBestandsbuchungProgramme"}
+    <div class='block block_oben block_unten span-24 last'>
+        <div style="margin-left: 40px;" class="text">
+            {$blockInformationBestandsbuchungProgramme}
+        </div>
     </div>
 
-    <span class="stupidcat" id="miniBild" label='Bild' editor='upload'></span>
-
-    {if="$showBlock"}
-    {if condition="$sprachenManager"}
-    {function="translate('Sprachen')"}: {loop name="sprachen"} <img src='/flags/{$value.flag}.png'> {/loop}
-    {/if}
+    <div class='span-24 last'>&nbsp;</div>
     {/if}
 
-    <span class="stupidcat" label='Programmbeschreibung' editor='htmleditor' id='txt'>{$programmdetails.txt}</span><p>
 
-    {if="$showBlock"}
-    {if condition="$programmdetails.treffpunkt"}
-    {function="translate('Treffpunkt')"}: {$programmdetails.treffpunkt}<br>
-    {/if}
+    <div class='block block_oben ueberschrift block_unten span-24 last'>
+        <div style="margin-left: 40px;">{$bookingdetails.Stadtname} - <span class="stupidcat" editor='textfield' id='progname' label='Programmname'>{$programmdetails.progname}</span></div>
+    </div>
 
-    {if condition="$programmdetails.opnv"}
-    {function="translate('öffentlicher Nahverkehr')"}: {$programmdetails.opnv}<br>
-    {/if}
+    <div class="span-17">&nbsp;</div>
 
-    {if="$bookingdetails.Dauer > 0"}
-    {function="translate('voraussichtliche Dauer')"}: {$bookingdetails.Dauer} {function="translate('Stunden')"}
-    {/if}
-    {/if}
+    <!-- neue Programmbuchung -->
+    <div id='programmbeschreibung' class="block block_oben block_unten" style="padding: 40px; width: 410px; float: left;">
+        <span class="stupidcat" id="miniBild" label='Bild' editor='upload'></span>
 
-    <p></p>
-    <span class="teilueberschrift_grau">{function="translate('Buchungsinformation')"}:</span>
-    {if condition="$programmdetails.buchungstext"}
-    <br>{$programmdetails.buchungstext}
-    {/if}
-    {if condition="$bookingdetails.buchungspauschale == 2"}
-    <br>{function="translate('Für die Buchung dieses Programmes erheben wir eine einmalige Buchungspauschale in Höhe von 30,00 €.')"}
-    {/if}
-
-    {if="$showBlock"}
-    {if="$stornofristen"}
-    <br><br>{function="translate('Stornokosten:')"}<br>
-
-    {loop="stornofristen"}
-    {if condition="$value.tage == 999"}
-    {function="translate('Keine Stornierung möglich')"}<br>
-    {elseif condition="$value.prozente == 0 and count($stornofristen) == 1"}
-    {function="translate('kostenfrei')"}<br>
-    {else}
-    {if condition="count($stornofristen) == ($key + 1)"}
-    <br>{function="translate('ab')"}
-    {else}
-    <br>{function="translate('bis')"}
-    {/if}
-
-    {$value.tage} {function="translate('Tag(e) vor Beginn der Buchung')"}, {$value.prozente} % {function="translate('des Preises der Buchung')"}.
-
-    {/if}
-    {/loop}
-    {/if}
-    {/if}
-
-    {if condition="$vertragspartner"}
-    <br><br>{function="translate('Vertragspartner für diese Leistung ist:')"}<br>
-    {$vertragspartner.company}, {$vertragspartner.street}, {$vertragspartner.zip} {$vertragspartner.city} <br>
-    {$vertragspartner.country}<br>
-    {/if}
-
-    {if condition="$buchungsTyp == 1"}
-    <br>
-    <img src="/buttons/t.png"> {function="translate('Dieses Programm ist noch in der Testphase.Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen innerhalb von max. 3 Werktagen eine seperate Bestätigung per E-Mail schicken')"}<br>
-    {/if}
-    <br>
-
-
-
-    {if="$showBlock"}
-    {if="$typOeffnungszeit == 2"}
-    {if="$oeffnungszeiten"}
-    <br>
-    <table border="0">
-        <tr>
-            <td colspan="3" class="teilueberschrift_grau">{function="translate('Öffnungszeiten')"}:</td>
-        </tr>
-        {loop name="$oeffnungszeiten"}
-        <tr>
-            <td>{$value.name}: </td>
-            <td>{$value.von} &nbsp;&nbsp; {function="translate('bis')"}</td>
-            <td>{$value.bis} {function="translate('Uhr')"}</td>
-        </tr>
-        {/loop}
-    </table>
-    {/if}
-    {/if}
-    {/if}
-</div>
-
-<!-- Datumswahl -->
-{if="$showBlock"}
-<div class="block block_oben block_unten ueberschrift" style="float: right; width: 220px; padding-left: 20px;">
-    {function="translate('Bitte wählen')"}:
-</div>
-<div id='buchung' style="padding: 10px; float: right; width: 220px;" class="block">
-
-    {if condition="$typOeffnungszeit < 4"}
-    <div id='datepicker'></div>
-    {/if}
-
-    <table>
-        {if condition="$typOeffnungszeit < 4"}
-        <tr>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>
-                {function="translate('Datum')"} <input id='alternateDatum' class="span-3 input" readonly>
-            </td>
-        </tr>
-        {/if}
-
-
-        {if condition="$typOeffnungszeit == 3"}
-        <tr>
-            <td id="zeitmanager">
-                {function="translate('Zeit')"} &nbsp;&nbsp;
-                <select id="zeitmanagerSelect" name="zeitmanager" class=" input_action">
-                    {loop name="zeitmanager"}
-                    <option value="{$value.zeit}">{$value.zeit}</option>
-                    {/loop}
-                </select> Uhr
-            </td>
-        </tr>
-        {elseif condition="$typOeffnungszeit == 2"}
-        <tr>
-            {if condition="$bestandsbuchung.zeitmanagerStunde"}
-            <td id="zeitmanager" style="padding: 10px;">
-                {function="translate('Zeit')"} &nbsp;&nbsp;
-                <input type="text" style="width: 30px;" class=" input_action validate[custom[integer],max[24],min[1]]" name="zeitmanagerStunde" id="zeitmanagerStunde" value="{$bestandsbuchung.zeitmanagerStunde}">
-                :
-                <input type="text" style="width: 30px;" class=" input_action validate[custom[integer],max[59],min[0]]" name="zeitmanagerMinute" id="zeitmanagerMinute" value="{$bestandsbuchung.zeitmanagerMinute}">
-                &nbsp; {function="translate('Uhr')"}</td>
-            {else}
-            <td id="zeitmanager" style="padding: 10px;">
-                {function="translate('Zeit')"} &nbsp;&nbsp;
-                <input type="text" style="width: 30px;" class=" input_action validate[custom[integer],max[24],min[1]]" name="zeitmanagerStunde" id="zeitmanagerStunde" value="0">
-                :
-                <input type="text" style="width: 30px;" class=" input_action validate[custom[integer],max[59],min[0]]" name="zeitmanagerMinute" id="zeitmanagerMinute" value="00">
-                &nbsp; {function="translate('Uhr')"}
-            </td>
+        {if="$showBlock"}
+            {if condition="$sprachenManager"}
+                {function="translate('Sprachen')"}: {loop name="sprachen"} <img src='/flags/{$value.flag}.png'> {/loop}
             {/if}
-        </tr>
         {/if}
 
-        {if condition="$sprachenmanager"}
-        <tr>
-            <td>
-                {function="translate('Programmsprachen')"}: &nbsp;&nbsp;
-                <select id="sprachenmanagerSelect" name="spracheManager" class="input_action">
-                    {function="sprachenmanagerSelect($sprachenmanager)"}
-                </select>
-            </td>
-        </tr>
+        <span class="stupidcat" label='Programmbeschreibung' editor='htmleditor' id='txt'>{$programmdetails.txt}</span><p>
+
+        {if="$showBlock"}
+            {if condition="$programmdetails.treffpunkt"}
+                {function="translate('Treffpunkt')"}: {$programmdetails.treffpunkt}<br>
+            {/if}
+
+            {if condition="$programmdetails.opnv"}
+                {function="translate('öffentlicher Nahverkehr')"}: {$programmdetails.opnv}<br>
+            {/if}
+
+            {if="$bookingdetails.Dauer > 0"}
+                {function="translate('voraussichtliche Dauer')"}: {$bookingdetails.Dauer} {function="translate('Stunden')"}
+            {/if}
         {/if}
-    </table>
-</div>
-{/if}
 
-<div class="span-15">&nbsp;</div>
-
-<!-- Programmvariante -->
-{if="$showBlock"}
-<div class="block block_oben block_unten ueberschrift" style="float: left; width: 690px;">
-    <div style="margin-left: 40px;">
-        {function="translate('Datum')"}: <span id="buchungsdatum"></span>
-        <span id="Kapazitaet" style="visibility: hidden"></span>
-    </div>
-    <div style="margin-left: 40px;" id="Kapazitaet_Hinweis" class="standardrot">
-        {function="translate('Programmkapazität überschritten. Maximale Buchbarkeit:')"} <span id="Kapazitaet_Hinweis_buchbar"></span>
-    </div>
-</div>
-
-<div class="block block_unten" id="buchungsblock" style="float: left; width: 690px;">
-
-    <input type='hidden' name='ProgrammId' value="{$bookingdetails.ProgrammId}">
-    <input type='hidden' name='datum' id='datum' value="{$gebuchtesDatum}">
-    <input type="hidden" name="sprache" id="sprache" value="1">
-
-    {if condition="$programmvarianten"}
-    <table class="gitter" style="margin-left: 20px;">
-        <tr>
-            <td>{function="translate('Anzahl')"}</td>
-            <td>{function="translate('Programmvariante')"}</td>
-            <td>{function="translate('Einzelpreis')"}</td>
-            <td>{function="translate('Preis der Programmvariante')"}</td>
-        </tr>
+        <p></p>
+        <span class="teilueberschrift_grau">{function="translate('Buchungsinformation')"}:</span>
+        {if condition="$programmdetails.buchungstext"}
+            <br>{$programmdetails.buchungstext}
+        {/if}
         {if condition="$bookingdetails.buchungspauschale == 2"}
-        <tr>
-            <td>
-                <input type="text" value="1" class="input_action span-1" disabled="true">
-            </td>
-            <td>
-                {function="translate('Buchungspauschale')"}
-            </td>
-            <td>
-                30,00 €
-            </td>
-            <td>
-                30,00 €
-            </td>
-        </tr>
+            <br>{function="translate('Für die Buchung dieses Programmes erheben wir eine einmalige Buchungspauschale in Höhe von 30,00 €.')"}
         {/if}
-        {loop name="programmvarianten"}
-        <tr id="zeile{$key}">
-            {if condition="$buchungsDetailShow"}
-            {if condition="$key == 0"}
-            <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="{$bestandsbuchung.anzahl}"></td>
-            {else}
-            <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
-            {/if}
-            {else}
-            <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
-            {/if}
-            <td>
-                <select name="programmvariante_{$key}" id="programmvariante_{$key}" class="span-10 input_action programmvarianteSelect">
-                    {$value.options}
-                </select>
-            </td>
-            <td class="span-3">
-                <span id="einzelpreis_{$key}" class="einzelpreis"></span> €
-            </td>
-            <td class="span-3">
-                <span id="preis_{$key}" class="preis"></span> €
-            </td>
 
-        </tr>
-        {/loop}
-        <tr>
-            <td colspan="4">
-                {function="translate('Gesamtpreis')"}: <span id='gesamtpreis'></span> €
-            </td>
-        </tr>
-    </table>
+        {if="$showBlock"}
+            {if="$stornofristen"}
+                <br><br>{function="translate('Stornokosten:')"}<br>
 
-    {if condition="$flagRabattProgramm == 2"}
-    <table class="gitter" style="margin-left: 20px;">
-        <tr>
-            <td colspan="2">{function="translate('Achtung ! Nur in einer Preisvariante eine Anzahl eingeben')"}</td>
-        </tr>
-        <tr>
-            <td>
-                {function="translate('Einkaufspreis')"}:
-            </td>
-            <td>
-                <input type="text" name="einkaufspreis" id="einkaufspreis" class="input_action validate[required]">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {function="translate('Verkaufspreis')"}:
-            </td>
-            <td>
-                <input type="text" name="verkaufspreis" id="verkaufspreis" class="input_action validate[required]">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <input type="submit" style="float: right; margin-right: 30px;" id="warenkorb" name="warenkorb" class="submit" value="{function="translate('in den Warenkorb')"}">
-            </td>
-        </tr>
-    </table>
-    {else}
-    <div id='submitButton' style="margin-left: 20px;">
-        <input type="submit" style="float: right; margin-right: 30px;" id="warenkorb" name="warenkorb" class="submit" value="{function="translate('in den Warenkorb')"}">
+                {loop="stornofristen"}
+                    {if condition="$value.tage == 999"}
+                        {function="translate('Keine Stornierung möglich')"}<br>
+                    {elseif condition="$value.prozente == 0 and count($stornofristen) == 1"}
+                        {function="translate('kostenfrei')"}<br>
+                    {else}
+                        {if condition="count($stornofristen) == ($key + 1)"}
+                            <br>{function="translate('ab')"}
+                        {else}
+                            <br>{function="translate('bis')"}
+                        {/if}
+
+                        {$value.tage} {function="translate('Tag(e) vor Beginn der Buchung')"}, {$value.prozente} % {function="translate('des Preises der Buchung')"}.
+
+                    {/if}
+                {/loop}
+            {/if}
+        {/if}
+
+        {if condition="$vertragspartner"}
+            <br><br>{function="translate('Vertragspartner für diese Leistung ist:')"}<br>
+                {$vertragspartner.company}, {$vertragspartner.street}, {$vertragspartner.zip} {$vertragspartner.city} <br>
+                {$vertragspartner.country}<br>
+        {/if}
+
+        {if condition="$buchungsTyp == 1"}
+            <br>
+            <img src="/buttons/t.png"> {function="translate('Dieses Programm ist noch in der Testphase.Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen innerhalb von max. 3 Werktagen eine seperate Bestätigung per E-Mail schicken')"}<br>
+        {/if}
+        <br>
+
+
+
+        {if="$showBlock"}
+            {if="$typOeffnungszeit == 2"}
+                {if="$oeffnungszeiten"}
+                    <br>
+                    <table border="0">
+                    <tr>
+                        <td colspan="3" class="teilueberschrift_grau">{function="translate('Öffnungszeiten')"}:</td>
+                    </tr>
+                    {loop name="$oeffnungszeiten"}
+                        <tr>
+                            <td>{$value.name}: </td>
+                            <td>{$value.von} &nbsp;&nbsp; {function="translate('bis')"}</td>
+                            <td>{$value.bis} {function="translate('Uhr')"}</td>
+                        </tr>
+                    {/loop}
+                    </table>
+                {/if}
+            {/if}
+        {/if}
     </div>
 
-    {/if}
+        <!-- Datumswahl -->
+        {if="$showBlock"}
+        <div class="block block_oben block_unten ueberschrift" style="float: right; width: 420px; padding-left: 20px;">
+            {function="translate('Bitte wählen')"}:
+        </div>
+        <div id='buchung' style="padding: 10px; float: right; width: 420px;" class="block">
+
+            {if condition="$typOeffnungszeit < 4"}
+                <div id='datepicker'></div>
+            {/if}
+
+            <table>
+                {if condition="$typOeffnungszeit < 4"}
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        {function="translate('Datum')"} <input id='alternateDatum' class="span-3 input" readonly>
+                    </td>
+                </tr>
+                {/if}
 
 
-    {/if}
+                {if condition="$typOeffnungszeit == 3"}
+                <tr>
+                    <td id="zeitmanager">
+                        {function="translate('Zeit')"} &nbsp;&nbsp;
+                        <select id="zeitmanagerSelect" name="zeitmanager" class=" input_action">
+                            {loop name="zeitmanager"}
+                                <option value="{$value.zeit}">{$value.zeit}</option>
+                            {/loop}
+                        </select> Uhr
+                    </td>
+                </tr>
+                {elseif condition="$typOeffnungszeit == 2"}
+                <tr>
+                    {if condition="$bestandsbuchung.zeitmanagerStunde"}
+                        <td id="zeitmanager" style="padding: 10px;">
+                            {function="translate('Zeit')"} &nbsp;&nbsp;
+                            <input type="text" style="width: 30px;" class=" input_action validate[custom[integer],max[24],min[1]]" name="zeitmanagerStunde" id="zeitmanagerStunde" value="{$bestandsbuchung.zeitmanagerStunde}">
+                            :
+                            <input type="text" style="width: 30px;" class=" input_action validate[custom[integer],max[59],min[0]]" name="zeitmanagerMinute" id="zeitmanagerMinute" value="{$bestandsbuchung.zeitmanagerMinute}">
+                            &nbsp; {function="translate('Uhr')"}</td>
+                    {else}
+                        <td id="zeitmanager" style="padding: 10px;">
+                            {function="translate('Zeit')"} &nbsp;&nbsp;
+                            <input type="text" style="width: 30px;" class=" input_action validate[custom[integer],max[24],min[1]]" name="zeitmanagerStunde" id="zeitmanagerStunde" value="0">
+                            :
+                            <input type="text" style="width: 30px;" class=" input_action validate[custom[integer],max[59],min[0]]" name="zeitmanagerMinute" id="zeitmanagerMinute" value="00">
+                            &nbsp; {function="translate('Uhr')"}
+                        </td>
+                    {/if}
+                </tr>
+                {/if}
+
+                {if condition="$sprachenmanager"}
+                <tr>
+                    <td>
+                        {function="translate('Programmsprachen')"}: &nbsp;&nbsp;
+                        <select id="sprachenmanagerSelect" name="spracheManager" class="input_action">
+                            {function="sprachenmanagerSelect($sprachenmanager)"}
+                        </select>
+                    </td>
+                </tr>
+                {/if}
+            </table>
+            <!-- Programmvariante -->
+          {if="$showBlock"}
+          <div class="ueberschrift" >
+              <div>
+                  {function="translate('Datum')"}: <span id="buchungsdatum"></span>
+                  <!--<span id="Kapazitaet" style="visibility: hidden"></span> -->
+              </div>
+              <div style="margin-left: 40px;" id="Kapazitaet_Hinweis" class="standardrot">
+                  {function="translate('Programmkapazität überschritten. Maximale Buchbarkeit:')"} <span id="Kapazitaet_Hinweis_buchbar"></span>
+              </div>
+          </div>
+
+          <div id="buchungsblock">
+
+              <input type='hidden' name='ProgrammId' value="{$bookingdetails.ProgrammId}">
+              <input type='hidden' name='datum' id='datum' value="{$gebuchtesDatum}">
+              <input type="hidden" name="sprache" id="sprache" value="1">
+
+              {if condition="$programmvarianten"}
+              <table class="" style="margin-left: 0px; ">
+                  <tr>
+                      <td>{function="translate('Anzahl')"}</td>
+                      <td>{function="translate('Programmvariante')"}</td>
+                      <td>{function="translate('Einzelpreis')"}</td>
+                      <td>{function="translate('Preis der Programmvariante')"}</td>
+                  </tr>
+                  {if condition="$bookingdetails.buchungspauschale == 2"}
+                  <tr>
+                      <td>
+                          <input type="text" value="1" class="input_action span-1" disabled="true">
+                      </td>
+                      <td>
+                          {function="translate('Buchungspauschale')"}
+                      </td>
+                      <td>
+                          30,00 €
+                      </td>
+                      <td>
+                          30,00 €
+                      </td>
+                  </tr>
+                  {/if}
+                  {loop name="programmvarianten"}
+                  <tr id="zeile{$key}">
+                      {if condition="$buchungsDetailShow"}
+                          {if condition="$key == 0"}
+                              <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="{$bestandsbuchung.anzahl}"></td>
+                          {else}
+                              <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
+                          {/if}
+                      {else}
+                          <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
+                      {/if}
+                      <td>
+                          <select name="programmvariante_{$key}" id="programmvariante_{$key}" class="span-10 input_action programmvarianteSelect">
+                              {$value.options}
+                          </select>
+                      </td>
+                      <td class="span-3">
+                          <span id="einzelpreis_{$key}" class="einzelpreis"></span> €
+                      </td>
+                      <td class="span-3">
+                          <span id="preis_{$key}" class="preis"></span> €
+                      </td>
+
+                  </tr>
+                  {/loop}
+                  <tr>
+                      <td colspan="4">
+                          {function="translate('Gesamtpreis')"}: <span id='gesamtpreis'></span> €
+                      </td>
+                  </tr>
+              </table>
+
+              {if condition="$flagRabattProgramm == 2"}
+                  <table class="gitter" style="margin-left: 20px;">
+                      <tr>
+                          <td colspan="2">{function="translate('Achtung ! Nur in einer Preisvariante eine Anzahl eingeben')"}</td>
+                      </tr>
+                      <tr>
+                          <td>
+                              {function="translate('Einkaufspreis')"}:
+                          </td>
+                          <td>
+                              <input type="text" name="einkaufspreis" id="einkaufspreis" class="input_action validate[required]">
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              {function="translate('Verkaufspreis')"}:
+                          </td>
+                          <td>
+                              <input type="text" name="verkaufspreis" id="verkaufspreis" class="input_action validate[required]">
+                          </td>
+                      </tr>
+                      <tr>
+                          <td colspan="2">
+                              <input type="submit" style="float: right; margin-right: 30px;" id="warenkorb" name="warenkorb" class="submit" value="{function="translate('in den Warenkorb')"}">
+                          </td>
+                      </tr>
+                  </table>
+              {else}
+                  <div id='submitButton' style="margin-left: 20px;">
+                      <input type="submit" style="float: right; margin-right: 30px;" id="warenkorb" name="warenkorb" class="submit" value="{function="translate('in den Warenkorb')"}">
+                  </div>
+
+              {/if}
+              {/if}
+              {if condition="$programmvarianten"}
+                  </form>
+              {/if}
+          </div>
+          {/if}
+          </div>
+          {/if}
 
 
 
-
-    {if condition="$programmvarianten"}
-</form>
-{/if}
-</div>
-{/if}
-
-</div>
-<!-- Ende Gesamtblock Programm -->
+    </div>
+    <!-- Ende Gesamtblock Programm -->

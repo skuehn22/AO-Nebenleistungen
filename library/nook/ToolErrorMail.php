@@ -73,7 +73,7 @@ class nook_ToolErrorMail {
             ->addTo($this->_mailAdresseTicket, 'Ticket Flow')
             ->setBodyText($bodyText)
             ->setSubject($subjekt)
-            ->setFrom('suppenterrine@gmail.com')
+            ->setFrom('kuehn.sebastian@gamil.com')
             ->send();
 
         return $this;
