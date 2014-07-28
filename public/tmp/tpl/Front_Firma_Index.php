@@ -1,0 +1,59 @@
+<?php if(!class_exists('raintpl')){exit;}?><?php if( $anzeigesprache == 1 ){ ?>
+<h3>Über Herden Online Booking</h3>
+<span style="font-size: 14px; line-height:17px">
+Unser Ziel ist die Erleichterung der Reiseplanung und -buchung für Gruppen ab 10 Personen: Schulklassen, Studiengruppen, Vereine, Reisebüros, Sprachinstitute u.a. <br /><br />
+Bisher mussten Sie oft lange auf verbindliche Angebote von Reiseveranstaltern warten – jetzt wird das anders! <br /><br />
+<b>Und so funktioniert’s:</b><br />
+Bei uns können Sie sich aus den verschiedenen Angeboten Ihre Reise online zusammenstellen. Sie bekommen detaillierte Preis- und Verfügbarkeitsauskünfte in Echtzeit und haben sofort ein klares detailliertes Angebot für Ihre Gruppenreise. <br /><br />
+Mit Ihrer E-Mai-Adresse und einem von Ihnen gewählten Passwort können Sie Ihre Reiseplanung speichern und jederzeit aktualisieren. So haben Sie immer ein aktuelles Angebot. <br /><br />
+Sobald Sie verbindlich buchen möchten werden die Preise und Verfügbarkeiten erneut geprüft (insbesondere bei kurzfristigen Buchungen kann es Änderungen geben). Dann können Sie online buchen und Sie erhalten per E-Mail eine Bestätigung und die Rechnung. <br /><br />
+Später können Sie jederzeit auf Ihre Buchungen zugreifen, Änderungen vornehmen, Programme dazubuchen oder stornieren. Nach den Änderungen oder Stornierungen erhalten Sie eine neue Bestätigung und eine ergänzende Rechnung oder Gutschrift. <br /><br /><br />
+
+<b>Und warum wir?</b><br />
+Wir arbeiten:<br />
+seit 1993 als Herden Veranstaltungs GmbH<br />
+seit 1996 als Herden Studienreisen Berlin, einem Geschäftsbereich der Herden Veranstaltungs GmbH<br />
+1996 - 2000 im Auftrag des Landes Berlin: Organisation von Schüler- und Studienreisen<br />
+seit 2003 als Herden Studienreisen Berlin GmbH<br />
+seit 2013 mit Herden Online Booking<br /><br /><br /><br />
+
+<b>Andere Projekte auf unserem Server sind:</b><br /><br />	
+<a href="http://www.herden.de " target="_blank"> Herden Studienreisen Berlin</a><br /><br />
+<a href="http://www.herden-veranstaltungen.com " target="_blank"> Herden Veranstaltungs GmbH</a><br /><br />
+<a href="http://www.inhouse-magazine.com " target="_blank">INHOUSE magazine</a><br /><br />
+<a href="http://www.herden.de/auktion" target="_blank">Kunstauktion</a><br /><br />
+<a href="http://www.interkulturelle-woche-berlin.de " target="_blank">Interkulturelle Woche Berlin</a><br /><br />
+        </span>
+
+<?php }else{ ?>
+<h3>About Herden Online Booking</h3>
+<span style="font-size: 14px; line-height:17px">
+
+It is our goal to make travel planning and booking easier for groups of 10 or more:  ideal for school classes, study groups, clubs, travel agencies and language institutes just to name a few examples.<br /><br />
+
+Until now, there were often long waits involved when booking with travel agents – but now that’s all changed!<br /><br />
+
+<b>And this is how it works:</b><br />
+Customize your trip by choosing from the many listed offerings. See detailed price and availability info in real time as we formulate a straightforward, comprehensive cost-estimate for your group trip.<br /><br />
+
+With your email address and personal password you can save your trip planning progress and update it anytime. This way your plans are always up-to-date.<br /><br />
+
+Once you’re ready to book, prices and availabilities are verified once more (changes are more likely with short noticed bookings). Then you can book online and the confirmation and invoice are emailed to you.<br /><br />
+
+You can review your booking anytime and also make desired adjustments: add programs or cancel them. Upon making an adjustment, you will receive a new confirmation and the respective invoice or credit voucher.<br /><br />
+
+<b>And why us?</b><br />
+Our clients know us<br />
+since 1993 as Herden Veranstaltungs GmbH<br />
+since 1996 as Herden Studienreisen Berlin, a section of Herden Veranstaltungs GmbH<br />
+1996 - 2000 organizing school trips and study tours on behalf of the Berlin Senat<br />
+since 2003 al Herden Studienreisen Berlin GmbH<br />
+since 2013 with Herden Online Booking<br /><br />
+
+<b>Other projects on this server are:</b><br /><br />
+<a href="http://www.herden.de " target="_blank"> Herden Studienreisen Berlin</a><br /><br />
+<a href="http://www.herden-veranstaltungen.com " target="_blank"> Herden Veranstaltungs GmbH</a><br /><br />
+<a href="http://www.inhouse-magazine.com " target="_blank">INHOUSE magazine</a><br /><br />
+<a href="http://www.herden.de/auktion" target="_blank">Kunstauktion (Art Auction)</a><br /><br />
+<a href="http://www.interkulturelle-woche-berlin.de " target="_blank">Interkulturelle Woche Berlin (Intercultural Weeks Berlin)</a><br />
+<?php } ?>

@@ -1,4 +1,4 @@
-<?php
+<?php 
  /**
  * Ermittelt die Basisangaben eines Programmes. Programmname , Programmbeschreibung, Sprache
  *
@@ -7,7 +7,7 @@
  * @file ToolProgrammBasisAngaben.php
  * @package tools
  */
-
+ 
 class nook_ToolProgrammBasisAngaben
 {
     // Fehler
@@ -145,3 +145,4 @@ class nook_ToolProgrammBasisAngaben
         return $rows[0];
     }
 }
+ 

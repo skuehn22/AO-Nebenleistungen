@@ -22,7 +22,7 @@
     </div>  -->
     <?php } ?>
 
-    <div class='span-23 ueberschrift block_unten block_oben block' >
+    <div class='span-24 ueberschrift block_unten block_oben block' >
          <p>
         <div style="line-height: 24px; width:550px; margin-left:245px; font-size:18px; text-align:;">
         <br><br>     <br><br>

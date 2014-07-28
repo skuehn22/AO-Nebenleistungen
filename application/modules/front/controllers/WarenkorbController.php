@@ -709,7 +709,7 @@ class Front_WarenkorbController extends Zend_Controller_Action
      * @param $anzahlBuchungspauschalen
      * @param $preisBuchungspauschale
      */
-    private function bereichBuchungspauschale(&$shoppingCartNestedProgramme, &$totalPrice)
+    private function bereichBuchungspauschale($shoppingCartNestedProgramme, $totalPrice)
     {
         $buchungspauschale = array();
 
