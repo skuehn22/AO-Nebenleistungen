@@ -40,3 +40,13 @@ Icon
 /application/configs/application.ini
 application/configs/application.ini
 
+public/tmp/tpl/*
+public/tmp/tpl/**
+/public/tmp/tpl/*
+/public/tmp/tpl/**
+
+
+
+
+
+
