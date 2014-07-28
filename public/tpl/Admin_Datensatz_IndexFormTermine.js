@@ -14,13 +14,38 @@ function fillTermine(){
     });
 
     var programmzeiten = [{
-           xtype: 'htmleditor',
+        xtype: 'radio',
+        fieldLabel: 'keine Öffnungszeiten und Termine zugeordnet',
+        name: 'programmzeiten',
+        inputValue: 1,
+        helpText: 'Dem Programm sind keine Öffnungszeiten und Termine zugeordnet, Datum kann gewählt werden'
+    },{
+        xtype: 'radio',
+        fieldLabel: 'Programmzeiten durch Kunde',
+        name: 'programmzeiten',
+        inputValue: 2,
+        helpText: 'dem Kunden wird eine Eingabefeld für die Startzeit angezeigt, Datum kann gewählt werden'
+    },{
+        xtype: 'radio',
+        fieldLabel: 'kein Datum, keine Zeiten',
+        name: 'programmzeiten',
+        inputValue: 4,
+        helpText: 'dem Programm ist kein datum, keine Öffnungszeit und keine Startzeit zugeordnet'
+    },{
+        xtype: 'label',
+        fieldLabel: 'Abfahrstzeiten',
+        name: 'programmzeiten'
+    },{
+        xtype: 'textarea',
+        fieldLabel: 'Abfahrtszeiten',
+        xtype: 'htmleditor',
 
-            name: 'abfahrtszeit',
-            hideLabel: true,
-            width: 450,
-            height: 150
-        },{
+        name: 'abfahrtszeit',
+        hideLabel: false,
+        width: 150,
+        hideLabel: true,
+        width: 450,
+        height: 150},{
 
             xtype: 'tbspacer',
             height: 20
