@@ -37,8 +37,9 @@
         <div class="span-3">
             {include="Front_Programmstart_Buchungstyp"}
         </div>
-        <div class="span-3 push-3 standardtext">
-            {function="translate('Preis ab')"}:  {function="translatePricing($value.werbepreis)"} €
+        <div class="span-4 push-3 standardtext">
+            {function="translate('Preis ab')"}:  {function="translatePricing($value.werbepreis)"} € {$value.werbepreistyp}
+
         </div>
         <div class="span-2">
             <form method='post' class="form" action='/front/programmdetail/index/city/{$value.cityId}/programId/{$value.id}'><input type='submit' class="submit" value='{function="translate('buchen')"}...'></form>
@@ -77,3 +78,5 @@
 
 </div>
 {/if}
+
+        {$template_info}

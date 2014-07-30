@@ -366,13 +366,23 @@ class Front_Model_Programmstart{
     {
 
         $cols = array(
-            'werbepreis'
+            'werbepreis',
+            'werbepreistyp'
         );
 
         for ($i = 0; $i < count($__programme); $i++) {
             $select = $this->tabelleProgrammdetails->select()->from($this->tabelleProgrammdetails, $cols)->where("id = ".$__programme[$i]['id']);
             $row = $this->tabelleProgrammdetails->fetchRow($select)->toArray();
             $__programme[$i]['werbepreis'] = $row['werbepreis'];
+            if ($row['werbepreistyp'] == "1"){
+                $__programme[$i]['werbepreistyp'] = "pro Person";
+            }
+
+            if ($row['werbepreistyp'] == "2"){
+                $__programme[$i]['werbepreistyp'] = "pro Gruppe";
+            }
+
+
         }
 
         return $__programme;
