@@ -162,8 +162,9 @@ class nook_ToolStartdatumBuchungProgramm
 
         $rows = $tabelleProgrammdetailsOeffnungszeiten->fetchAll($select)->toArray();
 
-        if(count($rows) > 0)
+        if(count($rows) > 0){
             $this->oeffnungszeitenProgramm = $rows;
+        }
 
         return;
     }
