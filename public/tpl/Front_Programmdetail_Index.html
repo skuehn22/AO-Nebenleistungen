@@ -65,7 +65,7 @@
     <div class="span-17">&nbsp;</div>
 
     <!-- neue Programmbuchung -->
-    <div id='programmbeschreibung' class="block block_oben block_unten" style="padding: 40px; width: 410px; float: left;">
+    <div id='programmbeschreibung' class="block block_oben block_unten" style="padding: 5px; width: 450px; float: left;">
         <span class="stupidcat" id="miniBild" label='Bild' editor='upload'></span>
 
         {if="$showBlock"}
@@ -95,7 +95,7 @@
         <p></p>
         <table style="background-color: #ddd; vertical-align: middle;">
             <tr>
-                <td width="150px;"><strong>Öffnungszeiten</strong></td>
+                <td width="250px;"><strong>Öffnungszeiten</strong></td>
                 <td width="150px;"><strong>Abfahrt/Treffpunkt</strong></td>
                 <td width="150px;"><strong>Anreise/ÖPNV</strong></td>
             </tr>
@@ -125,8 +125,8 @@
         </table>
         <table style="background-color: #ddd; vertical-align: middle;">
             <tr>
-                <td width="200px;"><strong>Freiplatzregel</strong></td>
-                <td width="200px;"><strong>Personenzahlregel</strong></td>
+                <td width="250px;"><strong>Freiplatzregel</strong></td>
+                <td width="250px;"><strong>Personenzahlregel</strong></td>
                 <td ><strong></strong></td>
             </tr>
             <tr>
@@ -189,10 +189,10 @@
 
         <!-- Datumswahl -->
         {if="$showBlock"}
-        <div class="block block_oben block_unten ueberschrift" style="float: right; width: 420px; padding-left: 20px;">
+        <div class="block block_oben block_unten ueberschrift" style="float: right; width: 450px; padding-left: 10px;">
             {function="translate('Bitte wählen')"}:
         </div>
-        <div id='buchung' style="padding: 10px; float: right; width: 420px;" class="block">
+        <div id='buchung' style="padding: 5px; border-bottom:1px solid #e26902; float: right; width: 450px;" class="block">
 
             {if condition="$typOeffnungszeit < 4"}
                 <div id='datepicker'></div>
