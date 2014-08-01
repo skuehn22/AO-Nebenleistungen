@@ -112,7 +112,11 @@ class Front_ProgrammdetailController extends Zend_Controller_Action
 
             // Tabelle der Preisvarianten
             $bestellTabelle = $modelPreisvarianten->getBestellTabelle();
+            $variantenAry = $modelPreisvarianten->getProgrammVariantenAry($params['programId']);
             $raintpl->assign('programmvarianten', $bestellTabelle);
+            $raintpl->assign('variantenAry', $variantenAry);
+
+
 
             // Anzahl der Programmvarianten eines Programmes
             $raintpl->assign('anzahlPreisvarianten', $modelPreisvarianten->getAnzahlPreisvarianten());

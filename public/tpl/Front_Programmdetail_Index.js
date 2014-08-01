@@ -522,9 +522,9 @@ $(document).ready(function() {
     $('#buchungsdatum').html($("#alternateDatum").val());
 
     // verbergen ungenutzter Preisvarianten
-    for(var i = 1; i < anzahlPreisvarianten; i++){
-        $("#zeile" + i).hide();
-    }
+    //for(var i = 1; i < anzahlPreisvarianten; i++){
+    //    $("#zeile" + i).hide();
+    //}
 
     // Bestandsbuchung , Berechnung Preis und Sichtbarkeit Button
     if(!zeitmanagerSelect == '0'){
