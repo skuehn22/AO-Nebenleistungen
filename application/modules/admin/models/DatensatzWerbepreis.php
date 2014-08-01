@@ -114,6 +114,8 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
         return $data;
     }
 
+
+
     /**
      * Updatet der Besonderheiten eines Programmes
      *
