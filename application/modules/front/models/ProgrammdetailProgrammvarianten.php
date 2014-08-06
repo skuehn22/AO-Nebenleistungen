@@ -159,10 +159,19 @@ class Front_Model_ProgrammdetailProgrammvarianten
     {
         // ermitteln Preisvarianten eines Programmes
         $programmvarianten = $this->ermittelnPreisvariantenProgramm($programmId, $this->bestandsbuchungPreisvarianteId);
-
         $programmvariantenAry = array();
 
-        for($i = 0; $i < $this->_condition_moegliche_anzahl_programmvarianten-1; $i++) {
+
+
+        for($i = 0; $i < count($programmvarianten); $i++) {
+
+            if ($i % 2 != 0) {
+                $programmvarianten[$i]['bgcolor'] = "#fff";
+            } else {
+                $programmvarianten[$i]['bgcolor'] = "#eee";
+            }
+
+            $programmvarianten[$i]['verkaufspreis'] = substr($programmvarianten[$i]['verkaufspreis'], 0, -1);
             $programmvariantenAry[$i] = $programmvarianten[$i];
         }
 
