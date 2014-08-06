@@ -815,7 +815,7 @@ class Admin_Model_Datensatz extends nook_Model_model
         );
 
         // Treffpunkte und Öpnv
-        $this->_updateTreffpunktUndOpnv($__programmDetailsDiverses['programmId'], $__programmDetailsDiverses);
+        //$this->_updateTreffpunktUndOpnv($__programmDetailsDiverses['programmId'], $__programmDetailsDiverses);
 
         return;
     }
