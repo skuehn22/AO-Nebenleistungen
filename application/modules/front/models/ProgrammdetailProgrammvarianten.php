@@ -93,7 +93,8 @@ class Front_Model_ProgrammdetailProgrammvarianten
         $cols = array(
             'id',
             'verkaufspreis',
-            'preisvariante_' . $this->_anzeigeSprache . ' as preisvariante'
+            'preisvariante_' . $this->_anzeigeSprache . ' as preisvariante',
+            'confirm_1'
         );
 
         $select = $this->_viewPreisvariantenSprachen->select();
@@ -162,7 +163,11 @@ class Front_Model_ProgrammdetailProgrammvarianten
         $programmvariantenAry = array();
 
         for($i = 0; $i < count($programmvarianten); $i++) {
-
+            if ($i % 2 != 0) {
+                $programmvarianten[$i]['bgcolor'] = "#fff";
+            } else {
+                $programmvarianten[$i]['bgcolor'] = "#f3f3f3";
+            }
 
 
             $programmvarianten[$i]['verkaufspreis'] = substr($programmvarianten[$i]['verkaufspreis'], 0, -1);
