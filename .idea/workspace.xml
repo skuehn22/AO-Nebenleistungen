@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php" afterPath="$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,37 +73,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin_Datensatz_IndexFormEditor.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Admin_Datensatz_IndexFormEditor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="20" selection-start="4587" selection-end="4587" vertical-scroll-proportion="0.6232558" vertical-offset="2352" max-vertical-offset="4420">
+            <state line="151" column="42" selection-start="4266" selection-end="4266" vertical-scroll-proportion="-8.6" vertical-offset="2352" max-vertical-offset="4420">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgrammstartController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php">
+      <file leaf-file-name="Programmzeiten.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmzeiten.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="344" column="9" selection-start="11475" selection-end="11475" vertical-scroll-proportion="0.0" vertical-offset="5672" max-vertical-offset="6052">
+            <state line="104" column="10" selection-start="2656" selection-end="2656" vertical-scroll-proportion="-17.0" vertical-offset="1326" max-vertical-offset="3298">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatensatzWerbepreis.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php">
+      <file leaf-file-name="Programmzeiten.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="0" selection-start="3059" selection-end="3059" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="2890">
+            <state line="107" column="9" selection-start="2890" selection-end="2890" vertical-scroll-proportion="0.52434456" vertical-offset="1679" max-vertical-offset="9112">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preiseBeschreibung.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/DbTable/preiseBeschreibung.php">
+      <file leaf-file-name="DatensatzController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="18" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="867">
+            <state line="394" column="0" selection-start="12939" selection-end="12939" vertical-scroll-proportion="-3.7307692" vertical-offset="6601" max-vertical-offset="19261">
               <folding />
             </state>
           </provider>
@@ -135,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/CartProgramme.php" />
         <option value="$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js" />
@@ -186,6 +186,7 @@
         <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Index.html" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
+        <option value="$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php" />
       </list>
     </option>
   </component>
@@ -308,6 +309,102 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -423,16 +520,16 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19097222" sideWeight="0.85751295" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
+      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1545139" sideWeight="0.85714287" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2326389" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43225807" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42875648" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19097222" sideWeight="0.1411917" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2170139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1545139" sideWeight="0.14058957" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19097222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2449,11 +2546,61 @@
           <line>131</line>
           <option name="timeStamp" value="1186" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php</url>
+          <line>100</line>
+          <option name="timeStamp" value="1187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php</url>
+          <line>116</line>
+          <option name="timeStamp" value="1188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php</url>
+          <line>104</line>
+          <option name="timeStamp" value="1189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php</url>
+          <line>162</line>
+          <option name="timeStamp" value="1190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php</url>
+          <line>163</line>
+          <option name="timeStamp" value="1191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php</url>
+          <line>165</line>
+          <option name="timeStamp" value="1192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php</url>
+          <line>390</line>
+          <option name="timeStamp" value="1193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php</url>
+          <line>392</line>
+          <option name="timeStamp" value="1194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php</url>
+          <line>394</line>
+          <option name="timeStamp" value="1195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php</url>
+          <line>393</line>
+          <option name="timeStamp" value="1196" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1187" />
+      <option name="time" value="1197" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -2463,21 +2610,6 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Pdo/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="208" column="0" selection-start="6371" selection-end="6371" vertical-scroll-proportion="-5.576923" vertical-offset="3068" max-vertical-offset="6596" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action/Interface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1004" selection-end="1004" vertical-scroll-proportion="-5.730769" vertical-offset="21" max-vertical-offset="952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1221" selection-end="1221" vertical-scroll-proportion="-5.576923" vertical-offset="263" max-vertical-offset="13362" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action/HelperBroker.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="238" column="0" selection-start="6682" selection-end="6682" vertical-scroll-proportion="-5.576923" vertical-offset="3578" max-vertical-offset="6256" />
@@ -2610,7 +2742,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Pimple/Pimple.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4879" />
+        <state line="45" column="0" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4879">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/OrderdataVormerkenController.php">
@@ -2622,7 +2756,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/Exception.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="374" />
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="374">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Loader.php">
@@ -2687,7 +2823,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzZusatzinformation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="29" selection-start="1990" selection-end="1990" vertical-scroll-proportion="-6.3076925" vertical-offset="1009" max-vertical-offset="1394" />
+        <state line="81" column="29" selection-start="1990" selection-end="1990" vertical-scroll-proportion="-6.3076925" vertical-offset="1009" max-vertical-offset="1394">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/Tool.php">
@@ -2774,7 +2912,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="20" selection-start="4587" selection-end="4587" vertical-scroll-proportion="0.6232558" vertical-offset="2352" max-vertical-offset="4420">
+        <state line="151" column="42" selection-start="4266" selection-end="4266" vertical-scroll-proportion="-8.6" vertical-offset="2352" max-vertical-offset="4420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmzeiten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="10" selection-start="2656" selection-end="2656" vertical-scroll-proportion="-17.0" vertical-offset="1326" max-vertical-offset="3298">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="394" column="0" selection-start="12939" selection-end="12939" vertical-scroll-proportion="-3.7307692" vertical-offset="6601" max-vertical-offset="19261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="9" selection-start="2890" selection-end="2890" vertical-scroll-proportion="0.52434456" vertical-offset="1679" max-vertical-offset="9112">
           <folding />
         </state>
       </provider>
