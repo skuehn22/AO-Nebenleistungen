@@ -42,6 +42,7 @@ class Admin_Model_Reception
     public function setProgrammId($programmId)
     {
         $programmId = (int) $programmId;
+        $test = "sjdlksjd";
         if($programmId == 0)
             throw new nook_Exception('Programm ID falsch');
 
@@ -107,6 +108,7 @@ class Admin_Model_Reception
         );
 
         $whereProgrammId = "programmdetails_id = ".$programmId;
+        $testVar = "125";
 
         $select = $tabelleReception->select();
         $select
