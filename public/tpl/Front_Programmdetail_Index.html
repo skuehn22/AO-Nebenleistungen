@@ -292,7 +292,7 @@
 
               {if condition="$programmvarianten"}
               <table class="" style="margin-left: 0px; ">
-                  <tr style='background-color:#ddd;'>
+                  <tr>
                       <td><strong>{function="translate('Anzahl')"}</strong></td>
                       <td><strong>{function="translate('Programmvariante')"}</strong></td>
                       <td><strong>{function="translate('Einzelpreis')"}</strong></td>
@@ -315,12 +315,12 @@
                   </tr>
                   {/if}
                   {loop name="variantenAry"}
-                  <tr id="zeile{$key}" style='background-color:{$variantenAry["$key"][bgcolor]}' >
+                  <tr id="zeile{$key}">
                       {if condition="$buchungsDetailShow"}
                           {if condition="$key == 0"}
-                              <td style="width:10px;"><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-1 validate[custom[integer]]" value="{$bestandsbuchung.anzahl}"></td>
+                              <td style="width:5px;"><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-1 validate[custom[integer]]" value="{$bestandsbuchung.anzahl}"></td>
                           {else}
-                              <td style="width:10px;"><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-1 validate[custom[integer]]" value="0"></td>
+                              <td style="width:5px;"><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-1 validate[custom[integer]]" value="0"></td>
                           {/if}
                       {else}
                           <td style="width:5px;"><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-1 validate[custom[integer]]" value="0"></td>

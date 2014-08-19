@@ -44,7 +44,34 @@ function positionBuchung(){
 function wechselPersonenanzahl(rowId, anzahl){
   //alert(rowId);
 
-    var einzelPreis = $("#einzelpreis_" + rowId).text();
+
+    //var selectedIndex = $("#select" + "programmvariante_" + rowId).attr("selectedIndex");
+    //var selectedIndex = $ddlHeader.attr('selectedIndex', 0);
+
+    var selectedIndex = $("#programmvariante_" + rowId).prop("selectedIndex");
+    //alert(selectedIndex);
+
+    //var idid = $("#programmvariante_1 option:selected").attr("value");
+    //alert(idid);
+
+
+      //selectedIndex = "2";
+//    if(selectedIndex == 0 && gebuchtesDatum == 0){
+//        var leerPreis = kaufmRunden(0.00);
+//        $("#preis_" + rowId).html(leerPreis);
+//        $("#einzelpreis_" + rowId).html(leerPreis);
+//
+//        return false;
+//    }
+//
+//    selectedIndex--;
+
+   //alert(selectedIndex);
+
+   //select#programmvariante_1999
+
+    var einzelPreis = preiseProgrammVarianten[selectedIndex];
+    //alert(einzelPreis);
 
     // berechneter Gesamtpreis
     var gesamtPreisNummerisch = parseInt(anzahl) * parseFloat(einzelPreis);
@@ -52,6 +79,7 @@ function wechselPersonenanzahl(rowId, anzahl){
     $("#preis_" + rowId).html(gesamtPreis);
 
     // Einzelpreis
+    einzelPreis = kaufmRunden(einzelPreis);
     $("#einzelpreis_" + rowId).html(einzelPreis);
 
     return gesamtPreisNummerisch;
