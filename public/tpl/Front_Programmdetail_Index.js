@@ -96,7 +96,7 @@ function berechnungGesamtpreis(){
     gesamtpreis = parseFloat(gesamtpreis);
 
     // Absendebutton
-    if(((gesamtpreis > 0) || (gesamtpreis < 0)) )
+    if( (gesamtAnzahl > 0) && ((gesamtpreis > 0) || (gesamtpreis < 0)) )
         $("#submitButton").show();
     else
         $("#submitButton").hide();
