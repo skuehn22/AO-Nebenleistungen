@@ -176,8 +176,9 @@
         {/if}
         </div>
 
-
+        <div class="span-5" style="width:450px; background-color: #f3f3f3;">&nbsp;</div>
         {if condition="$bookingdetails.buchungspauschale == 2"}
+
         <strong>{function="translate('Zusatzinformation: ')"}</strong>
         <br>{function="translate('Für die Buchung dieses Programmes erheben wir eine einmalige Buchungspauschale in Höhe von 30,00 €.')"}
         </div>
@@ -293,10 +294,10 @@
               {if condition="$programmvarianten"}
               <table class="" style="margin-left: 0px; ">
                   <tr>
-                      <td><strong>{function="translate('Anzahl')"}</strong></td>
-                      <td><strong>{function="translate('Programmvariante')"}</strong></td>
-                      <td><strong>{function="translate('Einzelpreis')"}</strong></td>
-                      <td><strong>{function="translate('Preis Variante')"}</strong></td>
+                      <td>{function="translate('Anzahl')"}</td>
+                      <td>{function="translate('Programmvariante')"}</td>
+                      <td>{function="translate('Einzelpreis')"}</td>
+                      <td>{function="translate('Preis der Programmvariante')"}</td>
                   </tr>
                   {if condition="$bookingdetails.buchungspauschale == 2"}
                   <tr>
@@ -314,24 +315,24 @@
                       </td>
                   </tr>
                   {/if}
-                  {loop name="variantenAry"}
+                  {loop name="programmvarianten"}
                   <tr id="zeile{$key}">
                       {if condition="$buchungsDetailShow"}
                           {if condition="$key == 0"}
-                              <td style="width:5px;"><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-1 validate[custom[integer]]" value="{$bestandsbuchung.anzahl}"></td>
+                              <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="{$bestandsbuchung.anzahl}"></td>
                           {else}
-                              <td style="width:5px;"><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-1 validate[custom[integer]]" value="0"></td>
+                              <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
                           {/if}
                       {else}
-                          <td style="width:5px;"><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-1 validate[custom[integer]]" value="0"></td>
+                          <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
                       {/if}
                       <td>
-
-                          {$variantenAry["$key"][preisvariante]}
-
+                          <select name="programmvariante_{$key}" id="programmvariante_{$key}" class="span-3 input_action programmvarianteSelect">
+                              {$value.options}
+                          </select>
                       </td>
-                      <td class="span-1">
-                          <span id="einzelpreis_{$key}" class="einzelpreis">{$variantenAry["$key"][verkaufspreis]}</span> €
+                      <td class="span-3">
+                          <span id="einzelpreis_{$key}" class="einzelpreis"></span> €
                       </td>
                       <td class="span-3">
                           <span id="preis_{$key}" class="preis"></span> €
@@ -341,8 +342,7 @@
                   {/loop}
                   <tr>
                       <td colspan="4">
-                          <br>
-                          <strong>{function="translate('Gesamtpreis')"}: <span id='gesamtpreis'></span> €</strong>
+                          {function="translate('Gesamtpreis')"}: <span id='gesamtpreis'></span> €
                       </td>
                   </tr>
               </table>
