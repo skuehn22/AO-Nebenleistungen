@@ -72,14 +72,14 @@ var adminDatensatzIndexStornofristen = function(){
                     xtype: 'numberfield',
                     name: 'tage1',
                     fieldLabel: '1. Stornofrist* (bis x Werktage)',
-                    allowBlank: true,
+                    allowBlank: false,
                     width: 50
                 },{
                     xtype: 'textfield',
                     name: 'prozente1',
                     width: 50,
                     id: 'adminDatensatzIndexStornofristenProzente1',
-                    allowBlank: true,
+                    allowBlank: false,
                     maskRe: /[0-9]/
                 },{
                     xtype: 'label',

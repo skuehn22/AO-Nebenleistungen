@@ -426,7 +426,7 @@ var adminDatensatzIndexPreisvarianten = function (){
                 mode: 'local',
                 hiddenName: 'mwst',
                 name: 'mwst',
-                store: [[0.19,'19%'],[0.07,'7%'],[0, '0%'],[0.1,'10%']]
+                store: [[0.19,'19%'],[0.07,'7%'],[0, '0%']]
             },{
                 xtype: 'checkbox',
                 fieldLabel: 'Buchungspauschale',
