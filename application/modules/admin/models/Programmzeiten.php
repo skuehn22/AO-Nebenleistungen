@@ -102,11 +102,11 @@ class Admin_Model_Programmzeiten extends nook_Model_model
             throw new nook_Exception($this->_error_daten_unvollstaendig);
         }
 
-
+        /*
         if(empty($this->_status)) {
             throw new nook_Exception($this->_error_daten_unvollstaendig);
         }
-
+        */
 
         for($i = 0; $i < 11; $i++) {
             if(array_key_exists("programmzeit" . $i . "stunde", $zeiten) and array_key_exists("programmzeit" . $i . "minute",$zeiten)) {
