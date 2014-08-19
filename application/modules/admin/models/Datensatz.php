@@ -646,9 +646,9 @@ class Admin_Model_Datensatz extends nook_Model_model
 
         // Textbausteine Bestätigungstexte
         $bestaetigungsTexte = $this->_findBestaetigungstexteEinerProgrammbeschreibung($__programmId);
-        //$gesamtDiverses = array_merge($gesamtDiverses, $bestaetigungsTexte);
+        $gesamtDiverses = array_merge($gesamtDiverses, $bestaetigungsTexte);
 
-        return $bestaetigungsTexte;
+        return $gesamtDiverses;
     }
 
     /**
