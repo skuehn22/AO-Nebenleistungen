@@ -215,33 +215,9 @@ class Admin_Model_Datensatz extends nook_Model_model
      *
      * @param $__languages
      */
-
-
-
     public function checkLanguages($__params)
     {
-        $text = $__params['languages'];
-        $textlaenge = strlen($text);
-
-        for($i=0; $i<$textlaenge; $i++) {
-            $textarray[$i] = $text{$i};
-        }
-
-        $j = 0;
-
-        for($i = 0; $i < $textlaenge; $i++) {
-            if (is_numeric($textarray[$i]) AND is_numeric($textarray[$i+1])) {
-                $languages[$j]=$textarray[$i].$textarray[$i+1];
-                $j = $j+1;
-            }else{
-                if (is_numeric($textarray[$i]) AND !is_numeric($textarray[$i+1]) AND !is_numeric($textarray[$i-1])){
-                    $languages[$j]=$textarray[$i];
-                    $j = $j+1;
-               }
-            }
-        }
-
-        //$languages = json_decode($__params['languages']);
+        $languages = json_decode($__params['languages']);
         array_filter($languages, array( $this, '_checkSingleLanguage' ));
 
         return $languages;
