@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" afterPath="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php" afterPath="$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Login_Index.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Login_Index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Programmstart_Index.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Programmstart_Index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/front.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/front.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/static.ini" afterPath="$PROJECT_DIR$/application/configs/static.ini" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,154 +28,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProgrammdetailController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammdetailController.php">
+      <file leaf-file-name="Datensatz.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="0" selection-start="5800" selection-end="5800" vertical-scroll-proportion="-15.615385" vertical-offset="2229" max-vertical-offset="14586">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rain.tpl.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/raintpl/rain.tpl.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="0" selection-start="3314" selection-end="3314" vertical-scroll-proportion="-5.8076925" vertical-offset="2229" max-vertical-offset="13430">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Front_Programmdetail_Index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="0" selection-start="6294" selection-end="6294" vertical-scroll-proportion="0.33186814" vertical-offset="2127" max-vertical-offset="7191">
+            <state line="72" column="0" selection-start="2395" selection-end="2395" vertical-scroll-proportion="-2.8235295" vertical-offset="1080" max-vertical-offset="15606">
               <folding>
-                <element signature="e#2974#3023#0" expanded="true" />
-                <element signature="e#4536#4591#0" expanded="true" />
-                <element signature="e#7737#7792#0" expanded="true" />
-                <element signature="e#10783#10838#0" expanded="true" />
-                <element signature="e#10935#10985#0" expanded="true" />
-                <element signature="e#12422#12444#0" expanded="true" />
-                <element signature="e#12567#12587#0" expanded="true" />
-                <element signature="e#12837#12857#0" expanded="true" />
-                <element signature="e#13183#13205#0" expanded="true" />
-                <element signature="e#13328#13348#0" expanded="true" />
-                <element signature="e#13548#13568#0" expanded="true" />
-                <element signature="e#14521#14545#0" expanded="true" />
-                <element signature="e#14745#14771#0" expanded="true" />
-                <element signature="e#15397#15423#0" expanded="true" />
-                <element signature="e#18543#18569#0" expanded="true" />
-                <element signature="e#19648#19689#0" expanded="true" />
-                <element signature="e#19949#19975#0" expanded="true" />
-                <element signature="e#20020#20061#0" expanded="true" />
-                <marker date="1406729314440" expanded="true" signature="7792:8260" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="7809:8018" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="7809:8018" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="10838:10872" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="11138:11362" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="11292:11362" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="11317:11362" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="11584:11672" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="11626:11672" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="11793:12168" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="12301:12494" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="12444:12494" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="12574:12586" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="13205:13255" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="13335:13347" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="13938:14009" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="13963:14009" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="14149:14266" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="14474:14567" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="14495:14567" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="14528:14544" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="14815:14855" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="15036:15064" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="15423:15494" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="15446:15494" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="15446:15494" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="15868:16098" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="15895:16023" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="16050:16098" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="16177:16239" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="18231:18318" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="18270:18318" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="18569:18660" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="18596:18660" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="18596:18660" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="18784:18867" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="18815:18867" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="18951:19113" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="19168:19251" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="19199:19251" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="19335:19497" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="19552:19764" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="19595:19764" placeholder="..." />
-                <marker date="1406729314440" expanded="true" signature="19655:19688" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15157:15193" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15157:15192" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15161:15193" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15161:15192" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15170:15193" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15170:15192" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15174:15193" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15174:15192" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15235:15312" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15238:15312" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15245:15312" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15248:15312" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15251:15312" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15257:15312" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15261:15312" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15265:15312" placeholder="..." />
+                <marker date="1406646401517" expanded="true" signature="15936:16039" placeholder="SELECT `id` ..." />
+                <marker date="1406646401517" expanded="true" signature="24260:24313" placeholder="select id, d..tbl_prog_sprache..." />
+                <marker date="1406646401517" expanded="true" signature="24475:24526" placeholder="select * fro..tbl_bundeslaender..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="templateExtensions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/nook/templateExtensions.php">
+      <file leaf-file-name="DatensatzController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="-5.8076925" vertical-offset="36" max-vertical-offset="11441">
+            <state line="428" column="9" selection-start="14156" selection-end="14156" vertical-scroll-proportion="-262.19232" vertical-offset="459" max-vertical-offset="19261">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Registry.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Zend/Registry.php">
+      <file leaf-file-name="Programmstart.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmstart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="0" selection-start="4171" selection-end="4171" vertical-scroll-proportion="-6.0" vertical-offset="1952" max-vertical-offset="3349">
+            <state line="381" column="63" selection-start="12202" selection-end="12202" vertical-scroll-proportion="-6.490196" vertical-offset="6146" max-vertical-offset="8279">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mysql.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Pdo/Mysql.php">
+      <file leaf-file-name="ProgrammstartController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="0" selection-start="3090" selection-end="3090" vertical-scroll-proportion="-5.8076925" vertical-offset="1226" max-vertical-offset="4403">
+            <state line="118" column="43" selection-start="3673" selection-end="3676" vertical-scroll-proportion="-2.8235295" vertical-offset="1862" max-vertical-offset="5848">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Abstract.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Pdo/Abstract.php">
+      <file leaf-file-name="Front_Programmstart_Index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmstart_Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="237" column="0" selection-start="7297" selection-end="7297" vertical-scroll-proportion="-5.8076925" vertical-offset="3555" max-vertical-offset="6596">
+            <state line="8" column="0" selection-start="344" selection-end="344" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1394">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Abstract.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Abstract.php">
+      <file leaf-file-name="front.phtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/layouts/scripts/front.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="473" column="0" selection-start="15686" selection-end="15686" vertical-scroll-proportion="-5.8076925" vertical-offset="7567" max-vertical-offset="21641">
+            <state line="91" column="54" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.18491484" vertical-offset="1471" max-vertical-offset="4556">
+              <folding>
+                <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#td#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#td#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Front_Impressum_Index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Front_Impressum_Index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="16" selection-start="236" selection-end="236" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolStartdatumBuchungProgramm.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php">
+      <file leaf-file-name="static.ini" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/configs/static.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="0" selection-start="3100" selection-end="3100" vertical-scroll-proportion="-5.8076925" vertical-offset="1821" max-vertical-offset="3927">
+            <state line="30" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2295">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Programmdetail.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmdetail.php">
+      <file leaf-file-name="Front_Login_Index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Front_Login_Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="222" column="0" selection-start="7517" selection-end="7517" vertical-scroll-proportion="-5.8076925" vertical-offset="3623" max-vertical-offset="12988">
+            <state line="26" column="56" selection-start="1277" selection-end="1277" vertical-scroll-proportion="-11.115385" vertical-offset="153" max-vertical-offset="663">
               <folding />
             </state>
           </provider>
@@ -213,7 +166,9 @@
         <option value="$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Reception.js" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" />
+        <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
         <option value="$PROJECT_DIR$/library/nook/Tool.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" />
         <option value="$PROJECT_DIR$/application/Bootstrap.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/ProgrammdetailXml.php" />
         <option value="$PROJECT_DIR$/library/Zend/Controller/Response/Abstract.php" />
@@ -232,11 +187,6 @@
         <option value="$PROJECT_DIR$/application/configs/static.ini" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Programmstart_Index.html" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/front.phtml" />
-        <option value="$PROJECT_DIR$/public/css/reset.css" />
-        <option value="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" />
-        <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
-        <option value="$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php" />
-        <option value="$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php" />
       </list>
     </option>
   </component>
@@ -335,7 +285,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="tpl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,6 +300,104 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nebenleistungen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,12 +544,12 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15416667" sideWeight="0.5320285" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
+      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18055555" sideWeight="0.7661142" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15416667" sideWeight="0.46797153" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18055555" sideWeight="0.23388582" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2326389" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2777778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30445546" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279703" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1070,6 +1118,11 @@
           <url>file://$PROJECT_DIR$/application/modules/front/models/Warenkorb.php</url>
           <line>142</line>
           <option name="timeStamp" value="375" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammdetailController.php</url>
+          <line>159</line>
+          <option name="timeStamp" value="380" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammdetailController.php</url>
@@ -2071,46 +2124,11 @@
           <line>219</line>
           <option name="timeStamp" value="853" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/models/DatensatzOeffnungszeiten.php</url>
-          <line>223</line>
-          <option name="timeStamp" value="857" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/models/DatensatzOeffnungszeiten.php</url>
-          <line>220</line>
-          <option name="timeStamp" value="864" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/models/DbTable/programmedetailsOeffnungszeiten.php</url>
-          <line>10</line>
-          <option name="timeStamp" value="865" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php</url>
-          <line>590</line>
-          <option name="timeStamp" value="867" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php</url>
-          <line>69</line>
-          <option name="timeStamp" value="868" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php</url>
-          <line>309</line>
-          <option name="timeStamp" value="873" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php</url>
-          <line>134</line>
-          <option name="timeStamp" value="889" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="891" />
+      <option name="time" value="857" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -2120,6 +2138,141 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/library/Zend/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="0" selection-start="3208" selection-end="3208" vertical-scroll-proportion="-4.1923075" vertical-offset="1574" max-vertical-offset="8024">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="488" selection-end="488" vertical-scroll-proportion="-7.9615383" vertical-offset="167" max-vertical-offset="3349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/austria/templateExtensions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Session/Namespace.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="0" selection-start="4411" selection-end="4411" vertical-scroll-proportion="-4.076923" vertical-offset="1985" max-vertical-offset="8772">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="650" column="0" selection-start="21522" selection-end="21522" vertical-scroll-proportion="-4.076923" vertical-offset="10621" max-vertical-offset="15266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tmp/tpl/Front_Warenkorb_Index_Statusanzeige.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tmp/tpl/Front_Warenkorb_Index_Bettensteuer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tmp/tpl/Front_Warenkorb_Index_Programme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Programme.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="49" selection-start="0" selection-end="8348" vertical-scroll-proportion="-5.230769" vertical-offset="17" max-vertical-offset="2805">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/nook/templateExtensions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="327" column="0" selection-start="7981" selection-end="7981" vertical-scroll-proportion="-5.269231" vertical-offset="5303" max-vertical-offset="11441">
+          <folding>
+            <marker date="1400749754000" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexDiverses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="27" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0" vertical-offset="2622" max-vertical-offset="3094">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Statement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="0" selection-start="3154" selection-end="3154" vertical-scroll-proportion="-5.9615383" vertical-offset="1834" max-vertical-offset="8075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Select.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="0" selection-start="4426" selection-end="4426" vertical-scroll-proportion="-5.8076925" vertical-offset="2348" max-vertical-offset="22831">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Table/Select.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="0" selection-start="2354" selection-end="2354" vertical-scroll-proportion="-5.8076925" vertical-offset="1209" max-vertical-offset="3587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/nook/ToolFehlersuche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="20" selection-start="2939" selection-end="2939" vertical-scroll-proportion="-10.461538" vertical-offset="1564" max-vertical-offset="2057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Json/Server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="398" column="24" selection-start="10747" selection-end="10747" vertical-scroll-proportion="-6.3076925" vertical-offset="6296" max-vertical-offset="9452">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Router/Abstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="15" selection-start="1586" selection-end="1586" vertical-scroll-proportion="-6.3076925" vertical-offset="431" max-vertical-offset="2754">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Controller/Action/HelperBroker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="338" column="0" selection-start="9300" selection-end="9300" vertical-scroll-proportion="-5.8076925" vertical-offset="5272" max-vertical-offset="6256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormSprache.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="26" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
@@ -2155,6 +2308,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Table/Abstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1335" column="0" selection-start="44057" selection-end="44057" vertical-scroll-proportion="-5.8076925" vertical-offset="22221" max-vertical-offset="27217">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Abstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="860" column="0" selection-start="27865" selection-end="27865" vertical-scroll-proportion="-5.8076925" vertical-offset="14146" max-vertical-offset="21641">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/url.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="19" selection-start="1194" selection-end="1194" vertical-scroll-proportion="-8.807693" vertical-offset="536" max-vertical-offset="1003">
@@ -2183,6 +2350,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Pdo/Mysql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="0" selection-start="3090" selection-end="3090" vertical-scroll-proportion="-2.8823528" vertical-offset="1230" max-vertical-offset="4403">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/address/sparrow.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="507" column="13" selection-start="13589" selection-end="13589" vertical-scroll-proportion="-5.9615383" vertical-offset="8260" max-vertical-offset="26367">
@@ -2193,6 +2367,13 @@
     <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Hotelrates.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="149" column="47" selection-start="4716" selection-end="4751" vertical-scroll-proportion="-6.4615383" vertical-offset="2365" max-vertical-offset="3434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Pdo/Abstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="222" column="0" selection-start="6854" selection-end="6854" vertical-scroll-proportion="-5.8076925" vertical-offset="3300" max-vertical-offset="6596">
           <folding />
         </state>
       </provider>
@@ -2239,6 +2420,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="428" column="9" selection-start="14156" selection-end="14156" vertical-scroll-proportion="-262.19232" vertical-offset="459" max-vertical-offset="19261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="2395" selection-end="2395" vertical-scroll-proportion="-2.8235295" vertical-offset="1080" max-vertical-offset="15606">
+          <folding>
+            <marker date="1406646401517" expanded="true" signature="15157:15193" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15157:15192" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15161:15193" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15161:15192" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15170:15193" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15170:15192" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15174:15193" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15174:15192" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15235:15312" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15238:15312" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15245:15312" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15248:15312" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15251:15312" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15257:15312" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15261:15312" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15265:15312" placeholder="..." />
+            <marker date="1406646401517" expanded="true" signature="15936:16039" placeholder="SELECT `id` ..." />
+            <marker date="1406646401517" expanded="true" signature="24260:24313" placeholder="select id, d..tbl_prog_sprache..." />
+            <marker date="1406646401517" expanded="true" signature="24475:24526" placeholder="select * fro..tbl_bundeslaender..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/ReceptionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="7" selection-start="1742" selection-end="1742" vertical-scroll-proportion="-4.3461537" vertical-offset="839" max-vertical-offset="1479">
@@ -2256,6 +2471,20 @@
     <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="118" column="43" selection-start="3673" selection-end="3676" vertical-scroll-proportion="-2.8235295" vertical-offset="1862" max-vertical-offset="5848">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmstart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="381" column="63" selection-start="12202" selection-end="12202" vertical-scroll-proportion="-6.490196" vertical-offset="6146" max-vertical-offset="8279">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Login_Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="56" selection-start="1277" selection-end="1277" vertical-scroll-proportion="-11.115385" vertical-offset="153" max-vertical-offset="663">
           <folding />
         </state>
       </provider>
@@ -2283,288 +2512,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/layouts/scripts/front.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="54" selection-start="3405" selection-end="3405" vertical-scroll-proportion="-1.4901961" vertical-offset="1471" max-vertical-offset="4556">
+        <state line="91" column="54" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.18491484" vertical-offset="1471" max-vertical-offset="4556">
           <folding>
             <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#td#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#td#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#ul#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmstart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="381" column="63" selection-start="12202" selection-end="12202" vertical-scroll-proportion="0.83588624" vertical-offset="6095" max-vertical-offset="8279">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Login_Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="56" selection-start="1277" selection-end="1277" vertical-scroll-proportion="-11.115385" vertical-offset="153" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/OeffnungszeitenProgramm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="38" selection-start="1593" selection-end="1593" vertical-scroll-proportion="-5.6538463" vertical-offset="618" max-vertical-offset="7650">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzOeffnungszeiten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="30" selection-start="7192" selection-end="7192" vertical-scroll-proportion="-5.3076925" vertical-offset="3585" max-vertical-offset="4488">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/programmedetailsOeffnungszeiten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="25" selection-start="298" selection-end="298" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/Datensatz.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="591" column="18" selection-start="17546" selection-end="17546" vertical-scroll-proportion="-177.0" vertical-offset="1020" max-vertical-offset="15606">
-          <folding>
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="SELECT `id` ..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="select id, d..tbl_prog_sprache..." />
-            <marker date="1406646401517" expanded="true" signature="-1:-1" placeholder="select * fro..tbl_bundeslaender..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="226" selection-end="226" vertical-scroll-proportion="-5.3076925" vertical-offset="15" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="367" column="25" selection-start="16708" selection-end="16708" vertical-scroll-proportion="-15.078431" vertical-offset="5470" max-vertical-offset="6545">
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#4;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#div#4;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#6;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="306" column="18" selection-start="10011" selection-end="10011" vertical-scroll-proportion="-5.5384617" vertical-offset="5058" max-vertical-offset="19261">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="3620" selection-end="3620" vertical-scroll-proportion="-5.5384617" vertical-offset="1811" max-vertical-offset="8024">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/nook/ToolSprache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="-6.0" vertical-offset="371" max-vertical-offset="1258">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/viewPreisvarianten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1054" selection-end="1054" vertical-scroll-proportion="-11.615385" vertical-offset="174" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="2824" selection-end="2824" vertical-scroll-proportion="0.33186814" vertical-offset="1345" max-vertical-offset="4658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Select.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="0" selection-start="4426" selection-end="4426" vertical-scroll-proportion="0.33186814" vertical-offset="2348" max-vertical-offset="22831">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Table/Select.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="0" selection-start="2354" selection-end="2354" vertical-scroll-proportion="-5.8076925" vertical-offset="1209" max-vertical-offset="3587">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Table/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="835" column="0" selection-start="25195" selection-end="25195" vertical-scroll-proportion="-5.8076925" vertical-offset="13721" max-vertical-offset="27217">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Pdo/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="237" column="0" selection-start="7297" selection-end="7297" vertical-scroll-proportion="-5.8076925" vertical-offset="3555" max-vertical-offset="6596">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Pdo/Mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="0" selection-start="3090" selection-end="3090" vertical-scroll-proportion="-5.8076925" vertical-offset="1226" max-vertical-offset="4403">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="473" column="0" selection-start="15686" selection-end="15686" vertical-scroll-proportion="-5.8076925" vertical-offset="7567" max-vertical-offset="21641">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/raintpl/rain.tpl.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="0" selection-start="3314" selection-end="3314" vertical-scroll-proportion="-5.8076925" vertical-offset="2229" max-vertical-offset="13430">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/nook/templateExtensions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="-5.8076925" vertical-offset="36" max-vertical-offset="11441">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Registry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="0" selection-start="4171" selection-end="4171" vertical-scroll-proportion="-6.0" vertical-offset="1952" max-vertical-offset="3349">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="0" selection-start="3100" selection-end="3100" vertical-scroll-proportion="-5.8076925" vertical-offset="1821" max-vertical-offset="3927">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmdetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="0" selection-start="7517" selection-end="7517" vertical-scroll-proportion="-5.8076925" vertical-offset="3623" max-vertical-offset="12988">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammdetailController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="0" selection-start="5800" selection-end="5800" vertical-scroll-proportion="-15.615385" vertical-offset="2229" max-vertical-offset="14586">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="0" selection-start="6294" selection-end="6294" vertical-scroll-proportion="0.33186814" vertical-offset="2127" max-vertical-offset="7191">
-          <folding>
-            <element signature="e#2974#3023#0" expanded="true" />
-            <element signature="e#4536#4591#0" expanded="true" />
-            <element signature="e#7737#7792#0" expanded="true" />
-            <element signature="e#10783#10838#0" expanded="true" />
-            <element signature="e#10935#10985#0" expanded="true" />
-            <element signature="e#12422#12444#0" expanded="true" />
-            <element signature="e#12567#12587#0" expanded="true" />
-            <element signature="e#12837#12857#0" expanded="true" />
-            <element signature="e#13183#13205#0" expanded="true" />
-            <element signature="e#13328#13348#0" expanded="true" />
-            <element signature="e#13548#13568#0" expanded="true" />
-            <element signature="e#14521#14545#0" expanded="true" />
-            <element signature="e#14745#14771#0" expanded="true" />
-            <element signature="e#15397#15423#0" expanded="true" />
-            <element signature="e#18543#18569#0" expanded="true" />
-            <element signature="e#19648#19689#0" expanded="true" />
-            <element signature="e#19949#19975#0" expanded="true" />
-            <element signature="e#20020#20061#0" expanded="true" />
-            <marker date="1406729314440" expanded="true" signature="7792:8260" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="7809:8018" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="7809:8018" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="10838:10872" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="11138:11362" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="11292:11362" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="11317:11362" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="11584:11672" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="11626:11672" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="11793:12168" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="12301:12494" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="12444:12494" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="12574:12586" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="13205:13255" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="13335:13347" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="13938:14009" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="13963:14009" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="14149:14266" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="14474:14567" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="14495:14567" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="14528:14544" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="14815:14855" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="15036:15064" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="15423:15494" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="15446:15494" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="15446:15494" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="15868:16098" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="15895:16023" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="16050:16098" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="16177:16239" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="18231:18318" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="18270:18318" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="18569:18660" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="18596:18660" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="18596:18660" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="18784:18867" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="18815:18867" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="18951:19113" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="19168:19251" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="19199:19251" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="19335:19497" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="19552:19764" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="19595:19764" placeholder="..." />
-            <marker date="1406729314440" expanded="true" signature="19655:19688" placeholder="..." />
           </folding>
         </state>
       </provider>

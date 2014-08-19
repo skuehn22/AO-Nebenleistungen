@@ -74,7 +74,7 @@
             {/if}
         {/if}
 
-        <span class="stupidcat" label='Programmbeschreibung' editor='htmleditor' id='txt'><span class="teilueberschrift_grau">{function="translate('Programmbeschreibung')"}:</span><br><br>{$programmdetails.txt}</span><p>
+        <span class="stupidcat" label='Programmbeschreibung' editor='htmleditor' id='txt'>{$programmdetails.txt}</span><p>
 
         {if="$showBlock"}
             {if condition="$programmdetails.treffpunkt"}
@@ -92,56 +92,6 @@
 
         <p></p>
         <span class="teilueberschrift_grau">{function="translate('Buchungsinformation')"}:</span>
-        <p></p>
-        <table style="background-color: #ddd; vertical-align: middle;">
-            <tr>
-                <td width="150px;"><strong>Öffnungszeiten</strong></td>
-                <td width="150px;"><strong>Abfahrt/Treffpunkt</strong></td>
-                <td width="150px;"><strong>Anreise/ÖPNV</strong></td>
-            </tr>
-            <tr>
-                <td>
-                    {if="$showBlock"}
-                    {if="$typOeffnungszeit == 2"}
-                    {if="$oeffnungszeiten"}
-                    <br>
-                    <table border="0">
-                        <tr>
-                            <td colspan="3" class="teilueberschrift_grau"></td>
-                        </tr>
-                        {loop name="$oeffnungszeiten"}
-                        <tr>
-                            <td>{$value.name}: </td>
-                            <td>{$value.von} &nbsp;&nbsp; {function="translate('bis')"}</td>
-                            <td>{$value.bis} {function="translate('Uhr')"}</td>
-                        </tr>
-                        {/loop}
-                    </table>
-                    {/if}
-                    {/if}
-                    {/if}
-                </td>
-                <td>{$programmdetails.treffpunkt_de}</td>
-                <td>{$programmdetails.opnv_de}</td>
-            </tr>
-        </table>
-        <table style="background-color: #ddd; vertical-align: middle;">
-            <tr>
-                <td width="200px;"><strong>Freiplatzregel</strong></td>
-                <td width="200px;"><strong>Personenzahlregel</strong></td>
-                <td ><strong></strong></td>
-            </tr>
-            <tr>
-                <td>
-                    {$programmdetails.freiplatzregel}
-                </td>
-                <td>{$programmdetails.personenzahlregel}</td>
-
-            </tr>
-        </table>
-
-
-
         {if condition="$programmdetails.buchungstext"}
             <br>{$programmdetails.buchungstext}
         {/if}
@@ -173,7 +123,7 @@
         {/if}
 
         {if condition="$vertragspartner"}
-            <br><br><strong>{function="translate('Vertragspartner für diese Leistung ist:')"}</strong><br>
+            <br><br>{function="translate('Vertragspartner für diese Leistung ist:')"}<br>
                 {$vertragspartner.company}, {$vertragspartner.street}, {$vertragspartner.zip} {$vertragspartner.city} <br>
                 {$vertragspartner.country}<br>
         {/if}
@@ -186,7 +136,25 @@
 
 
 
-
+        {if="$showBlock"}
+            {if="$typOeffnungszeit == 2"}
+                {if="$oeffnungszeiten"}
+                    <br>
+                    <table border="0">
+                    <tr>
+                        <td colspan="3" class="teilueberschrift_grau">{function="translate('Öffnungszeiten')"}:</td>
+                    </tr>
+                    {loop name="$oeffnungszeiten"}
+                        <tr>
+                            <td>{$value.name}: </td>
+                            <td>{$value.von} &nbsp;&nbsp; {function="translate('bis')"}</td>
+                            <td>{$value.bis} {function="translate('Uhr')"}</td>
+                        </tr>
+                    {/loop}
+                    </table>
+                {/if}
+            {/if}
+        {/if}
     </div>
 
         <!-- Datumswahl -->
@@ -207,7 +175,7 @@
                 </tr>
                 <tr>
                     <td>
-                       {function="translate('Datum')"}<input id='alternateDatum' class="span-3 input" readonly>
+                        {function="translate('Datum')"} <input id='alternateDatum' class="span-3 input" readonly>
                     </td>
                 </tr>
                 {/if}
@@ -260,7 +228,7 @@
           {if="$showBlock"}
           <div class="ueberschrift" >
               <div>
-                  <span style="font-size: 12px;"> {function="translate('Datum')"}: <span id="buchungsdatum"></span></span>
+                  {function="translate('Datum')"}: <span id="buchungsdatum"></span>
                   <!--<span id="Kapazitaet" style="visibility: hidden"></span> -->
               </div>
               <div style="margin-left: 40px;" id="Kapazitaet_Hinweis" class="standardrot">
@@ -310,7 +278,7 @@
                           <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
                       {/if}
                       <td>
-                          <select name="programmvariante_{$key}" id="programmvariante_{$key}" class="span-3 input_action programmvarianteSelect">
+                          <select name="programmvariante_{$key}" id="programmvariante_{$key}" class="span-10 input_action programmvarianteSelect">
                               {$value.options}
                           </select>
                       </td>
@@ -376,5 +344,3 @@
 
     </div>
     <!-- Ende Gesamtblock Programm -->
-
-{$template_info}
