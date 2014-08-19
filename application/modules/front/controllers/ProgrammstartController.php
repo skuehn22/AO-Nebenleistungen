@@ -332,18 +332,6 @@ class Front_ProgrammstartController extends Zend_Controller_Action{
             ->steuerungErmittlungProgrammeInEinerStadt()
             ->getCityEvents();
 
-
-        //Prüft ob bulletpoints vorhanden und gibt nur den ersten aus
-        $anzahl = count($programmeCity);
-        for($i = 0; $i <  $anzahl; ++$i){
-            if($programmeCity[$i][txt]!=str_replace("<ul>","",$programmeCity[$i][txt])){
-                $stringposition = strpos($programmeCity[$i][txt], "</li>");
-                $new_string = substr($programmeCity[$i][txt], 0, $stringposition);
-                $new_string = $new_string."</ul>";
-                $programmeCity[$i][txt]=$new_string;
-            }
-        }
-
         $raintpl->assign('cityEvents', $programmeCity);
 
         return $raintpl;
