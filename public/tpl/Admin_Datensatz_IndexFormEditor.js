@@ -160,7 +160,7 @@ function fillTemplate(sprache){
 
                         fenster.close();
                         fillSprache();
-
+                    
                 },
                 failure: function(){
                     showMsgBox('Werte wurde nicht geändert');
