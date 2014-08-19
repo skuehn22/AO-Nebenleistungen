@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php" afterPath="$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/front.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/front.phtml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Front_Programmdetail_Index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Front_Programmdetail_Index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="377" column="0" selection-start="16687" selection-end="16687" vertical-scroll-proportion="0.7758242" vertical-offset="6056" max-vertical-offset="6511">
+            <state line="106" column="0" selection-start="4363" selection-end="4363" vertical-scroll-proportion="-4.6153846" vertical-offset="1682" max-vertical-offset="6511">
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#4;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#1;n#div#4;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
@@ -74,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolStartdatumBuchungProgramm.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ToolStartdatumBuchungProgramm.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="0" selection-start="5735" selection-end="5735" vertical-scroll-proportion="26.307692" vertical-offset="4050" max-vertical-offset="4505">
+            <state line="198" column="0" selection-start="5735" selection-end="5735" vertical-scroll-proportion="0.48131868" vertical-offset="3147" max-vertical-offset="4505">
               <folding />
             </state>
           </provider>
@@ -2456,21 +2458,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="0" selection-start="5735" selection-end="5735" vertical-scroll-proportion="26.307692" vertical-offset="4050" max-vertical-offset="4505">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="377" column="0" selection-start="16687" selection-end="16687" vertical-scroll-proportion="0.7758242" vertical-offset="6056" max-vertical-offset="6511">
+        <state line="106" column="0" selection-start="4363" selection-end="4363" vertical-scroll-proportion="-4.6153846" vertical-offset="1682" max-vertical-offset="6511">
           <folding>
             <element signature="n#style#0;n#table#0;n#div#4;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#1;n#div#4;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#6;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="0" selection-start="5735" selection-end="5735" vertical-scroll-proportion="0.48131868" vertical-offset="3147" max-vertical-offset="4505">
+          <folding />
         </state>
       </provider>
     </entry>
