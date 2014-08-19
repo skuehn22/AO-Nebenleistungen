@@ -180,23 +180,6 @@ class Front_Model_Programmdetail extends nook_Model_model
         $sql = "select worddocument from tbl_programmdetails where id = " . $this->_programId;
         $programDetails['worddokument'] = $db->fetchOne($sql);
 
-        $sql = "select abfahrtszeit from tbl_programmdetails where id = " . $this->_programId;
-        $programDetails['abfahrtszeit'] = $db->fetchOne($sql);
-        $sql = "select personenzahlregel from tbl_programmdetails where id = " . $this->_programId;
-        if ($db->fetchOne($sql)!=""){
-            $programDetails['personenzahlregel'] = $db->fetchOne($sql);
-        }else{
-            $programDetails['personenzahlregel'] = "keine";
-        }
-
-
-        $sql = "select freiplatzregel from tbl_programmdetails where id = " . $this->_programId;
-        if ($db->fetchOne($sql)!=""){
-            $programDetails['freiplatzregel'] = $db->fetchOne($sql);
-        }else{
-            $programDetails['freiplatzregel'] = "keine";
-        }
-
         return $programDetails;
     }
 

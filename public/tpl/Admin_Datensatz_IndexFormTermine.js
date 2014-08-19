@@ -33,7 +33,7 @@ function fillTermine(){
         helpText: 'dem Programm ist kein datum, keine Öffnungszeit und keine Startzeit zugeordnet'
     },{
         xtype: 'label',
-        fieldLabel: 'Zeiten',
+        fieldLabel: 'Abfahrstzeiten',
         name: 'programmzeiten'
     },{
         xtype: 'textarea',
