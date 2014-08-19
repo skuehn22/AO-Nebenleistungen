@@ -124,9 +124,12 @@
 
         <!-- Navigation -->
         <ul>
-            <li>
+            <li><a href="#"><?php echo translate('Städte'); ?></a>
+                <ul>
+                    <?php echo Zend_Registry::get('nav'); ?>
+                </ul>
             </li>
-            <li></li>
+            <li><a href="/front/firma"><?php echo translate("wie es funktioniert"); ?></a></li>
             <li>
                  <?php
                 $anzahl = Zend_Registry::get('countShoppingCart');
