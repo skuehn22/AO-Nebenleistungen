@@ -59,7 +59,7 @@
 
 
     <div class='block block_oben ueberschrift block_unten span-24 last'>
-        <div style="margin-left: 5px;">{$bookingdetails.Stadtname} - <span class="stupidcat" editor='textfield' id='progname' label='Programmname'>{$programmdetails.progname}</span></div>
+        <div style="margin-left: 40px;">{$bookingdetails.Stadtname} - <span class="stupidcat" editor='textfield' id='progname' label='Programmname'>{$programmdetails.progname}</span></div>
     </div>
 
     <div class="span-17">&nbsp;</div>
@@ -123,7 +123,7 @@
                 <td>{$programmdetails.opnv_de}</td>
             </tr>
         </table>
-        <table class="grauer_kasten">
+        <table style="background-color: #ddd; vertical-align: middle;">
             <tr>
                 <td width="250px;"><strong>Freiplatzregel</strong></td>
                 <td width="250px;"><strong>Personenzahlregel</strong></td>
@@ -140,12 +140,16 @@
 
 
 
-
+        {if condition="$programmdetails.buchungstext"}
+            <br>{$programmdetails.buchungstext}
+        {/if}
+        {if condition="$bookingdetails.buchungspauschale == 2"}
+            <br>{function="translate('Für die Buchung dieses Programmes erheben wir eine einmalige Buchungspauschale in Höhe von 30,00 €.')"}
+        {/if}
 
         {if="$showBlock"}
             {if="$stornofristen"}
-        <div class="grauer_kasten">
-            <strong>{function="translate('Stornokosten: ')"}</strong>
+                <br><br>{function="translate('Stornokosten:')"}<br>
 
                 {loop="stornofristen"}
                     {if condition="$value.tage == 999"}
@@ -163,43 +167,20 @@
 
                     {/if}
                 {/loop}
-        </div>
             {/if}
         {/if}
-        <div class="span-5" style="width:450px; background-color: #f3f3f3;">&nbsp;</div>
 
-        <div class="grauer_kasten">
         {if condition="$vertragspartner"}
-            <strong>{function="translate('Vertragspartner für diese Leistung ist:')"}</strong><br>
+            <br><br><strong>{function="translate('Vertragspartner für diese Leistung ist:')"}</strong><br>
                 {$vertragspartner.company}, {$vertragspartner.street}, {$vertragspartner.zip} {$vertragspartner.city} <br>
                 {$vertragspartner.country}<br>
         {/if}
-        </div>
 
-        <div class="span-5" style="width:450px; background-color: #f3f3f3;">&nbsp;</div>
-        {if condition="$bookingdetails.buchungspauschale == 2"}
-
-        <strong>{function="translate('Zusatzinformation: ')"}</strong>
-        <br>{function="translate('Für die Buchung dieses Programmes erheben wir eine einmalige Buchungspauschale in Höhe von 30,00 €.')"}
-        </div>
-            <div class="span-5" style="width:450px; background-color: #f3f3f3;">&nbsp;</div>
-            {/if}
-            <div class="grauer_kasten">
-                <strong>{function="translate('Zusatzinformation: ')"}</strong>
-                {if condition="$programmdetails.buchungstext"}
-                <br>{$programmdetails.buchungstext}
-                {/if}
-            </div>
-
-            {if condition="$buchungsTyp == 1"}
-            <div class="span-5" style="width:450px; background-color: #f3f3f3;">&nbsp;</div>
-            <div class="grauer_kasten">
-            <strong>{function="translate('Programm-Testphase: ')"}</strong>
+        {if condition="$buchungsTyp == 1"}
             <br>
-            <img src="/buttons/t.png"> {function="translate('Interne Prüfung vor Versand an Programmanbieter.')"}<br>
-            </div>
-                {/if}
-             <br>
+            <img src="/buttons/t.png"> {function="translate('Dieses Programm ist noch in der Testphase.Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen innerhalb von max. 3 Werktagen eine seperate Bestätigung per E-Mail schicken')"}<br>
+        {/if}
+        <br>
 
 
 

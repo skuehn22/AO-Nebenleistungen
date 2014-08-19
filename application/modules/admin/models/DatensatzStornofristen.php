@@ -103,7 +103,7 @@ class Admin_Model_DatensatzStornofristen extends nook_Model_model{
             }
         }
 
-        // 3. Stornofrist
+        // 2. Stornofrist
         if(array_key_exists('tage3', $__params)){
             $__params['tage3'] = (int) $__params['tage3'];
             $__params['prozente3'] = (int) trim($__params['prozente3']);
@@ -111,58 +111,6 @@ class Admin_Model_DatensatzStornofristen extends nook_Model_model{
             if(is_int($__params['tage3']) and is_int($__params['prozente3'])){
                 $stornofristen[$i]['tage'] = $__params['tage3'];
                 $stornofristen[$i]['prozente'] = $__params['prozente3'];
-
-                $i++;
-            }
-        }
-
-        // 4. Stornofrist
-        if(array_key_exists('tage4', $__params)){
-            $__params['tage4'] = (int) $__params['tage4'];
-            $__params['prozente4'] = (int) trim($__params['prozente4']);
-
-            if(is_int($__params['tage4']) and is_int($__params['prozente4'])){
-                $stornofristen[$i]['tage'] = $__params['tage4'];
-                $stornofristen[$i]['prozente'] = $__params['prozente4'];
-
-                $i++;
-            }
-        }
-
-        // 5. Stornofrist
-        if(array_key_exists('tage5', $__params)){
-            $__params['tage5'] = (int) $__params['tage5'];
-            $__params['prozente5'] = (int) trim($__params['prozente5']);
-
-            if(is_int($__params['tage5']) and is_int($__params['prozente5'])){
-                $stornofristen[$i]['tage'] = $__params['tage5'];
-                $stornofristen[$i]['prozente'] = $__params['prozente5'];
-
-                $i++;
-            }
-        }
-
-        // 6. Stornofrist
-        if(array_key_exists('tage6', $__params)){
-            $__params['tage6'] = (int) $__params['tage6'];
-            $__params['prozente6'] = (int) trim($__params['prozente6']);
-
-            if(is_int($__params['tage6']) and is_int($__params['prozente6'])){
-                $stornofristen[$i]['tage'] = $__params['tage6'];
-                $stornofristen[$i]['prozente'] = $__params['prozente6'];
-
-                $i++;
-            }
-        }
-
-        // 7. Stornofrist
-        if(array_key_exists('tage7', $__params)){
-            $__params['tage7'] = (int) $__params['tage7'];
-            $__params['prozente7'] = (int) trim($__params['prozente7']);
-
-            if(is_int($__params['tage7']) and is_int($__params['prozente7'])){
-                $stornofristen[$i]['tage'] = $__params['tage7'];
-                $stornofristen[$i]['prozente'] = $__params['prozente7'];
 
                 $i++;
             }

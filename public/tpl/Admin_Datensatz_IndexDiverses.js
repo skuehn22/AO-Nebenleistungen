@@ -17,7 +17,46 @@ function fillDiverses(){
             layout: 'column',
             border: false,
             items: [{
-                columnWidth:1,
+                columnWidth:0.5,
+                layout: 'form',
+                border: false,
+                items: [{
+                    xtype: 'displayfield',
+                    value: ' ',
+                    height: 27
+                },{
+                    xtype: 'textarea',
+                    height: 150,
+                    fieldLabel: 'Bestätigungstext 1 (deutsch)',
+                    width: 270,
+                    name: 'confirm_1_de'
+                },{
+                    xtype: 'textarea',
+                    height: 150,
+                    fieldLabel: 'Bestätigungstext 2 (deutsch)',
+                    width: 270,
+                    name: 'confirm_2_de'
+                },{
+                    xtype: 'textarea',
+                    height: 150,
+                    fieldLabel: 'Bestätigungstext 3 (deutsch)',
+                    width: 270,
+                    name: 'confirm_3_de'
+                },{
+                    xtype: 'textarea',
+                    height: 150,
+                    fieldLabel: 'an Programmanbieter 1 (deutsch)',
+                    width: 270,
+                    name: 'an_prog_1_de'
+                },{
+                    xtype: 'textarea',
+                    height: 150,
+                    fieldLabel: 'Buchungstext (deutsch)',
+                    width: 270,
+                    name: 'buchungstext_de'
+                }]
+            },{
+                columnWidth:0.5,
                 layout: 'form',
                 border: false,
                 items: [{
@@ -35,27 +74,36 @@ function fillDiverses(){
                     mode: 'local',
                     store: cityStore
                 },{
-                columnWidth:1,
-                layout: 'form',
-                border: false,
-                items: [{
-                    xtype: 'displayfield',
-                    value: ' ',
-                    height: 27
+                    xtype: 'textarea',
+                    height: 150,
+                    fieldLabel: 'Bestätigungstext 1 (englisch)',
+                    width: 270,
+                    name: 'confirm_1_en'
                 },{
                     xtype: 'textarea',
                     height: 150,
-                    fieldLabel: 'an Programmanbieter 1:',
+                    fieldLabel: 'Bestätigungstext 2 (englisch)',
                     width: 270,
-                    name: 'an_prog_1_de'
+                    name: 'confirm_2_en'
                 },{
                     xtype: 'textarea',
                     height: 150,
-                    fieldLabel: 'Zusatzinformation an Reception:',
+                    fieldLabel: 'Bestätigungstext 3 (englisch)',
                     width: 270,
-                    name: 'buchungstext_de'
+                    name: 'confirm_3_en'
+                },{
+                    xtype: 'textarea',
+                    height: 150,
+                    fieldLabel: 'an Programmanbieter 1 (englisch)',
+                    width: 270,
+                    name: 'an_prog_1_en'
+                },{
+                    xtype: 'textarea',
+                    height: 150,
+                    fieldLabel: 'Buchungstext (englisch)',
+                    width: 270,
+                    name: 'buchungstext_en'
                 }]
-            }]
             }]
         }]
     });
@@ -97,7 +145,7 @@ function fillDiverses(){
     var fensterDiverses = new Ext.Window({
         title: 'diverse Angaben, Id: ' + programmId + ', Programmname: ' + programmName,
         modal: true,
-        width: 700,
+        width: 1000,
         autoHeight: true,
         shadow: false,
         border: false,

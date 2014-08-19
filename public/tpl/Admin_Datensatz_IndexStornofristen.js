@@ -109,7 +109,7 @@ var adminDatensatzIndexStornofristen = function(){
                 items: [{
                     xtype: 'numberfield',
                     name: 'tage3',
-                    fieldLabel: '3. Stornofrist (bis y Werktage) ',
+                    fieldLabel: '3. Stornofrist (ab z Werktage)',
                     allowBlank: true,
                     width: 50
                 },{
@@ -117,82 +117,6 @@ var adminDatensatzIndexStornofristen = function(){
                     name: 'prozente3',
                     width: 50,
                     id: 'adminDatensatzIndexStornofristenProzente3',
-                    allowBlank: true,
-                    maskRe: /[0-9]/
-                },{
-                    xtype: 'label',
-                    text: ' %'
-                }]
-            },{
-                xtype: 'compositefield',
-                items: [{
-                    xtype: 'numberfield',
-                    name: 'tage4',
-                    fieldLabel: '4. Stornofrist (bis y Werktage) ',
-                    allowBlank: true,
-                    width: 50
-                },{
-                    xtype: 'textfield',
-                    name: 'prozente4',
-                    width: 50,
-                    id: 'adminDatensatzIndexStornofristenProzente4',
-                    allowBlank: true,
-                    maskRe: /[0-9]/
-                },{
-                    xtype: 'label',
-                    text: ' %'
-                }]
-            },{
-                xtype: 'compositefield',
-                items: [{
-                    xtype: 'numberfield',
-                    name: 'tage5',
-                    fieldLabel: '5. Stornofrist (bis y Werktage) ',
-                    allowBlank: true,
-                    width: 50
-                },{
-                    xtype: 'textfield',
-                    name: 'prozente5',
-                    width: 50,
-                    id: 'adminDatensatzIndexStornofristenProzente5',
-                    allowBlank: true,
-                    maskRe: /[0-9]/
-                },{
-                    xtype: 'label',
-                    text: ' %'
-                }]
-            },{
-                xtype: 'compositefield',
-                items: [{
-                    xtype: 'numberfield',
-                    name: 'tage6',
-                    fieldLabel: '6. Stornofrist (bis y Werktage) ',
-                    allowBlank: true,
-                    width: 50
-                },{
-                    xtype: 'textfield',
-                    name: 'prozente6',
-                    width: 50,
-                    id: 'adminDatensatzIndexStornofristenProzente6',
-                    allowBlank: true,
-                    maskRe: /[0-9]/
-                },{
-                    xtype: 'label',
-                    text: ' %'
-                }]
-            },{
-                xtype: 'compositefield',
-                items: [{
-                    xtype: 'numberfield',
-                    name: 'tage7',
-                    fieldLabel: '7. Stornofrist (ab z Werktage)',
-                    allowBlank: true,
-                    width: 50
-                },{
-                    xtype: 'textfield',
-                    name: 'prozente7',
-                    width: 50,
-                    id: 'adminDatensatzIndexStornofristenProzente7',
                     allowBlank: true,
                     maskRe: /[0-9]/
                 },{

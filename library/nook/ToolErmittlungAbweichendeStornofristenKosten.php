@@ -84,12 +84,8 @@ class nook_ToolErmittlungAbweichendeStornofristenKosten
         if(count($stornofristenProgramm) > 0)
             $this->checkHasStornofristen = true;
 
-        /* S.Kuehn 01.08.2014
-         * auskommetiert da bei NL-Projekt nie Standardstornobedingungen genommen werden
-         */
-
-        //$standardStornoFristen = $this->ermittelnStandardStornoFristen();
-        //$stornofristenProgramm = $this->kontrolleStandardStornofristen($stornofristenProgramm, $standardStornoFristen);
+        $standardStornoFristen = $this->ermittelnStandardStornoFristen();
+        $stornofristenProgramm = $this->kontrolleStandardStornofristen($stornofristenProgramm, $standardStornoFristen);
 
         $this->stornofristenProgramm = $stornofristenProgramm;
 
