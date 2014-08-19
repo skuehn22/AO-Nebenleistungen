@@ -6,20 +6,25 @@
    <div class="block block_oben block_unten" style="padding: 0px 0px 0px 40px;">{$breadcrumb}</div>
 </div>     -->
 
+<div class="span-24">&nbsp;</div>
 
 
-<div class='span-23 last'>
+
+
+<div class="span-24">&nbsp;</div>
+
+<div class='span-22 last'>
 
 	{loop name="cityEvents"}
     <!-- Kopf -->
-    <div class='span-23 ueberschrift block_oben block' style="padding-left: 40px;">
+    <div class='span-22 ueberschrift block_oben block' style="padding-left: 40px;">
         <div class="span-12">{if condition="$cityId == 0"} {$value.ort}: {/if} {$value.progname} &nbsp;</div>
 
 
     </div>
 
     <!-- Programmblock -->
-    <div class="span-23 block_unten block" style="padding-left: 40px; min-height: 50px;">
+    <div class="span-22 block_unten block" style="padding-left: 40px; min-height: 50px;">
 
 
         <div class='span-9'>
@@ -74,3 +79,4 @@
 </div>
 {/if}
 
+        {$template_info}
