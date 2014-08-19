@@ -87,13 +87,20 @@ class nook_upload {
     }
 
     public function readFiles($id){
-        $alledateien = scandir('files/'.$id.'/'); //Ordner "files" auslesen
+        $pfad = 'files/'.$id.'/';
 
-        foreach ($alledateien as $datei) { // Ausgabeschleife
-           if ($datei!="." AND $datei!=".."){
-                $files = $files.$datei."\n";
-           }
-        };
+        if (file_exists($pfad)) {
+            $alledateien = scandir($pfad);
+            foreach ($alledateien as $datei) {
+                if ($datei!="." AND $datei!=".."){
+                    $files = $files.$datei."\n";
+                }
+            }
+        } else {
+            $files = NULL;
+        }
+
+
 
         return $files;
     }
