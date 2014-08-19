@@ -123,7 +123,7 @@ class Front_Model_ProgrammdetailProgrammvarianten
 
         for($i = 0; $i < count($__programmvarianten); $i++) {
 
-            $this->_selectBox .= "<option id='$i' value='" . $__programmvarianten[ $i ][ 'id' ] . "'>" . $__programmvarianten[ $i ][ 'preisvariante' ] . "</option>\n";
+            $this->_selectBox .= "<option value='" . $__programmvarianten[ $i ][ 'id' ] . "'>" . $__programmvarianten[ $i ][ 'preisvariante' ] . "</option>\n";
 
             if($i == 0) {
                 $this->_preisErsteProgrammvariante = $__programmvarianten[ $i ][ 'verkaufspreis' ];
@@ -153,20 +153,6 @@ class Front_Model_ProgrammdetailProgrammvarianten
         $this->_anzahlPreisvarianten = count($programmvarianten);
 
         return $programmvarianten;
-    }
-
-    public function getProgrammVariantenAry ($programmId)
-    {
-        // ermitteln Preisvarianten eines Programmes
-        $programmvarianten = $this->ermittelnPreisvariantenProgramm($programmId, $this->bestandsbuchungPreisvarianteId);
-
-        $programmvariantenAry = array();
-
-        for($i = 0; $i < $this->_condition_moegliche_anzahl_programmvarianten-1; $i++) {
-            $programmvariantenAry[$i] = $programmvarianten[$i];
-        }
-
-        return $programmvariantenAry;
     }
 
     /**
