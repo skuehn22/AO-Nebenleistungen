@@ -166,7 +166,7 @@ class nook_Tool
             $__events[$i]['txt'] .= " ...";
             unset($__events[$i]['noko_kurz']);
 
-           // $__events[$i]['txt'] = preg_replace("(<[a-zA-Z\/]+>)", '', $__events[$i]['txt']);
+            $__events[$i]['txt'] = preg_replace("(<[a-zA-Z\/]+>)", '', $__events[$i]['txt']);
         }
 
         return $__events;

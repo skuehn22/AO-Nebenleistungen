@@ -78,8 +78,7 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
             'mwst_ek',
             'rechnung_durchlaeufer_id',
             'freiplatzregel',
-            'personenzahlregel',
-            'abfahrtszeit'
+            'personenzahlregel'
         );
 
         $select = $this->_tabelleProgrammeDetails->select();
@@ -111,7 +110,6 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
         $data['werbepreistyp'] = $rows[0]['werbepreistyp'];
         $data['freiplatzregel'] = $rows[0]['freiplatzregel'];
         $data['personenzahlregel'] = $rows[0]['personenzahlregel'];
-        $data['abfahrtszeit'] = $rows[0]['abfahrtszeit'];
 
         return $data;
     }

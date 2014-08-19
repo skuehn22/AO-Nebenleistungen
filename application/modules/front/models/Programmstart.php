@@ -302,7 +302,6 @@ class Front_Model_Programmstart{
             // anpassen der Texte und Bilder der Programme
             array_walk($events, array($this,'_styleItems'));
             // kürzen langer Texte
-
             $events = $this->trimLongText($events);
 
             // entfernen der 'Tags' im Text
@@ -331,7 +330,7 @@ class Front_Model_Programmstart{
      * @param $key
      */
     private function _stripTags(&$__programm, $key){
-        $__programm['txt'] = strip_tags($__programm['txt'],'<p><br><u><b><a><ul><li>');
+        $__programm['txt'] = strip_tags($__programm['txt'],'<p><br><u><b><a>');
 
         return;
     }

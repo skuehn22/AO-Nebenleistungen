@@ -124,29 +124,17 @@
             </tr>
         </table>
         <table class="grauer_kasten">
-        <tr>
-            <td width="250px;"><strong>Freiplatzregel</strong></td>
-            <td width="250px;"><strong>Personenzahlregel</strong></td>
-            <td ><strong></strong></td>
-        </tr>
-        <tr>
-            <td>
-                {$programmdetails.freiplatzregel}
-            </td>
-            <td>{$programmdetails.personenzahlregel}</td>
-
-        </tr>
-    </table>
-
-        <table class="grauer_kasten">
             <tr>
-                <td width="450px;"><strong>Zeiten</strong></td>
-
+                <td width="250px;"><strong>Freiplatzregel</strong></td>
+                <td width="250px;"><strong>Personenzahlregel</strong></td>
+                <td ><strong></strong></td>
             </tr>
             <tr>
                 <td>
-                    {$programmdetails.abfahrtszeit}
+                    {$programmdetails.freiplatzregel}
                 </td>
+                <td>{$programmdetails.personenzahlregel}</td>
+
             </tr>
         </table>
 
@@ -406,4 +394,3 @@
     </div>
     <!-- Ende Gesamtblock Programm -->
 
-{$template_info}
