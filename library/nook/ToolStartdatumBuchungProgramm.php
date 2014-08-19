@@ -162,8 +162,42 @@ class nook_ToolStartdatumBuchungProgramm
 
         $rows = $tabelleProgrammdetailsOeffnungszeiten->fetchAll($select)->toArray();
 
-        if(count($rows) > 0){
-            $this->oeffnungszeitenProgramm = $rows;
+        for($i = 0; $i < count($rows)-1; $i++) {
+            if ($rows[$i]['von'] == $rows[$i+1]['von']){
+                $gleich = true;
+                $von = $rows[$i]['von'];
+            }else{
+                $gleich = false;
+                $i = 100;
+            }
+        }
+
+        if ($gleich){
+            for($i = 0; $i < count($rows)-1; $i++) {
+                if ($rows[$i]['bis'] !=""){
+                    if ($rows[$i]['bis'] == $rows[$i+1]['bis']){
+                        $gleich = true;
+                        $bis = $rows[$i]['bis'];
+                    }else{
+                        $gleich = false;
+                        $i = 100;
+                    }
+                }
+            }
+        }
+
+        if ($gleich){
+            $rowsGleich = array();
+            $rowsGleich[1]['von']= $von;
+            $rowsGleich[1]['bis']= $bis;
+            $rowsGleich[1]['wochentag']= "1";
+
+            $this->oeffnungszeitenProgramm = $rowsGleich;
+        }else{
+            if(count($rows) > 0){
+                $this->oeffnungszeitenProgramm = $rows;
+
+            }
         }
 
         return;
