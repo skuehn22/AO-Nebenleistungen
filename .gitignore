@@ -49,7 +49,7 @@ public/tmp/tpl/**
 /public/files/**
 /logs/*
 /logs/**
-
+.idea/workspace.xml
 
 
 
