@@ -49,6 +49,8 @@ public/tmp/tpl/**
 /public/files/**
 /logs/*
 /logs/**
+/pdf/*
+.idea/*
 
 
 
