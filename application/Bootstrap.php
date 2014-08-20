@@ -91,7 +91,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
             return;
         }
         catch (Exception $e){
-           $test = 123;
        }
 
     }
@@ -103,7 +102,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
             return $container;
         }
         catch(Exception $e){
-            $test = 123;
         }
     }
     
