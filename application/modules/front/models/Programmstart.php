@@ -330,7 +330,7 @@ class Front_Model_Programmstart{
      * @param $key
      */
     private function _stripTags(&$__programm, $key){
-        $__programm['txt'] = strip_tags($__programm['txt'],'<p><br><u><b><a>');
+        $__programm['txt'] = strip_tags($__programm['txt'],'<p><br><u><b><a><ul><li>');
 
         return;
     }

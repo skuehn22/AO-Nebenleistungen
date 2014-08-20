@@ -157,14 +157,10 @@ function fillTemplate(sprache){
                 success: function(){
                     // gridStore.reload();
 
-                    if(sprache == 1){
-                        fenster.close();
-                        fillTemplate(2);
-                    }
-                    else{
+
                         fenster.close();
                         fillSprache();
-                    }
+                    
                 },
                 failure: function(){
                     showMsgBox('Werte wurde nicht geändert');
