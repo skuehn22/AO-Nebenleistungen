@@ -309,9 +309,9 @@
               <table class="" style="margin-left: 0px; ">
                   <tr>
                       <td>{function="translate('Anzahl')"}</td>
-                      <td>{function="translate('Programmvariante')"}</td>
+                      <td>{function="translate('Variante')"}</td>
                       <td>{function="translate('Einzelpreis')"}</td>
-                      <td>{function="translate('Preis der Programmvariante')"}</td>
+                      <td>{function="translate('Preis')"}</td>
                   </tr>
                   {if condition="$bookingdetails.buchungspauschale == 2"}
                   <tr>
@@ -340,10 +340,11 @@
                       {else}
                           <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
                       {/if}
-                      <td>
-                          <select name="programmvariante_{$key}" id="programmvariante_{$key}" class="span-3 input_action programmvarianteSelect">
+                      <td style="width:420px;">
+                          <select style="display:none;" name="programmvariante_{$key}" id="programmvariante_{$key}" class="span-3 input_action programmvarianteSelect">
                               {$value.options}
                           </select>
+                          {$value.inputs}
                       </td>
                       <td class="span-3">
                           <span id="einzelpreis_{$key}" class="einzelpreis"></span> €
@@ -407,4 +408,3 @@
 
     </div>
     <!-- Ende Gesamtblock Programm -->
-

@@ -82,6 +82,10 @@ function wechselPersonenanzahl(rowId, anzahl){
     einzelPreis = kaufmRunden(einzelPreis);
     $("#einzelpreis_" + rowId).html(einzelPreis);
 
+
+
+
+
     return gesamtPreisNummerisch;
 }
 
@@ -124,7 +128,7 @@ function berechnungGesamtpreis(){
     gesamtpreis = parseFloat(gesamtpreis);
 
     // Absendebutton
-    if( (gesamtAnzahl > 0) && ((gesamtpreis > 0) || (gesamtpreis < 0)) )
+    if( (gesamtAnzahl > 0) || ((gesamtpreis > 0) || (gesamtpreis < 0)) )
         $("#submitButton").show();
     else
         $("#submitButton").hide();
@@ -522,9 +526,88 @@ $(document).ready(function() {
     $('#buchungsdatum').html($("#alternateDatum").val());
 
     // verbergen ungenutzter Preisvarianten
-    for(var i = 1; i < anzahlPreisvarianten; i++){
-        $("#zeile" + i).hide();
+    //for(var i = 1; i < anzahlPreisvarianten; i++){
+        //$("#zeile" + i).hide();
+    //}
+
+
+
+    if (document.getElementById('programmvariante_0')) {
+        document.getElementById('programmvariante_0').selectedIndex = 0;
     }
+    if (document.getElementById('programmvariante_1')) {
+        document.getElementById('programmvariante_1').selectedIndex = 1;
+    }
+    if (document.getElementById('programmvariante_2')) {
+        document.getElementById('programmvariante_2').selectedIndex = 2;
+    }
+    if (document.getElementById('programmvariante_3')) {
+        document.getElementById('programmvariante_3').selectedIndex = 3;
+    }
+    if (document.getElementById('programmvariante_4')) {
+        document.getElementById('programmvariante_4').selectedIndex = 4;
+    }
+    if (document.getElementById('programmvariante_5')) {
+        document.getElementById('programmvariante_5').selectedIndex = 5;
+    }
+    if (document.getElementById('programmvariante_6')) {
+        document.getElementById('programmvariante_6').selectedIndex = 6;
+    }
+    if (document.getElementById('programmvariante_7')) {
+        document.getElementById('programmvariante_7').selectedIndex = 7;
+    }
+    if (document.getElementById('programmvariante_8')) {
+        document.getElementById('programmvariante_8').selectedIndex = 8;
+    }
+    if (document.getElementById('programmvariante_9')) {
+        document.getElementById('programmvariante_9').selectedIndex = 9;
+    }
+    if (document.getElementById('programmvariante_10')) {
+        document.getElementById('programmvariante_10').selectedIndex = 10;
+    }
+
+    if (document.getElementById("einzelpreis_0")) {
+        document.getElementById("einzelpreis_0").innerHTML= preiseProgrammVarianten[0];
+    }
+
+    if (document.getElementById("einzelpreis_1")) {
+        document.getElementById("einzelpreis_1").innerHTML= preiseProgrammVarianten[1];
+    }
+    if (document.getElementById("einzelpreis_2")) {
+        document.getElementById("einzelpreis_2").innerHTML= preiseProgrammVarianten[2];
+    }
+    if (document.getElementById("einzelpreis_3")) {
+        document.getElementById("einzelpreis_3").innerHTML= preiseProgrammVarianten[3];
+    }
+    if (document.getElementById("einzelpreis_4")) {
+        document.getElementById("einzelpreis_4").innerHTML= preiseProgrammVarianten[4];
+    }
+    if (document.getElementById("einzelpreis_5")) {
+        document.getElementById("einzelpreis_5").innerHTML= preiseProgrammVarianten[5];
+    }
+    if (document.getElementById("einzelpreis_6")) {
+        document.getElementById("einzelpreis_6").innerHTML= preiseProgrammVarianten[6];
+    }
+    if (document.getElementById("einzelpreis_7")) {
+        document.getElementById("einzelpreis_7").innerHTML= preiseProgrammVarianten[7];
+    }
+    if (document.getElementById("einzelpreis_8")) {
+        document.getElementById("einzelpreis_8").innerHTML= preiseProgrammVarianten[8];
+    }
+    if (document.getElementById("einzelpreis_9")) {
+        document.getElementById("einzelpreis_9").innerHTML= preiseProgrammVarianten[9];
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     // Bestandsbuchung , Berechnung Preis und Sichtbarkeit Button
     if(!zeitmanagerSelect == '0'){

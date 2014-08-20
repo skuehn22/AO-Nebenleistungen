@@ -123,16 +123,21 @@ class Front_Model_ProgrammdetailProgrammvarianten
 
         for($i = 0; $i < count($__programmvarianten); $i++) {
 
-            $this->_selectBox .= "<option value='" . $__programmvarianten[ $i ][ 'id' ] . "'>" . $__programmvarianten[ $i ][ 'preisvariante' ] . "</option>\n";
 
-            if($i == 0) {
-                $this->_preisErsteProgrammvariante = $__programmvarianten[ $i ][ 'verkaufspreis' ];
-            }
 
-            $this->_preiseProgrammVarianten .= "'" . $__programmvarianten[ $i ][ 'verkaufspreis' ] . "',";
+                $this->_inputBox[$i] = "<span id='opt_".$i."' value='" . $__programmvarianten[ $i ][ 'id' ] . "'>" . $__programmvarianten[ $i ][ 'preisvariante' ] . "</span>";
+                $this->_selectBox .= "<option  value='" . $__programmvarianten[ $i ][ 'id' ] . "'>" . $__programmvarianten[ $i ][ 'preisvariante' ] . "</option>\n";
+
+                if($i == 0) {
+                    $this->_preisErsteProgrammvariante = $__programmvarianten[ $i ][ 'verkaufspreis' ];
+                }
+
+                $this->_preiseProgrammVarianten .= "'" . $__programmvarianten[ $i ][ 'verkaufspreis' ] . "',";
+
         }
 
         $this->_preiseProgrammVarianten = substr($this->_preiseProgrammVarianten, 0, -1);
+
 
         return;
     }
@@ -147,7 +152,10 @@ class Front_Model_ProgrammdetailProgrammvarianten
         $programmvarianten = array();
 
         for($i = 0; $i < $this->_condition_moegliche_anzahl_programmvarianten; $i++) {
-            $programmvarianten[$i]['options'] = $this->_selectBox;
+            if ($this->_inputBox[$i]!= ""){
+                $programmvarianten[$i]['options'] = $this->_selectBox;
+                $programmvarianten[$i]['inputs'] = $this->_inputBox[$i];
+            }
         }
 
         $this->_anzahlPreisvarianten = count($programmvarianten);

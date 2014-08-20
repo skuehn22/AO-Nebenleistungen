@@ -2,148 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\Bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\AbfahrtsorteController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\AssigncompanyController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\AvailablecategoriesController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\AvailableratesController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\BusprogrammeController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\CompanyController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\DatensatzController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\DatensatzExternerRedakteurController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\DatensatzStandardKapazitaetController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\DatensatzStornofristenController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\FehlerdarstellungController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\HauptschalterController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\HotelkategoriesController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\HotelproductsController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\Hotelrates1Controller.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\HotelratesController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\HotelsController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\InfoController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\KonzernadministratorController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\NewprogramController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\NotschalterController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\PermanentzusatzartikelController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\PersonendatenController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\PreispostenController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\ProgrammbuchungenController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\ProgrammkategorienController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\ProgrammvariantenController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\ProgrammzeitenController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\RatenverfuegbarkeitController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\ReceptionController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\StadtbeschreibungController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\TranslateController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\TranslatesingleController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\TroubleController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\WhiteboardController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\ZugangskontrolleController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\ZusatzartikelController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\controllers\zusatztexteFirmaController.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Abfahrtsorte.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Assigncompany.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Availablecategories.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Availablerates.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Buchungsfehler.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\BuchungsfehlerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Busprogramm.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Company.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Datensatz.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzAktivPassiv.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzBuchungstyp.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzExternerRedakteur.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzOeffnungszeiten.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzPreisbeschreibung.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzPreisvarianten.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzProgrammbild.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzStandardKapazitaet.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzStornofristen.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzWerbepreis.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzZahlungsziele.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzZeitenMapperTreffpunkt.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\DatensatzZusatzinformation.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Fehlerdarstellung.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Hauptschalter.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\HotelHotelliste.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\HotelStammdaten.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\HotelZahlungsfristen.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Hotelbuchungen.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\HotelbuchungenInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Hotelkategories.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Hotelproducts.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Hotelrates.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Hotelrates1.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Hotels.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\HotelsStornofristen.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Konzernadministratoren.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\KooperationEintragenZugehoerigkeit.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\KooperationenEinesProgrammes.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Loadhoteldata.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Newprogram.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Notschalter.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Permanentzusatzartikel.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Personendaten.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\PersonendatenBuchungsfehler.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\PersonendatenBuchungsfehlerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\PreispostenDurchlaeufer.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\ProgrammKategorien.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\ProgrammKategorienSpeichern.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\ProgrammKategorienZuordnen.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Programmbuchungen.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\ProgrammbuchungenStatus.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\ProgrammbuchungenUebersichtstabelle.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\ProgrammeAnzeigen.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Programmvarianten.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\ProgrammvariantenForm.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\ProgrammvariantenGrid.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Programmzeiten.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\RatenverfuegbarkeitRateneingabe.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Reception.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Stadtbeschreibung.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Translate.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Whiteboard.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Zugangskontrolle.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\Zusatzartikel.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\whiteboardFragen.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\models\zusatztexteFirma.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\assigncompany\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\availablecategories\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\availablerates\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\busprogramme\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\company\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\datensatz\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\fehlerdarstellung\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\hauptschalter\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\hotelkategories\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\hotelproducts\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\hotelrates1\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\hotelrates\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\hotels\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\info\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\konzernadministrator\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\loadhoteldata\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\newprogram\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\permanentzusatzartikel\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\programmbuchungen\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\programmvarianten\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\programmzeiten\erststart.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\ratenverfuegbarkeit\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\stadtbeschreibung\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\test\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\translate\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\whiteboard\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="D:\xampp\htdocs\Nebenleistungen\application\modules\front\admin\views\scripts\zusatzartikel\index.phtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Index.html" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexStornofristen.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexStornofristen.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" afterPath="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/Programmstart.php" afterPath="$PROJECT_DIR$/application/modules/front/models/Programmstart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/nook/Tool.php" afterPath="$PROJECT_DIR$/library/nook/Tool.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" afterPath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php" afterPath="$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
@@ -167,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Front_Programmdetail_Index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Front_Programmdetail_Index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="20" selection-start="5895" selection-end="5895" vertical-scroll-proportion="-18.884615" vertical-offset="2042" max-vertical-offset="7072">
+            <state line="409" column="38" selection-start="17883" selection-end="17883" vertical-scroll-proportion="0.82711864" vertical-offset="6465" max-vertical-offset="7055">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
@@ -191,6 +53,8 @@
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#2;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#3;n#tr#2;n#table#0;n#div#2;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#td#3;n#tr#2;n#table#0;n#div#2;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#1;n#div#2;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#td#0;n#tr#3;n#table#1;n#div#2;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
@@ -200,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Programmdetail.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmdetail.php">
+      <file leaf-file-name="Front_Programmdetail_Index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="9" selection-start="5797" selection-end="5797" vertical-scroll-proportion="-7.1153846" vertical-offset="2807" max-vertical-offset="12988">
+            <state line="423" column="60" selection-start="12402" selection-end="12402" vertical-scroll-proportion="-19.56" vertical-offset="6702" max-vertical-offset="10557">
               <folding />
             </state>
           </provider>
@@ -257,29 +121,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin_Datensatz_IndexFormEditor.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ProgrammdetailProgrammvarianten.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="153" column="0" selection-start="4555" selection-end="4555" vertical-scroll-proportion="-3.6862745" vertical-offset="2243" max-vertical-offset="4794">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admin_Datensatz_IndexFormEditor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="20" selection-start="4587" selection-end="4587" vertical-scroll-proportion="0.52667814" vertical-offset="2448" max-vertical-offset="4420">
+            <state line="163" column="18" selection-start="4586" selection-end="4586" vertical-scroll-proportion="0.0" vertical-offset="2448" max-vertical-offset="4420">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin_Datensatz_IndexPreisvarianten.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
+      <file leaf-file-name="Front_Programmdetail_Index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="416" column="71" selection-start="12476" selection-end="12476" vertical-scroll-proportion="0.0" vertical-offset="6956" max-vertical-offset="9333">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Admin_Datensatz_IndexFormTermine.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="27" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="8092">
-              <folding />
+            <state line="336" column="21" selection-start="16381" selection-end="16381" vertical-scroll-proportion="-7.269231" vertical-offset="5523" max-vertical-offset="7089">
+              <folding>
+                <marker date="1408543179631" expanded="true" signature="10097:19895" placeholder="..." />
+                <marker date="1408543179631" expanded="true" signature="13848:19857" placeholder="..." />
+                <marker date="1408543179631" expanded="true" signature="14776:19719" placeholder="..." />
+                <marker date="1408543179631" expanded="true" signature="16929:17690" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -302,8 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/library/Zend/Console/Getopt.php" />
-        <option value="$PROJECT_DIR$/library/nook/ToolProgrammBasisAngaben.php" />
         <option value="$PROJECT_DIR$/price/index.php" />
         <option value="$PROJECT_DIR$/library/nook/ToolErrorMail.php" />
         <option value="$PROJECT_DIR$/application/modules/admin/models/Programmzeiten.php" />
@@ -324,7 +191,6 @@
         <option value="$PROJECT_DIR$/public/tpl/Front_Login_Index.html" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Programmstart_Index.html" />
         <option value="$PROJECT_DIR$/public/css/reset.css" />
-        <option value="$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/front.phtml" />
         <option value="$PROJECT_DIR$/library/nook/ToolStartdatumBuchungProgramm.php" />
         <option value="$PROJECT_DIR$/application/configs/static.ini" />
@@ -350,9 +216,12 @@
         <option value="$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/Programmstart.php" />
         <option value="$PROJECT_DIR$/library/nook/Tool.php" />
-        <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Index.html" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
+        <option value="$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php" />
+        <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" />
+        <option value="$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php" />
+        <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
       </list>
     </option>
   </component>
@@ -634,15 +503,15 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22857143" sideWeight="0.50951684" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
+      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25059524" sideWeight="0.5093257" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2326389" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28705636" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27244258" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22857143" sideWeight="0.49048316" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25059524" sideWeight="0.49067432" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23511904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2284,7 +2153,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1062" />
+      <option name="time" value="1070" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -2294,11 +2163,6 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1190" column="1" selection-start="24310" selection-end="24310" vertical-scroll-proportion="0.0" vertical-offset="19669" max-vertical-offset="20349" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/Vertragspartner.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="5" selection-start="1375" selection-end="1535" vertical-scroll-proportion="-15.692307" vertical-offset="663" max-vertical-offset="4760">
@@ -2592,9 +2456,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="208" column="0" selection-start="7816" selection-end="7816" vertical-scroll-proportion="-7.3846154" vertical-offset="3344" max-vertical-offset="16609">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="373" column="18" selection-start="13482" selection-end="13482" vertical-scroll-proportion="-12.423077" vertical-offset="6018" max-vertical-offset="10166">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="18" selection-start="4586" selection-end="4586" vertical-scroll-proportion="0.0" vertical-offset="2448" max-vertical-offset="4420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="336" column="21" selection-start="16381" selection-end="16381" vertical-scroll-proportion="-7.269231" vertical-offset="5523" max-vertical-offset="7089">
+          <folding>
+            <marker date="1408543179631" expanded="true" signature="10097:19895" placeholder="..." />
+            <marker date="1408543179631" expanded="true" signature="13848:19857" placeholder="..." />
+            <marker date="1408543179631" expanded="true" signature="14776:19719" placeholder="..." />
+            <marker date="1408543179631" expanded="true" signature="16929:17690" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="0" selection-start="4555" selection-end="4555" vertical-scroll-proportion="-3.6862745" vertical-offset="2243" max-vertical-offset="4794">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="423" column="60" selection-start="12402" selection-end="12402" vertical-scroll-proportion="-19.56" vertical-offset="6702" max-vertical-offset="10557">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="20" selection-start="5895" selection-end="5895" vertical-scroll-proportion="-18.884615" vertical-offset="2042" max-vertical-offset="7072">
+        <state line="409" column="38" selection-start="17883" selection-end="17883" vertical-scroll-proportion="0.82711864" vertical-offset="6465" max-vertical-offset="7055">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#form#0;n#div#1;n#!!top" expanded="true" />
@@ -2615,32 +2526,13 @@
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#2;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#2;n#table#0;n#div#2;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#td#3;n#tr#2;n#table#0;n#div#2;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#1;n#div#2;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#0;n#tr#3;n#table#1;n#div#2;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="208" column="0" selection-start="7816" selection-end="7816" vertical-scroll-proportion="-7.3846154" vertical-offset="3344" max-vertical-offset="16609">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="373" column="18" selection-start="13482" selection-end="13482" vertical-scroll-proportion="-12.423077" vertical-offset="6018" max-vertical-offset="10166">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="20" selection-start="4587" selection-end="4587" vertical-scroll-proportion="0.52667814" vertical-offset="2448" max-vertical-offset="4420">
-          <folding />
         </state>
       </provider>
     </entry>
