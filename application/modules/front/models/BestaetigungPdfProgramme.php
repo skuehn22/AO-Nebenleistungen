@@ -970,7 +970,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
     private function _erstellenGrunddokument()
     {
 
-        $this->_newPdfBestaetigung = Zend_Pdf::load($this->_pfad . "/HOB_Briefpapier.pdf");
+        $this->_newPdfBestaetigung = Zend_Pdf::load($this->_pfad . "/vorlagen/20.pdf");
 
         return $this;
     }
@@ -1022,7 +1022,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
             $page->setFont($font, $this->_fontTexte['text']['groesse']);
 
             // einfügen Logo auf der neuen Seite
-            $image = Zend_Pdf_Image::imageWithPath($this->_pfad . "/LogoNameMini.jpg");
+            $image = Zend_Pdf_Image::imageWithPath($this->_pfad . "/vorlagen/aohostel-logo.png");
             $page->drawImage($image, 300, 720, 550, 804);
 
             // aktueller Seitenzaehler

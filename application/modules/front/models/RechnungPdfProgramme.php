@@ -539,6 +539,17 @@ class Front_Model_RechnungPdfProgramme extends nook_ToolModel implements arrayac
         return $this;
     }
 
+    private function _getVorlage(){
+
+
+        $this->_newPdfProgramme = Zend_Pdf::load($this->_pfad."/HOB_Briefpapier.pdf");
+
+        return $this;
+    }
+
+
+
+
     /**
      * Generiert einen Zeilenumbruch.
      *
@@ -574,7 +585,7 @@ class Front_Model_RechnungPdfProgramme extends nook_ToolModel implements arrayac
             $page->setFont($font, $this->_fontTexte['text']['groesse']);
 
             // einfügen Logo auf der neuen Seite
-            $image = Zend_Pdf_Image::imageWithPath($this->_pfad."/LogoNameMini.jpg");
+            $image = Zend_Pdf_Image::imageWithPath($this->_pfad."/vorlagen/aohostel-logo.png");
             $page->drawImage($image, 300, 720, 550, 804);
 
             // aktueller Seitenzaehler

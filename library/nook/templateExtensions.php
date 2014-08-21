@@ -328,7 +328,7 @@ function navigationLoginLogout()
     if ($sessionAuth->role_id > 1) {
         $button = "<td><a href='#' id='checkWarenkorb' style='color: white;' class='submit_rot'>".translate('abmelden')."</a></td>";
     } else {
-        $button = "<td><a href='#' style='color: white;' class='showHide submit_navigation'>" . translate('zur Anmeldung') . "</a></td>";
+        $button = "<td><a href='#' style='color: white;' class='showHide submit_navigation'>" . translate('Administrator') . "</a></td>";
     }
 
     return $button;
