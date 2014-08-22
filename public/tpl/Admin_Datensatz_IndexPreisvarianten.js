@@ -43,7 +43,7 @@ var adminDatensatzIndexPreisvarianten = function (){
         root: 'data',
         method: 'post',
         url: '/admin/datensatz/getpreisvarianten/',
-        fields: ['id', 'preisvariante_de', 'preisvariante_en', 'verkaufspreis', 'einkaufspreis', 'mwst']
+        fields: ['id', 'preisvariante_de', 'preisvariante_en', 'verkaufspreis', 'einkaufspreis', 'buchungsgebuehr', 'mwst']
     });
 
     var wandlePreis = function(value){
@@ -247,6 +247,13 @@ var adminDatensatzIndexPreisvarianten = function (){
                 fieldLabel: 'VK Brutto *',
                 maskRe: /^[0-9\,]$/,
                 allowBlank: false
+            },{
+                xtype: 'textfield',
+                width: 75,
+                name: 'buchungsgebuehr',
+                fieldLabel: 'Buchungsgebuehr',
+                maskRe: /^[0-9\,]$/,
+                allowBlank: false
             }],
             buttons: [{
             text: 'speichern',
@@ -414,7 +421,7 @@ var adminDatensatzIndexPreisvarianten = function (){
                 hiddenName: 'mwst_ek',
                 name: 'mwst_ek',
                 value: '0.19',
-                store: [[0.19,'19%'],[0.07,'7%'],[0, '0%'],[0.1,'10%']]
+                store: [[0.21, '21%'],[0.20, '20%'],[0.19,'19%'],[0.15,'15%'],[0.10, '10%'],[0.07,'7%'],[0, '0%']]
             },{
                 fieldLabel: 'Mwst VK *',
                 xtype: 'combo',
@@ -426,7 +433,7 @@ var adminDatensatzIndexPreisvarianten = function (){
                 mode: 'local',
                 hiddenName: 'mwst',
                 name: 'mwst',
-                store: [[0.19,'19%'],[0.07,'7%'],[0, '0%']]
+                store: [[0.21, '21%'],[0.20, '20%'],[0.19,'19%'],[0.15,'15%'],[0.10, '10%'],[0.07,'7%'],[0, '0%']]
             },{
                 xtype: 'checkbox',
                 fieldLabel: 'Buchungspauschale',

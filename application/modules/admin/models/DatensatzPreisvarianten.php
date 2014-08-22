@@ -228,7 +228,8 @@ class Admin_Model_DatensatzPreisvarianten extends nook_Model_model{
         $whereUpdatePreise = "id = ".$__params['id'];
         $updatePreise = array(
             'einkaufspreis' => $__params['einkaufspreis'],
-            'verkaufspreis' => $__params['verkaufspreis']
+            'verkaufspreis' => $__params['verkaufspreis'],
+            'buchungsgebuehr' => $__params['buchungsgebuehr']
         );
 
         $this->_tabellePreisvarianten->update($updatePreise, $whereUpdatePreise);
@@ -275,7 +276,8 @@ class Admin_Model_DatensatzPreisvarianten extends nook_Model_model{
         $insertPreise = array(
             "programmdetails_id" => $__params['bjl_Fa_ID'],
             "einkaufspreis" => $__params['einkaufspreis'],
-            "verkaufspreis" => $__params['verkaufspreis']
+            "verkaufspreis" => $__params['verkaufspreis'],
+            'buchungsgebuehr' => $__params['buchungsgebuehr']
         );
 
         $preise_id = $this->_tabellePreisvarianten->insert($insertPreise);
