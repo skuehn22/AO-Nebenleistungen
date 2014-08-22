@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Personaldata_Index.js" afterPath="$PROJECT_DIR$/public/tpl/Front_Personaldata_Index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Registrierung.js" afterPath="$PROJECT_DIR$/public/tpl/Front_Registrierung.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Buchungstyp.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Buchungstyp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Button.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Programme.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Programme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Uebernachtungen.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Uebernachtungen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Personaldata.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Personaldata.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/WarenkorbController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/WarenkorbController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/static.ini" afterPath="$PROJECT_DIR$/application/configs/static.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" afterPath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WarenkorbNeu.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/models/WarenkorbNeu.php">
+      <file leaf-file-name="Front_Programmdetail_Index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.9230769" vertical-offset="102" max-vertical-offset="2669">
+            <state line="590" column="51" selection-start="17941" selection-end="17941" vertical-scroll-proportion="0.6815562" vertical-offset="9557" max-vertical-offset="10557">
               <folding />
             </state>
           </provider>
@@ -96,8 +87,13 @@
       <file leaf-file-name="Front_Personaldata_Index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_Index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="9" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1139">
-              <folding />
+            <state line="36" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0" vertical-offset="448" max-vertical-offset="1139">
+              <folding>
+                <marker date="1408693708010" expanded="true" signature="67:1106" placeholder="{...}" />
+                <marker date="1408693708010" expanded="true" signature="751:858" placeholder="{...}" />
+                <marker date="1408693708010" expanded="true" signature="950:1053" placeholder="{...}" />
+                <marker date="1408693708010" expanded="true" signature="1048:1096" placeholder="//..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,8 +101,10 @@
       <file leaf-file-name="Front_Registrierung.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Registrierung.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0" vertical-offset="482" max-vertical-offset="1360">
-              <folding />
+            <state line="41" column="0" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1360">
+              <folding>
+                <marker date="1408693702480" expanded="true" signature="1249:1298" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,10 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Front_Warenkorb_Personaldata.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Front_Warenkorb_Personaldata.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Warenkorb_Personaldata.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="1014" selection-end="1014" vertical-scroll-proportion="1.0997305" vertical-offset="0" max-vertical-offset="2924">
+            <state line="21" column="6" selection-start="1076" selection-end="1076" vertical-scroll-proportion="-11.769231" vertical-offset="51" max-vertical-offset="2958">
               <folding />
             </state>
           </provider>
@@ -177,7 +175,6 @@
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_Index.html" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormEditor.js" />
         <option value="$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php" />
-        <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" />
         <option value="$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
@@ -198,6 +195,7 @@
         <option value="$PROJECT_DIR$/public/tpl/Front_Personaldata_Index.js" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Registrierung.js" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Personaldata.html" />
+        <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" />
       </list>
     </option>
   </component>
@@ -219,10 +217,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-1688" />
+    <option name="y" value="-111" />
+    <option name="width" value="1696" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -424,21 +422,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1688" y="-111" width="1696" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14348462" sideWeight="0.5083682" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
+      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19107144" sideWeight="0.50875" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2326389" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24842767" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16492693" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14348462" sideWeight="0.48953974" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3272328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19107144" sideWeight="0.49" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26607144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2277,13 +2275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="423" column="60" selection-start="12402" selection-end="12402" vertical-scroll-proportion="-19.56" vertical-offset="6702" max-vertical-offset="10557">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="281" column="17" selection-start="7641" selection-end="7641" vertical-scroll-proportion="-7.269231" vertical-offset="4588" max-vertical-offset="7888">
@@ -2330,7 +2321,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="12" selection-start="980" selection-end="980" vertical-scroll-proportion="-14.423077" vertical-offset="492" max-vertical-offset="3893">
           <folding>
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#page_header#0;n#page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#page_header#0;n#page#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2433,11 +2424,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="64" selection-start="1039" selection-end="1039" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="1326">
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#td#5;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#form#0;n#td#5;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2525,8 +2516,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="19" selection-start="2742" selection-end="2742" vertical-scroll-proportion="-45.115383" vertical-offset="255" max-vertical-offset="1870">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#9;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#9;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2580,15 +2571,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_Index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="9" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1139">
-          <folding />
+        <state line="36" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0" vertical-offset="448" max-vertical-offset="1139">
+          <folding>
+            <marker date="1408693708010" expanded="true" signature="67:1106" placeholder="{...}" />
+            <marker date="1408693708010" expanded="true" signature="751:858" placeholder="{...}" />
+            <marker date="1408693708010" expanded="true" signature="950:1053" placeholder="{...}" />
+            <marker date="1408693708010" expanded="true" signature="1048:1096" placeholder="//..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Registrierung.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0" vertical-offset="482" max-vertical-offset="1360">
-          <folding />
+        <state line="41" column="0" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1360">
+          <folding>
+            <marker date="1408693702480" expanded="true" signature="1249:1298" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2608,7 +2606,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Warenkorb_Personaldata.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="1014" selection-end="1014" vertical-scroll-proportion="1.0997305" vertical-offset="0" max-vertical-offset="2924">
+        <state line="21" column="6" selection-start="1076" selection-end="1076" vertical-scroll-proportion="-11.769231" vertical-offset="51" max-vertical-offset="2958">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="590" column="51" selection-start="17941" selection-end="17941" vertical-scroll-proportion="0.6815562" vertical-offset="9557" max-vertical-offset="10557">
           <folding />
         </state>
       </provider>

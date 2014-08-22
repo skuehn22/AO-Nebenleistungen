@@ -567,35 +567,35 @@ $(document).ready(function() {
     }
 
     if (document.getElementById("einzelpreis_0")) {
-        document.getElementById("einzelpreis_0").innerHTML= preiseProgrammVarianten[0];
+        document.getElementById("einzelpreis_0").innerHTML= kaufmRunden(preiseProgrammVarianten[0]);
     }
 
     if (document.getElementById("einzelpreis_1")) {
-        document.getElementById("einzelpreis_1").innerHTML= preiseProgrammVarianten[1];
+        document.getElementById("einzelpreis_1").innerHTML= kaufmRunden(preiseProgrammVarianten[1]);
     }
     if (document.getElementById("einzelpreis_2")) {
-        document.getElementById("einzelpreis_2").innerHTML= preiseProgrammVarianten[2];
+        document.getElementById("einzelpreis_2").innerHTML= kaufmRunden(preiseProgrammVarianten[2]);
     }
     if (document.getElementById("einzelpreis_3")) {
-        document.getElementById("einzelpreis_3").innerHTML= preiseProgrammVarianten[3];
+        document.getElementById("einzelpreis_3").innerHTML= kaufmRunden(preiseProgrammVarianten[3]);
     }
     if (document.getElementById("einzelpreis_4")) {
-        document.getElementById("einzelpreis_4").innerHTML= preiseProgrammVarianten[4];
+        document.getElementById("einzelpreis_4").innerHTML= kaufmRunden(preiseProgrammVarianten[4]);
     }
     if (document.getElementById("einzelpreis_5")) {
-        document.getElementById("einzelpreis_5").innerHTML= preiseProgrammVarianten[5];
+        document.getElementById("einzelpreis_5").innerHTML= kaufmRunden(preiseProgrammVarianten[5]);
     }
     if (document.getElementById("einzelpreis_6")) {
-        document.getElementById("einzelpreis_6").innerHTML= preiseProgrammVarianten[6];
+        document.getElementById("einzelpreis_6").innerHTML= kaufmRunden(preiseProgrammVarianten[6]);
     }
     if (document.getElementById("einzelpreis_7")) {
-        document.getElementById("einzelpreis_7").innerHTML= preiseProgrammVarianten[7];
+        document.getElementById("einzelpreis_7").innerHTML= kaufmRunden(preiseProgrammVarianten[7]);
     }
     if (document.getElementById("einzelpreis_8")) {
-        document.getElementById("einzelpreis_8").innerHTML= preiseProgrammVarianten[8];
+        document.getElementById("einzelpreis_8").innerHTML= kaufmRunden(preiseProgrammVarianten[8]);
     }
     if (document.getElementById("einzelpreis_9")) {
-        document.getElementById("einzelpreis_9").innerHTML= preiseProgrammVarianten[9];
+        document.getElementById("einzelpreis_9").innerHTML= kaufmRunden(preiseProgrammVarianten[9]);
     }
 
 
