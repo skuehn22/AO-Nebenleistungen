@@ -206,6 +206,11 @@ class Admin_Model_DatensatzPreisvarianten extends nook_Model_model{
         if(!is_float($__params['verkaufspreis']))
             $kontrolle++;
 
+        $__params['buchungsgebuehr'] = str_replace(',','.',$__params['buchungsgebuehr']);
+        $__params['buchungsgebuehr'] = (float) trim($__params['buchungsgebuehr']);
+        if(!is_float($__params['buchungsgebuehr']))
+            $kontrolle++;
+
         $__params['preisvariante_de'] = trim($__params['preisvariante_de']);
         if(strlen($__params['preisvariante_de']) < 5)
             $kontrolle++;

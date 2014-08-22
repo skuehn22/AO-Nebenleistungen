@@ -251,9 +251,9 @@ var adminDatensatzIndexPreisvarianten = function (){
                 xtype: 'textfield',
                 width: 75,
                 name: 'buchungsgebuehr',
-                fieldLabel: 'Buchungsgebuehr',
+                fieldLabel: 'Buchungsgebühr',
                 maskRe: /^[0-9\,]$/,
-                allowBlank: false
+                allowBlank: true
             }],
             buttons: [{
             text: 'speichern',

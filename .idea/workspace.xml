@@ -4,7 +4,6 @@
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php" afterPath="$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin_Datensatz_IndexPreisvarianten.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Admin_Datensatz_IndexPreisvarianten.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="5" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.17745303" vertical-offset="816" max-vertical-offset="9452">
+            <state line="252" column="38" selection-start="6980" selection-end="6995" vertical-scroll-proportion="0.0" vertical-offset="4080" max-vertical-offset="9452">
               <folding />
             </state>
           </provider>
@@ -48,7 +47,7 @@
       <file leaf-file-name="Admin_Programmvarianten_IndexFormPreisvariante.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Programmvarianten_IndexFormPreisvariante.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="48" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
+            <state line="32" column="48" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1887">
               <folding />
             </state>
           </provider>
@@ -84,16 +83,16 @@
       <file leaf-file-name="DatensatzPreisvarianten.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="0" selection-start="4446" selection-end="4446" vertical-scroll-proportion="-2.7843137" vertical-offset="1966" max-vertical-offset="5236">
+            <state line="220" column="0" selection-start="7411" selection-end="7411" vertical-scroll-proportion="-2.7843137" vertical-offset="3513" max-vertical-offset="5321">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatensatzController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DatensatzController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="586" column="56" selection-start="19614" selection-end="19614" vertical-scroll-proportion="-6.7843137" vertical-offset="9616" max-vertical-offset="19261">
+            <state line="614" column="11" selection-start="20600" selection-end="20600" vertical-scroll-proportion="0.3317757" vertical-offset="10296" max-vertical-offset="19261">
               <folding />
             </state>
           </provider>
@@ -184,8 +183,8 @@
         <option value="$PROJECT_DIR$/public/tpl/Front_Registrierung.js" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Personaldata.html" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" />
-        <option value="$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" />
+        <option value="$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php" />
       </list>
     </option>
   </component>
@@ -2308,7 +2307,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php</url>
-          <line>215</line>
+          <line>220</line>
           <option name="timeStamp" value="1129" />
         </line-breakpoint>
       </breakpoints>
@@ -2635,20 +2634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Buchungspauschale.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="698">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="32" selection-start="2423" selection-end="2423" vertical-scroll-proportion="-9.384615" vertical-offset="963" max-vertical-offset="1870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexFormTermine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="23" selection-start="678" selection-end="678" vertical-scroll-proportion="0.23224044" vertical-offset="204" max-vertical-offset="8092">
@@ -2670,20 +2655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="586" column="56" selection-start="19614" selection-end="19614" vertical-scroll-proportion="-6.7843137" vertical-offset="9616" max-vertical-offset="19261">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="4446" selection-end="4446" vertical-scroll-proportion="-2.7843137" vertical-offset="1966" max-vertical-offset="5236">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexGridPreisvarianten.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3434">
@@ -2698,6 +2669,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="32" selection-start="2423" selection-end="2423" vertical-scroll-proportion="-9.384615" vertical-offset="963" max-vertical-offset="1870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Programmvarianten_IndexFormPreisvariante.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="48" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1887">
@@ -2705,9 +2683,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Buchungspauschale.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="698">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="5" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.17745303" vertical-offset="816" max-vertical-offset="9452">
+        <state line="252" column="38" selection-start="6980" selection-end="6995" vertical-scroll-proportion="0.0" vertical-offset="4080" max-vertical-offset="9452">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="220" column="0" selection-start="7411" selection-end="7411" vertical-scroll-proportion="-2.7843137" vertical-offset="3513" max-vertical-offset="5321">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/admin/controllers/DatensatzController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="614" column="11" selection-start="20600" selection-end="20600" vertical-scroll-proportion="0.3317757" vertical-offset="10296" max-vertical-offset="19261">
           <folding />
         </state>
       </provider>
