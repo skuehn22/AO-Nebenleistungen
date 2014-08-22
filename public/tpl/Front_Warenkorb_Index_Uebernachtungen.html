@@ -45,16 +45,3 @@
     <div class="span-24">&nbsp;</div>
 {/loop}
 
-<!-- Alternativ Übernachtungen -->
-{if condition="!$shoppingCartUebernachtungNested"}
-<div class="span-24 block_oben block block_unten">
-    <div class="span-12 prepend-1 teilueberschrift">{function="translate('keine Übernachtungen gewählt')"}</div>
-    <div style="width: 430px; float: left;">
-        {if condition="$flagStornierung == 1"}
-            <form method='post' action='{$alternativButtonHotelbuchung}' style="float: right; margin-right: 40px;">
-                <input type='submit' class='submit_weiter' src='' name='suchen' value="{function="translate('Übernachtung suchen')"}">
-            </form>
-        {/if}
-    </div>
-</div>
-{/if}

@@ -2,23 +2,23 @@
     {if condition="$counterToOrder > 0"}
     {if condition="$flag_show_buttons"}
         {if condition="$flagStornierung == 1"}
-            <table style="float: right; margin-right: 40px; margin-bottom: 0px;">
+            <table style="float: right; margin-right: 4px; margin-bottom: 0px;">
                 <tr>
                     <td>
                         <form class="form" action="/front/stornierung/warenkorb-delete/" method="post">
                             {if condition="$blockGebuchteProgramme"}
                                 <input type="submit" id="warenkorbLeerenOben" class="warenkorb_leeren" value="{function=" translate('Warenkorb stornieren')"}">
                             {else}
-                                <input type="submit" id="warenkorbLeerenOben" class="warenkorb_leeren" value="{function=" translate('Warenkorb leeren')"}" style="position: relative; top: -3px;">
+                                <input type="submit" id="warenkorbLeerenOben" class="warenkorb_leeren" value="{function=" translate('Warenkorb leeren')"}" style="position: relative; top: 0px;">
                             {/if}
                         </form>
                     </td>
                     <td>
                         {if condition="$anzahlNeuerArtikel > 0"}
                             {if condition="$buchungsnummerZaehler == 0"}
-                                <form class="form" action="/front/vormerken-anmelden/index/" method="post">
-                                    <input type="submit" class="warenkorb_vormerken" value="{function="translate('vormerken')"}">
-                                </form>
+                                <!--<form class="form" action="/front/vormerken-anmelden/index/" method="post">-->
+                                    <!--<input type="submit" class="warenkorb_vormerken" value="{function="translate('vormerken')"}">-->
+                                <!--</form>-->
                             {/if}
                         {/if}
                     </td>
@@ -44,10 +44,23 @@
                     {/if}
                 <!-- wenn Benutzer nicht angemeldet -->
                 {else}
-                    <td style="padding-right: 0px;">
+                    <td style="padding-right: 0px; width:350px;">
                         <form class="form" action="/front/personaldata/index/" method="post">
                             <input type="submit" class="warenkorb_buchen" value="{function=" translate('weiter zur Buchung')"}">
+
                         </form>
+
+
+                    </td>
+                    <td>
+                        <form class="form" style="margin-right: 0px;" action="{$alternativButtonProgrammbuchung}" method="post">
+                            {if condition="$flag_show_buttons"}
+                            {if condition="$flagStornierung == 1"}
+                            <input type="submit" class="programmbuchung_neu" value="{function=" translate('weitere Programme buchen')"}">
+                            {/if}
+                            {/if}
+                        </form>
+
                     </td>
                 {/if}
                 </tr>

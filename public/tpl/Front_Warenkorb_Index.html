@@ -28,7 +28,7 @@
 <div id='allgemein' class="span-24 block_oben block_unten block">
 
     <!-- Überschrift des Warenkorbes -->
-    <div class="span-12 prepend-1">
+    <div class="span-12 " style="margin-left: 15px;">
         {if condition="$flag_show_buttons"}
             {if condition="$flagStornierung == 2"}
                 <span class=" ueberschrift_rot">{function="translate('Stornierung')"}</span>
@@ -56,12 +56,12 @@
     {include="Front_Warenkorb_Index_BestandsbuchungProgramme"}
 {/if}
 
-<div class="span-24">&nbsp;</div>
+
 
 <!-- Hotelbuchungen -->
 {include="Front_Warenkorb_Index_Uebernachtungen"}
 
-<div class="span-24">&nbsp;</div>
+
 
 <!-- Programmbuchungen -->
 {include="Front_Warenkorb_Index_Programme"}

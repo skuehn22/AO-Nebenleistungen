@@ -219,7 +219,15 @@ class Front_WarenkorbController extends Zend_Controller_Action
                 $shoppingCartZusatzprodukte
             );
 
-            $raintpl->assign('shoppingCartUebernachtungNested', $shoppingCartHotelNested);
+
+
+
+
+            for ($i=0; $i<=count(shoppingCartNestedProgramme); $i++) {
+                echo "The number is: $x <br>";
+            }
+
+$raintpl->assign('shoppingCartUebernachtungNested', $shoppingCartHotelNested);
 
             // Anzahl und Gesamtpreis der Zusatzprodukte
             $zusatzproduktePreise = $modelCart->berechneGesamtpreis($shoppingCartZusatzprodukte, 'zusatzprodukt');
