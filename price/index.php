@@ -633,7 +633,7 @@ class price
 
         $perPerson = $this->_XMLReader->getAttribute('PerPerson');
         $amount = $this->_XMLReader->getAttribute('Amount');
-        // $currencyCode = $this->_XMLReader->getAttribute('CurrencyCode');
+        // ´´$currencyCode = $this->_XMLReader->getAttribute('CurrencyCode');
 
         for($i = 0; $i < count($this->_tageDerRate); $i++) {
 

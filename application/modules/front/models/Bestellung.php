@@ -107,6 +107,8 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
         $this->_tabelleProduktbuchung = new Application_Model_DbTable_produktbuchung();
         /** @var _tabelleProgrammbuchung Application_Model_DbTable_programmbuchung */
         $this->_tabelleProgrammbuchung = new Application_Model_DbTable_programmbuchung();
+        /** @var _tabellePreise Application_Model_DbTable_programmbuchung */
+        $this->_tabellePreise = new Application_Model_DbTable_preise();
         /** @var _tabelleTextbausteine Application_Model_DbTable_textbausteine */
         $this->_tabelleTextbausteine = new Application_Model_DbTable_textbausteine();
 
@@ -229,6 +231,8 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
 
             ->_findProgrammbuchungen() // Programmbuchungen
 
+            ->_findAllPreise()
+
             ->_findStatischeFirmenTexte() // Texte Kopfzeile Fusszeile
 
             ->_setStatusBearbeitetDurchSystem();
@@ -255,6 +259,34 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
         $rechnungsDaten = $this->_tabelleRechnungen->fetchAll($select)->toArray();
 
         $this->_datenRechnungen = $rechnungsDaten[0];
+
+        return $this;
+    }
+
+    private function _findAllPreise()
+    {
+
+        // $aktuelleBuchungsnummer = nook_ToolBuchungsnummer::findeBuchungsnummer();
+        $sessionBuchung = new Zend_Session_Namespace('buchung');
+        $sessionBuchungVariablen = (array) $sessionBuchung->getIterator();
+        $buchungsNummer = $sessionBuchungVariablen['buchungsnummer'];
+
+
+        $select = $this->_tabelleProgrammbuchung->select()->where("buchungsnummer_id = " . $buchungsNummer);
+        $allePreise = $this->_tabelleProgrammbuchung->fetchAll($select)->toArray();
+
+        $i=0;
+
+        foreach ($allePreise as $value) {
+            $select = $this->_tabellePreise->select()->where("id = " . $value['tbl_programme_preisvarianten_id']);
+            $allePreiseVarianten = $this->_tabellePreise->fetchAll($select)->toArray();
+            $allePreiseVarianten[$i]['variantenID'] = $value['tbl_programme_preisvarianten_id'];
+            $i++;
+        }
+
+
+        $_SESSION['allePreise'] = $allePreiseVarianten;
+
 
         return $this;
     }

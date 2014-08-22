@@ -34,6 +34,19 @@
             {function="translate('Die Stornierungsbestätigung sowie eine Rechnung über eventuell anfallende Stornierungskoten erhalten Sie in Kürze per E-Mail.')"}<P><P>
             {function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>
         {/if}
+
+        {loop="$support.PreiseASSD"}
+        <br>
+        <strong>Programm-ID: {$value.programmdetails_id}<br></strong>
+        Einkaufspreis: {$value.einkaufspreis}<br>
+        Verkaufspreis: {$value.verkaufspreis}<br>
+        Buchungsgebühr: {$value.buchungsgebbuer}<br><br>
+
+
+        {/loop}
+
+
+
     </div>
 </div>
 
@@ -61,3 +74,5 @@
     </div>
 </div>
 {/if}
+
+

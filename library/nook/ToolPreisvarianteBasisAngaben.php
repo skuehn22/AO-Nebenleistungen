@@ -124,7 +124,8 @@ class nook_ToolPreisvarianteBasisAngaben
     private function ermittlungBasisangabenPreisvariante($preisvarianteId, $sprachenId)
     {
         $cols = array(
-            'preisvariante'
+            'preisvariante',
+            'confirm_1'
         );
 
         $wherePreisvarianteId = "preise_id = ".$preisvarianteId;

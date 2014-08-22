@@ -94,7 +94,8 @@ class Admin_Model_DatensatzPreisvarianten extends nook_Model_model{
 
             $cols = array(
                 'preisvariante',
-                'sprachen_id'
+                'sprachen_id',
+                'confirm_1'
             );
 
             $selectBeschreibung = $this->_tabellePreiseBeschreibung->select();

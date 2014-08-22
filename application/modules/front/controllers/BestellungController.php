@@ -412,6 +412,8 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
         $configData = $toolRegistryDaten->steuerungErmittelnDaten()->getKonfigDaten();
         $supportDaten['telefon'] = $configData['telefon'];
 
+        $supportDaten['PreiseASSD'] =$_SESSION['allePreise'];
+
         return $supportDaten;
     }
 

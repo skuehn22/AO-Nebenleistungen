@@ -93,7 +93,8 @@ class Front_Model_ProgrammdetailProgrammvarianten
         $cols = array(
             'id',
             'verkaufspreis',
-            'preisvariante_' . $this->_anzeigeSprache . ' as preisvariante'
+            'preisvariante_' . $this->_anzeigeSprache . ' as preisvariante',
+            'confirm_1'
         );
 
         $select = $this->_viewPreisvariantenSprachen->select();
@@ -126,6 +127,8 @@ class Front_Model_ProgrammdetailProgrammvarianten
 
 
                 $this->_inputBox[$i] = "<span id='opt_".$i."' value='" . $__programmvarianten[ $i ][ 'id' ] . "'>" . $__programmvarianten[ $i ][ 'preisvariante' ] . "</span>";
+
+
                 $this->_selectBox .= "<option  value='" . $__programmvarianten[ $i ][ 'id' ] . "'>" . $__programmvarianten[ $i ][ 'preisvariante' ] . "</option>\n";
 
                 if($i == 0) {
@@ -133,6 +136,7 @@ class Front_Model_ProgrammdetailProgrammvarianten
                 }
 
                 $this->_preiseProgrammVarianten .= "'" . $__programmvarianten[ $i ][ 'verkaufspreis' ] . "',";
+            $this->_confirmBox[$i] = $__programmvarianten[ $i ][ 'confirm_1' ];
 
         }
 
@@ -155,6 +159,7 @@ class Front_Model_ProgrammdetailProgrammvarianten
             if ($this->_inputBox[$i]!= ""){
                 $programmvarianten[$i]['options'] = $this->_selectBox;
                 $programmvarianten[$i]['inputs'] = $this->_inputBox[$i];
+                $programmvarianten[$i]['confirm'] = $this->_confirmBox[$i];
             }
         }
 
