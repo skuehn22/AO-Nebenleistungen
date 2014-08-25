@@ -100,7 +100,6 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
         $this->_tabelleBuchungsnummer = new Application_Model_DbTable_buchungsnummer();
         /** @var _tabelleRechnungen Application_Model_DbTable_rechnungen */
         $this->_tabelleRechnungen = new Application_Model_DbTable_rechnungen();
-
         /** @var _tabelleHotelbuchung Application_Model_DbTable_hotelbuchung */
         $this->_tabelleHotelbuchung = new Application_Model_DbTable_hotelbuchung();
         /** @var _tabelleProduktbuchung Application_Model_DbTable_produktbuchung */
@@ -111,6 +110,9 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
         $this->_tabellePreise = new Application_Model_DbTable_preise();
         /** @var _tabelleTextbausteine Application_Model_DbTable_textbausteine */
         $this->_tabelleTextbausteine = new Application_Model_DbTable_textbausteine();
+        /** @var _tabelleProgrammbeschreibung Application_Model_DbTable_programmbeschreibung */
+        $this->_tabelleProgrammbeschreibung = new Application_Model_DbTable_programmbeschreibung();
+
 
         /** @var _tabelleProducts Application_Model_DbTable_products */
         $this->_tabelleProducts = new Application_Model_DbTable_products(array( 'db' => 'hotels' ));
@@ -282,7 +284,23 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
             $allePreiseVarianten = $this->_tabellePreise->fetchAll($select)->toArray();
             $allePreiseVarianten[$i]['variantenID'] = $value['tbl_programme_preisvarianten_id'];
             $i++;
+
+
+            $select = $this->_tabelleProgrammbeschreibung->select();
+            $select
+                ->where("programmdetail_id = ".$value['programmdetails_id'])
+                ->where("sprache = 1");
+
+            $rows = $this->_tabelleProgrammbeschreibung->fetchAll($select)->toArray();
+            if(count($rows) <> 1)
+                throw new nook_Exception($this->_error_anzahl_datensaetze_stimmt_nicht);
+
+            $_SESSION['progname'] = $rows[0]['progname'];
         }
+
+
+
+
 
 
         $_SESSION['allePreise'] = $allePreiseVarianten;
