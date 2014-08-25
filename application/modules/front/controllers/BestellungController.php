@@ -417,7 +417,32 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
         $configData = $toolRegistryDaten->steuerungErmittelnDaten()->getKonfigDaten();
         $supportDaten['telefon'] = $configData['telefon'];
 
-        $supportDaten['PreiseASSD'] =$_SESSION['allePreise'];
+        $text = "";
+
+
+        for ($i = 0; $i<count($_SESSION['allePreise']); $i++) {
+            $text .= "<br><br><p><strong>". $_SESSION['allePreise'][$i]['progname']."</strong></p>";
+            $text .= $_SESSION['allePreise'][$i]['varName']."<br>";
+            $ek = number_format($_SESSION['allePreise'][$i]['ek'],2);
+            $vk = number_format($_SESSION['allePreise'][$i]['vk'],2);
+
+            if ($ek == $vk)
+            {
+                $text .= $_SESSION['allePreise'][$i]['anzahl']."x "."Preis inkl. MwSt:";
+                $text .= $vk."€<br>";
+            }
+
+            if ($ek != $vk)
+            {
+                $text .= $_SESSION['allePreise'][$i]['anzahl']."x "."Ticketpreis (0% MwSt): ";
+                $text .= $ek." €<br>";
+                $text .= "VVK (inkl. 19% MwSt:): ";
+                $text .= number_format(($vk-$ek),2)." €<br>";
+            }
+
+        }
+
+        $supportDaten['PreisinfoASSD'] = $text;
 
         return $supportDaten;
     }

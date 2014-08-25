@@ -100,7 +100,10 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
             $rows[0]['werbepreistyp'] = 'pro Gruppe';
 
         $data = array();
-        $data['werbepreis'] = str_replace('.',',',$rows[0]['werbepreis']);
+
+        if ($rows[0]['werbepreistyp']!=""){
+          $data['werbepreis'] = str_replace('.',',',$rows[0]['werbepreis']);
+        }
 
         if($rows[0]['buchungspauschale'] == 2)
             $data['buchungspauschale'] = true;
@@ -108,7 +111,9 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
         $data['mwst'] = $rows[0]['mwst'];
         $data['mwst_ek'] = $rows[0]['mwst_ek'];
         $data['durchlaeuferId'] = $rows[0]['rechnung_durchlaeufer_id'];
-        $data['werbepreistyp'] = $rows[0]['werbepreistyp'];
+        if ($rows[0]['werbepreistyp']!=""){
+          $data['werbepreistyp'] = $rows[0]['werbepreistyp'];
+        }
         $data['freiplatzregel'] = $rows[0]['freiplatzregel'];
         $data['personenzahlregel'] = $rows[0]['personenzahlregel'];
         $data['abfahrtszeit'] = $rows[0]['abfahrtszeit'];

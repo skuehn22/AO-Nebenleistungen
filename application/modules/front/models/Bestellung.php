@@ -112,6 +112,8 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
         $this->_tabelleTextbausteine = new Application_Model_DbTable_textbausteine();
         /** @var _tabelleProgrammbeschreibung Application_Model_DbTable_programmbeschreibung */
         $this->_tabelleProgrammbeschreibung = new Application_Model_DbTable_programmbeschreibung();
+        /** @var _tabelleProgrammbeschreibung Application_Model_DbTable_programmbeschreibung */
+        $this->_tabellePreisebeschreibung = new Application_Model_DbTable_preiseBeschreibung();
 
 
         /** @var _tabelleProducts Application_Model_DbTable_products */
@@ -277,33 +279,39 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
         $select = $this->_tabelleProgrammbuchung->select()->where("buchungsnummer_id = " . $buchungsNummer);
         $allePreise = $this->_tabelleProgrammbuchung->fetchAll($select)->toArray();
 
-        $i=0;
 
-        foreach ($allePreise as $value) {
-            $select = $this->_tabellePreise->select()->where("id = " . $value['tbl_programme_preisvarianten_id']);
+        for ($i = 0; $i<count($allePreise); $i++) {
+
+
+            //Preise holen
+            $select = $this->_tabellePreise->select()->where("id = " .$allePreise[$i]['tbl_programme_preisvarianten_id']);
             $allePreiseVarianten = $this->_tabellePreise->fetchAll($select)->toArray();
-            $allePreiseVarianten[$i]['variantenID'] = $value['tbl_programme_preisvarianten_id'];
-            $i++;
-
+            $allePreise[$i]['ek'] = $allePreiseVarianten[0]['einkaufspreis'];
+            $allePreise[$i]['vk'] = $allePreiseVarianten[0]['verkaufspreis'];
 
             $select = $this->_tabelleProgrammbeschreibung->select();
             $select
-                ->where("programmdetail_id = ".$value['programmdetails_id'])
+                ->where("programmdetail_id = ".$allePreise[$i]['programmdetails_id'])
                 ->where("sprache = 1");
 
+            //Programmname holen
             $rows = $this->_tabelleProgrammbeschreibung->fetchAll($select)->toArray();
-            if(count($rows) <> 1)
-                throw new nook_Exception($this->_error_anzahl_datensaetze_stimmt_nicht);
+            $allePreise[$i]['progname'] = $rows[0]['progname'];
 
-            $_SESSION['progname'] = $rows[0]['progname'];
+
+
+            $select = $this->_tabellePreisebeschreibung->select();
+            $select
+                ->where("preise_id = ".$allePreise[$i]['tbl_programme_preisvarianten_id'])
+                ->where("sprachen_id = 1");
+
+            $rows = $this->_tabellePreisebeschreibung->fetchAll($select)->toArray();
+            $allePreise[$i]['varName'] = $rows[0]['preisvariante'];
+
         }
 
 
-
-
-
-
-        $_SESSION['allePreise'] = $allePreiseVarianten;
+        $_SESSION['allePreise'] = $allePreise;
 
 
         return $this;

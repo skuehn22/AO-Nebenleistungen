@@ -2,7 +2,7 @@
     {if condition="$statusBuchung == 1 or $statusBuchung == 2"}
         <div style="padding-left: 40px;" class="ueberschrift_gruen">
             {if condition="$statusBuchung == 1"}
-                {function="translate('Buchung')"}
+                {function="translate('Buchungsbestätigung / ASSD Informationen')"}
             {elseif condition="$statusBuchung == 2"}
                 {function="translate('Buchungsänderung')"}
             {/if}
@@ -21,32 +21,21 @@
 
 <div class='span-24 block block_unten block_oben'>
     <div  style="padding-left: 40px; float: left;">
-        {if condition="$statusBuchung == 1"}
-            {function="translate('Wir danken Ihnen für Ihre Buchung Nr. ')"}{$support.kompletteBuchungsnummer}<br><br>
-            {function="translate('Ihre Buchungsunterlagen erhalten Sie in Kürze per E-Mail.')"}<P><P>
-            {function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>
-        {elseif condition="$statusBuchung == 2"}
-            {function="translate('Wir danken Ihnen für Ihre Buchungänderung Nr. ')"}{$support.kompletteBuchungsnummer}<br><br>
-            {function="translate('Ihre geänderten Buchungsunterlagen erhalten Sie in Kürze per E-Mail.')"}<P><P>
-            {function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>
-        {else}
-            {function="translate('Wir danken Ihnen für Ihre Stornierung Nr. ')"}{$support.kompletteBuchungsnummer}<br><br>
-            {function="translate('Die Stornierungsbestätigung sowie eine Rechnung über eventuell anfallende Stornierungskoten erhalten Sie in Kürze per E-Mail.')"}<P><P>
-            {function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>
-        {/if}
+        <!--{if condition="$statusBuchung == 1"}-->
+            <!--{function="translate('Wir danken Ihnen für Ihre Buchung Nr. ')"}{$support.kompletteBuchungsnummer}<br><br>-->
+            <!--{function="translate('Ihre Buchungsunterlagen erhalten Sie in Kürze per E-Mail.')"}<P><P>-->
+            <!--{function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>-->
+        <!--{elseif condition="$statusBuchung == 2"}-->
+            <!--{function="translate('Wir danken Ihnen für Ihre Buchungänderung Nr. ')"}{$support.kompletteBuchungsnummer}<br><br>-->
+            <!--{function="translate('Ihre geänderten Buchungsunterlagen erhalten Sie in Kürze per E-Mail.')"}<P><P>-->
+            <!--{function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>-->
+        <!--{else}-->
+            <!--{function="translate('Wir danken Ihnen für Ihre Stornierung Nr. ')"}{$support.kompletteBuchungsnummer}<br><br>-->
+            <!--{function="translate('Die Stornierungsbestätigung sowie eine Rechnung über eventuell anfallende Stornierungskoten erhalten Sie in Kürze per E-Mail.')"}<P><P>-->
+            <!--{function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>-->
+        <!--{/if}-->
 
-        {loop="$support.PreiseASSD"}
-        <br>
-        <strong>Programm-ID: {$value.programmdetails_id}<br></strong>
-        Einkaufspreis: {$value.einkaufspreis}<br>
-        Verkaufspreis: {$value.verkaufspreis}<br>
-        Buchungsgebühr: {$value.buchungsgebbuer}<br><br>
-
-
-        {/loop}
-
-
-
+        {$support.PreisinfoASSD}
     </div>
 </div>
 
