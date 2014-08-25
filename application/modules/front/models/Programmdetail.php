@@ -734,6 +734,8 @@ class Front_Model_Programmdetail extends nook_Model_model
 
         $daten = $db->fetchRow($sql);
 
+
+
         return $daten;
     }
 

@@ -308,10 +308,10 @@
               {if condition="$programmvarianten"}
               <table class="" style="margin-left: 0px; ">
                   <tr>
-                      <td>{function="translate('Anzahl')"}</td>
-                      <td>{function="translate('Variante')"}</td>
-                      <td>{function="translate('Einzelpreis')"}</td>
-                      <td>{function="translate('Preis')"}</td>
+                      <td><strong>{function="translate('Anzahl')"}</strong></td>
+                      <td><strong>{function="translate('Variante')"}</strong></td>
+                      <td><strong>{function="translate('Einzelpreis')"}</strong></td>
+                      <td><strong>{function="translate('Preis')"}</strong></td>
                   </tr>
                   {if condition="$bookingdetails.buchungspauschale == 2"}
                   <tr>
@@ -354,10 +354,11 @@
                       </td>
 
                   </tr>
-                  <tr>
-                      <td></td>
+                  <tr style=" border-style: solid; border-bottom: solid #aaa;" >
+                      <td ></td>
                       <td colspan="4">Info:  {$value.confirm}</td>
                   </tr>
+
                   {/loop}
                   <tr>
                       <td colspan="4">
@@ -413,4 +414,3 @@
     </div>
     <!-- Ende Gesamtblock Programm -->
 
-       
