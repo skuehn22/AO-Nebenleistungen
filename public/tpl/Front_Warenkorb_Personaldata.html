@@ -18,7 +18,7 @@
 
 <div class='span-23 block block_unten block_oben block_gray'>
     <div class="span-4"><b><a href='/front/warenkorb/index/'><< {function="translate('Warenkorb')"}</a></b></div>
-    <div class="span-7 teilueberschrift_gruen prepend-2">{function="translate('Bitte notieren Sie unbedingt ihr Passwort !')"}</div>
+    <!--<div class="span-7 teilueberschrift_gruen prepend-2">{function="translate('Bitte notieren Sie unbedingt ihr Passwort !')"}</div>-->
 </div>
 
 <div class="span-23">&nbsp;</div>
@@ -140,18 +140,18 @@
                     <td><label for="email_repeat">{function="translate('E-Mail wiederholen')"} *: </label></td>
                     <td><input type='text' name='email_repeat' id='email_repeat'  class='validate[required,equals[email]] input span-5' value="{$personalData.email}" autocomplete="off"></td>
                 </tr>
-                <tr>
-                    <td><label for="password">{function="translate('Passwort')"} *: </label></td>
-                    <td><input type='password' name='password' id='password' class='validate[required,minSize[8]] input span-5' autocomplete="off"></td>
-                </tr>
-                <tr>
-                    <td><label for="email_repeat">{function="translate('Passwort wiederholen')"} *: </label></td>
-                    <td><input type='password' name='password_repeat' id='password_repeat'  class='validate[required,equals[password]] input span-5' autocomplete="off"></td>
-                </tr>
-                <tr>
-                    <td><label for="phonenumber">{function="translate('Telefonnummer')"} *: </label></td>
-                    <td><input type='text' name='phonenumber' id='phonenumber' class='validate[required,minSize[2]] input span-5' value="{$personalData.phonenumber}"></td>
-                </tr>
+                <!--<tr>-->
+                    <!--<td><label for="password">{function="translate('Passwort')"} *: </label></td>-->
+                    <!--<td><input type='password' name='password' id='password' class='validate[required,minSize[8]] input span-5' autocomplete="off"></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td><label for="email_repeat">{function="translate('Passwort wiederholen')"} *: </label></td>-->
+                    <!--<td><input type='password' name='password_repeat' id='password_repeat'  class='validate[required,equals[password]] input span-5' autocomplete="off"></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td><label for="phonenumber">{function="translate('Telefonnummer')"} *: </label></td>-->
+                    <!--<td><input type='text' name='phonenumber' id='phonenumber' class='validate[required,minSize[2]] input span-5' value="{$personalData.phonenumber}"></td>-->
+                <!--</tr>-->
                 <tr>
                     <td>&nbsp;</td>
                     <td><input type='submit' class="submit" value="{function="translate('speichern')"}" name='submitPersonaldata' id='personaldata'></td>
@@ -160,7 +160,7 @@
         </form>
     </div>
 </div>
-	
+
 	<div class='span-23 block block_unten'>
 		<div class="span-6"><b><a href='/front/warenkorb/index/'><< {function="translate('Warenkorb')"}</a></b></div>
 		<div class='span-14'></div>

@@ -76,7 +76,7 @@
                 <label for="email">{function="translate('E-Mail')"} *: </label>
             </td>
             <td colspan="2">
-                <input type='text' name='email' id='email' class='validate[required,custom[email]] input span-5' value="{$personalData.email}" autocomplete="off">
+                <input type='text' name='email' id='email' class='input span-5' value="{$personalData.email}" autocomplete="off">
                 <div id='mail_info' name='mail_info'></div>
             </td>
         </tr>
@@ -85,31 +85,15 @@
                 <label for="email_repeat">{function="translate('E-Mail wiederholen')"} *: </label>
             </td>
             <td colspan="2">
-                <input type='text' name='email_repeat' id='email_repeat' class='validate[required,equals[email],custom[email]] input span-5' value="{$personalData.email}" autocomplete="off">
+                <input type='text' name='email_repeat' id='email_repeat' class='input span-5' value="{$personalData.email}" autocomplete="off">
             </td>
         </tr>
     {/if}
-    <tr>
-        <td>
-            <label for="password">{function="translate('Passwort')"} *: </label>
-        </td>
-        <td>
-            <input type='password' name='password' id='password' class='validate[required,minSize[8]] input span-5' autocomplete="off">
-        </td>
-        <td rowspan="3" class="span-8">
-            <div style="width: 240px;">
-                {function="translate('Bitte geben Sie hier ein Passwort Ihrer Wahl ein. Sie können sich mit Ihrer E-Mail und dem Passwort später wieder als Kunde bei uns einloggen.')"}
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <label for="password_repeat">{function="translate('Passwort wiederholen')"} *: </label>
-        </td>
-        <td>
-            <input type='password' name='password_repeat' id='password_repeat' class='validate[required,equals[password],minSize[8]] input span-5' autocomplete="off">
-        </td>
-    </tr>
+
+
+
+
+
     <tr>
         <td>
             <label for="phonenumber">{function="translate('Telefonnummer')"}: </label>
@@ -133,6 +117,27 @@
         <td>&nbsp;</td>
         <td colspan="2">
             <input type='submit' class="submit" value="{function=" translate('speichern')"}" name='submitPersonaldata' id='personaldata'><span id="informationOfflinekunde"></span>
+        </td>
+    </tr>
+    <tr style="visibility: hidden;">
+        <td>
+            <label for="password">{function="translate('Passwort')"} *: </label>
+        </td>
+        <td>
+            <input type='password' value="abcdefgh" name='password' id='password' class='validate[required,minSize[8]] input span-5' autocomplete="off">
+        </td>
+        <td rowspan="3" class="span-8">
+            <div style="width: 240px;">
+                {function="translate('Bitte geben Sie hier ein Passwort Ihrer Wahl ein. Sie können sich mit Ihrer E-Mail und dem Passwort später wieder als Kunde bei uns einloggen.')"}
+            </div>
+        </td>
+    </tr>
+    <tr style="visibility: hidden;">
+        <td>
+            <label for="password_repeat">{function="translate('Passwort wiederholen')"} *: </label>
+        </td>
+        <td>
+            <input type='password' value="abcdefgh" name='password_repeat' id='password_repeat' class='validate[required,equals[password],minSize[8]] input span-5' autocomplete="off">
         </td>
     </tr>
 </table>

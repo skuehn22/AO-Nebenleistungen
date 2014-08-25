@@ -69,6 +69,8 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
 
 
 
+
+
             // verändert die Anzahl der verfügbaren Zimmer, Status 'tbl_xml_buchung'
             if (($model_kundendatenUndBuchungsdaten->getCountDatenHotelbuchungen() > 0) and empty($notschalter['hotelbuchung'])){
                 $this->veraendenDerAnzahlVerfuegbareZimmer($model_kundendatenUndBuchungsdaten);
@@ -207,6 +209,9 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
             Zend_Session::regenerateId();
 
             $this->view->content = $raintpl->draw("Front_Bestellung_Index", true);
+
+            $model = new Front_Model_Logout();
+            $model->abmelden();
         }
         catch (Exception $e){
             $e = nook_ExceptionRegistration::registerException($e, 1, $this->realParams, $this->requestUrl);

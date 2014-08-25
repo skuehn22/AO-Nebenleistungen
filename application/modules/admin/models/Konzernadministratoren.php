@@ -64,6 +64,10 @@ class Admin_Model_Konzernadministratoren extends nook_Model_model{
     public function checkDoubleMailAdress($__datenKonzernVerantwortlicher){
         $sql = "select count(id) as anzahl from tbl_adressen where email = '".$__datenKonzernVerantwortlicher['email']."'";
         $anzahl = $this->_db_groups->fetchOne($sql);
+
+        //25.08.2014 S.Kuehn
+        //Doppelte Mails sind nun erlaubt
+        $anzahl = 0;
         if($anzahl > 0){
 
             $errors[0]['id'] = 'email';

@@ -1028,7 +1028,7 @@ $raintpl->assign('shoppingCartUebernachtungNested', $shoppingCartHotelNested);
             if (array_key_exists('submitPersonaldata', $params)) {
 
                 // Kontrolle ob Mailadresse bereits vorhanden
-                $isDoubleEmail = $model2->controlIfEmailIsDouble($params['email']);
+                //$isDoubleEmail = $model2->controlIfEmailIsDouble($params['email']);
                 // wenn Neukunde
                 if (empty($isDoubleEmail)) {
                     $this->_speichernNeukunde($params, $model2, $modelSuperuser);
