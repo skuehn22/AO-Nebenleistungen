@@ -114,6 +114,8 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
         $this->_tabelleProgrammbeschreibung = new Application_Model_DbTable_programmbeschreibung();
         /** @var _tabelleProgrammbeschreibung Application_Model_DbTable_programmbeschreibung */
         $this->_tabellePreisebeschreibung = new Application_Model_DbTable_preiseBeschreibung();
+        /** @var _tabelleProgrammbeschreibung Application_Model_DbTable_programmbeschreibung */
+        $this->_tabelleProgrammdetails = new Application_Model_DbTable_programmedetails();
 
 
         /** @var _tabelleProducts Application_Model_DbTable_products */
@@ -299,7 +301,14 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
             $allePreise[$i]['progname'] = $rows[0]['progname'];
 
 
+            //MwST abolen
+            $select = $this->_tabelleProgrammdetails->select()->where("id = " . $allePreise[$i]['programmdetails_id']);
+            $MwSt = $this->_tabelleProgrammdetails->fetchAll($select)->toArray();
+            $allePreise[$i]['mwst_ek'] = $MwSt[0]['mwst_ek'];
+            $allePreise[$i]['mwst_vk'] = $MwSt[0]['mwst'];
 
+
+            //Variantennamen abholen
             $select = $this->_tabellePreisebeschreibung->select();
             $select
                 ->where("preise_id = ".$allePreise[$i]['tbl_programme_preisvarianten_id'])

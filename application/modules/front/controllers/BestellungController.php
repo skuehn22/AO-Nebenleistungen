@@ -417,30 +417,47 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
         $configData = $toolRegistryDaten->steuerungErmittelnDaten()->getKonfigDaten();
         $supportDaten['telefon'] = $configData['telefon'];
 
-        $text = "";
+        $text = "<table style='border:1px; width: 700px;'>";
+        $text .= "<tr>
+                        <td style='padding-right: 8px;'><strong>Programmname</strong></td>
+                        <td style='padding-right: 8px;'><strong>Anzahl</strong></td>
+                        <td style='padding-right: 8px;'><strong>Ticketname</strong></td>
+                        <td style='padding-right: 8px;'><strong>Ticketpreis</strong></td>
+                        <td style='padding-right: 8px;'><strong>VVK</strong></td>
+                     </tr>";
 
 
         for ($i = 0; $i<count($_SESSION['allePreise']); $i++) {
-            $text .= "<br><br><p><strong>". $_SESSION['allePreise'][$i]['progname']."</strong></p>";
-            $text .= $_SESSION['allePreise'][$i]['varName']."<br>";
+
+
+            $text .= "<tr>
+                        <td>".$_SESSION['allePreise'][$i]['progname']."</td>
+                        <td>".$_SESSION['allePreise'][$i]['anzahl']."</td>
+                        <td>".$_SESSION['allePreise'][$i]['varName']."</td>
+                    ";
+
+            $mwst_ek = number_format($_SESSION['allePreise'][$i]['mwst_ek'],2);
+            $mwst_vk = number_format($_SESSION['allePreise'][$i]['mwst_vk'],2);
             $ek = number_format($_SESSION['allePreise'][$i]['ek'],2);
             $vk = number_format($_SESSION['allePreise'][$i]['vk'],2);
 
-            if ($ek == $vk)
+            if ($mwst_ek == $mwst_vk)
             {
-                $text .= $_SESSION['allePreise'][$i]['anzahl']."x "."Preis inkl. MwSt:";
-                $text .= $vk."€<br>";
+                $text .= "<td>".$vk."€ (inkl. ".($mwst_ek*100)."% Mwst)</td>";
+                $text .= "<td></td>";
             }
 
-            if ($ek != $vk)
+            if ($mwst_ek != $mwst_vk)
             {
-                $text .= $_SESSION['allePreise'][$i]['anzahl']."x "."Ticketpreis (0% MwSt): ";
-                $text .= $ek." €<br>";
-                $text .= "VVK (inkl. 19% MwSt:): ";
-                $text .= number_format(($vk-$ek),2)." €<br>";
+                $text .= "<td>".$ek."€ (inkl. 0% Mwst</td>";
+                $text .= "<td>".number_format(($vk-$ek),2)." € (inkl. ".($mwst_ek*100)."% Mwst)</td>";
             }
+
+            $text .= "</tr>";
 
         }
+
+        $text .= "</table>";
 
         $supportDaten['PreisinfoASSD'] = $text;
 
