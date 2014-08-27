@@ -133,7 +133,7 @@ $(document).ready(function() {
                     position: "absolute",
                     top: position.top + 10 + "px",
                     left: position.left + 10 + "px",
-                    color: '#76b82a'
+                    color: '#e26902'
                 }).show();
             }
             else{

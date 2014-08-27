@@ -195,7 +195,7 @@ dl.horizontal dd {
     }
 
 .fotoStadt{
-   color: #76B729;
+   color: #e26902;
    font-size: 14px;
    font-weight: bolder;
    padding-top: 5px;
@@ -223,7 +223,7 @@ dl.horizontal dd {
 /** Eingabefelder Kunde **/
 .input_action {
 	background: #f2f2f2 url(/img/input-bg.png) repeat-x;
-	border: 1px solid #76B729;
+	border: 1px solid #e26902;
 	color: black;
 	font: 12px Arial,Helvetica,sans-serif;
 	height: 18px;
