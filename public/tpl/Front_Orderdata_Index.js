@@ -16,31 +16,10 @@ function vormerken(){
 // kostenpflichtig buchen
 function buchenAgbAnzeigen()
 {
-    $.ajax({
-        url: "/front/Agb/fenster/",
-        type: "POST",
-        success: function (response)
-        {
-            var mask = $("#mask");
-
-            var styles = {
-                padding: '10px',
-                width: '1000px',
-                height: '700px',
-                overflow: 'scroll',
-                backgroundColor: '#fff'
-            };
-
-            mask.css(styles);
-            mask.html(response);
-
-            var modalStyle = {
-                close: false
-            };
-
-            mask.modal(modalStyle);
-        }
-    });
+    var element = document.getElementById("formOrderData");
+    var formOrderData = $(element);
+    formOrderData.attr('action', "/front/orderdata/edit/status/3/agb/agb");
+    formOrderData.submit();
 
     return;
 }

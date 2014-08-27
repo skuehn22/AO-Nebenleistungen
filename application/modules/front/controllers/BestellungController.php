@@ -417,7 +417,12 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
         $configData = $toolRegistryDaten->steuerungErmittelnDaten()->getKonfigDaten();
         $supportDaten['telefon'] = $configData['telefon'];
 
-        $text = "<table style='border:1px; width: 700px;'>";
+        $text = "ASSD-Buchungsnummer: ".$_SESSION['kundeninfo']['assd_nummer'];
+        $text .= "<br>Gruppenname: ".$_SESSION['kundeninfo']['gruppenname'];
+        $text .= "<br>Zusatzhinweis: ".$_SESSION['kundeninfo']['hinweis'];
+        $text .= "<br>Mitarbeiter: ".$_SESSION['kundeninfo']['mitarbeiternummer'];
+        $text .= "<br><br>";
+        $text .= "<table style='border:1px; width: 700px;'>";
         $text .= "<tr>
                         <td style='padding-right: 8px;'><strong>Programmname</strong></td>
                         <td style='padding-right: 8px;'><strong>Anzahl</strong></td>
@@ -438,18 +443,18 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
 
             $mwst_ek = number_format($_SESSION['allePreise'][$i]['mwst_ek'],2);
             $mwst_vk = number_format($_SESSION['allePreise'][$i]['mwst_vk'],2);
-            $ek = number_format($_SESSION['allePreise'][$i]['ek'],2);
-            $vk = number_format($_SESSION['allePreise'][$i]['vk'],2);
+            $ek = (number_format($_SESSION['allePreise'][$i]['ek'],2)*$_SESSION['allePreise'][$i]['anzahl']);
+            $vk = (number_format($_SESSION['allePreise'][$i]['vk'],2)*$_SESSION['allePreise'][$i]['anzahl']);
 
             if ($mwst_ek == $mwst_vk)
             {
-                $text .= "<td>".$vk."€ (inkl. ".($mwst_ek*100)."% Mwst)</td>";
+                $text .= "<td>".number_format($vk,2)." € (inkl. ".($mwst_ek*100)."% Mwst)</td>";
                 $text .= "<td></td>";
             }
 
             if ($mwst_ek != $mwst_vk)
             {
-                $text .= "<td>".$ek."€ (inkl. 0% Mwst</td>";
+                $text .= "<td>".number_format($ek,2)." € (inkl. 0% Mwst)</td>";
                 $text .= "<td>".number_format(($vk-$ek),2)." € (inkl. ".($mwst_ek*100)."% Mwst)</td>";
             }
 

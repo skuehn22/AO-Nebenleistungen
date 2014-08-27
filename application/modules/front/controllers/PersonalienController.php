@@ -79,7 +79,7 @@ class Front_PersonalienController extends Zend_Controller_Action implements nook
 
             $rolleDesBenutzers = nook_ToolBenutzerrolle::getRolleDesBenutzers();
             if($rolleDesBenutzers > $this->condition_benutzerrolle_neuling)
-                $this->_redirect("/front/orderdata/index/");
+                $this->_redirect("/front/orderdata/edit/status/3/agb/agb");
 
             $raintpl = raintpl_rainhelp::getRainTpl();
 
@@ -153,7 +153,7 @@ class Front_PersonalienController extends Zend_Controller_Action implements nook
             // speichern der geänderten Daten
             $this->save($params);
 
-            $this->_redirect("/front/orderdata/index/");
+            $this->_redirect("/front/orderdata/edit/status/3/agb/agb");
         }
         catch (Exception $e) {
             $e = nook_ExceptionRegistration::registerException($e, 1, $this->realParams, $this->requestUrl);

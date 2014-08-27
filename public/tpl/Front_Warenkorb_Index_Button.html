@@ -26,7 +26,7 @@
                     <!-- wenn Benutzer angemeldet und Rolle mindestens 'Kunde' == 3 -->
                     {if condition="$rolleId >= 3"}
                         <td style="padding-right: 0px;">
-                            <form class="form" action="/front/warenkorb/orderdata-warenkorb/" method="post">
+                            <form class="form" action="/front/orderdata/edit/status/3/agb/agb" method="post">
                                 {if condition="$flagBestandsbuchung"}
                                     <input type="submit" class="warenkorb_buchen" value="{function=" translate('Buchung anpassen')"}">
                                 {else}

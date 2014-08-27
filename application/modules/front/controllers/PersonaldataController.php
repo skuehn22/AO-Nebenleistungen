@@ -168,7 +168,7 @@ class Front_PersonaldataController extends Zend_Controller_Action
                 }
 
                 // umlenken auf Bestandsliste
-                $this->_redirect('/front/warenkorb/orderdata-warenkorb/');
+                $this->_redirect('/front/orderdata/edit/status/3/agb/agb');
             } // wenn keine Kundendaten vorhanden
             else {
                 $this->_redirect('/front/personaldata/index/');

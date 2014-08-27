@@ -89,11 +89,6 @@
             </td>
         </tr>
     {/if}
-
-
-
-
-
     <tr>
         <td>
             <label for="phonenumber">{function="translate('Telefonnummer')"}: </label>
@@ -103,22 +98,76 @@
         </td>
     </tr>
     <tr>
+    <td>
+        <label for="schriftwechsel">{function="translate('Schriftwechselsprache')"} *: </label>
+    </td>
+    <td colspan="2">
+        <select name="schriftwechsel" id='schriftwechsel' size="1" class='input span-5'>
+            <option value="1" selected>{function="translate('deutsch')"}</option>
+            <option value="2">{function="translate('englisch')"}</option>
+        </select>
+    </td>
+</tr>
+    <tr style="height:35px;">
         <td>
-            <label for="schriftwechsel">{function="translate('Schriftwechselsprache')"} *: </label>
         </td>
         <td colspan="2">
-            <select name="schriftwechsel" id='schriftwechsel' size="1" class='input span-5'>
-                <option value="1" selected>{function="translate('deutsch')"}</option>
-                <option value="2">{function="translate('englisch')"}</option>
-            </select>
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td>
+            <label for="assd_nummer">{function="translate('ASSD Buchungsnummer')"} *: </label>
+        </td>
+        <td colspan="2">
+            <input type='text' name='assd_nummer' id='assd_nummer' class='validate[required,minSize[4]] input span-5'>
         </td>
     </tr>
     <tr>
-        <td>&nbsp;</td>
+        <td>
+            <label for="gruppenname">{function="translate('Gruppename')"} : </label>
+        </td>
         <td colspan="2">
-            <input type='submit' class="submit" value="{function=" translate('speichern')"}" name='submitPersonaldata' id='personaldata'><span id="informationOfflinekunde"></span>
+            <input type='text' name='gruppenname' id='gruppenname' class='input span-5'>
         </td>
     </tr>
+    <tr>
+        <td>
+            <label for="hinweis">{function="translate('Zusatzhinweis')"}: </label>
+        </td>
+        <td colspan="2">
+            <input type='text' name='hinweis' id='hinweis' class='input span-5'>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="mitarbeiternummer">{function="translate('Mitarbeiternummer')"} *: </label>
+        </td>
+        <td colspan="2">
+            <select name="mitarbeiternummer" id='mitarbeiternummer' size="1" class='validate[required] input span-5'>
+                <option value="" selected></option>
+                <option value="0123456">0123456</option>
+                <option value="7891011">7891011</option>
+            </select>
+        </td>
+    </tr>
+
+
+
+
+
+    <tr>
+        <td>&nbsp;</td>
+        <td colspan="2">
+            <input type='submit' class="submit" value="{function=" translate('speichern und buchen!')"}" name='submitPersonaldata' id='personaldata'><span id="informationOfflinekunde"></span>
+        </td>
+    </tr>
+
+
+
     <tr style="visibility: hidden;">
         <td>
             <label for="password">{function="translate('Passwort')"} *: </label>

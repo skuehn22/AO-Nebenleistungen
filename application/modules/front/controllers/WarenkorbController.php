@@ -1033,7 +1033,7 @@ $raintpl->assign('shoppingCartUebernachtungNested', $shoppingCartHotelNested);
                 if (empty($isDoubleEmail)) {
                     $this->_speichernNeukunde($params, $model2, $modelSuperuser);
 
-                    $this->_redirect("/front/warenkorb/orderdata-warenkorb/");
+                    $this->_redirect("/front/orderdata/edit/status/3/agb/agb");
                 }
                 // Reaktion wenn Mailadresse schon vorhanden
                 else {

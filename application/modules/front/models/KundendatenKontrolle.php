@@ -46,7 +46,11 @@ class Front_Model_KundendatenKontrolle
             'city' => $this->validElement($params['city']),
             'password' => $this->validElement($params['password']),
             'phonenumber' => $params['phonenumber'],
-            'schriftwechsel' => $params['schriftwechsel']
+            'schriftwechsel' => $params['schriftwechsel'],
+            'assd_nummer' => $params['assd_nummer'],
+            'gruppenname' => $params['gruppenname'],
+            'hinweis' => $params['hinweis'],
+            'mitarbeiternummer' => $params['mitarbeiternummer']
         );
 
         $filter = array(
@@ -73,8 +77,6 @@ class Front_Model_KundendatenKontrolle
 //        if (strlen($element) < $laenge) {
 //            throw new nook_Exception($this->error_daten_unvollstaendig);
 //        }
-
-        $test = 123;
 
         return $element;
     }

@@ -493,6 +493,7 @@ class Front_Model_Bestellung extends nook_ToolModel implements arrayaccess
             throw new nook_Exception($this->_error_keine_kundendaten_vorhanden);
 
         $this->_kundenDaten = $kundenDaten[0];
+        $_SESSION['kundeninfo'] = $kundenDaten[0];
 
         return $this;
     }
