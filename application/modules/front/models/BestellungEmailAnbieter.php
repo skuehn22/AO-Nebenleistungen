@@ -597,12 +597,9 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
         $text[] = "";
         $text[] = "Sehr geehrter Programmanbieter,";
 
-        $text[] = "";
-        $text[] = "";
-
         // Programmbuchung
-        $text[] = "ändern Sie die bestehende Buchung Nr. ".$this->registrierungsNummer." bitte wie folgt:";
-        $text[] = "";
+        //$text[] = "ändern Sie die bestehende Buchung Nr. ".$this->registrierungsNummer." bitte wie folgt:";
+        //$text[] = "";
 
         // erstellen Text der Programmbuchungen
         $text = $this->blockProgramm($text, $datenMailProgrammanbieter);
@@ -642,9 +639,6 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
 
         // Allgemein
         $text[] = "Sehr geehrter Programmpartner,";
-
-        $text[] = "";
-        $text[] = "";
 
         // Programmbuchung
         //$text[] = "folgende Programmleistungen wurden gebucht:";
@@ -712,69 +706,83 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
     {
         for($i=0; $i < count($datenMailProgrammanbieter['programme']); $i++){
 
-            // einzelnes gebuchtes Programm
-            $gebuchtesProgramm = $datenMailProgrammanbieter['programme'][$i];
+            if($datenMailProgrammanbieter['programme'][$i]['programmbeschreibung']['programmdetail_id']==$datenMailProgrammanbieter['programme'][$i-1]['programmbeschreibung']['programmdetail_id'] AND $datenMailProgrammanbieter['programme'][$i]['buchungsdaten']['datum']==$datenMailProgrammanbieter['programme'][$i-1]['buchungsdaten']['datum']){
 
-            // Ermittlung der Programmsprache
-            $toolProgrammsprache = new nook_ToolProgrammsprache();
-            $programmsprache = $toolProgrammsprache
-               ->setProgrammsprache($gebuchtesProgramm['buchungsdaten']['sprache'])
-               ->setAnzeigespracheId($this->_condition_sprache_deutsch)
-               ->steuerungErmittlungProgrammsprache()
-               ->getBezeichnungProgrammsprache();
-
-            // Ermittlung Bezeichnung Wochentag
-            $toolWochentageNamen = new nook_ToolWochentageNamen();
-            $bezeichnungWochentag = $toolWochentageNamen
-                ->setAnzeigespracheId($this->_condition_sprache_deutsch)
-                ->setDatum($gebuchtesProgramm['buchungsdaten']['datum'])
-                ->setAnzeigeNamensTyp($this->_condition_wochentage_bezeichnung_langform)
-                ->steuerungErmittelnWochentag()
-                ->getBezeichnungWochentag();
-
-            $test = 123;
-
-            // Kennzeichnung Status des Programm
-            if($gebuchtesProgramm['buchungsdaten']['zaehler'] == 1)
-                $text[] = $this->condition_neue_buchung;
-            elseif( ($gebuchtesProgramm['buchungsdaten']['zaehler'] > 1) and ($gebuchtesProgramm['buchungsdaten']['anzahl'] > 0) )
-                $text[] = $this->condition_veraenderte_buchung;
-            elseif(($gebuchtesProgramm['buchungsdaten']['zaehler'] > 1) and ($gebuchtesProgramm['buchungsdaten']['anzahl'] == 0))
-                $text[] = $this->condition_stornierung_buchung;
+                // einzelnes gebuchtes Programm
+                $gebuchtesProgramm = $datenMailProgrammanbieter['programme'][$i];+// Preisvariante
+                $text[] = $gebuchtesProgramm['buchungsdaten']['anzahl'] . " * " . $gebuchtesProgramm['programmvariante']['preisvariante_de'];
 
 
-            // Umwandlung Datum
-            if( ($gebuchtesProgramm['buchungsdaten']['datum'] == '0000-00-00') or (empty($gebuchtesProgramm['buchungsdaten']['datum'])) )
-                $datum = false;
-            else
-                $datum = nook_ToolDatum::wandleDatumEnglischInDeutsch($gebuchtesProgramm['buchungsdaten']['datum']);
 
-            // Zeit ohne Sekunden
-            if( ($gebuchtesProgramm['buchungsdaten']['zeit'] == '00:00:00') or (empty($gebuchtesProgramm['buchungsdaten']['zeit'])) )
-                $zeit = false;
-            else
-                $zeit = nook_ToolZeiten::kappenZeit($gebuchtesProgramm['buchungsdaten']['zeit'], 2);
+            }else{// einzelnes gebuchtes Programm
+                $gebuchtesProgramm = $datenMailProgrammanbieter['programme'][$i];
 
-            // Datum mit Wochentag und Zeit ohne Sekunden
-            $programmNameMitDatumUndZeit = $gebuchtesProgramm['programmbeschreibung']['progname'];
+                // Ermittlung der Programmsprache
+                $toolProgrammsprache = new nook_ToolProgrammsprache();
+                $programmsprache = $toolProgrammsprache
+                    ->setProgrammsprache($gebuchtesProgramm['buchungsdaten']['sprache'])
+                    ->setAnzeigespracheId($this->_condition_sprache_deutsch)
+                    ->steuerungErmittlungProgrammsprache()
+                    ->getBezeichnungProgrammsprache();
 
-            if(!empty($datum))
-                $programmNameMitDatumUndZeit .= " am " .$bezeichnungWochentag.", ". $datum;
+                // Ermittlung Bezeichnung Wochentag
+                $toolWochentageNamen = new nook_ToolWochentageNamen();
+                $bezeichnungWochentag = $toolWochentageNamen
+                    ->setAnzeigespracheId($this->_condition_sprache_deutsch)
+                    ->setDatum($gebuchtesProgramm['buchungsdaten']['datum'])
+                    ->setAnzeigeNamensTyp($this->_condition_wochentage_bezeichnung_langform)
+                    ->steuerungErmittelnWochentag()
+                    ->getBezeichnungWochentag();
 
-            if(!empty($zeit))
-                $programmNameMitDatumUndZeit .= " um ".$zeit." Uhr";
+                // Kennzeichnung Status des Programm
+                if($gebuchtesProgramm['buchungsdaten']['zaehler'] == 1)
+                    $text[] = $this->condition_neue_buchung;
+                elseif( ($gebuchtesProgramm['buchungsdaten']['zaehler'] > 1) and ($gebuchtesProgramm['buchungsdaten']['anzahl'] > 0) )
+                    $text[] = $this->condition_veraenderte_buchung;
+                elseif(($gebuchtesProgramm['buchungsdaten']['zaehler'] > 1) and ($gebuchtesProgramm['buchungsdaten']['anzahl'] == 0))
+                    $text[] = $this->condition_stornierung_buchung;
 
-            $text[] = $programmNameMitDatumUndZeit;
 
-            // Preisvariante
-            $text[] = $gebuchtesProgramm['buchungsdaten']['anzahl'] . " * " . $gebuchtesProgramm['programmvariante']['preisvariante_de'];
+                // Umwandlung Datum
+                if( ($gebuchtesProgramm['buchungsdaten']['datum'] == '0000-00-00') or (empty($gebuchtesProgramm['buchungsdaten']['datum'])) )
+                    $datum = false;
+                else
+                    $datum = nook_ToolDatum::wandleDatumEnglischInDeutsch($gebuchtesProgramm['buchungsdaten']['datum']);
 
-            // Programmsprache
-            if(!empty($programmsprache))
-                $text[] = 'gewählte Sprache des Programmes: '.$programmsprache;
+                // Zeit ohne Sekunden
+                if( ($gebuchtesProgramm['buchungsdaten']['zeit'] == '00:00:00') or (empty($gebuchtesProgramm['buchungsdaten']['zeit'])) )
+                    $zeit = false;
+                else
+                    $zeit = nook_ToolZeiten::kappenZeit($gebuchtesProgramm['buchungsdaten']['zeit'], 2);
 
-            // Leerzeile
-            $text[] = "";
+                // Datum mit Wochentag und Zeit ohne Sekunden
+                $programmNameMitDatumUndZeit = $gebuchtesProgramm['programmbeschreibung']['progname'];
+
+                if(!empty($datum))
+                    $programmNameMitDatumUndZeit .= " am " .$bezeichnungWochentag.", ". $datum;
+
+                if(!empty($zeit))
+                    $programmNameMitDatumUndZeit .= " um ".$zeit." Uhr";
+
+                $text[] = $programmNameMitDatumUndZeit;
+
+                // Preisvariante
+                $text[] = $gebuchtesProgramm['buchungsdaten']['anzahl'] . " * " . $gebuchtesProgramm['programmvariante']['preisvariante_de'];
+
+                // Programmsprache
+                if(!empty($programmsprache))
+                    $text[] = 'gewählte Sprache des Programmes: '.$programmsprache;
+
+                // Leerzeile
+                $text[] = "";
+
+
+
+
+            }
+
+
+
         }
 
         return $text;

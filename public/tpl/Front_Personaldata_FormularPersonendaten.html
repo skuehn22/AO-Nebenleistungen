@@ -91,10 +91,10 @@
     {/if}
     <tr>
         <td>
-            <label for="phonenumber">{function="translate('Telefonnummer')"}: </label>
+            <label for="phonenumber">{function="translate('Telefonnummer')"}*: </label>
         </td>
         <td>
-            <input type='text' name='phonenumber' id='phonenumber' class='validate[minSize[3],custom[onlyNumberSp]] input span-5' value="{$personalData.phonenumber}">
+            <input type='text' name='phonenumber' id='phonenumber' class='validate[required,minSize[3],custom[onlyNumberSp]] input span-5' value="{$personalData.phonenumber}">
         </td>
     </tr>
     <tr>
