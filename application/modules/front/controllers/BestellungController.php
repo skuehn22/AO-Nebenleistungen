@@ -422,8 +422,8 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
                         <td style='padding-right: 8px;'><strong>Programmname</strong></td>
                         <td style='padding-right: 8px;'><strong>Anzahl</strong></td>
                         <td style='padding-right: 8px;'><strong>Ticketname</strong></td>
-                        <td style='padding-right: 8px;'><strong>Ticketpreis</strong></td>
-                        <td style='padding-right: 8px;'><strong>VVK</strong></td>
+                        <td style='padding-right: 8px;'><strong>Programmpreis</strong></td>
+                        <td style='padding-right: 8px;'><strong>VVK Gebühr</strong></td>
                      </tr>";
 
 

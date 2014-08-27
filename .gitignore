@@ -38,7 +38,10 @@ Icon
 .Trashes
 
 /application/configs/application.ini
+application/configs/static.ini
 application/configs/application.ini
+/application/configs/static.ini
+
 
 public/tmp/tpl/*
 public/tmp/tpl/**
@@ -52,6 +55,7 @@ public/tmp/tpl/**
 .idea/workspace.xml
 idea/workspace.xml
 /pdf/
+
 
 
 
