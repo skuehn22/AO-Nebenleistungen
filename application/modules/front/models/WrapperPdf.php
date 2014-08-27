@@ -88,7 +88,7 @@ class Front_Model_WrapperPdf
     protected $currentMarginTop = 20;
     protected $currentMarginBottom = 50;
 
-    protected $logoImage = "vorlagen/logo.gif";
+    protected $logoImage = "vorlagen/logo.png";
 
     // Cache images so that if they are loaded more than once, we re-use them
     protected $imageCache = array();
