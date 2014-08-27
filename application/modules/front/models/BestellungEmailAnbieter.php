@@ -641,15 +641,13 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
         $text = array();
 
         // Allgemein
-        $text[] = "Buchung! ".$this->registrierungsNummer."-".$this->zaehler;
-        $text[] = "";
-        $text[] = "Sehr geehrter Programmanbieter,";
+        $text[] = "Sehr geehrter Programmpartner,";
 
         $text[] = "";
         $text[] = "";
 
         // Programmbuchung
-        $text[] = "folgende Programmleistungen wurden gebucht:";
+        //$text[] = "folgende Programmleistungen wurden gebucht:";
         $text[] = "";
 
         // erstellen Text der Programmbuchungen
@@ -688,10 +686,10 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
 
         $text[] = "Kundendetails";
         $text[] = "";
-        $text[] = "*** Personendaten ***";
-        $text[] = $personendaten['company'];
-        $text[] = $personendaten['title'] . " " . $personendaten['firstname'] . " " . $personendaten['lastname'];
-        $text[] = "";
+        $text[] = "ASSD-Buchungsnummer: ".$personendaten['assd_nummer'];
+        $text[] = "Gruppennname: ".$personendaten['gruppenname'];
+        $text[] = "Ansprechpartner:  ".$personendaten['title'] . " " . $personendaten['firstname'] . " " . $personendaten['lastname'];
+        $text[] = "Telefon: ".$personendaten['phonenumber'];
         $text[] = "";
 
         return $text;

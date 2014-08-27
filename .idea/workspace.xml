@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,15 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Front_Personalien_Index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personalien_Index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="prev0~.htm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/prev0~.htm">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestellungEmailAnbieter.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BestellungEmailAnbieter.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="70" selection-start="1602" selection-end="1602" vertical-scroll-proportion="-7.1538463" vertical-offset="460" max-vertical-offset="14059">
+            <state line="696" column="0" selection-start="22989" selection-end="22989" vertical-scroll-proportion="0.6516854" vertical-offset="11484" max-vertical-offset="14025">
               <folding />
             </state>
           </provider>
@@ -88,10 +79,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="392" column="54" selection-start="11992" selection-end="12017" vertical-scroll-proportion="0.63261294" vertical-offset="6342" max-vertical-offset="7922">
+            <state line="390" column="30" selection-start="11927" selection-end="11927" vertical-scroll-proportion="-18.647058" vertical-offset="5679" max-vertical-offset="7922">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bestellung.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/models/Bestellung.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="487" column="41" selection-start="15649" selection-end="15669" vertical-scroll-proportion="-3.3137255" vertical-offset="8110" max-vertical-offset="9605">
               <folding />
             </state>
           </provider>
@@ -189,10 +189,10 @@
         <option value="$PROJECT_DIR$/application/layouts/scripts/default.phtml" />
         <option value="$PROJECT_DIR$/application/layouts/austria/front.phtml" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
-        <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungPdfDokument.php" />
         <option value="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
       </list>
     </option>
   </component>
@@ -2449,11 +2449,21 @@
           <line>407</line>
           <option name="timeStamp" value="1332" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
+          <line>688</line>
+          <option name="timeStamp" value="1333" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
+          <line>686</line>
+          <option name="timeStamp" value="1335" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1333" />
+      <option name="time" value="1336" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -2491,7 +2501,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Warenkorb_Personaldata.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="98" selection-start="9238" selection-end="9247" vertical-scroll-proportion="-4.9215684" vertical-offset="2435" max-vertical-offset="3043" />
+        <state line="158" column="98" selection-start="9238" selection-end="9247" vertical-scroll-proportion="-4.9215684" vertical-offset="2435" max-vertical-offset="3043">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index.html">
@@ -2705,13 +2717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/Bestellung.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="495" column="50" selection-start="15979" selection-end="15979" vertical-scroll-proportion="0.0" vertical-offset="3163" max-vertical-offset="9605">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/KundendatenKontrolle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="50" selection-start="2076" selection-end="2076" vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="1530">
@@ -2768,20 +2773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="70" selection-start="1602" selection-end="1602" vertical-scroll-proportion="-7.1538463" vertical-offset="460" max-vertical-offset="14059">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungPdfDokument.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="48" selection-start="986" selection-end="986" vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="3366">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="177" column="0" selection-start="6646" selection-end="6646" vertical-scroll-proportion="-8.461538" vertical-offset="2789" max-vertical-offset="17697">
@@ -2798,9 +2789,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/Bestellung.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="487" column="41" selection-start="15649" selection-end="15669" vertical-scroll-proportion="-3.3137255" vertical-offset="8110" max-vertical-offset="9605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="54" selection-start="11992" selection-end="12017" vertical-scroll-proportion="0.63261294" vertical-offset="6342" max-vertical-offset="7922">
+        <state line="390" column="30" selection-start="11927" selection-end="11927" vertical-scroll-proportion="-18.647058" vertical-offset="5679" max-vertical-offset="7922">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungPdfDokument.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="48" selection-start="986" selection-end="986" vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="3366">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="696" column="0" selection-start="22989" selection-end="22989" vertical-scroll-proportion="0.6516854" vertical-offset="11484" max-vertical-offset="14025">
           <folding />
         </state>
       </provider>
