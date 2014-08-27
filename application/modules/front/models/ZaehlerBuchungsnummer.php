@@ -252,14 +252,14 @@ class Front_Model_ZaehlerBuchungsnummer implements Front_Model_ZaehlerBuchungsnu
             $this->zaehler = $arrayBuchung[ 'zaehler' ];
 
             if(empty($this->buchungsnummer) or empty($this->zaehler)){
-                //$this->findSessionId();
-                //$this->findAktuelleBuchungsnummerUndZaehlerMitSession();
+                $this->findSessionId();
+                $this->findAktuelleBuchungsnummerUndZaehlerMitSession();
             }
         }
         // wenn neue Buchung
         else{
-            //$this->findSessionId();
-            //$this->findAktuelleBuchungsnummerUndZaehlerMitSession();
+            $this->findSessionId();
+            $this->findAktuelleBuchungsnummerUndZaehlerMitSession();
         }
 
         return;
