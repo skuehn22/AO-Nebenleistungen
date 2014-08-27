@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungPdfDokument.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungPdfDokument.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/default.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/default.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/austria/front.phtml" afterPath="$PROJECT_DIR$/application/layouts/austria/front.phtml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestellungController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BestellungController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="18" selection-start="6478" selection-end="6478" vertical-scroll-proportion="0.3164794" vertical-offset="2789" max-vertical-offset="17697">
+            <state line="177" column="0" selection-start="6646" selection-end="6646" vertical-scroll-proportion="-8.461538" vertical-offset="2789" max-vertical-offset="17697">
               <folding>
                 <marker date="1409147572119" expanded="false" signature="15585:15646" placeholder="..." />
                 <marker date="1409147572119" expanded="false" signature="16343:16368" placeholder="..." />
@@ -94,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="8" selection-start="3133" selection-end="3133" vertical-scroll-proportion="-4.3333335" vertical-offset="1683" max-vertical-offset="7922">
+            <state line="392" column="54" selection-start="11992" selection-end="12017" vertical-scroll-proportion="0.63261294" vertical-offset="6342" max-vertical-offset="7922">
               <folding />
             </state>
           </provider>
@@ -197,8 +191,8 @@
         <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungPdfDokument.php" />
-        <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
         <option value="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
       </list>
     </option>
   </component>
@@ -2788,16 +2782,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="8" selection-start="3133" selection-end="3133" vertical-scroll-proportion="-4.3333335" vertical-offset="1683" max-vertical-offset="7922">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="18" selection-start="6478" selection-end="6478" vertical-scroll-proportion="0.3164794" vertical-offset="2789" max-vertical-offset="17697">
+        <state line="177" column="0" selection-start="6646" selection-end="6646" vertical-scroll-proportion="-8.461538" vertical-offset="2789" max-vertical-offset="17697">
           <folding>
             <marker date="1409147572119" expanded="false" signature="15585:15646" placeholder="..." />
             <marker date="1409147572119" expanded="false" signature="16343:16368" placeholder="..." />
@@ -2808,6 +2795,13 @@
             <marker date="1409147572119" expanded="false" signature="16696:16715" placeholder="..." />
             <marker date="1409147572119" expanded="false" signature="16788:16807" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="392" column="54" selection-start="11992" selection-end="12017" vertical-scroll-proportion="0.63261294" vertical-offset="6342" max-vertical-offset="7922">
+          <folding />
         </state>
       </provider>
     </entry>
