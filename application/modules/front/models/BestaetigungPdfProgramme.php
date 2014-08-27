@@ -222,7 +222,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $this->_abstand(true);
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
-        $gruss3 = "Stephanie Ulbrich";
+        $gruss3 = "Ihr A&O Team";
         $page->drawText($gruss3, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
         return $this;
@@ -293,7 +293,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $this->_abstand('half');
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
-        $agb1 = "Es gelten die allgemeinen Geschäftsbedingungen von Herden Online Booking, die Sie mit der Buchung";
+        $agb1 = "Es gelten die allgemeinen Geschäftsbedingungen von A&O, die Sie mit der Buchung";
         $agb1 = translate($agb1);
         $page->drawText($agb1, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
@@ -304,9 +304,9 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $agb2 = translate($agb2);
 
         if($anzeigeSpracheId == 1)
-            $agb2 .= " http://hob.herden.de/service/AGB.pdf";
+            $agb2 .= " http://www.aohostels.com/de/";
         else
-            $agb2 .= " http://hob.herden.de/service/GTC.pdf";
+            $agb2 .= " http://www.aohostels.com/de/";
 
         $page->drawText($agb2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
@@ -750,7 +750,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
             $rechtswert + 8,
             $this->_hochWert + 8
         );
-        $textBuchungstyp = " gekennzeichneten Programme sind noch in der Testphase. Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen";
+        //$textBuchungstyp = " gekennzeichneten Programme sind noch in der Testphase. Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen";
         $textBuchungstyp = translate($textBuchungstyp);
         $rechtswert += 10;
 
@@ -759,7 +759,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $this->_abstand();
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
-        $textBuchungstyp = "innerhalb von max.3 Werktagen eine separate Bestätigung per E-mail schicken.";
+        //$textBuchungstyp = "innerhalb von max.3 Werktagen eine separate Bestätigung per E-mail schicken.";
         $textBuchungstyp = translate($textBuchungstyp);
         $page->drawText($textBuchungstyp, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 

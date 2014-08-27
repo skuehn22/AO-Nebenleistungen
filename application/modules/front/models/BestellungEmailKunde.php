@@ -379,16 +379,18 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
             ->getStatusOfflinekunde();
 
         // Buchung durch Superuser
-        if (!empty($flagSuperuser))
-            $this->_mail->addTo($static['standardmails']['offline']['buchung']);
-        // versandt E-Mail im Offline Modus
-        elseif ($static['standardmails']['offline']['modus'] == 2)
-            $this->_mail->addTo($static['standardmails']['offline']['buchung']);
-        // Kunde hat Status 'Offlinekunde == 2'
-        elseif($flagOfflineKunde == 2)
-            $this->_mail->addTo($static['standardmails']['offline']['buchung']);
-        else
-            $this->_mail->addTo($this->_kundenDaten['email']);
+//        if (!empty($flagSuperuser))
+//            $this->_mail->addTo($static['standardmails']['offline']['buchung']);
+//        // versandt E-Mail im Offline Modus
+//        elseif ($static['standardmails']['offline']['modus'] == 2)
+//            $this->_mail->addTo($static['standardmails']['offline']['buchung']);
+//        // Kunde hat Status 'Offlinekunde == 2'
+//        elseif($flagOfflineKunde == 2)
+//            $this->_mail->addTo($static['standardmails']['offline']['buchung']);
+//        else
+//            $this->_mail->addTo($this->_kundenDaten['email']);
+
+        $this->_mail->addTo("Kristina.Doerfel@aohostels.com");
 
         return $this;
     }
@@ -405,7 +407,7 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
     {
         // Originalbuchung
         if ($this->zaehler == 1) {
-            $betreffZeile = translate("Ihre Buchung Nr. ");
+            $betreffZeile = translate("Buchung Nebenleistung Buchungs Nr. ");
             $betreffZeile .= $this->registrierungsNummer . "-" . $this->zaehler;
         } // Veränderungsbuchung
         else {

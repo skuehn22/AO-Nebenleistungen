@@ -172,8 +172,8 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
             // Pdf Programme - Rechnung
             if (!empty($namePdfProgrammRechnung) and empty($notschalter['programmbuchung']))
             {
-                $namePdfProgrammRechnung = $pfad . "/" . $namePdfProgrammRechnung;
-                $model_emailKunde->setPdfProgrammRechnung($namePdfProgrammRechnung);
+                //$namePdfProgrammRechnung = $pfad . "/" . $namePdfProgrammRechnung;
+                //$model_emailKunde->setPdfProgrammRechnung($namePdfProgrammRechnung);
             }
 
             // Pdf Programme - Bestätigung

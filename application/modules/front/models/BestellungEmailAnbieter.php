@@ -36,7 +36,7 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
     protected $_modelTexteBuchungsDatenSaetze = null;
     protected $_mail = null;
 
-    protected $_betreffZeileErstbuchung = "Buchung, Herden Online Booking";
+    protected $_betreffZeileErstbuchung = "Buchung, A&O Hostel & Hotel";
     protected $_betreffZeileVeraenderungsbuchung = "Buchungsänderung, ";
 
     protected $_bodyText = '';

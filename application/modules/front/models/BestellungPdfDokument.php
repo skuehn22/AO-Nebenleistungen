@@ -12,8 +12,8 @@ class Front_Model_BestellungPdfDokument extends nook_ToolModel implements arraya
 
     // Meta Daten Pdf Dokument
     protected $_metaDataPdfDokument = array(
-        "Creator" => "Herden Online Booking",
-        "Producer" => "Herden Online Booking"
+        "Creator" => "A&O Nebenleistungen",
+        "Producer" => "A&O Nebenleistungen"
     );
 
     // Font der Texte im Pdf
