@@ -417,11 +417,21 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
         $configData = $toolRegistryDaten->steuerungErmittelnDaten()->getKonfigDaten();
         $supportDaten['telefon'] = $configData['telefon'];
 
-        $text = "ASSD-Buchungsnummer: ".$_SESSION['kundeninfo']['assd_nummer'];
-        $text .= "<br>Gruppenname: ".$_SESSION['kundeninfo']['gruppenname'];
-        $text .= "<br>Zusatzhinweis: ".$_SESSION['kundeninfo']['hinweis'];
-        $text .= "<br>Mitarbeiter: ".$_SESSION['kundeninfo']['mitarbeiternummer'];
-        $text .= "<br><br>";
+        $text = "<table style='width:500px;  border-style: solid; border-bottom: solid #aaa;'>";
+        $text .= "<tr>";
+
+        $text .= "<td style='width:200px;'><strong>ASSD-Buchungsnummer:</strong> </td><td>".$_SESSION['kundeninfo']['assd_nummer']."</td>";
+        $text .= "</tr>";
+        $text .= "<td><strong>Gruppenname:</strong> </td><td>".$_SESSION['kundeninfo']['gruppenname']."<td>";
+        $text .= "</tr>";
+        $text .= "<td><strong>Zusatzhinweis: </strong></td><td>".$_SESSION['kundeninfo']['hinweis']."<td>";
+        $text .= "</tr>";
+        $text .= "<td><strong>Mitarbeiter: </strong></td><td>".$_SESSION['kundeninfo']['mitarbeiternummer']."<td>";
+        $text .= "</tr>";
+        $text .= "</table>";
+
+        $text .= "<br>";
+
         $text .= "<table style='border:1px; width: 700px;'>";
         $text .= "<tr>
                         <td style='padding-right: 8px;'><strong>Programmname</strong></td>
