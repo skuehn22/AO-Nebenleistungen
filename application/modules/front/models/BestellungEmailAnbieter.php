@@ -764,7 +764,9 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
                 if(!empty($zeit))
                     $programmNameMitDatumUndZeit .= " um ".$zeit." Uhr";
 
-                $text[] = $programmNameMitDatumUndZeit;+// Programmsprache
+                $text[] = $programmNameMitDatumUndZeit;
+
+                // Programmsprache
                 if(!empty($programmsprache))
                     $text[] = 'gewählte Sprache des Programmes: '.$programmsprache;
 
