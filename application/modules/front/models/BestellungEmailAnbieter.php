@@ -706,7 +706,7 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
     {
         for($i=0; $i < count($datenMailProgrammanbieter['programme']); $i++){
 
-            if($datenMailProgrammanbieter['programme'][$i]['programmbeschreibung']['programmdetail_id']==$datenMailProgrammanbieter['programme'][$i-1]['programmbeschreibung']['programmdetail_id'] AND $datenMailProgrammanbieter['programme'][$i]['buchungsdaten']['datum']==$datenMailProgrammanbieter['programme'][$i-1]['buchungsdaten']['datum']){
+            if($datenMailProgrammanbieter['programme'][$i]['programmbeschreibung']['programmdetail_id']==$datenMailProgrammanbieter['programme'][$i-1]['programmbeschreibung']['programmdetail_id'] AND $datenMailProgrammanbieter['programme'][$i]['buchungsdaten']['datum']==$datenMailProgrammanbieter['programme'][$i-1]['buchungsdaten']['datum'] AND $datenMailProgrammanbieter['programme'][$i]['buchungsdaten']['zeit']==$datenMailProgrammanbieter['programme'][$i-1]['buchungsdaten']['zeit']){
 
                 // einzelnes gebuchtes Programm
                 $gebuchtesProgramm = $datenMailProgrammanbieter['programme'][$i];+// Preisvariante
@@ -774,7 +774,7 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
                     $text[] = 'gewählte Sprache des Programmes: '.$programmsprache;
 
                 // Leerzeile
-                $text[] = "";
+                //$text[] = "";
 
 
 
