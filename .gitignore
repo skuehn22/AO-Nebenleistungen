@@ -50,6 +50,7 @@ public/tmp/tpl/**
 /logs/*
 /logs/**
 .idea/workspace.xml
+idea/workspace.xml
 /pdf/
 
 
