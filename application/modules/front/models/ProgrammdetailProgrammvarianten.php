@@ -24,7 +24,7 @@ class Front_Model_ProgrammdetailProgrammvarianten
     private $_preisErsteProgrammvariante = null;
     private $_anzahlPreisvarianten = null;
 
-    private $_condition_moegliche_anzahl_programmvarianten = 5;
+    private $_condition_moegliche_anzahl_programmvarianten = null;
 
     private $_error_daten_nicht_integer = 830;
     private $_error_wert_nicht_vorhanden = 831;
@@ -155,7 +155,7 @@ class Front_Model_ProgrammdetailProgrammvarianten
     {
         $programmvarianten = array();
 
-        for($i = 0; $i < $this->_condition_moegliche_anzahl_programmvarianten; $i++) {
+        for($i = 0; $i < count($this->_inputBox); $i++) {
             if ($this->_inputBox[$i]!= ""){
                 $programmvarianten[$i]['options'] = $this->_selectBox;
                 $programmvarianten[$i]['inputs'] = $this->_inputBox[$i];
