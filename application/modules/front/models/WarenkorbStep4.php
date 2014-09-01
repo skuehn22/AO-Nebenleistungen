@@ -138,7 +138,7 @@ class Front_Model_WarenkorbStep4 extends nook_Model_model{
 			$mail->addTo($this->condition_mail_address_support, 'Ihre Bestellung');
 
 		$mail->setBodyHtml($__htmlOrderMail);
-		$mail->setFrom('kuehn.sebastian@gmail.com', 'Herden Studienreisen');
+		$mail->setFrom('tickets@aohostels.com', 'Herden Studienreisen');
 		$mail->setSubject('Ihre Bestellung bei Studienreisen Herden');
 		$control = $mail->send();
 
@@ -189,7 +189,7 @@ class Front_Model_WarenkorbStep4 extends nook_Model_model{
 			$mail = new Zend_Mail('UTF-8');
 			$mail->setBodyHtml($mailToSupplier);
 			$mail->addTo($supplierData['email'], 'Kundenbestellung');
-			$mail->setFrom('kuehn.sebastian@gmail.com', 'Herden Studienreisen');
+			$mail->setFrom('tickets@aohostels.com', 'Herden Studienreisen');
 			$mail->setSubject('Bestellung eines Programmes');
 
 			$control = $mail->send();
