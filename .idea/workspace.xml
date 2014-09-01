@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" afterPath="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,19 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestellungController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BestellungController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="473" column="0" selection-start="18093" selection-end="18093" vertical-scroll-proportion="-309.26923" vertical-offset="0" max-vertical-offset="17697">
+            <state line="467" column="86" selection-start="18036" selection-end="18036" vertical-scroll-proportion="0.6189474" vertical-offset="7645" max-vertical-offset="17697">
               <folding>
-                <marker date="1409571689875" expanded="false" signature="15585:15646" placeholder="..." />
-                <marker date="1409571689875" expanded="false" signature="16343:16368" placeholder="..." />
-                <marker date="1409571689875" expanded="true" signature="16394:16867" placeholder="..." />
-                <marker date="1409571689875" expanded="false" signature="16431:16450" placeholder="..." />
-                <marker date="1409571689875" expanded="false" signature="16522:16541" placeholder="..." />
-                <marker date="1409571689875" expanded="false" signature="16607:16626" placeholder="..." />
-                <marker date="1409571689875" expanded="false" signature="16696:16715" placeholder="..." />
-                <marker date="1409571689875" expanded="false" signature="16788:16807" placeholder="..." />
+                <marker date="1409578244556" expanded="false" signature="15585:15646" placeholder="..." />
+                <marker date="1409578244556" expanded="false" signature="16343:16368" placeholder="..." />
+                <marker date="1409578244556" expanded="true" signature="16394:16867" placeholder="..." />
+                <marker date="1409578244556" expanded="false" signature="16431:16450" placeholder="..." />
+                <marker date="1409578244556" expanded="false" signature="16522:16541" placeholder="..." />
+                <marker date="1409578244556" expanded="true" signature="16607:16626" placeholder="..." />
+                <marker date="1409578244556" expanded="false" signature="16696:16715" placeholder="..." />
+                <marker date="1409578244556" expanded="false" signature="16788:16807" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -98,19 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgrammdetailController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammdetailController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="0" selection-start="3730" selection-end="3730" vertical-scroll-proportion="-6.6153846" vertical-offset="1698" max-vertical-offset="14586">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Front_Programmdetail_Index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="343" column="41" selection-start="15107" selection-end="15107" vertical-scroll-proportion="-7.4615383" vertical-offset="5637" max-vertical-offset="7174">
+            <state line="342" column="41" selection-start="15059" selection-end="15059" vertical-scroll-proportion="-7.4615383" vertical-offset="5620" max-vertical-offset="7174">
               <folding>
                 <element signature="n#style#0;n#select#0;n#td#3;n#tr#2;n#table#0;n#div#2;n#div#3;n#!!top" expanded="true" />
               </folding>
@@ -118,10 +108,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Front_Programmdetail_Index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Front_Programmdetail_Index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="604" column="5" selection-start="18465" selection-end="18465" vertical-scroll-proportion="0.55888224" vertical-offset="9988" max-vertical-offset="11747">
+            <state line="576" column="5" selection-start="17193" selection-end="17193" vertical-scroll-proportion="0.0" vertical-offset="9070" max-vertical-offset="11747">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Front_Bestellung_Index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Front_Bestellung_Index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="23" selection-start="562" selection-end="562" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="1241">
               <folding />
             </state>
           </provider>
@@ -193,9 +192,9 @@
         <option value="$PROJECT_DIR$/application/configs/static.ini" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" />
         <option value="$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php" />
-        <option value="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" />
+        <option value="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" />
       </list>
     </option>
   </component>
@@ -2398,11 +2397,6 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="479" column="0" selection-start="15861" selection-end="15861" vertical-scroll-proportion="-7.1153846" vertical-offset="7635" max-vertical-offset="21641" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/Zend/Db/Statement.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="302" column="0" selection-start="9194" selection-end="9194" vertical-scroll-proportion="-7.1153846" vertical-offset="4626" max-vertical-offset="8075" />
@@ -2679,22 +2673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="473" column="0" selection-start="18093" selection-end="18093" vertical-scroll-proportion="-309.26923" vertical-offset="0" max-vertical-offset="17697">
-          <folding>
-            <marker date="1409571689875" expanded="false" signature="15585:15646" placeholder="..." />
-            <marker date="1409571689875" expanded="false" signature="16343:16368" placeholder="..." />
-            <marker date="1409571689875" expanded="true" signature="16394:16867" placeholder="..." />
-            <marker date="1409571689875" expanded="false" signature="16431:16450" placeholder="..." />
-            <marker date="1409571689875" expanded="false" signature="16522:16541" placeholder="..." />
-            <marker date="1409571689875" expanded="false" signature="16607:16626" placeholder="..." />
-            <marker date="1409571689875" expanded="false" signature="16696:16715" placeholder="..." />
-            <marker date="1409571689875" expanded="false" signature="16788:16807" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="221" column="0" selection-start="7440" selection-end="7440" vertical-scroll-proportion="-6.3461537" vertical-offset="3507" max-vertical-offset="5338">
@@ -2718,7 +2696,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="41" selection-start="15107" selection-end="15107" vertical-scroll-proportion="-7.4615383" vertical-offset="5637" max-vertical-offset="7174">
+        <state line="342" column="41" selection-start="15059" selection-end="15059" vertical-scroll-proportion="-7.4615383" vertical-offset="5620" max-vertical-offset="7174">
           <folding>
             <element signature="n#style#0;n#select#0;n#td#3;n#tr#2;n#table#0;n#div#2;n#div#3;n#!!top" expanded="true" />
           </folding>
@@ -2727,8 +2705,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="604" column="5" selection-start="18465" selection-end="18465" vertical-scroll-proportion="0.55888224" vertical-offset="9988" max-vertical-offset="11747">
+        <state line="576" column="5" selection-start="17193" selection-end="17193" vertical-scroll-proportion="0.0" vertical-offset="9070" max-vertical-offset="11747">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Bestellung_Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="562" selection-end="562" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="1241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="467" column="86" selection-start="18036" selection-end="18036" vertical-scroll-proportion="0.6189474" vertical-offset="7645" max-vertical-offset="17697">
+          <folding>
+            <marker date="1409578244556" expanded="false" signature="15585:15646" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16343:16368" placeholder="..." />
+            <marker date="1409578244556" expanded="true" signature="16394:16867" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16431:16450" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16522:16541" placeholder="..." />
+            <marker date="1409578244556" expanded="true" signature="16607:16626" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16696:16715" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16788:16807" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
