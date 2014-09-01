@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,6 +26,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="BestaetigungPdfProgramme.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1042" column="0" selection-start="37804" selection-end="37804" vertical-scroll-proportion="0.33333334" vertical-offset="17545" max-vertical-offset="20264">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Front_Personaldata_Index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_Index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -37,7 +47,7 @@
       <file leaf-file-name="BestellungController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="461" column="24" selection-start="17772" selection-end="17772" vertical-scroll-proportion="-7.3846154" vertical-offset="7645" max-vertical-offset="17697">
+            <state line="217" column="0" selection-start="8134" selection-end="8134" vertical-scroll-proportion="-6.5" vertical-offset="3520" max-vertical-offset="17697">
               <folding>
                 <marker date="1409578244556" expanded="false" signature="15585:15646" placeholder="..." />
                 <marker date="1409578244556" expanded="false" signature="16343:16368" placeholder="..." />
@@ -61,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestellungEmailAnbieter.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BestellungEmailAnbieter.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="685" column="25" selection-start="22765" selection-end="22765" vertical-scroll-proportion="0.5222222" vertical-offset="11410" max-vertical-offset="14246">
+            <state line="131" column="0" selection-start="5369" selection-end="5369" vertical-scroll-proportion="-3.0784314" vertical-offset="2070" max-vertical-offset="14246">
               <folding />
             </state>
           </provider>
@@ -83,15 +93,6 @@
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="148" column="24" selection-start="5548" selection-end="5548" vertical-scroll-proportion="-14.346154" vertical-offset="2143" max-vertical-offset="3587">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProgrammdetailProgrammvarianten.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="17" selection-start="466" selection-end="466" vertical-scroll-proportion="-4.3333335" vertical-offset="0" max-vertical-offset="4879">
               <folding />
             </state>
           </provider>
@@ -184,7 +185,6 @@
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungPdfDokument.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/RechnungPdfProgramme.php" />
-        <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
         <option value="$PROJECT_DIR$/library/raintpl/rain.tpl.class.php" />
         <option value="$PROJECT_DIR$/application/configs/application.ini" />
         <option value="$PROJECT_DIR$/library/raintpl/rainhelp.php" />
@@ -196,6 +196,7 @@
         <option value="$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.html" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
       </list>
     </option>
   </component>
@@ -579,20 +580,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1040" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16015625" sideWeight="0.7724359" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
+      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0765625" sideWeight="0.77198696" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2326389" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3304721" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34120172" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16015625" sideWeight="0.2275641" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.253125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0765625" sideWeight="0.22638437" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2385,20 +2386,25 @@
           <option name="timeStamp" value="1353" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
-          <line>131</line>
-          <option name="timeStamp" value="1364" />
+          <url>file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php</url>
+          <line>1038</line>
+          <option name="timeStamp" value="1369" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
-          <line>132</line>
-          <option name="timeStamp" value="1365" />
+          <url>file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php</url>
+          <line>1036</line>
+          <option name="timeStamp" value="1370" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php</url>
+          <line>1042</line>
+          <option name="timeStamp" value="1371" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1366" />
+      <option name="time" value="1372" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -2658,13 +2664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="491" column="38" selection-start="17287" selection-end="17287" vertical-scroll-proportion="-57.615383" vertical-offset="6849" max-vertical-offset="20128">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="17" selection-start="466" selection-end="466" vertical-scroll-proportion="-4.3333335" vertical-offset="0" max-vertical-offset="4879">
@@ -2700,22 +2699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="461" column="24" selection-start="17772" selection-end="17772" vertical-scroll-proportion="-7.3846154" vertical-offset="7645" max-vertical-offset="17697">
-          <folding>
-            <marker date="1409578244556" expanded="false" signature="15585:15646" placeholder="..." />
-            <marker date="1409578244556" expanded="false" signature="16343:16368" placeholder="..." />
-            <marker date="1409578244556" expanded="true" signature="16394:16867" placeholder="..." />
-            <marker date="1409578244556" expanded="false" signature="16431:16450" placeholder="..." />
-            <marker date="1409578244556" expanded="false" signature="16522:16541" placeholder="..." />
-            <marker date="1409578244556" expanded="true" signature="16607:16626" placeholder="..." />
-            <marker date="1409578244556" expanded="false" signature="16696:16715" placeholder="..." />
-            <marker date="1409578244556" expanded="false" signature="16788:16807" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/tmp/tpl/Front_Programmdetail_Index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="56" selection-start="4736" selection-end="4736" vertical-scroll-proportion="-7.076923" vertical-offset="1482" max-vertical-offset="7174">
@@ -2742,7 +2725,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="685" column="25" selection-start="22765" selection-end="22765" vertical-scroll-proportion="0.5222222" vertical-offset="11410" max-vertical-offset="14246">
+        <state line="131" column="0" selection-start="5369" selection-end="5369" vertical-scroll-proportion="-3.0784314" vertical-offset="2070" max-vertical-offset="14246">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="0" selection-start="8134" selection-end="8134" vertical-scroll-proportion="-6.5" vertical-offset="3520" max-vertical-offset="17697">
+          <folding>
+            <marker date="1409578244556" expanded="false" signature="15585:15646" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16343:16368" placeholder="..." />
+            <marker date="1409578244556" expanded="true" signature="16394:16867" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16431:16450" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16522:16541" placeholder="..." />
+            <marker date="1409578244556" expanded="true" signature="16607:16626" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16696:16715" placeholder="..." />
+            <marker date="1409578244556" expanded="false" signature="16788:16807" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1042" column="0" selection-start="37804" selection-end="37804" vertical-scroll-proportion="0.33333334" vertical-offset="17545" max-vertical-offset="20264">
           <folding />
         </state>
       </provider>

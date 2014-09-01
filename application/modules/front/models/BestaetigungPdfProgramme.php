@@ -1030,7 +1030,15 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
     private function _erstellenGrunddokument()
     {
 
-        $this->_newPdfBestaetigung = Zend_Pdf::load($this->_pfad . "/vorlagen/20.pdf");
+        $assd = $this->_kundenDaten['assd_nummer'];
+        $assd = explode("-", $assd);
+
+        try {
+            $this->_newPdfBestaetigung = Zend_Pdf::load($this->_pfad . "/vorlagen/".$assd[0].".pdf");
+        }catch (Exception $e) {
+            $this->_newPdfBestaetigung = Zend_Pdf::load($this->_pfad . "/vorlagen/default.pdf");
+        }
+
 
         return $this;
     }
