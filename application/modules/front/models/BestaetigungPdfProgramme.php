@@ -1033,6 +1033,16 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $assd = $this->_kundenDaten['assd_nummer'];
         $assd = explode("-", $assd);
 
+        if ($assd[0] == "AT"){
+           if ($assd[1] == "W1"){
+               $assd[0] = "AT-W1";
+           }
+
+            if ($assd[1] == "W2"){
+                $assd[0] = "AT-W2";
+            }
+        }
+
         try {
             $this->_newPdfBestaetigung = Zend_Pdf::load($this->_pfad . "/vorlagen/".$assd[0].".pdf");
         }catch (Exception $e) {

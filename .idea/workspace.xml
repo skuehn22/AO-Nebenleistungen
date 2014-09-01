@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,16 @@
       <file leaf-file-name="BestaetigungPdfProgramme.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1042" column="0" selection-start="37804" selection-end="37804" vertical-scroll-proportion="0.33333334" vertical-offset="17545" max-vertical-offset="20264">
+            <state line="1046" column="0" selection-start="37771" selection-end="37771" vertical-scroll-proportion="0.33333334" vertical-offset="17613" max-vertical-offset="20434">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WrapperPdf.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="321" column="0" selection-start="11302" selection-end="11302" vertical-scroll-proportion="-6.5" vertical-offset="5288" max-vertical-offset="16235">
               <folding />
             </state>
           </provider>
@@ -58,15 +66,6 @@
                 <marker date="1409578244556" expanded="false" signature="16696:16715" placeholder="..." />
                 <marker date="1409578244556" expanded="false" signature="16788:16807" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatensatzPreisvarianten.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="221" column="0" selection-start="7440" selection-end="7440" vertical-scroll-proportion="-6.3461537" vertical-offset="3507" max-vertical-offset="5338">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -2387,24 +2386,24 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php</url>
-          <line>1038</line>
+          <line>1046</line>
           <option name="timeStamp" value="1369" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php</url>
-          <line>1036</line>
-          <option name="timeStamp" value="1370" />
+          <line>1050</line>
+          <option name="timeStamp" value="1371" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php</url>
-          <line>1042</line>
-          <option name="timeStamp" value="1371" />
+          <line>1044</line>
+          <option name="timeStamp" value="1372" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1372" />
+      <option name="time" value="1373" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -2558,13 +2557,6 @@
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/RechnungPdfProgramme.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="211" column="0" selection-start="6924" selection-end="6924" vertical-scroll-proportion="0.0" vertical-offset="3292" max-vertical-offset="11118">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="321" column="0" selection-start="11302" selection-end="11302" vertical-scroll-proportion="0.0" vertical-offset="5457" max-vertical-offset="16235">
           <folding />
         </state>
       </provider>
@@ -2746,9 +2738,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="321" column="0" selection-start="11302" selection-end="11302" vertical-scroll-proportion="-6.5" vertical-offset="5288" max-vertical-offset="16235">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1042" column="0" selection-start="37804" selection-end="37804" vertical-scroll-proportion="0.33333334" vertical-offset="17545" max-vertical-offset="20264">
+        <state line="1046" column="0" selection-start="37771" selection-end="37771" vertical-scroll-proportion="0.33333334" vertical-offset="17613" max-vertical-offset="20434">
           <folding />
         </state>
       </provider>
