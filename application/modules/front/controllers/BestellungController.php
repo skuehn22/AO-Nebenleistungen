@@ -464,7 +464,7 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
 
             if ($mwst_ek != $mwst_vk)
             {
-                $text .= "<td>".number_format($ek,2)." € (inkl. 0% Mwst)</td>";
+                $text .= "<td>".number_format($ek,2)." € (inkl. 19% Mwst)</td>";
                 $text .= "<td>".number_format(($vk-$ek),2)." € (inkl. ".($mwst_ek*100)."% Mwst)</td>";
             }
 
