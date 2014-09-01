@@ -246,12 +246,11 @@ class Front_Model_WarenkorbStep4 extends nook_Model_model{
 		$mail = new Zend_Mail('UTF-8');
 		$mail->addTo($__personalData['email'], 'Ihre Rechnung');
 		$mail->setBodyHtml($mailWithVoucherAndBill);
-		$mail->setFrom('kuehn.sebastian@gmail.com', 'Herden Studienreisen');
-		$mail->setSubject('Ihre Bestellung bei Studienreisen Herden');
+		$mail->setFrom('tickets@aohostels.com', 'A&O Nebenleistungen');
+		$mail->setSubject('Ihre Bestellung bei A&O Nebenleistungen');
 		$control = $mail->send();
 		if(empty($control))
 			throw new nook_Exception($this->error_no_mail_send);
-
 		return;
 	}
 
