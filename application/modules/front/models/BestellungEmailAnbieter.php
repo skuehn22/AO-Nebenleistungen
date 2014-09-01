@@ -684,7 +684,7 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
         $text[] = "Gruppennname: ".$personendaten['gruppenname'];
         $text[] = "Ansprechpartner:  ".$personendaten['title'] . " " . $personendaten['firstname'] . " " . $personendaten['lastname'];
         $text[] = "Telefon: ".$personendaten['phonenumber'];
-        $text[] = "Hinweis: ".$personendaten['zusatzhinweis'];
+        $text[] = "Hinweis: ".$personendaten['hinweis'];
         $text[] = "";
 
         return $text;
