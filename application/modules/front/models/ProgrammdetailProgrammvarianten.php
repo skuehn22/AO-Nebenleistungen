@@ -24,7 +24,7 @@ class Front_Model_ProgrammdetailProgrammvarianten
     private $_preisErsteProgrammvariante = null;
     private $_anzahlPreisvarianten = null;
 
-    private $_condition_moegliche_anzahl_programmvarianten = null;
+    private $_condition_moegliche_anzahl_programmvarianten = 15;
 
     private $_error_daten_nicht_integer = 830;
     private $_error_wert_nicht_vorhanden = 831;
