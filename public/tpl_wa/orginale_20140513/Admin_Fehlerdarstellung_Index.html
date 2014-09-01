@@ -1,0 +1,178 @@
+<script type="text/javascript">
+    var gridFehlermeldung;
+    var jsonstoreFehler;
+    var propertygridFehlerdarstellung;
+    var templatePropertyGrid;
+
+
+	Ext.onReady(function(){
+
+        jsonstoreFehler = new Ext.data.JsonStore({
+            url: '/admin/fehlerdarstellung/getfehlermeldungen/',
+            root: 'data',
+            totalProperty: 'anzahl',
+            fields: [{
+                name: 'fehlernummer'
+            },{
+                name: 'date'
+            },{
+                name: 'modul'
+            },{
+                name: 'model'
+            },{
+                name: 'blockCode'
+            },{
+                name: 'reaction'
+            },{
+                name: 'line'
+            },{
+                name: 'variables'
+            },{
+                name: 'kunde'
+            }]
+        });
+
+        gridFehlermeldung = new Ext.grid.GridPanel({
+        autoHeight: true,
+        width: 500,
+        title: 'aufgetretene Fehler',
+        autoExpandColumn: 'datum',
+        columnLines: true,
+        stripeRows: true,
+        viewConfig: {
+            scrollOffset: 2,
+            forceFit: true
+        },
+        listeners: {
+            rowclick: zeigeDatenInPropertygrid
+        },
+        store: jsonstoreFehler,
+        columns:[{
+                xtype: 'gridcolumn',
+                dataIndex: 'fehlernummer',
+                header: 'Fehlernummer',
+                id: 'fehlernummer',
+                sortable: true,
+                width: 50
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'date',
+                header: 'Datum',
+                id: 'datum',
+                sortable: true,
+                width: 100
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'modul',
+                header: 'Modul',
+                sortable: true,
+                width: 100
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'model',
+                header: 'Model',
+                sortable: true,
+                width: 100
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'blockCode',
+                header: 'Fehlercode',
+                sortable: true,
+                width: 100
+            },{
+                xtype: 'gridcolumn',
+                dataIndex: 'reaction',
+                header: 'Reaktion',
+                sortable: true,
+                width: 100,
+                renderer: rendererReaktion
+            }],
+            bbar: [{
+                xtype: 'paging',
+	            store: jsonstoreFehler,
+	            pageSize: 20,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+            }]
+    });
+
+    propertygridFehlerdarstellung = new Ext.grid.PropertyGrid({
+        width: 500,
+        autoHeight: true,
+        autoEncode: true,
+        autoExpandColumn: 'inhaltProperty',
+        listeners: {
+            'beforeedit': {
+                fn: function(){
+                    return false;
+                }
+            }
+        },
+        propertyNames: {
+            name: 'Name',
+            inhalt: 'Inhalt'
+        },
+        viewConfig : {
+            forceFit: true,
+            scrollOffset: 2
+        }
+    });
+
+
+        
+    gridFehlermeldung.render('tabelleDerFehlermeldungen');
+    propertygridFehlerdarstellung.render('detailFehlermeldung');
+    jsonstoreFehler.load();
+
+});
+
+    function rendererReaktion(val){
+
+        var icon = "<img src='/buttons/brick_add.png'  ext:qtip='Fehler wurde registriert'>";
+
+        if(val == 1)
+            icon = "<img src='/buttons/brick_error.png'  ext:qtip='Anwender wurde umgelenkt / beendet'>";
+        if(val == 2)
+            icon = "<img src='/buttons/brick_go.png'  ext:qtip='Anwender wurde über Fehler informiert'>";
+
+        return icon;
+    }
+
+    function zeigeDatenInPropertygrid(grid, rowIndex, event){
+        var row = gridFehlermeldung.getSelectionModel().getSelected();
+
+        var variables = Ext.util.JSON.decode(row.data.variables);
+
+        var details = {};
+        for(var key in variables){
+            if(key != 'module' && key != 'controller' && key != '_dc')
+                details[key] = variables[key];
+        }
+
+        for(var key in row.data){
+            if(key != 'variables')
+                details[key] = row.data[key];
+        }
+
+        propertygridFehlerdarstellung.setSource(details);
+
+        return;
+    }
+
+</script>
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+        <h3 style="color: blue">aufgetretene Fehler</h3>
+        <br>
+        Anzeige der aufgetretenen Fehler des Systems.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-32' id='inhalt' style='border: red 1px blue;'>
+    <div class="span-15" id="tabelleDerFehlermeldungen">
+
+    </div>
+    <div class="span-15" id='detailFehlermeldung'>
+
+    </div>
+</div>

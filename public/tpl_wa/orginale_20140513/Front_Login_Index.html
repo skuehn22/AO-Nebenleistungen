@@ -1,0 +1,63 @@
+<script type="text/javascript" src="/tpl/Front_Login_Index.js"></script>
+{if condition="$errorMessage"}
+<div style='height: 100px; padding: 20px;'>
+    {function="translate('Uuuups ! Leider ist ein Fehler aufgetreten. <br>Bitte wenden Sie sich an unseren Support')"}<br>
+    {function="translate('Fehlernummer')"}: {$errorMessage}<p>
+
+    <p>
+       <a href="/front/login/">{function="translate('zurück zum Start')"}</a>
+    </p>
+</div>
+{/if}
+
+
+<!-- Austria -->
+
+<div class="span-16 ueberschrift block_oben block" style="padding-left: 40px;">
+    <div class="span-6"> Prager Burg / Hradschin    </div>
+    <div class="span-3 push-3 standardtext"> </div>
+    <div class="span-2">
+
+    </div>
+</div>
+
+
+<div class="span-16 block_unten block" style="padding-left: 40px; min-height: 50px;">
+  <div class="span-5">
+    <table style="margin-bottom: 0px;">
+    <tbody>
+    <tr>
+    <td>
+    <img id="bild1_306" class="bild basic-modal" width="150" alt="Prager Burg im Abendlicht" src="/tpl_austria/images/programme/prag/306.jpg">
+    </td>
+    </tr>
+    <tr>
+    <td class="c_images"> © IncoCzech  </td>
+    </tr>
+    </tbody>
+    </table>
+  </div>
+  <div class="span-6">
+    Ein kleiner oder großer Rundgang - Sie haben die Wahl! Kleiner Rundgang: St. Veitsdom, Königspalas ...
+    <a href="/front/programmdetail/index/city/7/programId/306">mehr</a>
+    <span class="standardgruen"> </span>
+  </div>
+  <div class="span-3">
+    <img src="/buttons/t.png">
+    Testphase: Vorerst nur als Reservierungswunsch buchbar.
+    <br>
+    <div style="margin-top:15px;">
+      <form class="form" action="/front/programmdetail/index/city/1/programId/127" method="post">
+              <input class="submit" type="submit" value="buchen...">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

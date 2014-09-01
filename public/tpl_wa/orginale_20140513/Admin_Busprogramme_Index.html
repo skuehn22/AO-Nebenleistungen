@@ -1,0 +1,397 @@
+<!-- extensions -->
+<script type="text/javascript" src='/extjs/ux/Spinner.js'></script>
+<script type="text/javascript" src='/extjs/ux/SpinnerField.js'></script>
+<script type="text/javascript"><!--
+
+
+	var jsonStore;
+	var grid;
+	var form;
+	var cities;
+	var sprache;
+
+	Ext.onReady(function(){
+		
+		jsonStore = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/busprogramme/tabelitems/",
+	        id: 'jsonStore',
+	        fields: ['Fa_Id','progname','AO_City','vk','mwst_satz','buchungsfrist','sachleistung','maxPersons','prio_noko','permanent_zusatz','sprache','sprache_id','AO_City_ID']
+	    });
+
+		grid = new Ext.grid.GridPanel({
+			autoHeight: true,
+            // frame: true,
+	        stripeRows: true,
+	        loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true
+	        },
+			autoExpandColumn: 'progname',
+	        store: jsonStore,
+	        width: 950,
+	        id: 'myGrid',
+	        title: 'vorhandene Busprogramme',
+			columns: [{
+				    dataIndex: 'Fa_Id',
+				    header: 'Programmnummer',
+				    width: 100,
+				    id: 'Fa_Id'
+				},{
+				    dataIndex: 'progname',
+				    header: 'Programmname',
+				    width: 150,
+				    id: 'progname'
+				},{
+				    header: 'Stadt',
+				    width: 100,
+				    dataIndex: 'AO_City',
+				    id: 'AO_City'
+				},{
+					xtype: 'numbercolumn',
+					format: '0.00',
+				    header: 'Verkaufspreis',
+				    id: 'vk',
+				    dataIndex: 'vk',
+				    width: 100
+				},{
+				    header: 'Mehrwertsteuer',
+				    width: 100,
+				    dataIndex: 'mwst_satz',
+				    id: 'mwst_satz',
+				    renderer: renderer_mwst
+				},{
+				    header: 'Buchungsfrist',
+				    width: 50,
+				    dataIndex: 'buchungsfrist',
+				    id: 'buchungsfrist'
+				},{
+				    header: 'Sachleistung',
+				    width: 50,
+				    dataIndex: 'sachleistung',
+				    id: 'sachleistung',
+				    renderer: renderer_sachleistung
+				},{
+				    header: 'max. Personen',
+				    width: 50,
+				    align: 'right',
+				    dataIndex: 'maxPersons'
+				},{
+				    header: 'sichtbar',
+				    width: 50,
+				    dataIndex: 'prio_noko',
+				    id: 'prio_noko',
+				    renderer: renderer_sichtbarkeit
+				},{
+				    header: 'Zusatzprogramm',
+				    width: 50,
+				    dataIndex: 'permanent_zusatz',
+				    id: 'permanent_zusatz',
+				    renderer: renderer_zusatzprogramm
+				},{
+				    header: 'Sprache',
+				    width: 50,
+				    dataIndex: 'sprache',
+				    id: 'sprache'
+				},{
+					header: 'ID City',
+					width: 50,
+					dataIndex: 'AO_City_ID',
+					id: 'AO_City_ID',
+					hidden: true
+				},{
+					header: 'ID Sprache',
+					width: 50,
+					dataIndex: 'sprache_id',
+					id: 'sprache_id',
+					hidden: true
+				}
+			],
+			bbar: [{
+	            xtype: 'paging',
+	            store: jsonStore,
+	            id: 'paging',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	        }]
+		});
+
+		var prioNoko = new Ext.data.SimpleStore({
+			fields: ['id','sichtbar'],
+			data: [['1','sichtbar'],['2','sichtbar'],['3','nicht sichtbar']]
+		});
+
+		var mehrwertSteuer = new Ext.data.SimpleStore({
+			fields: ['id','mwst'],
+			data: [['A','19%'],['B','7%'],['C','0%']]
+		});
+
+		var sachleistung = new Ext.data.SimpleStore({
+			fields: ['id','sachleistung'],
+			data: [['1','Programm'],['2','Sachleistung'],['3','Bus'],['4','Citytransfer'],['5','Transfer']]
+		});
+
+		var zusatzprogramm = new Ext.data.SimpleStore({
+			fields: ['id','zusatzprogramm'],
+			data: [['1','normal'],['2','Zusatzprogramm']]
+		});
+
+		// sprache = new Ext.data.JsonStore({
+	       // root: 'data',
+	       // method: 'post',
+	       // url: "/admin/busprogramme/getsprache/",
+	       // id: 'language',
+	       // fields: ['id','sprache'],
+	       // autoLoad: true
+		// });
+
+		cities = new Ext.data.JsonStore({
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/busprogramme/getcities/",
+	        id: 'cities',
+	        fields: ['id','city'],
+	        autoLoad: true
+		});
+
+		
+		form = new Ext.form.FormPanel({
+	        autoHeight: true,
+	        renderTo: 'form',
+	        width: 950,
+	        padding: 10,
+            frame: true,
+	        id: 'myForm',
+	        url: '/admin/busprogramme/updatebus/',
+	        method: 'post',
+	        title: 'editieren der vorhandenen Busprogramme',
+            items: [{
+		                xtype: 'textfield',
+		                fieldLabel: 'Programmnummer',
+		                width: 75,
+		                minLength: 2,
+		                allowBlank: false,
+		                readOnly: true,
+		                id: 'Fa_Id'
+		            },{
+		                xtype: 'textfield',
+		                fieldLabel: 'Programmname',
+		                width: 350,
+		                name: 'progname',
+		                allowBlank: false,
+		                id: 'progname'
+		            },{
+		                xtype: 'combo',
+		                fieldLabel: 'Stadt',
+		                width: 150,
+		                allowBlank: false,
+		                id: 'AO_City',
+		                allowBlank: false,
+		                forceSelection: true,
+						triggerAction: 'all',
+						typeAhead: true,
+						displayField: 'city',
+						valueField: 'id',
+						hiddenName: 'city',
+						store: cities
+		            },{
+		                xtype: 'combo',
+		                fieldLabel: 'Sichtbarkeit',
+		                width: 150,
+		                allowBlank: false,
+		                //id: 'prio_noko',
+		                forceSelection: true,
+						triggerAction: 'all',
+						displayField: 'sichtbar',
+						valueField: 'id',
+						hiddenName: 'prio_noko',
+						store: prioNoko,
+						mode: 'local',
+						lazyRender:true,
+						typeAhead: true
+		            },{
+		                xtype: 'combo',
+		                fieldLabel: 'Mehrwertsteuer',
+		                width: 150,
+		                // id: 'mwst_satz',
+		                allowBlank: false,
+		                forceSelection: true,
+						triggerAction: 'all',
+						displayField: 'mwst',
+						valueField: 'id',
+						hiddenName: 'mwst_satz',
+						store: mehrwertSteuer,
+						lazyRender:true,
+						typeAhead: true,
+						mode: 'local'
+		            },{
+		                xtype: 'numberfield',
+		                fieldLabel: 'Verkaufspreis Netto',
+		                width: 150,
+		                decimalPrecision: 2,
+		                minValue: 0.01,
+		                id: 'vk'
+		            },{
+		                xtype: 'combo',
+		                fieldLabel: 'Sachleistung',
+		                width: 150,
+		                // id: 'sachleistung',
+		                allowBlank: false,
+		                forceSelection: true,
+						triggerAction: 'all',
+						displayField: 'sachleistung',
+						valueField: 'id',
+						hiddenName: 'sachleistung',
+						store: sachleistung,
+						lazyRender:true,
+						typeAhead: true,
+						mode: 'local'
+		            },{
+		                xtype: 'numberfield',
+		                fieldLabel: 'Buchungsfrist',
+		                width: 100,
+		                id: 'buchungsfrist'
+		            },{
+		                xtype: 'numberfield',
+		                fieldLabel: 'max. Personen',
+		                width: 100,
+		                id: 'maxPersons'
+		            },{
+		                xtype: 'combo',
+		                fieldLabel: 'permanentes Zusatzprogramm',
+		                width: 150,
+		                id: 'permanent_zusatz',
+		                allowBlank: false,
+		                forceSelection: true,
+						triggerAction: 'all',
+						displayField: 'zusatzprogramm',
+						valueField: 'id',
+						hiddenName: 'zusatzprogramm',
+						store: zusatzprogramm,
+						lazyRender:true,
+						typeAhead: true,
+						mode: 'local'
+		            },
+		           // ,{
+		             // xtype: 'combo',
+		             // fieldLabel: 'Sprache',
+		             // width: 150,
+		             // id: 'sprache',
+		             // allowBlank: false,
+		             // forceSelection: true,
+					 //	triggerAction: 'all',
+					 //	lazyRender:true,
+					 //	typeAhead: true,
+					 //	displayField: 'sprache',
+					 //	valueField: 'id',
+					 //	hiddenName: 'sprache',
+					 //	store: sprache
+		           // }
+		            {
+		                xtype: 'numberfield',
+		                fieldLabel: 'Sprach ID',
+		                width: 50,
+		                id: 'sprache',
+		                hidden: true
+		            }
+		        ],
+		        fbar: {
+					xtype: 'toolbar',
+					items: [{
+						 xtype: 'button',
+			             text: 'ändern',
+			             id: 'aendern',
+			             handler: function(){
+							form.getForm().submit({
+								success: function(form,action){
+									jsonStore.reload();
+									showMsgBox(' Datensatz ' + form.items.items[0].value +  ' geändert');
+								},
+								failure: function(form,action){
+									Ext.Msg.alert('Warnung');
+								}
+							});
+						}
+					}]
+            	}
+		});
+
+		grid.getSelectionModel().on('rowselect', function(sm, rowIndex, record){
+			form.getForm().loadRecord(record);
+			Ext.getCmp('AO_City').setValue(record.data.AO_City_ID);
+			Ext.getCmp('sprache').setValue(record.data.sprache_id);
+		});
+	
+	    grid.render('grid');
+		jsonStore.load();
+		
+	});
+
+	function renderer_sichtbarkeit(val){
+		var icon = '';
+		if(val == 1 || val == 2)
+			icon = "<img src='/buttons/accept.png'>";
+		else
+			icon = "<img src='/buttons/cancel.png'>";
+		
+		return icon;
+	}
+
+	function renderer_sachleistung(val){
+		var typ = '';
+
+		if(val == 1)
+			typ = 'Programm';
+		else if(val == 2)
+			typ = 'Sachleistung';
+		else if(val == 3)
+			typ = 'Bus';
+		else if(val == 4)
+			typ = 'Citytransfer';
+		else if(val == 5)
+			typ = 'Transfer';
+		
+		return typ;
+	}
+
+	function renderer_mwst(val){
+		var typ = '';
+
+		if(val == 'A')
+			typ = '19%';
+		else if(val == 'B')
+			typ = '7%';
+		else
+			typ = '0%';
+		
+		return typ;
+	}
+
+	function renderer_zusatzprogramm(val){
+		var typ = '';
+
+		if(val == 1)
+			typ = 'normal';
+		else
+			typ = 'Zusatzprogramm';
+		
+		return typ;
+	}	
+	
+</script>
+<div class='span-32'>&nbsp;</div>
+<div class='span-32'>
+    <div class="blockDescription span-15">
+        <h3 style="color: blue">Vorhandene Busprogramme</h3>
+        <br>
+        Anzeige der vorhandenen Busprogramme.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-32' id='grid'></div>
+<div class='span-32'>&nbsp;</div>
+<div class='span-32' id='form'></div>

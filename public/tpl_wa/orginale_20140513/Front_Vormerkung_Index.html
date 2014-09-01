@@ -1,0 +1,46 @@
+<div class="block block_oben block_unten ueberschrift_gruen" style="padding-left: 40px;">
+    {function="translate('Ihre Vormerkungen')"}
+</div>
+
+<div>&nbsp;</div>
+
+{if condition="$vormerkungen"}
+    <div class="block_oben block block_unten" style="float: left; padding-left: 40px;">
+        <div class="span-4 teilueberschrift">{function="translate('Vormerkung Nr.')"}</div>
+        <div class="span-2 teilueberschrift">&nbsp;</div>
+        <div class="span-6 teilueberschrift">{function="translate('Information')"}</div>
+        <div class="span-4 teilueberschrift">&nbsp;</div>
+        <div class="span-4 teilueberschrift">&nbsp;</div>
+    </div>
+    {loop="$vormerkungen"}
+        <div class="block_links_rechts block_unten" style="padding-left: 40px; float: left; padding-left: 40px; padding-top: 10px; padding-bottom: 10px;">
+            <div class="span-4">{$value.registrierungsnummer}</div>
+            <div class="span-2"><a href="/front/vormerkpdf/index/buchungsNummerId/{$value.id}" target="_blank" class="submit">Pdf</a></div>
+            <div class="span-6">
+                {loop="$value.buchung"}
+                    <p>
+                        {if condition="$value.startdatum"}
+                            {$value.startdatum},
+                        {/if}
+
+                        {if condition="$value.startzeit"}
+                            {$value.startzeit} {function="translate('Uhr')"}
+                        {/if}
+
+                        {if condition="$value.name"}
+                            <br>{$value.name}
+                        {/if}
+
+                        {if condition="$value.ratenName"}
+                            <br>{$value.ratenName}
+                        {/if}
+
+
+                    </p>
+                {/loop}
+            </div>
+            <div class="span-4"><form method="post" action="/front/vormerkung/edit/buchungsnummer/{$value.id}/translate/{$value.translate}"><input class="form submit" type="submit" name="buchungsnummer" value="{function="translate('ändern / buchen')"}"></form></div>
+            <div class="span-4"><form method="post" action="/front/vormerkung/delete/buchungsnummer/{$value.id}"><input class="form submit" type="submit" name="buchungsnummer" value="{function="translate('löschen')"}"></form></div>
+        </div>
+    {/loop}
+{/if}

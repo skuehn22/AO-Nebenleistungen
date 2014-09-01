@@ -1,0 +1,42 @@
+<script type="text/javascript" src="/tpl/Admin_Hotelrates1_Produkte.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotelrates1_Vorhandenerate.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotelrates1_Neuerate.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotelrates1_Bild.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotelrates1_Parent.js"></script>
+        
+<script type="text/javascript">
+
+    var condition_hotel_new = '1';
+	var condition_hotel_passiv = '2';
+	var condition_hotel_aktiv = '3';
+
+    var memoryHotelId = false;
+    var memoryHotelCode = false;
+    var memoryRatenId = false;
+    var memoryRateCode = false;
+    var memoryRatenName = '';
+
+    var formKategorieHotel;
+    var fenster;
+
+    var jsonStoreKategories;
+    var gridHotels;
+    var gridProducts;
+
+	Ext.onReady(function(){
+        fillParent();
+	});
+
+</script>
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue">Raten eines Hotels</h3>
+    <br>
+    Der Verantwortliche des Hotels kann neue Raten anlegen<br>
+    und vorhandene Raten überarbeiten.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-15' id='gridHotel'></div>
+<div class='span-15' id='gridKategories'></div>
+<div class='span-32'></div>

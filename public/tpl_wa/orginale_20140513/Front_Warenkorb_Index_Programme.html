@@ -1,0 +1,160 @@
+<!-- Programme -->
+{loop name="shoppingCartNestedProgramme"}
+<div class="span-24 block_oben block_unten block">
+    <div class="span-12 prepend-1 ueberschrift_gruen">{$value.stadtname}</div>
+    <div style="width: 430px; float: left;">
+        <table style="float: right;">
+            <tr>
+                <td>
+                    <form class="form" style="margin-right: 40px;" action="{$alternativButtonProgrammbuchung}" method="post">
+                        {if condition="$flag_show_buttons"}
+                            {if condition="$flagStornierung == 1"}
+                                <input type="submit" class="programmbuchung_neu" value="{function=" translate('weitere Programme buchen')"}">
+                            {/if}
+                        {/if}
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+    {loop name="$value.programme"}
+
+        <!-- bereits stornierte Programme ausblenden -->
+        {if condition="$value.anzahl > 0"}
+            <div class='block_gray block block_unten' style="float: left;">
+                <div class="span-5 prepend-1">
+                    {function="anzeigenBilder($value.programmdetails_id,1,150)"}
+                </div>
+                <div class="span-12">
+                    <p class="teilueberschrift_gruen">{$value.progname}</p>
+
+                    <p>{$value.preisvarianteName}</p>
+
+                    {if condition="$value.typOeffnungszeiten < 4"}
+                        {function="translate('Datum der Durchführung')"}: {$value.datum}<br>
+                    {/if}
+
+                    {if condition="$value.typOeffnungszeiten < 4"}
+                        {if condition="$value.typOeffnungszeiten > 1"}
+                            {function="translate('Zeit der Durchführung')"}: {function="formatiereZeit($value.zeit,2)"} Uhr<br>
+                        {/if}
+                    {/if}
+
+                    {if condition="$value.gebuchteProgrammsprache > 0"}
+                        {function="translate('gebuchte Programmsprache')"}: <img src="/flags/{function="flagge($value.gebuchteProgrammsprache)"}.png"><br>
+                    {/if}
+
+                    {function="translate('Preis')"}: {$value.preisvariantePreis} €<br>
+                    {function="translate('Anzahl')"}: {$value.anzahl}<br><br>
+                    {function="translate('Gesamtpreis für diese Programmvariante')"}: {$value.preisvarianteGesamtpreis} €<br>
+
+                    {if condition="$value.vertragspartner"}
+                        <br>{function="translate('Vertragspartner für diese Leistung ist:')"}<br>
+                        {$value.vertragspartner.company}, {$value.vertragspartner.street}, {$value.vertragspartner.zip} {$value.vertragspartner.city} <br>
+                        {$value.vertragspartner.country}<br>
+                    {/if}
+
+                    {if condition="$value.tageStornofristen"}
+                        <br>{function="translate('Stornokosten:')"}<br>
+
+                        {loop="$value.tageStornofristen"}
+                            {if condition="$value.tage == 999"}
+                                {function="translate('Keine Stornierung möglich')"}.
+                            {else}
+                                {$value.tage} {function="translate('Tage vor Beginn der Buchung')"}, {$value.prozente} % {function="translate('des Preises der Buchung')"}. <br>
+                            {/if}
+                        {/loop}
+                        <br>
+                    {/if}
+
+                    {if condition="$value.hinweis"}
+                        {function="translate('saisonaler Hinweis')"}: {$value.hinweis}<p>
+                    {/if}
+
+                    {if condition="$value.oepnv"}
+                        {function="translate('öffentlicher Nahverkehr')"}: {$value.oepnv}<p>
+                    {/if}
+
+                    {if condition="$value.treffpunktText"}
+                        {function="translate('Treffpunkt')"}: {$value.treffpunktText}<p>
+                    {/if}
+
+                    {if condition="$value.oeffnungszeiten"}
+                        {function="translate('Öffnungszeiten')"}:<br> {$value.oeffnungszeiten}<p>
+                    {/if}
+                </div>
+                <div style="float: left; width: 228px;">
+                    <table style="float: right; margin-right: 40px;">
+                        {if condition="$flag_show_buttons"}
+                            <!-- neues Programm -->
+                            {if condition="$value.status == 1"}
+                            <tr>
+                                <td>
+                                    <form class="form" action="#" method="post">
+                                        <input type="submit" id="{$value.id}" class="programmbuchung_stornieren singleProgrammButton" value="{function=" translate('löschen')"}">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form class="form" action="/front/programmdetail/edit-programmbuchung/idBuchungstabelle/{$value.id}" method="post">
+                                        <input type="submit" class="programmbuchung_bearbeiten" value="{function=" translate('bearbeiten')"}">
+                                    </form>
+                                </td>
+                            </tr>
+                            {else}
+
+                            <!-- bereits gebuchtes Programm -->
+                            <tr>
+                                <td colspan="2" class="input_action">
+                                    {function="translate('bereits gebuchtes Programm')"}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <form class="form" action="#" method="post">
+                                        {if condition="$value.inStornofrist == 1"}
+                                            <input type="submit" id="{$value.id}" class="programmbuchung_stornieren singleProgrammButton" value="{function=" translate('kostenpflichtig stornieren')"}">
+                                        {else}
+                                            <input type="submit" id="{$value.id}" class="programmbuchung_stornieren stornoProgrammButton" value="{function=" translate('kostenfrei stornieren')"}">
+                                        {/if}
+                                    </form>
+                                </td>
+                                <td>
+                                    <form class="form" action="/front/programmdetail/edit-programmbuchung/idBuchungstabelle/{$value.id}" method="post">
+                                        {if condition="$value.preisvariantePreis > 0"}
+                                            <input type="submit" class="programmbuchung_bearbeiten" value="{function=" translate('bearbeiten')"}">
+                                        {/if}
+                                    </form>
+                                </td>
+                            </tr>
+                            {/if}
+                        {/if}
+
+                        <tr>
+                            <td colspan="2">
+                                {include="Front_Warenkorb_Buchungstyp"}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        {/if}
+    {/loop}
+{/loop}
+
+<!-- Alternativ Programme -->
+{if condition="$flag_show_buttons"}
+    {if condition="!$shoppingCartNestedProgramme"}
+    <div class="span-24">&nbsp;</div>
+
+    <div class="span-24 block_oben block block_unten">
+        <div class="span-12 prepend-1 teilueberschrift">{function="translate('keine touristischen Programme gewählt')"}
+        </div>
+        <div style="width: 430px; float: left;">
+            <form method='post' action='{$alternativButtonProgrammbuchung}' style="float: right; margin-right: 40px;">
+                <input type='submit' class='programmbuchung_neu' src='' name='suchenProgramme' value="{function="translate('Programmangebote suchen')"}">
+            </form>
+        </div>
+    </div>
+    {/if}
+{/if}

@@ -428,7 +428,7 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
 
         // Betreffzeile Erstbuchung
         if ($this->zaehler == 1){
-            $subject = $this->_betreffZeileErstbuchung." ".$this->registrierungsNummer."-".$this->zaehler;
+            $subject = $this->_betreffZeileErstbuchung;
             $this->_mail->setSubject($subject);
         }
         // Betreffzeile Veränderungsbuchung

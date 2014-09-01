@@ -1,0 +1,41 @@
+<script type="text/javascript" src="/tpl/Admin_Hotelkategories_IndexVorhandene.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotelkategories_IndexDaten.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Hotelkategories_IndexBeschreibung.js"></script>
+
+<script type="text/javascript">
+
+	var memoryHotelId = false;
+	var memoryCategoryId = false;
+    var memorySprache = false;
+    var EM = null;
+
+    var parentView;
+
+    
+	Ext.onReady(function(){
+
+        // globaler Eventmanager
+        EM = new Ext.util.Observable();
+        EM.addEvents('hotelkategoriesVorhandeneKategorieGridLoad');
+        EM.on('hotelkategoriesVorhandeneKategorieGridLoad',function(){
+            parentView.gridKategories.store.load();
+        });
+
+        // Block der Benutzer
+        hotelkategoriesVorhandeneAdmin();
+
+	});
+
+
+</script>
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue" align="center">Kategorien eines Hotels !</h3>
+    <br>
+    Der Verantwortliche des Hotels kann neue Kategorien / Übernachtungsmöglichkeiten anlegen.<br>
+    Es kann eine deutsche und eine englische Beschreibung der Kategorie angelegt werden.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-15' id='gridHotel'></div>
+<div class='span-15' id='gridKategories'></div>

@@ -1,0 +1,62 @@
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+
+
+<div class="span-24 block_oben block_unten">
+     {function="anzeigenStadtteaserBilder(8,6,950)"}
+</div>
+<div class="span-24 bild_unterschrift">
+    <div>
+        <a href="/front/agb/index" class="menu_level_1_inactive">Städte</a>
+        <a href="/front/agb/index" class="menu_level_1_inactive">Hotel</a>
+        <a href="/front/programmstart/index/city/1" class="menu_level_1">Programm</a>
+    </div>
+
+    <div class="themen_menu" style="float:right;">
+        <a href="/front/vorschlag/view/city/1">Cliquen Reisen</a>
+        <a href="/front/vorschlag/view/city/1">Klassen Reisen</a>
+        <a href="/front/vorschlag/view/city/1">Team Reisen</a></span>
+    </div>
+
+
+</div>
+<div class="span-24" style="border-bottom:1px dotted #E2001A; height:25px;">
+    <a href="" class="submenu_level_1_inactive">Stadt-Land-Fluß</a>
+    <a href="" class="submenu_level_1_inactive">Unterhaltung</a>
+    <a href="" class="submenu_level_1">Events</a>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="span-24" style="float:right; ">
+
+	{loop name="cityEvents"}
+     <div style="float:left;">
+        {if condition="$counter == 0"}
+            {include="Front_Hotellist_Index_Suchparameter"}
+        {/if}
+     </div>
+
+      <div class="span-17 hotel_box" style="float:right;">
+            <div class="span-5" style="padding-left: 1px;">
+              <div class="hotel_top" style="padding-left: 10px;">
+                  <h1>{$value.progname}<br></h1>
+              </div>
+              <div style="margin-left:10px; margin-top:5px;">
+                 {function="anzeigenBilder($value.id,1,150,1)"}
+              </div>
+            </div>
+            <div class="span-10" style="padding-left:55px;">
+                <p><br></p>
+                {$value.txt} <a href="/front/programmdetail/index/city/{$value.cityId}/programId/{$value.id}">{function="translate('mehr')"}</a>      <p></p>
+                <p><form method='post' class="form" action='/front/programmdetail/index/city/{$value.cityId}/programId/{$value.id}'><input type='submit' class="submit reisekorb_more" value='{function="translate('buchen')"}...'></form></p>
+                 <p style="margin-bottom:10px;">&nbsp;</p>
+            </div>
+      </div>
+       <div class="span-17" style="float:right;"> &nbsp;</div>
+
+
+
+	{/loop}
+
+</div>

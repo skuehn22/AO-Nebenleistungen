@@ -1,0 +1,63 @@
+<div class="block_oben block block_unten span-24">
+    {if condition="$statusBuchung == 1 or $statusBuchung == 2"}
+        <div style="padding-left: 40px;" class="ueberschrift_gruen">
+            {if condition="$statusBuchung == 1"}
+                {function="translate('Buchung')"}
+            {elseif condition="$statusBuchung == 2"}
+                {function="translate('Buchungsänderung')"}
+            {/if}
+        </div>
+    {else}
+        <div style="padding-left: 40px;" class="ueberschrift_rot">
+            {function="translate('Stornierung')"}
+        </div>
+    {/if}
+</div>
+
+<div class="span-24">
+    &nbsp;
+</div>
+
+
+<div class='span-24 block block_unten block_oben'>
+    <div  style="padding-left: 40px; float: left;">
+        {if condition="$statusBuchung == 1"}
+            {function="translate('Wir danken Ihnen für Ihre Buchung Nr. ')"}{$support.kompletteBuchungsnummer}<br><br>
+            {function="translate('Ihre Buchungsunterlagen erhalten Sie in Kürze per E-Mail.')"}<P><P>
+            {function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>
+        {elseif condition="$statusBuchung == 2"}
+            {function="translate('Wir danken Ihnen für Ihre Buchungänderung Nr. ')"}{$support.kompletteBuchungsnummer}<br><br>
+            {function="translate('Ihre geänderten Buchungsunterlagen erhalten Sie in Kürze per E-Mail.')"}<P><P>
+            {function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>
+        {else}
+            {function="translate('Wir danken Ihnen für Ihre Stornierung Nr. ')"}{$support.kompletteBuchungsnummer}<br><br>
+            {function="translate('Die Stornierungsbestätigung sowie eine Rechnung über eventuell anfallende Stornierungskoten erhalten Sie in Kürze per E-Mail.')"}<P><P>
+            {function="translate('Sie erreichen uns Montag bis Freitag von 9 - 17 Uhr telefonisch unter +49 30-28 39 23 10')"} <P>
+        {/if}
+    </div>
+</div>
+
+<div class="span-24">
+    &nbsp;
+</div>
+
+{if condition="$notschalter['programmbuchung']"}
+<div class='span-24 block block_unten block_oben'>
+    <div  style="padding-left: 40px; float: left;">
+        <span class="teilueberschrift_rot">{function="translate('Achtung')"}!</span><br>
+        {function="translate('Auf Grund von Wartungsarbeiten können momentan keine Programme online gebucht werden. Wir setzen uns umgehend mit Ihnen in Verbindung und danken für Ihr Verständnis.')"}<br>
+    </div>
+</div>
+<div class="span-24">
+    &nbsp;
+</div>
+{/if}
+
+{if condition="$notschalter['hotelbuchung']"}
+<div class='span-24 block block_unten block_oben'>
+    <div  style="padding-left: 40px; float: left;">
+        <span class="teilueberschrift_rot">{function="translate('Achtung')"}!</span><br>
+        {function="translate('Auf Grund von Wartungsarbeiten können momentan keine Übernachtungen online gebucht werden. Wir setzen uns umgehend mit Ihnen in Verbindung und danken für Ihr Verständnis.')"}<br>
+    </div>
+</div>
+{/if}

@@ -1,0 +1,21 @@
+<script type="text/javascript" src="/tpl/Admin_Notschalter_Formular.js"></script>
+
+<script type="text/javascript">
+
+	var memoryProgrammId= null;
+
+	Ext.onReady(function(){
+        objAdminNotschalterFormular = new adminNotschalterFormular();
+        objAdminNotschalterFormular.init();
+	});
+</script>
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue" align="center">Notschalter des System</h3>
+    <br>
+    Der Administrator kann die Buchung der Programme und Übernachtungen steuern.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+    <div class='span-15' id='formularNotschalter'></div>
+    <div class='span-15'><img src="/buttons/hauptschalter_klein.png"/></div>

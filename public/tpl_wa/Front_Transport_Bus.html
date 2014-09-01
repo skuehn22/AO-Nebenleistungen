@@ -1,0 +1,107 @@
+<script type="text/javascript" src='/tpl/Front_Transport_Bus.js'></script>
+
+ <div class="block block_oben ueberschrift">
+    {function="translate('einen Bus mieten, Abfahrtsort in Berlin')"}
+</div>
+
+<div class='span-23'>
+
+    <div class="span-23">&nbsp;</div>
+
+	<form action="/front/transport/busorder/" method='post' class="form" id="formTransferData">
+		<div class='span-8' style="padding:  10px;">
+		
+			<input type='hidden' name='datum' id='datum' value="{$datum}">
+			<input type='hidden' id='ProgrammId' value="" name="ProgrammId">
+			<input type='hidden' id='languages' name='languages' value='1'>
+			<input type='hidden' id='sachleistung' name='sachleistung' value=''>
+			
+			<table>
+                <tr>
+                    <td>{function="translate('Personenzahl')"}: *</td>
+                    <td> <input type='text' id='persons' value="1" class="validate[required,custom[integer],min[1]] input" name='persons' style='width: 50px;'></td>
+                </tr>
+                <tr>
+                    <td>{function="translate('Zeitdauer in Stunden')"}: *</td>
+                    <td><input type='text' id='dauer' value="1" class="validate[required,custom[integer],min[1]] input" name='dauer' style='width: 50px;'></td>
+                </tr>
+			</table>
+			<div id='datepicker'></div>
+			<div>&nbsp;</div>
+
+            <table>
+                <tr>
+                    <td>{function="translate('gewähltes Datum')"}: *</td>
+                    <td>
+                        <input type="text" id='gewaehltesDatum' value="" name="gewaehltesDatum" style="width: 110px;" class="input validate[required,min[3]]">
+                    </td>
+                </tr>
+                <tr>
+                    <td>{function="translate('gewünschte Startzeit')"}: *</td>
+                    <td>
+                        <input type='text' name='stunde' id='stunde' value="" class="validate[required,custom[integer],max[23]] input" style='width: 50px;'>
+			            :
+			            <input type='text' name='minute' id='minute' value="" class="validate[required,custom[integer],max[59]] input" position="bottomLeft" style='width: 50px;'>
+			            {function="translate('Uhr')"}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">{function="translate('Information')"}:</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea rows="3" cols="30" id='information' name='information' class="textarea"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type='button' class="submit" value="{function="translate('Bus suchen')"}" id="sucheBus"></td>
+                </tr>
+            </table>
+			
+		</div>
+	
+		<div class='span-14' align='left' id="Orte">
+            <table>
+                <tr>
+                    <td><input type="radio" name="abfahrtsOrt" class='abfahrtsOrt' checked value="1"></td>
+                    <td>{function="translate('Abfahrtsort aus Liste auswählen')"}:</td>
+                    <td><input type='text' name='adresseAbfahrt' id='adresseAbfahrt' class='validate[minSize[2]] input' style="width: 300px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="abfahrtsOrt" class='abfahrtsOrt' value="2"></td>
+                    <td>{function="translate('eigener Abfahrtsort festlegen')"}:</td>
+                    <td><textarea rows="3" cols="40" id="eigeneAdresseAbfahrt" class="textarea"></textarea></td>
+                </tr>
+                <tr><td colspan="3">&nbsp;</td></tr>
+                <tr>
+                    <td><input type="radio" checked name="zielOrt" id='zielOrt' value="1"></td>
+                    <td>{function="translate('Abfahrtsort aus Liste auswählen')"}:</td>
+                    <td><input type='text' name='adresseZiel' id='adresseZiel' class='validate[minSize[2]] input' style="width: 300px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="zielOrt" id='zielOrt' value="2"></td>
+                    <td>{function="translate('eigener Zielort festlegen')"}:</td>
+                    <td><textarea rows="3" id="eigeneAdresseZiel" cols="40" class="textarea"></textarea></td>
+                </tr>
+            </table>
+
+            <p>&nbsp;</p>
+
+            <table>
+                <tr>
+                    <td>{function="translate('gewählte Bus')"}: *</td>
+                    <td><input type='text' id='selectedBus' name='selectedBus' readonly class="validate[required,minSize[4]] input" style="width: 200px;"></td>
+                </tr>
+                <tr>
+                    <td>{function="translate('berechneter Preis')"}: *</td>
+                    <td><input type='text' id='pricePersons' name='pricePersons' readonly class="validate[required] input" style='width: 200px;'>&nbsp; Euro</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type='submit' name='senden' id="warenkorb" value="{function="translate(' in den Warenkorb ')"}" class='submit'>
+                        <input type='reset' name='reset' id="reset" value="{function="translate(' Formular löschen ')"}" class='submit'>
+                    </td>
+                </tr>
+            </table>
+        
+		</div>
+	</form>
+</div>

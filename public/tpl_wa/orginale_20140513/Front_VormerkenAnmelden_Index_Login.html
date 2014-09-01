@@ -1,0 +1,24 @@
+<div class="span-12">
+    <div style="padding-left: 40px;" class="teilueberschrift block_oben block_unten block">
+        {function="translate('Login')"}<br>
+        <span class="standardtext">{function="translate('text login')"}</span>
+    </div>
+    <div class="block block_unten" style="min-height: 100px; padding-left: 40px;">
+        <form class="formular form" id="formLogin" name="formLogin" method="post" action="/front/vormerken-anmelden/login/">
+        <table>
+            <tr>
+                <td width="110"><label for="email">{function="translate('E-Mail')"} * :</label></td>
+                <td><input type="text" name="email" id="email" class='validate[required,custom[email]] input span-4'></td>
+            </tr>
+            <tr>
+                <td><label for="passwort">{function="translate('Passwort')"} * :</td>
+                <td><input class="validate[required,minSize[6]] input span-4" type="password" name="passwort" id="passwort"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" class="submit" name="anmelden" value="{function="translate('Login')"}"></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+{if condition="count($value.produkte) > 0"}
+<div class='span-24 teilueberschrift block block_unten'>
+    <div class="span-12 prepend-1">
+        <div class="ueberschrift_gruen span-3">{$value.city}:</div>
+        {function="translate('zusätzlich gewählte Produkte')"}: <span class="teilueberschrift_gruen">{$value.hotelUeberschrift}</span>
+    </div>
+    <div  style="width: 430px; float: left;">
+        {if condition="$flag_show_buttons"}
+            <table style="float: right; margin-right: 40px;">
+                <tr>
+                    <td>
+                        <a class="button_link" href="/front/hotelreservation-delete/produktbuchung/teilrechnungenId/{$value.teilrechnung_id}">{function="translate('Hotelprodukte löschen')"}</a>
+                    </td>
+                    <form method='post' style="float: right; margin-right: 40px;" action='/front/zusatzprodukte/edit-alle-produkte/teilrechnungsId/{$value.teilrechnung_id}/propertyId/{$value.propertyId}'>
+                    <td>
+                        <input type='submit' class='produktbuchung_bearbeiten' name='delete' value="{function="translate('Hotelprodukte bearbeiten')"}">
+                    </td>
+                    </form>
+                </tr>
+            </table>
+        {/if}
+    </div>
+</div>
+{else}
+<div class='span-24 teilueberschrift block block_unten'>
+   <div class="span-12 prepend-1">
+       <div class="ueberschrift_gruen span-3">{$value.city}:</div>
+       {function="translate('zusätzlich gewählte Produkte')"}: <span class="teilueberschrift_gruen">{$value.hotelUeberschrift}</span>
+   </div>
+   <div  style="width: 430px; float: left;">
+       {if condition="$flag_show_buttons"}
+       <form method='post' style="float: right; margin-right: 40px;" action='/front/zusatzprodukte/zusaetzlich-buchen/teilrechnungsId/{$value.teilrechnung_id}/propertyId/{$value.propertyId}'>
+           <input type='submit' class='submit' name='delete' value="{function="translate('Hotelprodukte buchen')"}">
+       </form>
+       {/if}
+   </div>
+</div>
+{/if}
+
+{loop name="value.produkte"}
+<div class="span-24 block_unten block_gray block">
+
+    <div class="span-5 prepend-1">
+        <img src='{function="findProductImage($value.products_id)"}'><p></p>
+    </div>
+
+    <div class="span-12">
+        <span class="teilueberschrift_gruen">{$value.name}</span><br><br>
+
+        {$value.beschreibung}
+        <br><br>
+
+        {function="translate('Datum der Anreise')"}: {function="formatiereDatum($value.anreisedatum)"}<p>
+
+        {if condition="$value.produktTyp == 1"}
+            {function="translate('Personen')"}: {$value.anzahl}<br>
+            {function="translate('Preis pro Person')"}: {function="translatePricing($value.aktuellerProduktPreis)"} €<br>
+        {elseif condition="$value.produktTyp == 2"}
+            {function="translate('für')"} {$value.anzahl} {function="translate('Zimmer')"}<br>
+            {function="translate('Preis pro Zimmer')"}: {function="translatePricing($value.aktuellerProduktPreis)"} €<br>
+        {elseif condition="$value.produktTyp == 3"}
+            {function="translate('Personen')"}: {$value.anzahl}<br>
+            {function="translate('Nächte')"}: {$value.uebernachtungen}<br>
+            {function="translate('Preis pro Person und Nacht')"}: {function="translatePricing($value.aktuellerProduktPreis)"} €<br>
+        {else}
+            {function="translate('Anzahl')"}: {$value.anzahl}<br>
+            {function="translate('Preis')"}: {function="translatePricing($value.aktuellerProduktPreis)"} €<br>
+        {/if}
+
+        <br>
+        {function="translate('Gesamtpreis')"}: {function="translatePricing($value.summeProduktPreis)"} €
+
+    </div>
+</div>
+{/loop}

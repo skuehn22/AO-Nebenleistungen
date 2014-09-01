@@ -1,0 +1,13 @@
+{if="$value.typ == 1"}
+    {function="translate('je Person')"}
+{elseif="$value.typ == 2"}
+    {function="translate('je Zimmer')"}
+{elseif="$value.typ == 3"}
+    {function="translate('1 Personen und '.$information.uebernachtungen.' N&auml;chte')"}
+{elseif="$value.typ == 4"}
+    {function="translate('Preis pro St&uuml;ck')"}
+{elseif="$value.typ == 5"}
+    {function="translate('St&uuml;ck * N&auml;chte')"}
+{elseif="$value.typ == 6"}
+    {function="translate('je Tag')"}
+{/if}

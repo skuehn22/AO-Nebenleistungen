@@ -1,0 +1,109 @@
+<script type="text/javascript">
+<!--
+
+	var grid;
+
+	Ext.onReady(function(){
+
+		jsonGridStore = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/availablecategories/getcategories/",
+	        id: 'jsonCategoriesStore',
+	        fields: ['property_name','property_code','categorie_name','datum','roomlimit','availibility','min_stay']
+	    });
+
+		grid = new Ext.grid.GridPanel({
+			autoHeight: true,
+	        stripeRows: true,
+	        loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true
+	        },
+			autoExpandColumn: 'property_name',
+	        store: jsonGridStore,
+	        width: 750,
+	        id: 'hotelsGrid',
+	        title: 'vorhandene Hotels',
+		    columns: [
+					new Ext.grid.RowNumberer({width: 30}),
+			  		{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'property_name',
+		                header: 'Hotelname',
+		                width: 50,
+		                id: 'property_name'
+		            },{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'property_code',
+		                header: 'Hotel Code',
+		                id: 'property_code',
+		                width: 100
+		   			},{
+					   xtype: 'gridcolumn',
+		           	   dataIndex: 'categorie_name',
+		           	   header: 'Kategorie Name',
+		           	   width: 100,
+		           	   id: 'categorie_name'
+	   				},{
+					   xtype: 'gridcolumn',
+		           	   dataIndex: 'datum',
+		           	   header: 'Datum',
+		           	   width: 100,
+		           	   id: 'datum',
+		           	   renderer: rendererDatum
+           			},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'roomlimit',
+  		           	   header: 'Zimmeranzahl',
+  		           	   width: 70,
+  		           	   id: 'roomlimit'
+               		},{
+                  	   xtype: 'gridcolumn',
+  		           	   dataIndex: 'availibility',
+  		           	   header: 'verfügbar',
+  		           	   width: 70,
+  		           	   id: 'availibility',
+  		           	   renderer: rendererVerfuegbarkeit
+                   	},{
+                   	   xtype: 'gridcolumn',
+   		           	   dataIndex: 'min_stay',
+   		           	   header: 'min. Tage',
+   		           	   width: 100,
+   		           	   id: 'min_stay'
+                    }],
+		   bbar: [{
+	            xtype: 'paging',
+	            store: jsonGridStore,
+	            id: 'paging',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	        }]
+		});
+			
+	    grid.render('grid');
+	    jsonGridStore.load();
+	});
+
+	function rendererDatum(val){
+		var teile = val.split("-");
+
+		return teile[2] + "." + teile[1] + "." + teile[0];
+	}
+
+	function rendererVerfuegbarkeit(val){
+		if(val == 1)
+			return "<img src='/buttons/accept.png'>";
+		else
+			return "<img src='/buttons/cancel.png'>";
+	}
+
+-->
+</script>
+<div class='span-32' id='info' style='height: 50px; border: solid black 1px;'></div>
+<div class='span-32' id='grid'></div>
+<div class='span-32' style='height: 10px; border: solid black 1px;'></div>
+<div class='span-32' id='tabs'></div>

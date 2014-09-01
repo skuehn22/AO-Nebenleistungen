@@ -1,0 +1,157 @@
+<!-- Maxi Bild -->
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+
+<script type="text/javascript">
+    var memoryPersonenanzahl = {$information.personenanzahl};
+</script>
+<script type="text/javascript" src='/tpl/Front_Zusatzprodukte_Index.js'></script>
+
+<div class="span-24">
+    <div class="block block_oben block_unten" style="padding-left: 40px;">{$breadcrumb}</div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+{if="$information"}
+<div class="block block_oben ueberschrift_gruen block_unten span-24">
+        <div style="margin-left: 40px;">{function="translate('Bitte Zusatzprodukte')"} {$information.ueberschrift} {function="translate('auswählen')"}</div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="block block_unten block_oben span-24">
+    <div class="span-5" style="margin-left: 40px;">
+        {function="anzeigenBilder($information.hotelId,6,150)"}
+    </div>
+
+    {if="$bereitsGebuchteProdukte"}
+    <div class="span-7">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="block_oben block">
+                <td colspan="3" style="padding-left: 10px;"> {function="translate('mit der Auswahl von Zimmern haben sie bereits folgende Produkte gebucht')"} </td>
+            </tr>
+            {loop name="bereitsGebuchteProdukte"}
+            <tr class="block block_unten">
+                <td style="padding-left: 10px;"> {$value.anzahl} * {$value.name} </td>
+                <td style="padding-left: 10px;"> <img src="/buttons/help.png" id="produkt{$value.id}" description="{$value.beschreibung}" class="produktbeschreibung"> </td>
+                <td style="padding-left: 10px;"><img src='{function="findProductImage($value.id)"}'></td>
+            </tr>
+            {/loop}
+        </table>
+    </div>
+    {/if}
+
+    <div class="block block_oben block_unten span-5" style="padding-left: 10px;">
+        <div class="ueberschrift block_unten">
+            {function="translate('eingegebene Suchparameter')"}:<br><br>
+        </div>
+        {function="translate('Anreisetag')"}: {$information.anreisetag} <br>
+        {function="translate('Abreisetag')"}: {$information.abreisetag} <br>
+        {function="translate('Personenanzahl')"}: {$information.personenanzahl}<br>
+        {function="translate('Anzahl Übernachtungen')"}: {$information.uebernachtungen}
+    </div>
+</div>
+{/if}
+
+
+<div class="span-21">
+    &nbsp;
+</div>
+
+{if="$zusatzprodukte"}
+<div class="span-24">
+    <form method="post" action="/front/zusatzprodukte/save/teilrechnungId/{$teilrechnungId}" class="form" id="form">
+    <table border="0" cellpadding="0" cellspacing="0" class="gitter span-20" id="tabelleZusatzprodukte">
+    <tr>
+        <td colspan="7"> <span class="tabellenueberschrift_gruen">{function="translate('weitere Produkte des Hotels')"}:</span></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td> {function="translate('Anzahl')"} </td>
+        <td> {function="translate('Beschreibung')"} </td>
+        <td> &nbsp; </td>
+        <td> {function="translate('Preis')"} </td>
+        <td> {function="translate('Summe')"} </td>
+        <td>&nbsp;&nbsp;</td>
+    </tr>
+    {loop name="zusatzprodukte"}
+        {if="$value.verpflegung == 2"}
+            {include="Front_Zusatzprodukte_Hoteloptionen"}
+        {elseif="$value.typ == 6"}
+        <tr class="typ6">
+            <td>&nbsp;</td>
+            <td>{function="translate('für')"} <input type="text" size="5" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="input_action span-2 validate[custom[integer]] zusatzprodukt"> {function="translate('Personen')"}</td>
+            <td>{$value.name}</td>
+            <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translate('pro Person')"} {function="translatePricing($value.price)"} €</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td><img src='{function="findProductImage($value.id)"}'></td>
+        </tr>
+        {elseif="$value.typ == 1"}
+        <tr class="typ1">
+            <td>&nbsp;</td>
+            <td>{function="translate('für')"} <input type="text" size="5" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="input_action span-2 validate[custom[integer]] zusatzprodukt"> {function="translate('Personen')"}</td>
+            <td>{$value.name}</td>
+            <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translate('pro Person')"} {function="translatePricing($value.price)"} €</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td><img src='{function="findProductImage($value.id)"}'></td>
+        </tr>
+        {elseif="$value.typ == 2"}
+        <tr class="typ2">
+            <td>&nbsp;</td>
+            <td>{function="translate('für')"} <input type="text" size="5" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="input_action span-2 validate[custom[integer]] zusatzprodukt"> {function="translate('Zimmer')"}</td>
+            <td>{$value.name}</td>
+            <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translate('pro Zimmer')"} {function="translatePricing($value.price)"} €</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td><img src='{function="findProductImage($value.id)"}'></td>
+        </tr>
+        {elseif="$value.typ == 3"}
+         <tr class="typ3">
+            <td>&nbsp;</td>
+            <td>{function="translate('für')"} <input type="text" size="5" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="input_action span-2 validate[custom[integer]] zusatzprodukt"> {function="translate('Personen /')"} {$information.uebernachtungen} {function="translate('Nächte')"}</td>
+            <td>{$value.name}</td>
+             <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}">
+                {function="translate('pro Person und')"} {$information.uebernachtungen}{$value.uebernachtungen} {function="translate('Übernachtungen')"} {function="translatePricing($value.price)"} €
+            </td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td><img src='{function="findProductImage($value.id)"}'></td>
+        </tr>
+        {elseif="$value.typ == 4"}
+        <tr class="typ4">
+            <td>&nbsp;</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="zusatzprodukt input_action validate[custom[integer]] span-2"> {function="translate('Anzahl')"}</td>
+            <td>{$value.name}</td>
+            <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translatePricing($value.price)"} €</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td><img src='{function="findProductImage($value.id)"}'></td>
+        </tr>
+        {elseif="$value.typ == 5"}
+        <tr class="typ5">
+            <td>&nbsp;</td>
+            <td>{function="translate('für')"} <input type="text" size="5" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="input_action span-2 validate[custom[integer]] zusatzprodukt"> {function="translate('Anzahl /')"} {$information.uebernachtungen} {function="translate('Nächte')"}</td>
+            <td>{$value.name}</td>
+            <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}">{function="translate('pro Anzahl und')"} {$information.uebernachtungen}{$value.uebernachtungen} {function="translate('Übernachtungen')"} {function="translatePricing($value.price)"} €</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td><img src='{function="findProductImage($value.id)"}'></td>
+        </tr>
+        {/if}
+    {/loop}
+
+    <tr class="buttons">
+        <td colspan="4">{function="translate('Gesamtpreis')"}: <span id='total'>0.00</span> €</td>
+        <td colspan="3" align="center"><input type="submit" name="zusatzprodukte" value=" {function="translate('weiter zum Warenkorb')"} " class='submit'></td>
+    </tr>
+    </table>
+    </form>
+</div>
+{else}
+ <form method="post" action="/front/warenkorb/index/" class="form">
+     <input type="submit" name="zusatzprodukte" value=" {function="translate('weiter zum Warenkorb')"} " class='submit'>
+ </form>
+ {/if}

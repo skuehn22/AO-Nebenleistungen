@@ -1,0 +1,31 @@
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+<script type="text/javascript" src="/tooltipImage/tooltip.image.js"></script>
+
+<div id='ablaufleiste' class="span-24 last">
+    <div class="block block_oben block_unten ueberschrift_gruen" style="padding-left: 40px;">{function="translate('Neueröffnung')"}</div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="span-12">
+
+    <!-- Inhalt zur Dekoration -->
+
+
+
+</div>
+
+<div class="span-12 last">
+    <div class="ueberschrift block_oben block block_unten" style="padding-left: 10px;">
+        {$cityname}
+    </div>
+    <div class="block_unten block_links_rechts" style="padding: 10px; min-height: 200px;">
+        <div style="width: 256; float: left; padding: 5px 0px 0px 5px; margin: 0px 5px 0px 0px;" class="bildrahmen">
+            {function="anzeigenBilder($cityId,10,244, 1)"}
+        </div>
+            {if condition="$citybeschreibung"}
+                {$citybeschreibung}
+            {/if}
+    </div>
+</div>

@@ -1,0 +1,24 @@
+{if condition="$gruppenRabatt"}
+    <div class="span-22 block_unten block_gray block" style="padding-left: 40px; padding-right: 40px;">
+        <span class="teilueberschrift_gruen">{function="translate('gewährte Freiplätze')"}</span>
+        <table>
+        {loop name="$gruppenRabatt"}
+            {if condition="$value.freiplaetze > 0"}
+                <tr>
+                    <td>
+                        {if condition="$value.freiplaetze > 1"}
+                            {$value.freiplaetze} {function="translate('Freiplätze im')"}
+                        {else}
+                            {$value.freiplaetze} {function="translate('Freiplatz im')"}
+                        {/if}
+                    </td>
+                    <td>{$value.hotelName}: </td>
+                    <td>{$value.freiplaetze} {function="translate('Person(en)')"}  * {$value.categorieName} </td>
+                    <td>{function="translate('am')"} {function="formatiereDatumIso($value.datum)"} à {function="translatePricing($value.rabatt)"} € </td>
+
+                </tr>
+            {/if}
+        {/loop}
+        </table>
+    </div>
+{/if}

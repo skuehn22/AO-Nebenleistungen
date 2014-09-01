@@ -1,0 +1,306 @@
+<!-- extensions -->
+<script type="text/javascript" src='/extjs/ux/Spinner.js'></script>
+<script type="text/javascript" src='/extjs/ux/SpinnerField.js'></script>
+
+<script type="text/javascript">
+<!--
+var jsonStore;
+var grid;
+var form;
+var Fa_Id;
+var combo_zusatz;
+
+	Ext.onReady(function(){
+		jsonStore = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/zusatzartikel/tabelitems/",
+	        id: 'jsonStore',
+	        fields: ['Fa_Id','ort','progname','eintrittspreise','oeffnungszeiten','minPersons','maxPersons','minDuration','maxDuration','sachleistung','permanent_zusatz','wertigkeit']
+	    });
+	
+	    // create the Grid
+	    grid = new Ext.grid.GridPanel({
+	        store: jsonStore,
+			autoHeight: true,
+	        width: 660,
+	        stripeRows: true,
+	        title: 'editieren Programme für die Verwendung als Zusatzartikel',
+	        loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true
+	        },
+			autoExpandColumn: 'progname',
+	        columns: [new Ext.grid.RowNumberer({width: 30})
+	        	,{
+	                id       :'Fa_Id',
+	                header   : 'Programmnummer', 
+	                width    : 60, 
+	                dataIndex: 'Fa_Id'
+	            },{
+	                id       :'ort',
+	                header   : 'Stadt', 
+	                width    : 75, 
+	                dataIndex: 'ort'
+	            },{
+	                header   : 'Programmbezeichnung', 
+	                width    : 250,
+					id: 'progname',
+	                dataIndex: 'progname'
+	            },{
+	                header   : 'min. Personen', 
+	                width    : 50,
+					id: 'minPersons',
+	                dataIndex: 'minPersons'
+	            },{
+	                header   : 'max. Personen', 
+	                width    : 50,
+					id: 'maxPersons',
+	                dataIndex: 'maxPersons'
+	            },{
+	                header   : 'min. Dauer', 
+	                width    : 50,
+					id: 'minDuration',
+	                dataIndex: 'minDuration'
+	            },{
+	                header   : 'max. Dauer', 
+	                width    : 50,
+					id: 'maxDuration',
+	                dataIndex: 'maxDuration'
+	            },{
+	                header   : 'Service', 
+	                width    : 50,
+					id: 'sachleistung',
+	                dataIndex: 'sachleistung',
+	                renderer: renderer_service
+	            },{
+					header: 'Zusatz',
+					width: '50',
+					id: 'permanent_zusatz',
+					dataIndex: 'permanent_zusatz',
+					renderer: renderer_permanent
+		        },{
+	                header   : 'Wertigkeit', 
+	                width    : 50,
+					id: 'wertigkeit',
+	                dataIndex: 'wertigkeit',
+	                renderer: renderer_wertigkeit
+	            }],
+			bbar: [{
+	            xtype: 'paging',
+	            store: jsonStore,
+	            id: 'paging',
+	            pageSize: 20,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	        }],
+	        tbar: [{
+				text: 'Suche in der Programmbezeichnung oder Programmnummer:'
+	        },{
+				xtype: 'textfield',
+				width: 150,
+				name: 'progsearch',
+				id: 'progsearch'
+		    },{
+				xtype: 'tbseparator'
+			},{
+				xtype: 'button',
+				text: 'suche',
+				icon: '/buttons/arrow_right.png',
+				handler: function(){
+					var progsearch = Ext.getCmp('progsearch').getValue();
+					jsonStore.setBaseParam('progsearch', progsearch);
+					jsonStore.load();
+				}
+			},{
+				xtype: 'tbseparator'
+			}]
+	    });
+
+	    form = new Ext.form.FormPanel({
+	        title: 'Zusatzartikel editieren',
+	        width: 300,
+	        autoHeight: true,
+	        padding: 10,
+	        renderTo: 'form',
+            frame: true,
+	        id: 'ZusatzartikelForm',
+            items: [{
+                    xtype: 'textfield',
+                    fieldLabel: 'Programmnummer',
+                    name: 'Fa_Id',
+                    width: 75,
+                    id: 'Fa_Id',
+                    readOnly: true
+                },{
+                    xtype: 'textfield',
+                    fieldLabel: 'Programmname',
+                    name: 'progname',
+                    width: 150,
+                    id: 'progname',
+                    readOnly: true
+                },{
+                    xtype: 'numberfield',
+                    fieldLabel: 'min. Personen',
+                    name: 'minPersons',
+                    width: 60,
+                    id: 'minPersons',
+                    allowDecimals: false,
+                    minValue: 0
+                },{
+                    xtype: 'numberfield',
+                    fieldLabel: 'max. Personen',
+                    name: 'maxPersons',
+                    width: 60,
+                    id: 'maxPersons',
+                    allowDecimals: false,
+                    maxValue: 100,
+                    minValue: 0
+                },{
+                	xtype: 'spinnerfield',
+                	fieldLabel: 'min. Dauer',
+                	name: 'minDuration',
+                	id: 'minDuration',
+                	width: 60,
+                	allowDecimals: true,
+                	decimalPrecision: 2,
+                	incrementValue: 0.25,
+                	minValue: 0,
+                	accelerate: true
+                },{
+                	xtype: 'spinnerfield',
+                	fieldLabel: 'max. Dauer',
+                	name: 'maxDuration',
+                	id: 'maxDuration',
+                	width: 60,
+                	allowDecimals: true,
+                	decimalPrecision: 2,
+                	incrementValue: 0.25,
+                	minValue: 0,
+                	accelerate: false
+                },{
+					xtype: 'combo',
+					fieldLabel: 'Zusatzartikel',
+					name: 'permanent_zusatz',
+					id: 'permanent_zusatz',
+					 triggerAction: 'all',
+					 forceSelection: true,
+					 mode: 'local',
+					 displayField: 'displayText',
+					 valueField: 'myId',
+					 hiddenName: 'permanent_zusatz',
+					 store: new Ext.data.ArrayStore({
+					    id: 0,
+					    fields: [
+					        'myId',
+					        'displayText'
+					    ],
+					    data: [[1, 'kein Zusatzartikel'], [2, 'Zusatzartikel']]
+					}),
+					valueField: 'myId',
+					displayField: 'displayText'
+                }],
+                fbar: {
+					xtype: 'toolbar',
+					items: [{
+						xtype: 'button',
+						text: 'eintragen',
+						handler: function(){
+							formValid = 0;
+							var minPersons = Ext.getCmp('minPersons');
+							minimum(minPersons);
+							var maxPersons = Ext.getCmp('maxPersons');
+							minimum(maxPersons);
+							var minDuration = Ext.getCmp('minDuration');
+							minimum(minDuration);
+							var maxDuration = Ext.getCmp('maxDuration');
+							minimum(maxDuration);
+
+							if(formValid > 0)
+								return;
+							
+							form.getForm().submit({
+								url: '/admin/zusatzartikel/updaterecord/',
+								method: 'post',
+								success: function(form, action){
+									jsonStore.reload();
+									showMsgBox('Datensatz verändert');
+								}
+							});
+							
+						}
+					}]
+            	}
+	    });
+
+	    var zusatz = new Ext.data.SimpleStore({
+			fields: ['status'],
+			data: [['kein Zusatzartikel'], ['Zusatzartikel']]
+		});
+		
+		Ext.getCmp('minPersons').on('blur', minimum);
+		Ext.getCmp('maxPersons').on('blur', minimum);
+		
+	    grid.getSelectionModel().on('rowselect', function(sm, rowIndex, record){
+			form.getForm().loadRecord(record);
+		});
+
+	    jsonStore.on('load', function(store, records, options){
+			if(records && records.length > 0){
+				grid.getSelectionModel().selectFirstRow();
+			}
+		});
+	
+	    grid.render('grid');
+		jsonStore.load();
+
+	});
+	
+	function minimum(field){
+		var min = field.getValue();
+		if(min == 0){
+			formValid++;
+			field.markInvalid('minimale Anzahl > 0');
+		}
+		else
+			field.clearInvalid();
+	}
+
+	function renderer_permanent(val){
+		if(val == 2)
+			return "<img src='/buttons/accept.png'>";
+		else
+			return "<img src='/buttons/delete.png'>";
+	}
+
+	function renderer_service(val){
+		if(val == 2)
+			return "<img src='/buttons/accept.png'>";
+		else
+			return "<img src='/buttons/delete.png'>";
+	}
+
+	function renderer_wertigkeit(val){
+		if(val < 3)
+			return "<span style='color: red;'>" + val + "</span>";
+		if(val > 3)
+			return "<span style='color: green;'>" + val + "</span>";
+		else
+			return "<span style='color: black;'>" + val + "</span>";
+	}
+</script>
+    <div class='span-32'>&nbsp;</div>
+    <div class='span-32'>
+        <div class="blockDescription span-15">
+            <h3 style="color: blue">Zusatzartikel</h3>
+            <br>
+            Zuordnung von Programmen als Zusatzartikel.<br>
+            Achtung nicht verwenden !<br>
+            Alpha Status.
+        </div>
+    </div>
+    <div class="span-32">&nbsp;</div>
+	<div id='grid' class="span-20"></div>
+	<div id="form" class='span-9'></div>

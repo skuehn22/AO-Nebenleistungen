@@ -1,0 +1,69 @@
+<script type="text/javascript">
+    
+var formPreisvarianten;
+var gridPreisvarianten;
+var gridPreisvariantenJsonStore;
+
+Ext.onReady(function(){
+
+});
+
+function eintragenPreisvariante(){
+    formPreisvarianten.getForm().submit({
+        success: function(form,action){
+            showMsgBox('Preisvariante wurde eingetragen');
+            form.reset();
+            // gridPreisvariantenJsonStore.load();
+        },
+        failure: function(){
+            showMsgBox('Preisvariante konnte nicht gespeichert werden');
+        }
+
+    });
+}
+
+
+
+function loeschenPreisVariante(){
+    var model = gridPreisvarianten.getSelectionModel();
+    if(!model.hasSelection()){
+      showMsgBox('Bitte Preisvariante auswählen');
+
+      return;
+    }
+
+    var id = model.getSelected().data.id;
+
+    Ext.Ajax.request({
+        url: '/admin/programmvarianten/gridprogrammvarianten/',
+        success: function(){
+            showMsgBox('Preisvariante gelöscht');
+            gridPreisvariantenJsonStore.reload();
+        },
+        failure: function(){
+            showMsgBox('Preisvariante konnte nicht gelöscht werden');
+        },
+        params: {
+            deleteId: id
+        }
+    });
+}
+
+</script>
+<script type="text/javascript" src="/tpl/Admin_Programmvarianten_IndexFormPreisvariante.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Programmvarianten_IndexGridPreisvariante.js"></script>
+
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+        <h3 style="color: blue">Bearbeiten der Zuordnung von Hotels zu einem Konzernverantwortlichen</h3>
+        <br>
+        Festlegen der Preisvarianten der Programme.<br>
+        Achtung !<br>
+        Tool ist noch in der Alpha Version.<br>
+        Neue Preisvarianten nur in Rücksprache mit den Administrator vornehmen.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+
+<div class="span-12" id='divFormPreisvarianten'></div>
+<div class="span-15" id='divGridPreisvarianten'></div>

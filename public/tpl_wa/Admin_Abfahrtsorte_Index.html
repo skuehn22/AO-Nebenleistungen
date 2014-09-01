@@ -1,0 +1,53 @@
+<script type="text/javascript" src="/tpl/abfahrtsorteProgramme.js"></script>
+<script type="text/javascript" src="/tpl/abfahrtsorteTreffpunkte.js"></script>
+<script type="text/javascript" src="/tpl/abfahrtsorteZeiten.js"></script>
+
+<script type="text/javascript">
+
+    var showCloseButton = {$showCloseButton};
+    var programmId = null;
+
+    Ext.onReady(function(){
+        var ButtonPanel = new Ext.Panel({
+            width: 400,
+            height: 30,
+            baseCls: 'x-plain'
+        });
+
+        {if condition="$rolle > 9"}
+            abfahrtsorteProgrammeAdmin();
+
+            ButtonPanel.addButton({
+                text: 'Abfahrtsort',
+                handler: function(){
+                    abfahrtsorteTreffpunkteAdmin();
+                }
+            });
+
+            ButtonPanel.addButton({
+                text: 'Ankunft / Abfahrtszeiten',
+                handler: function(){
+                    abfahrtsorteZeitenAdmin();
+                }
+            });
+
+        {elseif condition="$rolle > 6"}
+            alert('noch einbauen');
+        {/if}
+
+        ButtonPanel.render('ButtonPanel');
+
+    });
+</script>
+
+
+
+
+<div class='span-20 blockDescription' id='info'>
+        <h3 style="color: blue">Bearbeiten der Abfahrts und Ankunftsorte eines Programmes</h3>
+        Eintragen der Abfahrts - und Ankunftszeiten
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-30' id='app'></div>
+<div class='span-30'>&nbsp;</div>
+<div class='span-20' id='ButtonPanel'></div>

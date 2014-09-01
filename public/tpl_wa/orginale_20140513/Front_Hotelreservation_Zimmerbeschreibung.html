@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    
+    $(".produktbeschreibung").mouseover(function(){
+        var produktBeschreibung = $("#" + this.id).attr('description');
+        $('#' + this.id).validationEngine('showPrompt', produktBeschreibung, 'pass', true);
+    });
+
+    $(".produktbeschreibung").mouseout(function(){
+        $('.produktbeschreibung').validationEngine('hideAll');
+    });
+
+</script>
+
+{if="$showBlock"}
+<div class="span-19 last block_oben ueberschrift block">{function="translate('Beschreibung')"}: {$beschreibungZimmer.ueberschrift}</div>
+<div class="block_unten block" style="float: left;">
+    <div class="span-8">
+        <!-- Bild -->
+        <img src="{function="findKategorieImage($beschreibungZimmer.kategorieBildId)"}" class="bild basic-modal-kategorie" title="" width='200' id="bild7_{$beschreibungZimmer.kategorieBildId}">
+
+        {if="$showProdukte"}
+        <table>
+            <tr class="block_unten block block_oben">
+                <td class="teilueberschrift" colspan="2" align="center">{function="translate('Leistungen inclusive')"}:</td>
+            </tr>
+            {loop="produkte"}
+            <tr class="block block_unten">
+                <td>
+                    {$value.produkt}
+                </td>
+                <td><img src='{function="findProductImage($value.produktId)"}'></td>
+            </tr>
+            {/loop}
+        </table>
+        {/if}
+    </div>
+    <div class="span-11 last">
+        {$beschreibungZimmer.langtext}
+    </div>
+</div>
+{/if}

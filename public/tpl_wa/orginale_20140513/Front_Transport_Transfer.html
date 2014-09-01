@@ -1,0 +1,75 @@
+<script type="text/javascript" src='/tpl/Front_Transport_Transfer.js'></script>
+<script type="text/javascript">
+<!--
+	var fieldPlz = "{function="translate('Bitte PLZ eingeben')"}";
+	var systemError = "{function="translate('Leider ist der Transfer in den von ihnen gemachten PLZ - Bereichen nicht möglich<p>Bitte hier - klicken - !')"}";
+//-->
+</script>
+
+<div class='span-23' align='center'>
+	<form action="/front/transport/transferorder/" method='post' id="formTransferData">
+		<div class='span-8' style='border: solid 1px yellow;'>
+		
+			<input type='hidden' name='datum' id='datum' value="{$datum}">
+			
+			<input type='hidden' id='ProgrammId' value="" name="ProgrammId">
+			<input type='hidden' id='languages' name='languages' value='1'>
+			<input type='hidden' id='sachleistung' name='sachleistung' value=''>
+			
+			<p>
+			{function="translate('Personenzahl')"}: <input type='text' id='persons' value="1" class="validate[required,custom[integer],min[1]]" name='persons' style='width: 50px;'>
+			
+			<p>
+			<div id='datepicker'></div>
+			
+			<p>
+			{function="translate('gewünschte Startzeit')"}:		<input type='text' name='stunde' id='stunde' value="" class="validate[required,custom[integer],max[23]]" style='width: 50px;'> 
+			:
+			<input type='text' name='minute' id='minute' value="" class="validate[required,custom[integer],max[59]]" position="bottomLeft" style='width: 50px;'>
+			{function="translate('Uhr')"}
+			<p>
+			
+			<p>
+			{function="translate('Information')"}:<br>
+			<textarea rows="3" cols="30" id='information' name='information'></textarea>
+			
+		</div>
+	
+		<div class='span-8' style='border: solid 1px red;' align='left'>
+			<input type='radio' value='2' class='adresseStatus' id="adresseStatus2" name='adresseStatus' checked>
+			{function="translate('vorhandenen Abfahrtsort auswählen')"}<br>
+			<span id='adresseVorschlag'>
+				<p>
+				<select name="vorschlag" id='vorschlag' size="1">
+				{loop="vorschlag"}
+			      <option value="{$value.zip} {$value.treffpunkt}">{$value.zip} {$value.treffpunkt}</option>
+			    {/loop}
+			    </select>
+		    </span>
+		    <p>
+		
+			<input type='radio' value='1' class='adresseStatus' id="adresseStatus1" name='adresseStatus'>
+			{function="translate('eigenen Abfahrtsort vorschlagen')"}<br>
+			<span id='adresseManuell'>
+				<p>
+				{function="translate('Bitte PLZ eingeben und Ort aus der Liste auswählen')"} *: <input type='text' name='plzAbfahrt' id='plzAbfahrt' class='validate[required,minSize[2]]' style='width: 300px;'><br>
+				{function="translate('Abfahrtsort aus einer Liste übernehmen<br>oder eigenen Abfahrtsort eingeben')"} *: <input type='text' id='adresseAbfahrt' name='adresseAbfahrt' class='validate[required,minSize[4]]' style='width: 300px;'><p>
+			</span>
+			
+			<p>
+			{function="translate('Bitte PLZ eingeben und Ort aus der Liste auswählen')"} *: <input type='text' name='plzZiel' id='plzZiel' class='validate[required,minSize[2]]' style='width: 300px;'><br>
+			{function="translate('Zielort aus einer Liste übernehmen<br>oder eigenen Zielort eingeben')"} *: <input type='text' id='adresseZiel' name='adresseZiel' class='validate[required,minSize[4]]' style='width: 300px;'><p>
+			<input type='button' value="{function="translate('Bus suchen')"}" id="sucheBus">
+			
+		</div>
+		
+		<div class='span-6' style='border: solid 1px green;'>
+			{function="translate('gewählte Bus')"}: 
+			<input type='text' id='selectedBus' name='selectedBus' style='width: 200px;' readonly class="validate[required,minSize[4]]">
+			{function="translate('Preis')"}:<br>
+			<input type='text' id='pricePersons' name='pricePersons' style='width: 150px;' readonly class="validate[required]"> Euro
+			 
+			<input type='submit' name='senden' value="{function="translate(' Bestellung absenden ')"}">
+		</div>
+	</form>
+</div>

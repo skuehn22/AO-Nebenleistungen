@@ -1,0 +1,258 @@
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+
+{if="$showBlock"}
+<script type="text/javascript" src='/tpl/Front_Programmdetail_Index.js'></script>
+
+<script type='text/javascript'>
+    var fromJahr = {$bookingdetails.fromJahr};
+    var fromMonat = {$bookingdetails.fromMonat};
+    var fromTag = {$bookingdetails.fromTag};
+
+	var toJahr = {$bookingdetails.toJahr};
+	var toMonat = {$bookingdetails.toMonat};
+	var toTag = {$bookingdetails.toTag};
+
+    var sperrtage = new Array({$sperrtage});
+    var geschaeftstage = new Array({$geschaeftstage});
+    var programmId = {$bookingdetails.ProgrammId};
+    var preiseProgrammVarianten = new Array({$preiseProgrammVarianten});
+
+    var sprache = '{$sprache}';
+    var anzahlPreisvarianten = {$anzahlPreisvarianten};
+
+    var gebuchtesDatum = '{$gebuchtesDatum}';
+    var gebuchtePreisvariante = '{$gebuchtePreisvariante}';
+
+    var zeitmanagerSelect = '{$zeitmanagerSelect}';
+    var zeitmanagerStunde = '{$zeitmanagerStunde}';
+    var zeitmanagerMinute = '{$zeitmanagerMinute}';
+
+    var buchungspauschale = '{$bookingdetails.buchungspauschale}';
+    var preisBuchungspauschale = '{$bookingdetails.preisBuchungspauschale}';
+    var hinweisAuswahlPreisvatiante = "{function="translate('Bitte Eingabe überprüfen')"}";
+    var hinweisOeffnungszeiten = "{function="translate('Bitte Öffnungszeiten beachten')"}";
+</script>
+{/if}
+
+
+  <div class="span-24 bild_unterschrift topmenu_level_1">
+    <div class="menu_left"><a href="/front/agb/index">Städte</a>
+    <a href="#" class="menu_level_1_inactive">Hotel</a>
+    <a href="/front/programmstart/index/city/1">Programm</a>  </span></div>
+   <div class="themen_menu" style="float:right;">
+        <a href="/front/vorschlag/view/city/1">Cliquen Reisen</a>
+        <a href="/front/vorschlag/view/city/1">Klassen Reisen</a>
+        <a href="/front/vorschlag/view/city/1">Team Reisen</a></span>
+    </div>
+</div>
+<div class="span-24">
+   &nbsp;
+</div>
+
+
+<div class='span-24' id='programmdetail'>
+
+    {if condition="$buchungsDetailShow"}
+        <form id="formID" class="form formular" method="post" action="/front/programmdetail/update-programmbuchung/">
+    {else}
+        <form id="formID" class="form formular" method="post" action="/front/programmdetail/insert-programmbuchung/">
+    {/if}
+
+    {if condition="$blockInformationBestandsbuchungProgramme"}
+    <div class='block block_oben block_unten span-24 last'>
+        <div style="margin-left: 40px;" class="text">
+            {$blockInformationBestandsbuchungProgramme}
+        </div>
+    </div>
+
+    <div class='span-24 last'>&nbsp;</div>
+    {/if}
+
+             <div style="float:left;">
+        {if condition="$counter == 0"}
+            {include="Front_Hotellist_Index_Suchparameter"}
+        {/if}
+        </div>
+    <div class='block block_oben ueberschrift block_unten span-17 last' style="float:right; width:690px;">
+        <div style="margin-left: 40px;">{$bookingdetails.Stadtname} - <span class="stupidcat" editor='textfield' id='progname' label='Programmname'>{$programmdetails.progname}</span></div>
+    </div>
+
+    <div class="span-17">&nbsp;</div>
+
+    <!-- neue Programmbuchung -->
+    <div id='programmbeschreibung' class="block block_oben block_unten" style="padding: 40px; width: 610px; float: right;">
+
+        <div style="float: left; width: 150px; margin-right: 20px; margin-bottom: 10px;">
+            {function="anzeigenBilder($bookingdetails.ProgrammId,1,150)"}
+        </div>
+
+        <span class="stupidcat" id="miniBild" label='Bild' editor='upload'></span>
+
+        {if="$showBlock"}
+            {if condition="$sprachenManager"}
+                {function="translate('Sprachen')"}: {loop name="sprachen"} <img src='/flags/{$value.flag}.png'> {/loop}
+            {/if}
+        {/if}
+
+        <span class="stupidcat" label='Programmbeschreibung' editor='htmleditor' id='txt'>{$programmdetails.txt}</span><p>
+
+        {if="$showBlock"}
+            {if condition="$programmdetails.treffpunkt"}
+                {function="translate('Treffpunkt')"}: {$programmdetails.treffpunkt}<br>
+            {/if}
+
+            {if condition="$programmdetails.opnv"}
+                {function="translate('öffentlicher Nahverkehr')"}: {$programmdetails.opnv}<br>
+            {/if}
+
+            {if="$bookingdetails.Dauer > 0"}
+                {function="translate('voraussichtliche Dauer')"}: {$bookingdetails.Dauer} {function="translate('Stunden')"}
+            {/if}
+        {/if}
+
+        <p></p>
+        <span class="teilueberschrift_grau">{function="translate('Buchungsinformation')"}:</span>
+        {if condition="$programmdetails.buchungstext"}
+            <br>{$programmdetails.buchungstext}
+        {/if}
+        {if condition="$bookingdetails.buchungspauschale == 2"}
+            <br>{function="translate('Für die Buchung dieses Programmes erheben wir eine einmalige Buchungspauschale in Höhe von 30,00 €.')"}
+        {/if}
+
+        {if="$showBlock"}
+            {if="$stornofristen"}
+                <br><br>{function="translate('Stornokosten:')"}<br>
+
+                {loop="stornofristen"}
+                    {if condition="$value.tage == 999"}
+                        {function="translate('Keine Stornierung möglich')"}.
+                    {else}
+                        {$value.tage} {function="translate('Tage vor Beginn der Buchung')"}, {$value.prozente} % {function="translate('des Preises der Buchung')"}. <br>
+                    {/if}
+                {/loop}
+            {/if}
+        {/if}
+
+        {if condition="$vertragspartner"}
+            <br><br>{function="translate('Vertragspartner für diese Leistung ist:')"}<br>
+                {$vertragspartner.company}, {$vertragspartner.street}, {$vertragspartner.zip} {$vertragspartner.city} <br>
+                {$vertragspartner.country}<br>
+        {/if}
+
+        {if condition="$buchungsTyp == 1"}
+            <br>
+            <img src="/buttons/t.png"> {function="translate('Dieses Programm ist noch in der Testphase.Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen innerhalb von max. 3 Werktagen eine seperate Bestätigung per E-Mail schicken')"}<br>
+        {/if}
+        <br>
+
+
+
+        {if="$showBlock"}
+            {if="$typOeffnungszeit == 2"}
+                {if="$oeffnungszeiten"}
+                    <br>
+                    <table border="0">
+                    <tr>
+                        <td colspan="3" class="teilueberschrift_grau">{function="translate('Öffnungszeiten')"}:</td>
+                    </tr>
+                    {loop name="$oeffnungszeiten"}
+                        <tr>
+                            <td>{$value.name}: </td>
+                            <td>{$value.von} &nbsp;&nbsp; {function="translate('bis')"}</td>
+                            <td>{$value.bis} {function="translate('Uhr')"}</td>
+                        </tr>
+                    {/loop}
+                    </table>
+                {/if}
+            {/if}
+        {/if}
+    </div>
+        <div class="span-15">&nbsp;</div>
+
+        <!-- Programmvariante -->
+        {if="$showBlock"}
+        <div class="block block_oben block_unten ueberschrift" style="float: right; width: 690px;">
+            <div style="margin-left: 40px;">
+                {function="translate('Datum')"}: <span id="buchungsdatum"></span>
+                <span id="Kapazitaet" style="visibility: hidden"></span>
+            </div>
+            <div style="margin-left: 40px;" id="Kapazitaet_Hinweis" class="standardrot">
+                {function="translate('Programmkapazität überschritten. Maximale Buchbarkeit:')"} <span id="Kapazitaet_Hinweis_buchbar"></span>
+            </div>
+        </div>
+
+        <div class="block block_unten" id="buchungsblock" style="float: right; width: 690px;">
+
+            <input type='hidden' name='ProgrammId' value="{$bookingdetails.ProgrammId}">
+            <input type='hidden' name='datum' id='datum' value="{$gebuchtesDatum}">
+            <input type="hidden" name="sprache" id="sprache" value="1">
+
+            {if condition="$programmvarianten"}
+            <table class="gitter" style="margin-left: 20px;">
+                <tr>
+                    <td>{function="translate('Anzahl')"}</td>
+                    <td>{function="translate('Programmvariante')"}</td>
+                    <td>{function="translate('Einzelpreis')"}</td>
+                    <td>{function="translate('Preis der Programmvariante')"}</td>
+                </tr>
+                {if condition="$bookingdetails.buchungspauschale == 2"}
+                <tr>
+                    <td>
+                        <input type="text" value="1" class="input_action span-1" disabled="true">
+                    </td>
+                    <td>
+                        {function="translate('Buchungspauschale')"}
+                    </td>
+                    <td>
+                        30,00 €
+                    </td>
+                    <td>
+                        30,00 €
+                    </td>
+                </tr>
+                {/if}
+                {loop name="programmvarianten"}
+                <tr id="zeile{$key}">
+                    {if condition="$buchungsDetailShow"}
+                        {if condition="$key == 0"}
+                            <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="{$bestandsbuchung.anzahl}"></td>
+                        {else}
+                            <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
+                        {/if}
+                    {else}
+                        <td><input type="text" name="{$key}" id="{$key}" class="anzahlProgramme input_action span-2 validate[custom[integer]]" value="0"></td>
+                    {/if}
+                    <td>
+                        <select name="programmvariante_{$key}" id="programmvariante_{$key}" class="span-10 input_action programmvarianteSelect">
+                            {$value.options}
+                        </select>
+                    </td>
+                    <td class="span-3">
+                        <span id="einzelpreis_{$key}" class="einzelpreis"></span> €
+                    </td>
+                    <td class="span-3">
+                        <span id="preis_{$key}" class="preis"></span> €
+                    </td>
+
+                </tr>
+                {/loop}
+                <tr>
+                    <td colspan="4">
+                        {function="translate('Gesamtpreis')"}: <span id='gesamtpreis'></span> €
+                    </td>
+                </tr>
+            </table>
+            <div id='submitButton' style="margin-left: 20px;">
+                <input type="submit" style="float: right; margin-right: 30px;" id="warenkorb" name="warenkorb" class="submit" value="{function="translate('in den Warenkorb')"}">
+            </div>
+            {/if}
+
+            {if condition="$programmvarianten"}
+                </form>
+            {/if}
+        </div>
+        {/if}
+
+    </div>
+    <!-- Ende Gesamtblock Programm -->

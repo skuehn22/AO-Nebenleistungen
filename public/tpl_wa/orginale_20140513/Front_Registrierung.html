@@ -1,0 +1,24 @@
+<script type="text/javascript" src='/tpl/Front_Registrierung.js'></script>
+<script type="text/javascript">
+    var doppelteEmailAdresse = '{function="translate('Mailadresse schon vorhanden !')"}';
+    var keineEmailAdresse = '{function="translate('keine Mailadresse !')"}';
+    var leereEmailAdresse = '{function="translate('Mailadresse ist leer !')"}';
+</script>
+
+<div id='ablaufleiste' class="span-24 last">
+    <div class="block block_oben block_unten ueberschrift_gruen" style="padding-left: 40px;">{function="translate('Registrierung')"}</div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="span-16 block_oben block block_unten">
+    <form class='formular form' id="formPersonalData" method='post' action='/front/registrierung/create/offlinekunde/1'>
+        {include="Front_Personaldata_FormularPersonendaten"}
+    </form>
+</div>
+<div class="span-4" style="min-height: 150px;" id="offlinebucher">
+    &nbsp;
+</div>
+
+
+

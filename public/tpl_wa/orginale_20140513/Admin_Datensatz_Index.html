@@ -1,0 +1,470 @@
+<!-- extensions -->
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexPreisvarianten.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexFormEditor.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexFormSprache.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexFormTermine.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexDiverses.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexOeffnungszeiten.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexZusatzinformation.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexStornofristen.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexKommentar.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Datensatz_IndexKapazitaet.js"></script>
+
+<script type="text/javascript" src="/extjs/ux/form/cleanHtml.js"></script>
+
+<script type="text/javascript">
+
+    // Button für Administrator
+    var showCloseButton = {$showCloseButton};
+
+    // Steuerung der Child Views
+    var programmId = null;
+    var programmName = null;
+    var cityId = null;
+
+    var vorauswahlCompany = '{$vorauswahlCompany}';
+
+	var grid;
+	var gridStore;
+	var cityStore;
+	var panel;
+    
+    var moles;
+    var dummyBild;
+
+    var sprache;
+    var preiseForm;
+    var termineForm;
+    var storePreiseMwst;
+    var diversesForm;
+    var countryStore;
+    var bundeslandStore;
+    var jsonStoreSperrtage;
+    var checkboxSelSperrtage;
+    var gridPreisVarianten;
+    var jsonStoreGridPreisVarianten;
+    var spracheFenster;
+
+    var test;
+
+	Ext.onReady(function(){
+
+		cityStore = new Ext.data.JsonStore({
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/datensatz/getcities/",
+	        id: 'cities',
+	        fields: ['id','city'],
+	        autoLoad: true
+		}); 
+
+		gridStore = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/datensatz/tabelitems/",
+	        id: 'jsonStore',
+	        fields: ['id','progname','AO_City','company','cityId','aktiv','buchungstyp','oeffnungszeitentyp']
+	    });
+
+        countryStore = new Ext.data.JsonStore({
+            root: 'data',
+            method: 'post',
+            url: '/admin/datensatz/findcountries/',
+            id: 'countryStore',
+            fields: ['id','de'],
+            autoLoad: true
+        });
+        
+        bundeslandStore = new Ext.data.JsonStore({
+            root: 'data',
+            method: 'post',
+            url: '/admin/datensatz/findbundesland/',
+            id: 'bundeslandStore',
+            fields: ['id','bundesland'],
+            autoLoad: true
+        });
+
+        // Breich Tabelle
+		grid = new Ext.grid.GridPanel({
+			autoHeight: true,
+	        stripeRows: true,
+	        loadMask: true,
+	        columnLines: true,
+			autoExpandColumn: 'progname',
+	        store: gridStore,
+	        width: 1000,
+	        id: 'myGrid',
+	        title: 'vorhandene Programme',
+            listeners: {
+                rowdblclick: function(){
+                    fillZusatzinformation();
+                }
+            },
+            viewConfig: {
+                forceFit: true,
+                scrollOffset: 0
+            },
+		    columns: [{
+		                xtype: 'numbercolumn',
+		                dataIndex: 'id',
+		                header: 'Programm ID',
+		                sortable: true,
+		                width: 100,
+		                format: '0',
+		                id: 'id'
+		            },{
+		                xtype: 'gridcolumn',
+		                header: 'Programmname',
+		                sortable: true,
+		                dataIndex: 'progname',
+			            id: 'progname'
+		            },{
+		                xtype: 'gridcolumn',
+		                header: 'Stadt',
+		                sortable: true,
+		                width: 150,
+		                dataIndex: 'AO_City',
+			            id: 'AO_City'
+		     		},{
+		                xtype: 'gridcolumn',
+		                header: 'Firma',
+		                sortable: true,
+		                width: 250,
+		                dataIndex: 'company',
+			            id: 'company'
+		     		},{
+		                xtype: 'gridcolumn',
+		                header: 'cityId',
+		                hidden: true,
+		                width: 50,
+		                dataIndex: 'cityId',
+			            id: 'cityId'
+		     		},{
+						xtype: 'gridcolumn',
+						header: 'aktiv',
+						width: 50,
+						dataIndex: 'aktiv',
+						id: 'aktiv',
+						renderer: rendererAktivProgramm
+			     	},{
+                        xtype: 'gridcolumn',
+                        header: 'Buchungstyp',
+                        width: 60,
+                        dataIndex: 'buchungstyp',
+                        id: 'buchungstyp',
+                        renderer: rendererBuchungstyp
+                    },{
+                        xtype: 'gridcolumn',
+                        header: 'Öffnungszeitentyp',
+                        width: 50,
+                        dataIndex: 'oeffnungszeitentyp',
+                        id: 'oeffnungszeitentyp',
+                        renderer: rendererOeffnungszeitentyp
+                    }],
+		     bbar: [{
+		            xtype: 'paging',
+		            store: gridStore,
+		            id: 'paging',
+		            pageSize: 20,
+		            displayMsg: "Anzeige: {0} - {1} von {2} ",
+		            displayInfo: true
+		     }],
+		     tbar: [{
+                    text: 'Programm ID :'
+                },{
+                    xtype: 'textfield',
+                 	width: 50,
+                 	name: 'idSearch',
+                 	id: 'idSearch'
+                },{
+                    xtype: 'tbseparator'
+                },{
+					text: 'Programmbezeichnung :'
+		        },{
+					xtype: 'textfield',
+					width: 150,
+					name: 'progSearch',
+					id: 'progSearch'
+			    },{
+					xtype: 'tbseparator'
+				},{
+					text: 'Stadt :'
+				},{
+					xtype: 'combo',
+	                width: 150,
+	                id: 'cityCombo',
+	                forceSelection: true,
+					triggerAction: 'all',
+					displayField: 'city',
+					valueField: 'id',
+                    selectOnFocus: true,
+					hiddenName: 'city',
+                    mode: 'local',
+					store: cityStore,
+					typeAhead: true
+				},{
+					xtype: 'tbseparator'
+				},{
+					text: 'Firma:'
+				},{
+					xtype: 'textfield',
+					width: 150,
+					name: 'companySearch',
+					id: 'companySearch'
+				},{
+					xtype: 'tbseparator'
+				},{
+					xtype: 'button',
+					text: 'suche',
+					icon: '/buttons/arrow_right.png',
+					handler: function(){
+						var progSearch = Ext.getCmp('progSearch').getValue();
+						var city = Ext.getCmp('cityCombo').getValue();
+
+						gridStore.setBaseParam('progsearch', progSearch);
+						gridStore.setBaseParam('city', city);
+
+						var companySearch = Ext.getCmp('companySearch').getValue();
+                        gridStore.setBaseParam('company', companySearch);
+
+                        var idSearch = Ext.getCmp('idSearch').getValue();
+                        gridStore.setBaseParam('idSearch', idSearch);
+
+						gridStore.load();
+					}
+				},{
+					xtype: 'tbseparator'
+			}]
+		});
+
+        // Bereich Button
+        var buttonPanel = new Ext.Panel({
+            layout: 'table',
+            defaultType: 'button',
+            baseCls: 'x-plain',
+            cls: 'btn-panel',
+            renderTo: 'buttonsBereich',
+            menu: undefined,
+            split: false,
+            layoutConfig: {
+                columns: 5
+            },
+            defaults: {
+                style: 'margin: 3px;',
+                width: 150
+            },
+            items: [
+            {if="$showBlock"}
+                {
+                    text: 'Zusatzinformation',
+                    handler: function(){
+                        fillZusatzinformation();
+                    }
+                },{
+                    text: 'Diverses / Statusänderung',
+                    handler: function(){
+                        fillDiverses();
+                    }
+                },{
+                    text: 'deutsch',
+                    handler: function(){
+                        fillTemplate(1);
+                    }
+                },{
+                    text: 'englisch',
+                    handler: function(){
+                        fillTemplate(2)
+                    }
+                },{
+                    text: 'Programmsprachen',
+                    handler: function(){
+                        fillSprache();
+                    }
+                },{
+                    text: 'Öffnungszeiten Wochentage',
+                    handler: function(){
+                        fillOeffnungszeiten();
+                    }
+                },{
+                    text: 'Termine',
+                    handler: function(){
+                        fillTermine();
+                    }
+                },{
+                    text: 'Stornofristen',
+                    handler: function(){
+                        fillStornofristen();
+                    }
+                },{
+                    text: 'Preisvarianten',
+                    handler: function(){
+                        fillPreise();
+                    }
+                },{
+                    text: 'Kommentar',
+                    handler: function(){
+                        fillKommentar();
+                    }
+                },{
+                    text: 'Kapazität',
+                    handler: function(){
+                        fillKapazitaet();
+                    }
+                },{
+                    text: 'Umschalten Offline / Online',
+                    handler: function(){
+                        umschaltenBuchungsmodus();
+                    }
+                },{
+                    text: 'aktiv / passiv',
+                    handler: function(){
+                        umschaltenAktivPassiv();
+                    }
+                }
+            {else}
+            {
+				text: 'Inhalt bearbeiten',
+                handler: function(){
+                fillZusatzinformation();
+                }
+            },{
+                text: 'Umschalten Offline / Online',
+                handler: function(){
+                    umschaltenBuchungsmodus();
+                }
+            }
+            {/if}
+            ]
+        });
+
+        // Umschalten Buchungsmodus
+        function umschaltenBuchungsmodus(){
+            if(!grid.getSelectionModel().hasSelection()){
+                showMsgBox('Bitte Programm auswählen !');
+
+                return;
+            }
+
+
+            var row = grid.getSelectionModel().getSelected();
+
+            Ext.Ajax.request({
+               url: '/admin/datensatz/wechsel-buchungstyp/',
+               success: function(){
+                   showMsgBox('Buchungstyp gewechselt');
+                   gridStore.load();
+               },
+               params: {
+                    programmId: row.data.id
+               }
+            });
+        }
+
+        // Umschalten Aktiv / Passiv
+        function umschaltenAktivPassiv(){
+            if(!grid.getSelectionModel().hasSelection()){
+                showMsgBox('Bitte Programm auswählen !');
+
+                return;
+            }
+
+
+            var row = grid.getSelectionModel().getSelected();
+
+            Ext.Ajax.request({
+               url: '/admin/datensatz/wechsel-aktiv/',
+               success: function(){
+                   showMsgBox('Aktiv / Passiv gewechselt');
+                   gridStore.load();
+               },
+               params: {
+                    programmId: row.data.id
+               }
+            });
+        }
+
+        // Speicherung der Steuerungsvariablen der Child Views
+        // wenn ein Programm in der Tabelle markiert wurde
+
+		grid.getSelectionModel().on('rowselect', function(sm, rowIndex, record){
+			programmId = record.data.id;
+            programmName = record.data.progname
+			cityId = record.data.cityId;
+		});
+
+		grid.render('grid');
+		gridStore.load();
+
+        // Vorauswahl der Suchparameter Firma
+        if(vorauswahlCompany){
+            Ext.getCmp('companySearch').setValue(vorauswahlCompany);
+        }
+        
+	});
+
+	function rendererAktivProgramm(val){
+		if(val == '2')
+			return "<img src='/buttons/accept.png' ext:qtip='Programm ist aktiv geschaltet'>";
+		else if(val == 1)
+			return "<img src='/buttons/cancel.png' ext:qtip='Programm ist passiv geschaltet'>";
+        else if(val == '3')
+            return "<img src='/buttons/weather_lightning.png' ext:qtip='Programm zum löschen vorgemerkt'>";
+	}
+
+    function rendererBuchungstyp(val){
+        if(val == '1')
+            return "<img src='/buttons/clock_red.png' ext:qtip='Modus Offline Buchung'>";
+        else if(val == '2')
+            return "<img src='/buttons/clock_go.png' ext:qtip='Modus Online Buchung'>";
+    }
+
+    function rendererOeffnungszeitentyp(val)
+    {
+        // keine Startzeiten und Öffnungszeiten, Datum
+        if(val == '1')
+            return "<img src='/buttons/clock_link.png' ext:qtip='keine Startzeiten und Öffnungszeiten, Datum'>";
+        // Öffnungszeiten und Datum, keine Startzeiten
+        if(val == '2')
+            return "<img src='/buttons/clock_pause.png' ext:qtip='Öffnungszeiten und Datum, keine Startzeiten'>";
+        // Startzeiten und Datum, keine Öffnungszeiten
+        if(val == '3')
+            return "<img src='/buttons/clock_play.png' ext:qtip='Startzeiten und Datum, keine Öffnungszeiten'>";
+        // kein Datum und Öffnungszeiten und Starttermine
+        if(val == '4')
+            return "<img src='/buttons/clock_stop.png' ext:qtip='kein Datum und Öffnungszeiten und Starttermine'>";
+
+    }
+
+	function rendererFlag(val){
+		return "<img src='/flags/" + val + ".png'>"
+	}
+
+    function rendererBerechneWochentag(val){
+
+        var dd = val.substr(0,2);
+        var mm = val.substr(3,2);
+        var yyyy = val.substr(6,4);
+        var wochentag = objectDatumsBerechnung.ermittleWochentag(dd,mm,yyyy);
+
+        return wochentag;
+    }
+
+    function loescheSelectedSperrtage(){
+
+        var selectedRecords = [];
+        selectedRecords = checkboxSelSperrtage.getSelections();
+        jsonStoreSperrtage.remove(selectedRecords);
+    }
+
+</script>
+
+
+<div class='span-20 blockDescription' id='info'>
+        <h3 style="color: blue">Bearbeiten der Daten eines Programmes</h3>
+        Überarbeitung der Daten eines Programmdatensatzes.
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-30' id='grid'></div>
+<div class='span-30'>&nbsp;</div>
+<div class='span-30' id='buttonsBereich'></div>

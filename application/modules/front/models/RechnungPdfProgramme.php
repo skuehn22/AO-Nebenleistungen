@@ -206,16 +206,16 @@ class Front_Model_RechnungPdfProgramme extends nook_ToolModel implements arrayac
         $toolPdf->setHPadding(0);
         $page = $this->_setPageSchrift($page);
 
-        $textBuchungstyp = "Die mit * gekennzeichneten Programme sind noch in der Testphase. Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen";
-        $textBuchungstyp = translate($textBuchungstyp);
-        $page->drawText($textBuchungstyp,$this->_linie1, $this->_hochWert, 'UTF-8');
+        //$textBuchungstyp = "Die mit * gekennzeichneten Programme sind noch in der Testphase. Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen";
+        //$textBuchungstyp = translate($textBuchungstyp);
+        //$page->drawText($textBuchungstyp,$this->_linie1, $this->_hochWert, 'UTF-8');
 
         $this->_abstand();
         $page = $this->_newPdfProgramme->pages[$this->_seitennummer];
 
-        $textBuchungstyp = "innerhalb von max.3 Werktagen eine separate Bestätigung per E-mail schicken.";
-        $textBuchungstyp = translate($textBuchungstyp);
-        $page->drawText($textBuchungstyp,$this->_linie1, $this->_hochWert, 'UTF-8');
+        //$textBuchungstyp = "innerhalb von max.3 Werktagen eine separate Bestätigung per E-mail schicken.";
+        //$textBuchungstyp = translate($textBuchungstyp);
+        //$page->drawText($textBuchungstyp,$this->_linie1, $this->_hochWert, 'UTF-8');
 
         $this->_abstand();
         $page = $this->_newPdfProgramme->pages[$this->_seitennummer];

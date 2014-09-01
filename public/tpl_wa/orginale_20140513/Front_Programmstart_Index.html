@@ -1,0 +1,149 @@
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+
+<!-- Ablaufleiste -->
+<div id='ablaufleiste' class="span-24">
+   <div class="block block_oben block_unten" style="padding: 0px 0px 0px 40px;">{$breadcrumb}</div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class='span-24 block_oben block block_unten'>
+
+    <div style="float: left; width: 50px; margin-top: 10px; margin-left: 40px;">
+        {if condition="$paginator"}
+            {function="translate('Seiten')"} :
+        {else}
+            &nbsp;
+        {/if}
+    </div>
+
+    <!-- Paginator -->
+    <div class="span-6">
+        {if condition="$paginator"}
+            {loop name="paginator"}
+                <div class="kreis">
+                    <a class="{$value.class}" href='/{$value.module}/{$value.controller}/{$value.action}/seite/{$value.seite}/city/{$value.cityId}'>{$value.anzeige}</a>
+                </div>
+            {/loop}
+        {else}
+            &nbsp;
+        {/if}
+    </div>
+
+    <!-- Kategorien -->
+    {if condition="kategorien"}
+    <div class="span-15">
+        {loop name="kategorien"}
+            <a class="{$value.css} linkKategorien" href="/front/programmstart/index/programmkategorie/{$value.programmKategorieId}">{$value.anzeige} |</a>
+        {/loop}
+    </div>
+
+    {/if}
+</div>
+
+
+<div class="span-24">&nbsp;</div>
+
+<div class='span-17 last'>
+
+	{loop name="cityEvents"}
+    <!-- Kopf -->
+    <div class='span-15 ueberschrift block_oben block' style="padding-left: 40px;">
+        <div class="span-6">{if condition="$cityId == 0"} {$value.ort}: {/if} {$value.progname} &nbsp;</div>
+
+        <div class="span-3 push-3 standardtext">
+            {function="translate('Preis ab')"}:  {function="translatePricing($value.werbepreis)"} €
+        </div>
+        <div class="span-2">
+            <form method='post' class="form" action='/front/programmdetail/index/city/{$value.cityId}/programId/{$value.id}'><input type='submit' class="submit" value='{function="translate('buchen')"}...'></form>
+        </div>
+    </div>
+
+    <!-- Programmblock -->
+    <div class="span-15 block_unten block" style="padding-left: 40px; min-height: 50px;">
+        <div class="span-5">
+            {function="anzeigenBilder($value.id,1,150,1)"}
+            &nbsp;
+        </div>
+
+        <div class='span-6'>
+            {$value.txt} <a href="/front/programmdetail/index/city/{$value.cityId}/programId/{$value.id}">{function="translate('mehr')"}</a>
+            <span class="standardgruen">
+                {if condition="$value.languages"}{function="translate('Sprachen')"}:  {loop name="$value.languages"} <img src='/flags/{$value.flag}.png'> {/loop}<br>{/if}
+            </span>
+        </div>
+
+        <div class="span-3">
+            {include="Front_Programmstart_Buchungstyp"}
+        </div>
+    </div>
+    <div class="span-15">&nbsp;</div>
+	{/loop}
+
+</div>
+
+<!-- Informationen zur Stadt -->
+{if condition="$cityId > 0"}
+<div style="width: 280; float: left;">
+    <div class='block_oben block ueberschrift' style="padding-left: 18px;">
+        {$ort}
+    </div>
+    <div class="block_unten  block_links_rechts" style="padding: 10px 10px 10px 18px;">
+        <div class="bildrahmen" style="width: 240px; float: left; padding: 5px;">
+            {function="anzeigenBilder($cityId,10,240)"}
+        </div>
+        <p>&nbsp;</p>
+        {$stadtbeschreibung}
+    </div>
+</div>
+<!-- Informationen zur Programmsuche -->
+{else}
+    {if condition="$cityEvents"}
+    <!-- Informationen zur Programmsuche -->
+    <div style="width: 280; float: left;">
+        <div class='block_oben block_unten block ueberschrift' style="padding-left: 18px;">
+            {function="translate('Ihr Suchergebnis')"}
+        </div>
+    </div>
+    {else}
+    <!-- keine Programme gefunden -->
+    <div style="width: 280; float: right;">
+        <div class='block_oben block ueberschrift' style="padding-left: 18px;">
+            {function="translate('keine Programme gefunden')"}
+        </div>
+        <div class="block_unten  block_links_rechts" style="padding: 10px 10px 10px 18px;">
+            {function="translate('Mindestens 3 Zeichen eingeben. Bitte suchen Sie erneut.')"}
+        </div>
+    </div>
+    {/if}
+{/if}
+
+<!-- Paginator -->
+{if condition="$paginator"}
+<div class='span-24 block_oben block block_unten'>
+
+    <div style="float: left; width: 50px; margin-top: 10px; margin-left: 40px;">
+        {if condition="$paginator"}
+            {function="translate('Seiten')"} :
+        {else}
+            &nbsp;
+        {/if}
+    </div>
+
+    <!-- Paginator -->
+    <div class="span-6">
+        {if condition="$paginator"}
+            {loop name="paginator"}
+                <div class="kreis">
+                    <a class="{$value.class}" href='/{$value.module}/{$value.controller}/{$value.action}/seite/{$value.seite}/city/{$value.cityId}'>{$value.anzeige}</a>
+                </div>
+            {/loop}
+        {else}
+            &nbsp;
+        {/if}
+    </div>
+
+</div>
+{/if}
+

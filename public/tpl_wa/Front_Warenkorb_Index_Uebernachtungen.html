@@ -1,0 +1,60 @@
+<!-- Übernachtungen -->
+{loop name="shoppingCartUebernachtungNested"}
+    <div class='span-24 block block_oben teilueberschrift'>
+        <div class="span-12 prepend-1">
+            <div class="ueberschrift_gruen span-3">{$value.city}:</div>
+            {function="translate('Übernachtung')"}: <span class="teilueberschrift_gruen">{$value.hotelUeberschrift}</span>
+        </div>
+        <div style="width: 430px; float: left;">
+
+            <table style="float: right;">
+                <tr>
+                    <td>
+                        {if condition="$flag_show_buttons"}
+                            <a class="button_link" href="/front/hotelreservation-delete/hotelbuchung/teilrechnungenId/{$value.teilrechnung_id}">{function="translate('Hotelbuchung löschen')"}</a>
+                        {/if}
+                    </td>
+                    <td>
+                        <form class="form" style="margin-right: 40px;" action="/front/hotelreservation/update-show" method="post">
+                            <input type="hidden" name="propertyId" value="{$value.propertyId}">
+                            <input type="hidden" name="suchdatum" value="{$value.anreisedatum}">
+                            <input type="hidden" name="adult" value="{$value.adult}">
+                            <input type="hidden" name="days" value="{$value.nights}">
+                            <input type="hidden" name="to" value="{$value.to}">
+                            <input type="hidden" name="from" value="{$value.anreisedatum}">
+                            <input type="hidden" name="cityId" value="{$value.cityId}">
+                            <input type="hidden" name="flagUpdate" value="2">
+                            <input type="hidden" name="teilrechnungen_id" value="{$value.teilrechnung_id}">
+
+                            {if condition="$flag_show_buttons"}
+                                <input type="submit" class="hotelbuchung_bearbeiten" value="{function="translate('Hotelbuchung bearbeiten')"}">
+                            {/if}
+
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    {include="Front_Warenkorb_Index_Uebernachtungen_Raten"}
+
+    {include="Front_Warenkorb_Index_Uebernachtungen_Produkte"}
+
+    <div class="span-24">&nbsp;</div>
+{/loop}
+
+<!-- Alternativ Übernachtungen -->
+{if condition="!$shoppingCartUebernachtungNested"}
+<div class="span-24 block_oben block block_unten">
+    <div class="span-12 prepend-1 teilueberschrift">{function="translate('keine Übernachtungen gewählt')"}</div>
+    <div style="width: 430px; float: left;">
+        {if condition="$flagStornierung == 1"}
+            <form method='post' action='{$alternativButtonHotelbuchung}' style="float: right; margin-right: 40px;">
+                <input type='submit' class='submit_weiter' src='' name='suchen' value="{function="translate('Übernachtung suchen')"}">
+            </form>
+        {/if}
+    </div>
+</div>
+{/if}

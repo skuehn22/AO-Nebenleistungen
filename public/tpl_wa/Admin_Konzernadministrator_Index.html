@@ -1,0 +1,334 @@
+
+<script type="text/javascript">
+
+    var memoryKonzernadministratorId = false;
+    var jsonStoreGridHotels;
+    var jsonStoreGridKonzernadministrator;
+    var gridKonzernAdministratoren;
+    var gridHotels;
+    var formKonzernverantwortlicher;
+
+	Ext.onReady(function(){
+
+        jsonStoreRegion = new Ext.data.JsonStore({
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hotels/getcountryregions/",
+	        id: 'jsonStoreRegion',
+	        fields: ['region']
+	    });
+
+         jsonStoreCity = new Ext.data.JsonStore({
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/hotels/getcountrycities/",
+	        id: 'jsonStoreCity',
+	        fields: ['city','id'],
+            autoLoad: true
+	    });
+
+        jsonStoreGridKonzernadministrator = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/konzernadministrator/gridkonzernadministrator/",
+	        id: 'storeGridKonzernadministrator',
+	        fields: ['id','firstname','lastname']
+	    });
+
+        jsonStoreGridHotels = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/konzernadministrator/gridhotels/",
+	        id: 'storeGridHotels',
+	        fields: ['id','hotel','check'],
+            baseParams: {
+                id: memoryKonzernadministratorId
+            },
+            listeners: {
+                load: function(store, records){
+                    var records = [];
+                    var hotelIstGewaehlt = true;
+                    store.each(function(record){
+                        if(record.get('check') == hotelIstGewaehlt){
+                            records.push(record);
+                        }
+                    });
+                    gridHotels.getSelectionModel().selectRecords(records);
+                },
+                beforeload: function(){
+                    this.setBaseParam('id', memoryKonzernadministratorId);
+                }
+            }
+
+	    });
+
+		gridKonzernAdministratoren = new Ext.grid.GridPanel({
+			autoHeight: true,
+            renderTo: 'gridKonzernadministrator',
+	        stripeRows: true,
+	        loadMask: true,
+	        columnLines: true,
+            autoScroll: false,
+	        viewConfig: {
+				forceFit: true,
+                scrollOffset: 0
+	        },
+            listeners: {
+                  rowdblclick: function(){
+                      var rowData = this.getSelectionModel().getSelected();
+                      memoryKonzernadministratorId = rowData.data.id;
+                      
+                      jsonStoreGridHotels.load();
+                  },
+                  rowclick: function(){
+                      var rowData = this.getSelectionModel().getSelected();
+                      memoryKonzernadministratorId = rowData.data.id;
+
+                  }
+                  
+            },
+			autoExpandColumn: 'lastname',
+	        store: jsonStoreGridKonzernadministrator,
+	        width: 350,
+	        id: 'konzernAdministratoren',
+	        title: 'angelegte Konzernadministratoren ',
+		    columns: [{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'id',
+		                header: 'Id',
+		                width: 50,
+		                id: 'id',
+                        hidden: true
+		            },{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'firstname',
+		                header: 'Vorname',
+		                width: 150,
+		                id: 'firstname'
+		            },{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'lastname',
+		                header: 'Familienname',
+		                id: 'lastname',
+		                width: 150
+		   			}],
+		   bbar: [{
+	            xtype: 'paging',
+	            store: jsonStoreGridKonzernadministrator,
+	            id: 'pagingKonzernAdministrator',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	       }],
+           buttons: [{
+               text: 'Formular leeren',
+               listeners: {
+                    click: function(){
+                        formKonzernverantwortlicher.getForm().reset();
+                    }
+               }
+           },{
+                text: 'Personendaten bearbeiten',
+                listeners: {
+                    click: personenDatenAbrufen
+                }
+           },{
+                text: 'Hotels abrufen',
+                listeners: {
+                    click: hotelsAbrufen
+                }
+           }]
+		});
+
+        checkboxSel = new Ext.grid.CheckboxSelectionModel();
+
+        gridHotels = new Ext.grid.GridPanel({
+			autoHeight: true,
+            renderTo: 'gridHotels',
+	        stripeRows: true,
+            sm: checkboxSel,
+	        loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true,
+                scrollOffset: 0
+	        },
+			autoExpandColumn: 'property_name',
+	        store: jsonStoreGridHotels,
+	        width: 400,
+	        id: 'hotelsGrid',
+	        title: 'vorhandene Hotels',
+		    columns: [{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'id',
+		                header: 'Id',
+		                width: 50,
+		                id: 'id'
+                        // hidden: true
+		            },{
+		                xtype: 'gridcolumn',
+		                dataIndex: 'hotel',
+		                header: 'Hotel',
+		                width: 200,
+		                id: 'hotel'
+		            },
+                    checkboxSel
+            ],
+		   bbar: [{
+	            xtype: 'paging',
+	            store: jsonStoreGridHotels,
+	            id: 'pagingHotels',
+	            pageSize: 10,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	       }],
+           buttons: [{
+                text: 'ausgewählte Hotels übernehmen',
+                listeners: {
+                    click: uebernahmeHotels
+                }
+           },{
+               text: 'alle zugeordneten Hotels löschen',
+               listeners: {
+                   click: loschenZugeordneterHotels
+               }
+           }]
+		});
+
+        jsonStoreGridKonzernadministrator.load();
+	});
+
+    function personenDatenAbrufen(){
+        if(!memoryKonzernadministratorId){
+            showMsgBox('Bitte Konzernadministrator auswählen');
+
+            return;
+        }
+
+        memoryKonzernadministratorId = gridKonzernAdministratoren.getSelectionModel().getSelected().data.id;
+
+        formKonzernverantwortlicher.getForm().load({
+            url: '/admin/Konzernadministrator/datenkonzernverantwortlicher/',
+            params: {
+                konzernVerantwortlicherId: memoryKonzernadministratorId
+            }
+        });
+
+    }
+
+    function loschenZugeordneterHotels(){
+        if(!memoryKonzernadministratorId){
+            showMsgBox('Bitte Konzernadministrator auswählen');
+
+            return;
+        }
+
+         Ext.Ajax.request({
+           url: '/admin/Konzernadministrator/loeschehotels/',
+           success: function(request, action){
+               showMsgBox('Hotels wurden gelöscht !');
+               gridHotels.store.load();
+           },
+           failure: function(){
+               showMsgBox('Hotels konnten nicht gelöscht werden !');
+           },
+           params: {
+               konzernverantwortlicher: memoryKonzernadministratorId
+           }
+        });
+
+        return;
+    }
+
+    function uebernahmeHotels(){
+        if(!memoryKonzernadministratorId){
+            showMsgBox('Bitte Konzernadministrator auswählen');
+
+            return;
+        }
+
+        var ausgewaehlteHotels = gridHotels.getSelectionModel().getSelections();
+
+        var selectedHotels = new Array();
+
+        for(var i=0; i<ausgewaehlteHotels.length; i++){
+            selectedHotels[i] = ausgewaehlteHotels[i].data.id;
+        }
+
+        if(ausgewaehlteHotels.length == 0){
+            showMsgBox('Bitte Hotel auswählen');
+
+            return;
+        }
+
+
+        var auswahl = Ext.util.JSON.encode(selectedHotels);
+
+        Ext.Ajax.request({
+           url: '/admin/Konzernadministrator/sethotels/',
+           success: function(request, action){
+                showMsgBox('Hotels wurden gespeichert !');
+           },
+           failure: function(){
+               showMsgBox('Hotels konnten nicht gespeichert werden !');
+           },
+           params: {
+               hotels: auswahl,
+               konzernverantwortlicher: memoryKonzernadministratorId
+           }
+        });
+
+        return;
+    }
+
+    function hotelsAbrufen(){
+
+        if(!memoryKonzernadministratorId){
+            showMsgBox('Bitte Konzernadministrator auswählen');
+
+            return;
+        }
+
+        loadHotelGrid();
+
+        return;
+    }
+
+    function loadHotelGrid(){
+        var rowData = gridKonzernAdministratoren.getSelectionModel().getSelected();
+        memoryKonzernadministratorId = rowData.data.id;
+        jsonStoreGridHotels.load();
+        
+        return;
+    }
+
+    function neuenKonzernverantwortlichenAnlegen(){
+
+        formKonzernverantwortlicher.getForm().submit({
+            url: '/admin/konzernadministrator/newkonzernverantwortlicher/',
+            success: function(form, action){
+                showMsgBox('Daten des Konzernverantwortlichen wurden eingetragen');
+                form.reset();
+                jsonStoreGridKonzernadministrator.reload();
+                
+            }
+        });
+    }
+
+</script>
+<script type="text/javascript" src="/tpl/Admin_Konzernadministrator_IndexPersonenformular.js"></script>
+
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue">Bearbeiten der Zuordnung von Hotels zu einem Konzernverantwortlichen</h3>
+    <br>
+    Programm zur Bearbeitung der Rechte des Konzernadministrators.<br>
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class="span-20" id='formKonzernverantwortlicher'></div>
+<div class="span-25">&nbsp;</div>
+<div class='span-17' id='gridKonzernadministrator'></div>
+<div class='span-8 prepend-1' id='gridHotels'></div>

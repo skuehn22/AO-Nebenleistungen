@@ -1,0 +1,53 @@
+<div class='span-22 block block_oben teilueberschrift_gruen block_gray'>
+    {function="translate('Bestelliste !')"}<p>
+</div>
+<div class="span-22 block_unten block_gray block">
+    {function="translate('Hier haben Sie die Übersicht über die von Ihnen vorgenommenenen Bestellungen')"}<br>
+    {function="translate('Entsprechend unserer')"} <a href='/front/agb/index/'>AGB</a>
+    {function="translate('haben Sie die Möglichkeit Bestellungen zu stornieren.')"}<br>
+</div>
+
+<div class="span-22">&nbsp;</div>
+
+{loop name="orderedPrograms"}
+<div class="span-22 block block_oben block_gray">
+    {function="translate('Buchungsvorgang')"}: {$value.buchungsnummer}, {function="translate('Programmname')"}:
+    {$value.progname}, {function="translate('Status')"}: {$value.status}
+</div>
+
+<div class="span-22 block block_unten">
+
+    <div class='span-6'>
+        <img src='{$value.image}' class="bild">
+    </div>
+
+    <div class="span-8">
+        {$value.txt}
+    </div>
+
+    <div class='span-6 special_gray'>
+        {function="translate('gebucht am')"}: {$value.datum}<br>
+        {function="translate('Anzahl Personen')"}: {$value.persons}<br>
+
+        {if condition="$value.sachleistung == 1"}
+        {function="translate('Preis pro Person')"}: {function="translatePricing($value.price)"} Euro <br>
+        {function="translate('Gesamtpreis')"}: {function="translatePricing($value.totalPrice)"} Euro<p>
+        {else}
+        {function="translate('Gesamtpreis')"}: {function="translatePricing($value.price)"} Euro
+
+        <p>
+        {/if}
+
+        {if condition="$value.storno == 2"}
+        {if condition="$value.status == 4"}
+
+        <form action='/front/history/storno/' method='post'>
+            <input type='hidden' name='stornoId' value='{$value.buchungs_id}'>
+            {function="translate('Storno')"} <input type='image' name='storno' id='storno' src='/buttons/cancel.png'>
+        </form>
+        {/if}
+        {/if}
+
+    </div>
+</div>
+{/loop}

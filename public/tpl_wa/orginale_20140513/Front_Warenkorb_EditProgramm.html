@@ -1,0 +1,66 @@
+<script type="text/javascript" src="/tpl/Front_Warenkorb_EditProgramm.js"></script>
+
+<div id='Information' class="ueberschrift span-23 block_oben block" style="padding-left: 40px;">
+    {function="translate('Korrektur eines gebuchten Programmes')"}
+</div>
+
+<div id='allgemein' class="span-23 block_unten block" style="padding-left: 40px;">
+
+    <form action="/front/warenkorb/changeprogram/programmbuchungId/{$programmvariante.programmbuchungId}"
+          class="form formular" id="formID" method="post">
+        <table class="blank">
+            <tr>
+                <td>
+                    {function="translate('Programmname')"} :
+                </td>
+                <td>
+                    {$programmvariante.progname}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Programmvariante')"} :
+                </td>
+                <td>
+                    {$programmvariante.preisvariante}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Datum')"} :
+                </td>
+                <td>
+                    {$programmvariante.datum}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Zeit')"} :
+                </td>
+                <td>
+                    {function="formatiereZeit($programmvariante.zeit,2)"}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Anzahl')"} :
+                </td>
+                <td>
+                    {if condition="$bestandsbuchung == 1"}
+                    <input name="anzahl" id="anzahl" value="{$programmvariante.anzahl}"
+                           class="input_action span-2 validate[custom[integer]]">
+                    {else}
+                    <select name="anzahl">
+                        <option value="0">0</option>
+                        {function="erstellenOptionAnzahl($programmvariante.anzahl, $programmvariante.anzahl)"}
+                    </select>
+                    {/if}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="aendern" class="submit" value="{function=" translate('ändern')"}">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

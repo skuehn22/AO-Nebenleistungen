@@ -1,0 +1,70 @@
+<script type="text/javascript" src="/simpleModal/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/simpleModal/steuerung.modal.js"></script>
+
+<div class="span-24 block_oben block_unten">
+     {function="anzeigenStadtteaserBilder($parameter.city,6,950)"}
+</div>
+<div class="span-24 bild_unterschrift">
+    <div>
+        <a href="/front/agb/index" class="menu_level_1_inactive">Städte</a>
+        <a href="#" class="menu_level_1">Hotel</a>
+        <a href="/front/programmstart/index/city/1" class="menu_level_1_inactive">Programm</a>
+    </div>
+    <div class="themen_menu" style="float:right; margin-top:10px;">
+        <a href="/front/vorschlag/view/city/1">Cliquen Reisen</a>
+        <a href="/front/vorschlag/view/city/1">Klassen Reisen</a>
+        <a href="/front/vorschlag/view/city/1">Team Reisen</a></span>
+    </div>
+</div>
+<div class="span-24" style="border-bottom:1px dotted #E2001A; height:25px;">
+    <a href="" class="submenu_level_1_inactive">Budget</a>
+    <a href="" class="submenu_level_1_inactive">Comfort</a>
+    <a href="" class="submenu_level_1">Deluxe</a>
+</div>
+
+<div class="span-24">&nbsp;</div>
+<div class="span-24">&nbsp;</div>
+
+<div class="span-24" style="float:right; ">
+
+    {if condition="$hotels"}
+    {loop="hotels"}
+        <div style="float:left;">
+        {if condition="$counter == 0"}
+            {include="Front_Hotellist_Index_Suchparameter"}
+        {/if}
+        </div>
+        <div class="span-17 hotel_box" style="float:right;">
+            <div class="span-5" style="padding-left: 1px;">
+              <div class="hotel_top" style="padding-left: 10px;">
+                  <h1>{$value.ueberschrift}<br></h1>
+              </div>
+              <div style="margin-left:10px; margin-top:5px;">
+                  {function="anzeigenHotelBilder($value.id,6,200)"}
+              </div>
+            </div>
+            <div class="span-10" style="padding-left:55px;">
+                <p><br></p>
+                {$value.description}<p></p>
+                <form action="/front/hotelreservation/index/propertyId/{$value.id}" method="post" class="form">
+                    <input type="submit" class="submit" value="{function="translate('verfügbare Zimmer anzeigen')"}">
+                </form>
+                 <p style="margin-bottom:10px;">&nbsp;</p>
+            </div>
+
+        </div>
+        <p style="margin-bottom:1px;">&nbsp;</p>
+    {/loop}
+    {else}
+        <div class="span-24 block block_oben block_unten">
+            <div style="padding-left: 40px;">
+                {function="translate('Leider brachte ihre Suche nach Übernachtungen in')"} {$city} {function="translate('kein Ergebnis.')"}<br>
+                {function="translate('Bitte ändern Sie die Details der Suchanfrage')"}<br>
+                {function="translate('Bitte überprüfen sie die Suchparameter und beachten sie')"}<br>
+                <u>{function="translate('die Mindestgruppenstärke von 10 Personen')"}</u><br><br>
+                <a href="/front/hotelsearch/index/city/{$parameter.city}">{function="translate('Zurück zur Suche nach Übernachtungen')"}</a><br>
+            </div>
+        </div>
+    {/if}
+
+</div>

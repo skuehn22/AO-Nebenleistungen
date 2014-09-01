@@ -1,0 +1,28 @@
+<div class="block span-24 block_oben block_unten">
+    <div class="span-16 prepend-1">
+        {$breadcrumb}
+    </div>
+
+    <div class="span-6 append-1 last">
+        <span class="standardtextfett">
+            {function="translate('Kundennummer')"}:
+            {if condition="$kundenId > 0"}
+                {$kundenId}
+            {else}
+                {function="translate('unbekannt')"}
+            {/if}
+            <br>
+
+            {if condition="$kompletteBuchungsnummer != ' '"}
+                {function="translate('Buchungsnummer')"}: {$kompletteBuchungsnummer}<br>
+            {/if}
+
+            {function="translate('Status')"}:
+            {if condition="$buchungsnummerZaehler > 0"}
+                {function="translate('bearbeiten einer Buchung')"}<br>
+            {else}
+                {function="translate('neue Buchung')"}<br>
+            {/if}
+        </span>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div style="width: 228px; float: left;">
+    <div class="reisekorb_top" style="padding-left: 10px;">
+        <h1>{function="translate('Reisekorb')"}<br><br></h1>
+    </div>
+    <div class="reisekorb" style="padding-left: 10px;">
+        <table width="100%">
+            <tr>
+                <td>
+                    {function="translate('Stadt')"}:
+                </td>
+                <td>
+                    <input  class="reisekorb_input" type="text" style="width:100px;" name="city" value=" {$city}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Anreisedatum')"}:
+                </td>
+                <td>
+                    <input  class="reisekorb_input" type="text" style="width:100px;" name="from" value=" {function="formatiereDatumMitMonat($parameter.from)"}  ">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Abreisedatum')"}:
+                </td>
+                <td>
+                <input  class="reisekorb_input" type="text" style="width:100px;" name="to" value=" {function="formatiereDatumMitMonat($parameter.to)"}">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Übernachtungen')"}:
+                </td>
+                <td>
+                  <input  class="reisekorb_input" type="text" style="width:100px;" name="days" value=" {$parameter.days}">
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {function="translate('Personen')"}:
+                </td>
+                <td>
+                  <input  class="reisekorb_input" type="text" style="width:100px;" name="adult" value=" {$parameter.adult}">
+                </td>
+            </tr>
+             <tr>
+                <td colspan="2" align="center">
+                    <br><a class="reisekorb_search" href="/front/login/save-hotelsearch">{function="translate('Suche ändern')"}</a><br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <br><a class="reisekorb_more" href=" /front/programmstart/index/city/1">{function="translate('Programm wählen')"}</a>   <br><br><br>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</div>

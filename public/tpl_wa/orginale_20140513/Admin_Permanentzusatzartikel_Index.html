@@ -1,0 +1,85 @@
+<script type="text/javascript">
+<!--
+    
+    var grid;
+    var jsonStore;
+    var myRecord;
+    
+    Ext.onReady(function(){
+        
+        jsonStore = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/permanentzusatzartikel/tabelitems/",
+	        id: 'jsonStore',
+	        fields: ['Fa_Id','Ort','progname','permanent_zusatz']
+	    });
+        
+          grid = new Ext.grid.GridPanel({
+            title: 'bearbeiten permanente Zusatzartikel',
+            store: jsonStore,
+            width: 700,
+            height: 700,
+            autoExpandColumn: 'progname',
+            loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true
+	        },
+            columns: [{
+                    dataIndex: 'Fa_Id',
+                    header: 'Programmnummer',
+                    width: 75,
+                    id: 'Fa_Id'
+                },{
+                    dataIndex: 'Ort',
+                    header: 'Ort',
+                    width: 150,
+                    id: 'Ort'
+                },{
+                    header: 'Programmname',
+                    width: 250,
+                    id: 'progname',
+                    dataIndex: 'progname'
+                },{
+                    header: 'permanenter Zusatzartikel',
+                    width: 150,
+                    id: 'permanent_zusatz',
+                    dataIndex: 'permanent_zusatz',
+                    renderer: function(value, cell){
+                        if(value == 1)
+                            return "<input type='checkbox' onClick='changeCheckbox(this)'></input>";
+                        else
+                            return "<input type='checkbox' onClick='changeCheckbox(this)' checked></input>";
+                    }
+            }],
+            bbar: [{
+	            xtype: 'paging',
+	            store: jsonStore,
+	            id: 'paging',
+	            pageSize: 20,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	        }]
+        });
+        
+        grid.getSelectionModel().on('rowselect', function(sm, rowIndex, record){
+			myRecord = record;
+		});
+        
+        
+        grid.render('grid');
+        jsonStore.load();
+        
+    });
+    
+    function changeCheckbox(box){
+        console.log(box);
+    }
+-->
+</script>
+
+
+
+<div id="grid" style='margin: 20px; border: solid red 1px;'></div>

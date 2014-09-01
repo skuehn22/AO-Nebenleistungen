@@ -1,0 +1,16 @@
+    {if condition="$anzeigesprache == 1"}
+        <span class="ueberschrift_rot">Stornierung</span><br><br>
+
+        <span style="font-size: 14px; line-height:17px">
+        Die Buchung {$buchungsnummer} wurde wunschgemäß storniert. Eine Stornobestätigung und eine Abrechnung
+        unter Berücksichtigung der Stornierungsbedingungen erhalten Sie in Kürze per E-Mail.
+        </span>
+    {else}
+        <span class="ueberschrift_rot">{function="translate('Stornierung')"}</span><br><br>
+
+        <span style="font-size: 14px; line-height:17px">
+        {function="translate('Die Buchung {$buchungsnummer} wurde wunschgemäß storniert. Eine Stornobestätigung und eine Abrechnung
+              unter Berücksichtigung der Stornierungsbedingungen erhalten Sie in Kürze per E-Mail.')"}
+
+        </span>
+    {/if}

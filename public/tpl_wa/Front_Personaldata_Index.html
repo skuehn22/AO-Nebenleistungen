@@ -1,0 +1,53 @@
+<script type="text/javascript" src='/tpl/Front_Personaldata_Index.js'></script>
+<script type="text/javascript">
+    var doppelteEmailAdresse = '{function="translate('Mailadresse schon vorhanden !')"}';
+    var unbekanntEmailAdresse = '{function="translate('Mailadresse unbekannt !')"}';
+</script>
+
+<div class='span-24 block block_oben block_unten'>
+    <div class="span-12" style="padding-left: 40px;">
+        {$breadcrumb}
+    </div>
+    <div class="span-10">
+        {function="translate('Bitte notieren Sie unbedingt ihr Passwort !')"}<br>
+    </div>
+</div>
+
+<div class="span-24">&nbsp;</div>
+
+<div class="span-17">
+    <div style="padding-left: 40px;" class=" block block_oben block_unten teilueberschrift">{function="translate('Neukunde')"}:</div>
+
+    <div class="block_unten block">
+        <form class='formular form' id="formPersonalData" method='post' action='/front/warenkorb/personaldata/'>
+            {include="Front_Personaldata_FormularPersonendaten"}
+        </form>
+    </div>
+</div>
+
+<div class="span-6 last">
+    <form class="formular form" id="loginForm" method="post" action="/front/personaldata/login/">
+        <table class="block block_unten span-6">
+            <tr>
+                <td colspan="2">
+                    <div class="block_oben block" style="padding-left: 40px;"><span class="teilueberschrift">{function="translate('Kunden - Login')"}:</span></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding-top: 15px; padding-left: 10px;"><label for="login_email">{function="translate('E-Mail')"}*:</label></td>
+                <td><input class='validate[required,custom[email]] input span-4' name="login_email" id="login_email" type="text"></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;"><label for="login_passwort">{function="translate('Passwort')"}*:</td>
+                <td><input class="validate[required,minSize[2]] input span-4" name="login_passwort" id="login_passwort" type="password"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" class="submit" name="login_anmelden" value="{function="translate('anmelden')"}"></td>
+            </tr>
+            <tr><td colspan="2">&nbsp;</td></tr>
+        </table>
+    </form>
+
+</div>

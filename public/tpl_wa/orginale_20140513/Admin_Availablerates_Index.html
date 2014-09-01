@@ -1,0 +1,288 @@
+<script type="text/javascript">
+
+	var grid;
+	var selectedHotel;
+	var hotelStore;
+	var jsonGridStore;
+	var searchHotelCode = false;
+    var startDatum = false;
+    var endDatum = false;
+
+	Ext.onReady(function(){
+
+		hotelStore = new Ext.data.JsonStore({
+            root: 'data',
+            method: 'post',
+            url: '/admin/availablerates/gethotels/',
+            fields: ['property_code','property_name'],
+            autoLoad: true
+        });
+		
+		jsonGridStore = new Ext.data.JsonStore({
+	        totalProperty: 'anzahl',
+	        root: 'data',
+	        method: 'post',
+	        url: "/admin/availablerates/getratesandcategories/",
+	        id: 'jsonCategoriesStore',
+	        fields: ['datum','roomlimit','min_stay','arrival','departure','release_from','release_to','amount','pricePerPerson','name','aktiv']
+	    });
+
+		grid = new Ext.grid.GridPanel({
+			autoHeight: true,
+	        stripeRows: true,
+	        loadMask: true,
+	        columnLines: true,
+	        viewConfig: {
+				forceFit: true,
+                scrollOffset: 0
+	        },
+			autoExpandColumn: 'name',
+	        store: jsonGridStore,
+	        width: 1000,
+	        id: 'hotelsGrid',
+	        title: 'Raten und Kategorien eines Hotels',
+		    columns: [{
+					   xtype: 'gridcolumn',
+		           	   dataIndex: 'datum',
+		           	   header: 'Datum',
+		           	   width: 50,
+		           	   renderer: rendererDatum
+           			},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'datum',
+  		           	   header: 'Wochentag',
+  		           	   width: 50,
+                       renderer: rendererDayOfWeek
+               		},{
+					   xtype: 'gridcolumn',
+		           	   dataIndex: 'name',
+		           	   header: 'Raten Name',
+		           	   width: 100
+           			},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'amount',
+  		           	   header: 'Tagespreis',
+  		           	   width: 50,
+                       renderer: rendererEuro
+               		},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'pricePerPerson',
+  		           	   header: 'Zimmerpreis ?',
+  		           	   width: 50,
+                       renderer: rendererGroup
+               		},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'aktiv',
+  		           	   header: 'aktiv ?',
+  		           	   width: 50,
+                       renderer: rendererAktiv
+               		},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'roomlimit',
+  		           	   header: 'Anzahl',
+  		           	   width: 50
+               		},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'release_from',
+  		           	   header: 'buchbar ab',
+  		           	   width: 50
+               		},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'release_to',
+  		           	   header: 'buchbar bis',
+  		           	   width: 50
+               		},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'min_stay',
+  		           	   header: 'min. Tage',
+  		           	   width: 50
+               		},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'arrival',
+  		           	   header: 'Anreisetag',
+  		           	   width: 50,
+                       renderer: rendererVerfuegbarkeit
+               		},{
+           			   xtype: 'gridcolumn',
+  		           	   dataIndex: 'departure',
+  		           	   header: 'Abreisetag',
+  		           	   width: 50,
+                       renderer: rendererVerfuegbarkeit
+               		}],
+		   bbar: [{
+	            xtype: 'paging',
+	            store: jsonGridStore,
+	            id: 'paging',
+	            pageSize: 20,
+	            displayMsg: "Anzeige: {0} - {1} von {2} ",
+	            displayInfo: true
+	        }],
+	        tbar: [{
+					text: 'Bitte Hotel wählen: ',
+                    xtype: 'tbtext'
+		        },{
+		        	xtype: 'combo',
+	                width: 300,
+					triggerAction: 'all',
+                    tpl: '<tpl for="."><div class="x-combo-list-item" >{property_name} : {property_code}</div></tpl>',
+					displayField: 'property_name',
+					valueField: 'property_code',
+					store: hotelStore,
+					lazyRender:true,
+                    hiddenName: 'property_code',
+					id: 'myHotel'
+		    },{
+                xtype: 'tbseparator'
+            },{
+                xtype: 'tbspacer',
+                width: 10
+            },{
+                xtype: 'tbtext',
+                text: 'Datum von: '
+            },{
+                xtype: 'datefield',
+                id: 'startDatum'
+            },{
+                xtype: 'tbseparator'
+            },{
+                xtype: 'tbspacer',
+                width: 10
+            },{
+                xtype: 'tbtext',
+                text: 'Datum bis'
+            },{
+                xtype: 'datefield',
+                id: 'endDatum'
+            },{
+                xtype: 'tbseparator'
+            },{
+                xtype: 'tbbutton',
+                text: 'suchen',
+                handler: function(){
+
+                    if(!searchHotelCode){
+                        showMsgBox('Bitte Hotel auswählen');
+
+                        return;
+                    }
+
+                    startDatum = Ext.getCmp('startDatum');
+                    endDatum = Ext.getCmp('endDatum');
+
+                    if(startDatum.getValue() == '' || endDatum.getValue() == ''){
+                        showMsgBox('Datumseingabe überprüfen');
+
+                        return;
+                    }
+
+
+                    jsonGridStore.setBaseParam('startDatum', startDatum.getValue());
+                    jsonGridStore.setBaseParam('endDatum', endDatum.getValue());
+
+                    jsonGridStore.load();
+                }
+            },{
+                xtype: 'tbseparator'
+            },{
+                xtype: "tbbutton",
+                text: 'Suchdatum löschen: ',
+                handler: function(){
+
+                    if(startDatum && typeof(startDatum) == 'object')
+                        startDatum.setValue('');
+
+                    if(endDatum && typeof(endDatum) == 'object')
+                        endDatum.setValue('');
+
+                    if(!searchHotelCode){
+                        showMsgBox('Bitte Hotel auswählen');
+
+                        return;
+                    }
+
+                    jsonGridStore.setBaseParam('startDatum', startDatum.getValue());
+                    jsonGridStore.setBaseParam('endDatum', endDatum.getValue());
+
+                    jsonGridStore.load();
+                }
+            },{
+                xtype: 'tbseparator'
+            }]
+		});
+
+        // Ermitteln ID des Hotels
+        Ext.getCmp('myHotel').on('select', function(field){
+            jsonGridStore.setBaseParam('searchHotelCode', field.value);
+            searchHotelCode = field.value;
+        });
+
+	    grid.render('grid');
+	});
+
+	function rendererDatum(val){
+		var teile = val.split("-");
+
+		return teile[2] + "." + teile[1] + "." + teile[0];
+	}
+
+	function rendererVerfuegbarkeit(val){
+		if(val == 1)
+			return "<img src='/buttons/accept.png' ext:qtip='möglich'>";
+		else
+			return "<img src='/buttons/cancel.png'  ext:qtip='nicht möglich'>";
+	}
+
+    function rendererDayOfWeek(val){
+
+        var WeekDay = new Array("So.", "Mo.", "Die.", "Mi.","Do.", "Fr.", "Sa.");
+
+        var myDate = new Date();
+        var dateItems = val.split("-");
+        myDate.setFullYear(dateItems[0]);
+        dateItems[1] = dateItems[1] - 1;
+        myDate.setMonth(dateItems[1]);
+        myDate.setDate(dateItems[2]);
+        var numberWeekDay = myDate.getDay();
+
+        if(numberWeekDay == 0 || numberWeekDay == 6)
+            return "<span><b>" + WeekDay[numberWeekDay] + "</b></span>";
+        else
+            return "<span>" + WeekDay[numberWeekDay] + "</span>";
+    }
+
+    function rendererEuro(val){
+        var newVal = val.replace('.',',');
+
+        return newVal + " Euro";
+    }
+
+    function rendererAktiv(val){
+        if(val == 1)
+            return "<img src='/buttons/exclamation.png'  ext:qtip='Rate neu angelegt'>";
+		else if(val == 2)
+			return "<img src='/buttons/cancel.png'  ext:qtip='Rate passiv'>";
+        else
+            return "<img src='/buttons/accept.png' ext:qtip='Rate aktiv'>";
+    }
+
+    function rendererGroup(val){
+        if(val == 'false')
+            return "<img src='/buttons/group.png'  ext:qtip='Zimmerpreis'>";
+        else
+            return "<img src='/buttons/user.png'   ext:qtip='Personenpreis'>";
+    }
+
+</script>
+<div class='span-32' id='info'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue">verfügbare Raten</h3>
+    <br>
+    Anzeige der verfügbaren Raten eines Beherbergungsbetriebes.<br>
+    Darstellung des möglichen Buchungsdatums, der Anreise und Abreisetage,<br>
+    der Preise und der Buchungsfristen.
+    </div>
+</div>
+<div class="span-32">&nbsp;</div>
+<div class='span-32' id='grid'></div>
+<div class='span-32'></div>
+<div class='span-32' id='tabs'></div>

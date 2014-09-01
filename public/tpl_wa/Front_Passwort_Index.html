@@ -1,0 +1,21 @@
+<script type="text/javascript" src='/tpl/Front_Passwort_Index.js'></script>
+
+<div class="span-15 block_oben block block_gray teilueberschrift_gruen">
+    {function="translate('Passwort vergessen')"} ?
+</div>
+<div class="span-15 block block_unten">
+    {if condition="$sendMail == 2"}
+        {function="translate('Das Passwort wurde an die von Ihnen')"}<br>
+        {function="translate('angegebene Mailadresse gesandt !')"}
+    {else}
+        {function="translate('Sehr geehrte Damen und Herren !')"}<p>
+        {function="translate('Bitte geben Sie ihre Mailadresse ein.')"}<br>
+        {function="translate('Wir senden Ihnen ihr Passwort zu.')"}
+
+        <form method='post' class="form" action='/front/password/index/' name='formPaswordRemember' id='formPaswordRemember'>
+            <label for="email">{function="translate('E-Mail')"} *: </label>
+            <input type='text' name='email' id='email' class='validate[required,custom[email]] input' value=""><br><br>
+            <input type='submit' class="submit" name='sendRememberPassword' id='sendRememberPassword' value="{function="translate('Passwort anfordern')"}">
+        </form>
+    {/if}
+</div>

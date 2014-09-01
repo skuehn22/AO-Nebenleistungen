@@ -1,0 +1,34 @@
+<script type="text/javascript" src="/tpl/Admin_Programmkategorien_tabelleProgramme.js"></script>
+<script type="text/javascript" src="/tpl/Admin_Programmkategorien_tabelleKategorien.js"></script>
+
+<script type="text/javascript">
+    Ext.onReady(function(){
+        // Darstellung Tabelle gebuchte Programme
+        var tabelleProgrammeObj = new tabelleProgrammeClass();
+        tabelleProgramme = tabelleProgrammeObj.start();
+        tabelleProgramme.store.load();
+        tabelleProgramme.show();
+
+        // Darstellung Tabelle gebuchte Programme
+        var tabelleKategorienObj = new tabelleKategorienClass();
+        tabelleKategorien = tabelleKategorienObj.start();
+        tabelleKategorien.store.load();
+        tabelleKategorien.show();
+
+        // Dependency Injection
+        tabelleProgrammeObj.setTabelleKategorienObj(tabelleKategorienObj);
+    });
+</script>
+
+<div class='span-24' id='info'>
+    <div class="blockDescription span-15">
+    <h3 style="color: blue">Zuordnung der Kategorien zu den Programmen</h3>
+    <br>
+        Der Administrator kann einem Programm ein oder mehrere Programmkategorien zuordnen
+    </div>
+</div>
+<div class='span-24'>&nbsp;</div>
+<div class="span-24">
+    <div class="span-17" id="tabelleVorhandeneProgramme"></div>
+    <div class="span-5" id="tabelleVorhandeneKategorien"></div>
+</div>
