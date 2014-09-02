@@ -201,6 +201,8 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
             $supportDaten = $this->supportAngaben();
             $raintpl->assign('support', $supportDaten);
 
+            $raintpl->assign('curreny', $_SESSION['curreny']);
+
             // darstellen Status der Buchung
             $raintpl = $this->ermittelnStatusBuchung($raintpl);
 
@@ -458,14 +460,14 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
 
             if ($mwst_ek == $mwst_vk)
             {
-                $text .= "<td>".number_format($vk,2)." € (inkl. ".($mwst_ek*100)."% Mwst)</td>";
+                $text .= "<td>".number_format($vk,2)." ".$_SESSION['curreny']." (inkl. ".($mwst_ek*100)."% Mwst)</td>";
                 $text .= "<td></td>";
             }
 
             if ($mwst_ek != $mwst_vk)
             {
-                $text .= "<td>".number_format($ek,2)." € (inkl. ".($mwst_ek*100)."% Mwst)</td>";
-                $text .= "<td>".number_format(($vk-$ek),2)." € (inkl. 19% Mwst)</td>";
+                $text .= "<td>".number_format($ek,2)." ".$_SESSION['curreny']." (inkl. ".($mwst_ek*100)."% Mwst)</td>";
+                $text .= "<td>".number_format(($vk-$ek),2)." ".$_SESSION['curreny']." (inkl. 19% Mwst)</td>";
             }
 
             $text .= "</tr>";

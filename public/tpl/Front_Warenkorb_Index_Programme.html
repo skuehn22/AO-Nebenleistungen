@@ -57,9 +57,9 @@
                         {function="translate('gebuchte Programmsprache')"}: <img src="/flags/{function="flagge($value.gebuchteProgrammsprache)"}.png"><br>
                     {/if}
 
-                    {function="translate('Preis')"}: {function="translatePricing($value.preisvariantePreis)"}  €<br>
+                    {function="translate('Preis')"}: {function="translatePricing($value.preisvariantePreis)"}  {$curreny}<br>
                     {function="translate('Anzahl')"}: {$value.anzahl}<br><br>
-                    {function="translate('Gesamtpreis für diese Programmvariante')"}: {function="translatePricing($value.preisvarianteGesamtpreis)"}  €<br>
+                    {function="translate('Gesamtpreis für diese Programmvariante')"}: {function="translatePricing($value.preisvarianteGesamtpreis)"}  {$curreny}<br>
 
                     {if condition="$value.vertragspartner"}
                         <br>{function="translate('Vertragspartner für diese Leistung ist:')"}<br>

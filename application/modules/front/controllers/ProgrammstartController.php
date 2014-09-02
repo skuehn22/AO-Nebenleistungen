@@ -234,6 +234,7 @@ class Front_ProgrammstartController extends Zend_Controller_Action{
             ->getNavigation();
 
         $raintpl->assign('breadcrumb', $navigation);
+        $raintpl->assign('curreny', $_SESSION['curreny']);
     }
 
     /**

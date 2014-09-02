@@ -140,6 +140,8 @@ class Front_WarenkorbController extends Zend_Controller_Action
             // Button Link der alternativen Blöcke
             $raintpl = $modelAlternativeBloecke->buttonLink($raintpl);
 
+            $raintpl->assign('curreny', $_SESSION['curreny']);
+
             // Model Warenkorb
             $modelCart = new Front_Model_Cart();
 

@@ -84,8 +84,8 @@
             <td>{function="translate('für')"} <input type="text" size="5" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="input_action span-2 validate[custom[integer]] zusatzprodukt"> {function="translate('Personen')"}</td>
             <td>{$value.name}</td>
             <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
-            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translate('pro Person')"} {function="translatePricing($value.price)"} €</td>
-            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translate('pro Person')"} {function="translatePricing($value.price)"} {$curreny}</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> {$curreny}</td>
             <td><img src='{function="findProductImage($value.id)"}'></td>
         </tr>
         {elseif="$value.typ == 1"}
@@ -94,8 +94,8 @@
             <td>{function="translate('für')"} <input type="text" size="5" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="input_action span-2 validate[custom[integer]] zusatzprodukt"> {function="translate('Personen')"}</td>
             <td>{$value.name}</td>
             <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
-            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translate('pro Person')"} {function="translatePricing($value.price)"} €</td>
-            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translate('pro Person')"} {function="translatePricing($value.price)"} {$curreny}</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> {$curreny}</td>
             <td><img src='{function="findProductImage($value.id)"}'></td>
         </tr>
         {elseif="$value.typ == 2"}
@@ -104,8 +104,8 @@
             <td>{function="translate('für')"} <input type="text" size="5" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="input_action span-2 validate[custom[integer]] zusatzprodukt"> {function="translate('Zimmer')"}</td>
             <td>{$value.name}</td>
             <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
-            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translate('pro Zimmer')"} {function="translatePricing($value.price)"} €</td>
-            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translate('pro Zimmer')"} {function="translatePricing($value.price)"} {$curreny}</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> {$curreny}</td>
             <td><img src='{function="findProductImage($value.id)"}'></td>
         </tr>
         {elseif="$value.typ == 3"}
@@ -115,9 +115,9 @@
             <td>{$value.name}</td>
              <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
             <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}">
-                {function="translate('pro Person und')"} {$information.uebernachtungen}{$value.uebernachtungen} {function="translate('Übernachtungen')"} {function="translatePricing($value.price)"} €
+                {function="translate('pro Person und')"} {$information.uebernachtungen}{$value.uebernachtungen} {function="translate('Übernachtungen')"} {function="translatePricing($value.price)"} {$curreny}
             </td>
-            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> {$curreny}</td>
             <td><img src='{function="findProductImage($value.id)"}'></td>
         </tr>
         {elseif="$value.typ == 4"}
@@ -126,8 +126,8 @@
             <td> &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="zusatzprodukt input_action validate[custom[integer]] span-2"> {function="translate('Anzahl')"}</td>
             <td>{$value.name}</td>
             <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
-            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translatePricing($value.price)"} €</td>
-            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}"> {function="translatePricing($value.price)"} {$curreny}</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> {$curreny}</td>
             <td><img src='{function="findProductImage($value.id)"}'></td>
         </tr>
         {elseif="$value.typ == 5"}
@@ -136,15 +136,15 @@
             <td>{function="translate('für')"} <input type="text" size="5" name="{$value.id}" id='{$value.id}' value="{$value.personenanzahl}" class="input_action span-2 validate[custom[integer]] zusatzprodukt"> {function="translate('Anzahl /')"} {$information.uebernachtungen} {function="translate('Nächte')"}</td>
             <td>{$value.name}</td>
             <td> <img src="/buttons/help.png" description="{$value.beschreibung}" class="produktbeschreibung" id="produkt{$value.id}"> </td>
-            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}">{function="translate('pro Anzahl und')"} {$information.uebernachtungen}{$value.uebernachtungen} {function="translate('Übernachtungen')"} {function="translatePricing($value.price)"} €</td>
-            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> €</td>
+            <td>{include="Front_Zusatzprodukte_Preisbeschreibung"}<br><input type="hidden"  id="preis{$value.id}" value="{$value.price}">{function="translate('pro Anzahl und')"} {$information.uebernachtungen}{$value.uebernachtungen} {function="translate('Übernachtungen')"} {function="translatePricing($value.price)"} {$curreny}</td>
+            <td><span id="gesamtPreisProdukt{$value.id}" class="gesamtPreisProdukt">{function="translatePricing(0.00)"}</span> {$curreny}</td>
             <td><img src='{function="findProductImage($value.id)"}'></td>
         </tr>
         {/if}
     {/loop}
 
     <tr class="buttons">
-        <td colspan="4">{function="translate('Gesamtpreis')"}: <span id='total'>0.00</span> €</td>
+        <td colspan="4">{function="translate('Gesamtpreis')"}: <span id='total'>0.00</span> {$curreny}</td>
         <td colspan="3" align="center"><input type="submit" name="zusatzprodukte" value=" {function="translate('weiter zum Warenkorb')"} " class='submit'></td>
     </tr>
     </table>

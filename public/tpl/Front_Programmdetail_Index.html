@@ -194,7 +194,7 @@
         {if condition="$bookingdetails.buchungspauschale == 2"}
 
         <strong>{function="translate('Zusatzinformation: ')"}</strong>
-        <br>{function="translate('Für die Buchung dieses Programmes erheben wir eine einmalige Buchungspauschale in Höhe von 30,00 €.')"}
+        <br>{function="translate('Für die Buchung dieses Programmes erheben wir eine einmalige Buchungspauschale in Höhe von 30,00 {$curreny}.')"}
         </div>
             <div class="span-5" style="width:450px; background-color: #f3f3f3;">&nbsp;</div>
             {/if}
@@ -322,10 +322,10 @@
                           {function="translate('Buchungspauschale')"}
                       </td>
                       <td>
-                          30,00 €
+                          30,00 {$curreny}
                       </td>
                       <td>
-                          30,00 €
+                          30,00 {$curreny}
                       </td>
                   </tr>
                   {/if}
@@ -347,10 +347,10 @@
                           {$value.inputs}
                       </td>
                       <td class="span-3">
-                          <span id="einzelpreis_{$key}" class="einzelpreis"></span> €
+                          <span id="einzelpreis_{$key}" class="einzelpreis"></span> {$curreny}
                       </td>
                       <td class="span-3">
-                          <span id="preis_{$key}" class="preis"></span> €
+                          <span id="preis_{$key}" class="preis"></span> {$curreny}
                       </td>
 
                   </tr>
@@ -362,7 +362,7 @@
                   {/loop}
                   <tr>
                       <td colspan="4">
-                          {function="translate('Gesamtpreis')"}: <span id='gesamtpreis'></span> €
+                          {function="translate('Gesamtpreis')"}: <span id='gesamtpreis'></span> {$curreny}
                       </td>
                   </tr>
               </table>

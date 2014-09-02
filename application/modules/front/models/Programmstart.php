@@ -68,6 +68,13 @@ class Front_Model_Programmstart{
         $sql = "select AO_City from tbl_ao_city where AO_City_ID = '".$cityId."'";
         $this->_cityName = $db->fetchOne($sql);
 
+        //Währung nach Stadt bestimmen
+        if ($cityId == 7){
+            $_SESSION['curreny'] = "CZK";
+        }else{
+            $_SESSION['curreny'] = "&euro;";
+        }
+
         return $this;
     }
 

@@ -135,6 +135,8 @@ class Front_ProgrammdetailController extends Zend_Controller_Action
             // Zeitmamanger
             $raintpl = $this->_zeitmanager($params, $raintpl);
 
+            $raintpl->assign('curreny', $_SESSION['curreny']);
+
             // Vertragspartner
             $raintpl = $this->vertragspartner($params, $raintpl);
 
