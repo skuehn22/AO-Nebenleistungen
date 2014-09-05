@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,19 +34,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Front_Personaldata_FormularPersonendaten.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Front_Personaldata_FormularPersonendaten.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="50" selection-start="6228" selection-end="6228" vertical-scroll-proportion="-13.846154" vertical-offset="2360" max-vertical-offset="3604">
+            <state line="167" column="50" selection-start="6585" selection-end="6585" vertical-scroll-proportion="0.57710844" vertical-offset="2360" max-vertical-offset="3621">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin_Datensatz_IndexPreisvarianten.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Admin_Datensatz_IndexPreisvarianten.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="13" selection-start="6891" selection-end="6891" vertical-scroll-proportion="0.25350466" vertical-offset="4016" max-vertical-offset="9333">
+            <state line="269" column="23" selection-start="7478" selection-end="7478" vertical-scroll-proportion="0.0" vertical-offset="4424" max-vertical-offset="9333">
               <folding />
             </state>
           </provider>
@@ -191,8 +191,8 @@
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php" />
-        <option value="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" />
+        <option value="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" />
       </list>
     </option>
   </component>
@@ -2770,16 +2770,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html">
+    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="50" selection-start="6228" selection-end="6228" vertical-scroll-proportion="-13.846154" vertical-offset="2360" max-vertical-offset="3604">
+        <state line="269" column="23" selection-start="7478" selection-end="7478" vertical-scroll-proportion="0.0" vertical-offset="4424" max-vertical-offset="9333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
+    <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="13" selection-start="6891" selection-end="6891" vertical-scroll-proportion="0.25350466" vertical-offset="4016" max-vertical-offset="9333">
+        <state line="167" column="50" selection-start="6585" selection-end="6585" vertical-scroll-proportion="0.57710844" vertical-offset="2360" max-vertical-offset="3621">
           <folding />
         </state>
       </provider>
