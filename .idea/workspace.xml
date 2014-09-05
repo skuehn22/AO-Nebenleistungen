@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" afterPath="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" afterPath="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +34,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Front_Personaldata_FormularPersonendaten.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Front_Personaldata_FormularPersonendaten.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="41" selection-start="6576" selection-end="6576" vertical-scroll-proportion="0.5628672" vertical-offset="2360" max-vertical-offset="3604">
+            <state line="160" column="50" selection-start="6228" selection-end="6228" vertical-scroll-proportion="-13.846154" vertical-offset="2360" max-vertical-offset="3604">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admin_Datensatz_IndexPreisvarianten.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="249" column="13" selection-start="6891" selection-end="6891" vertical-scroll-proportion="0.25350466" vertical-offset="4016" max-vertical-offset="9333">
               <folding />
             </state>
           </provider>
@@ -115,15 +124,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Front_Bestellung_Index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/tpl/Front_Bestellung_Index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="51" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1241">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -142,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php" />
         <option value="$PROJECT_DIR$/library/nook/ToolPreisvarianteBasisAngaben.php" />
         <option value="$PROJECT_DIR$/price/index.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/Programmdetail.php" />
@@ -193,6 +192,7 @@
         <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" />
+        <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" />
       </list>
     </option>
   </component>
@@ -2484,11 +2484,6 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungPdfDokument.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="19" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="3485" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/RechnungPdfProgramme.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="211" column="0" selection-start="6924" selection-end="6924" vertical-scroll-proportion="0.0" vertical-offset="3292" max-vertical-offset="11118">
@@ -2777,7 +2772,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="41" selection-start="6576" selection-end="6576" vertical-scroll-proportion="0.5628672" vertical-offset="2360" max-vertical-offset="3604">
+        <state line="160" column="50" selection-start="6228" selection-end="6228" vertical-scroll-proportion="-13.846154" vertical-offset="2360" max-vertical-offset="3604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="249" column="13" selection-start="6891" selection-end="6891" vertical-scroll-proportion="0.25350466" vertical-offset="4016" max-vertical-offset="9333">
           <folding />
         </state>
       </provider>

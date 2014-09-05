@@ -247,13 +247,6 @@ var adminDatensatzIndexPreisvarianten = function (){
                 fieldLabel: 'VK Brutto *',
                 maskRe: /^[0-9\,]$/,
                 allowBlank: false
-            },{
-                xtype: 'textfield',
-                width: 75,
-                name: 'buchungsgebuehr',
-                fieldLabel: 'Buchungsgebühr',
-                maskRe: /^[0-9\,]$/,
-                allowBlank: true
             }],
             buttons: [{
             text: 'speichern',
