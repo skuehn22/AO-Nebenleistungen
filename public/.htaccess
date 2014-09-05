@@ -1,12 +1,4 @@
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule .* index.php
-AuthUserFile /www/htdocs/w0122706/htdocs/public/.htpasswd
-AuthGroupFile /dev/null
-AuthName ByPassword
-AuthType Basic
-require valid-user
+
 
 SetEnv APPLICATION_ENV production
 

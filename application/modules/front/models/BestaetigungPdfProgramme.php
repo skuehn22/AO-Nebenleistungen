@@ -177,15 +177,19 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
     public function erstellePdf()
     {
 
-        $namePdfProgrammBestaetigung = $this
-            ->_erstellenGrunddokument()
-            ->erstellenIcon() // erstellt das Icon der Offlinebuchung
-            ->_erstellenKundendaten()
-            ->_erstellenAnrede()
-            ->_erstellenProgrammblock()
-            ->_hinweisAufAgb()
-            ->_erstellenGruss()
-            ->_savePdf();
+        for ($i = 0; $i < count($_SESSION['allePreise']); $i++) {
+            $namePdfProgrammBestaetigung = $this
+                ->_erstellenGrunddokument()
+                ->erstellenIcon() // erstellt das Icon der Offlinebuchung
+                ->_erstellenKundendaten()
+                ->_erstellenAnrede()
+                ->_erstellenProgrammblock($_SESSION['allePreise'][$i]['id'])
+                ->_hinweisAufAgb()
+                ->_erstellenGruss()
+                ->_savePdf($_SESSION['allePreise'][$i]['progname']);
+        }
+
+
 
         return $namePdfProgrammBestaetigung;
     }
@@ -407,7 +411,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
      *
      * @return Front_Model_BestaetigungPdfProgramme
      */
-    private function _erstellenProgrammblock()
+    private function _erstellenProgrammblock($proID)
     {
         $anzeigeSprache = nook_ToolSprache::ermittelnKennzifferSprache();
         $gebuchteProgramme = $this->_gebuchteProgramme;
@@ -435,6 +439,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
         // Schleife Programme
         for ($i = 0; $i < count($gebuchteProgramme); $i++) {
+            if ($gebuchteProgramme[$i]['id'] == $proID){
 
             if($gebuchteProgramme[$i]['programmdetails_id'] == $gebuchteProgramme[$i-1]['programmdetails_id'] AND $gebuchteProgramme[$i]['datum'] == $gebuchteProgramme[$i-1]['datum'] AND $gebuchteProgramme[$i]['zeit'] == $gebuchteProgramme[$i-1]['zeit']){
 
@@ -671,6 +676,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
                 }
 
                 } // Ende Programme
+            }
       }
 
 
@@ -974,7 +980,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
      *
      * @return string
      */
-    private function _savePdf()
+    private function _savePdf($progname)
     {
 
         $registrierungsnummer = $this->ermittelnRegistrierungsnummer();
@@ -982,7 +988,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         /** @var $newPdf Zend_pdf */
         $newPdf = $this->_newPdfBestaetigung;
 
-        $nameNeuePdfDatei = $this->_pfad . "/B_" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
+        $nameNeuePdfDatei = $this->_pfad . "/B_" . $registrierungsnummer . "_" . $this->zaehler . "_".$progname.".pdf";
         $dateiName = $newPdf->save($nameNeuePdfDatei);
 
         return $nameNeuePdfDatei;
@@ -1093,7 +1099,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
             $this->_hochWert = $this->_obererRand;
 
-            // eine neue Seite zum Dokument, Schriftart und Schriftgröße als Standardwerte
+            //eine neue Seite zum Dokument, Schriftart und Schriftgröße als Standardwerte
             $page = $this->_newPdfBestaetigung->newPage(Zend_Pdf_Page::SIZE_A4);
             $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
             $this->_font = $font;
