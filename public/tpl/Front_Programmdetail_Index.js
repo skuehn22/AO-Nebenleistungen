@@ -108,7 +108,7 @@ function berechnungGesamtpreis(){
     var gesamtpreis = 0;
     var gesamtAnzahl = 0;
 
-    for(var i = 0; i < 5; i++){
+    for(var i = 0; i < 21; i++){
         var anzahl = $("#" + i).val();
         anzahl = parseInt(anzahl);
         gesamtAnzahl += anzahl;
@@ -667,16 +667,6 @@ $(document).ready(function() {
     if (document.getElementById("einzelpreis_21")) {
         document.getElementById("einzelpreis_21").innerHTML= kaufmRunden(preiseProgrammVarianten[21]);
     }
-
-
-
-
-
-
-
-
-
-
 
 
     // Bestandsbuchung , Berechnung Preis und Sichtbarkeit Button
