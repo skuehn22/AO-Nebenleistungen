@@ -456,7 +456,10 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
             $mwst_ek = number_format($_SESSION['allePreise'][$i]['mwst_ek'],2);
             $mwst_vk = number_format($_SESSION['allePreise'][$i]['mwst_vk'],2);
             $ek = (number_format($_SESSION['allePreise'][$i]['ek'],2)*$_SESSION['allePreise'][$i]['anzahl']);
-            $vk = (number_format($_SESSION['allePreise'][$i]['vk'],2)*$_SESSION['allePreise'][$i]['anzahl']);
+            $vk = ($_SESSION['allePreise'][$i]['vk']*$_SESSION['allePreise'][$i]['anzahl']);
+            $vk = str_replace(array('.', ','), array('', '.'), $vk);
+            //$vk=number_format($vk, 2, ',', '.');
+
 
             if ($mwst_ek == $mwst_vk)
             {

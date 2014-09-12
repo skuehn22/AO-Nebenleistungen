@@ -34,6 +34,13 @@ class Front_ProgrammstartController extends Zend_Controller_Action{
             // speichern Parameter in Session
             $params = $this->storeIndexAction($params);
 
+            //Währung nach Stadt bestimmen
+            if ($params['city'] == 7){
+                $_SESSION['curreny'] = "CZK";
+            }else{
+                $_SESSION['curreny'] = "&euro;";
+            }
+
             $raintpl = raintpl_rainhelp::getRainTpl();
 
             // Breadcrumb
@@ -75,6 +82,9 @@ class Front_ProgrammstartController extends Zend_Controller_Action{
     protected function ermittelnKategorienDerStadt(array $params, $raintpl)
     {
         $frontModelProgrammeKategorienStadt = new Front_Model_ProgrammeKategorienStadt();
+
+
+
         $frontModelProgrammeKategorienStadt
             ->setCityId($params['city'])
             ->setAnzeigeSpracheId($params['sprache']);
@@ -257,6 +267,8 @@ class Front_ProgrammstartController extends Zend_Controller_Action{
     private function erstellenPaginatorProgramme($params, $raintpl)
     {
         $frontModelProgrammeSeitenSuchen = new Front_Model_ProgrammeSeitenSuchen();
+
+
 
         $frontModelProgrammeSeitenSuchen
             ->setProgrammeProSeite($this->condition_programme_pro_seite)
