@@ -684,7 +684,7 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
         $text[] = "Gruppennname: ".$personendaten['gruppenname'];
         $text[] = "Ansprechpartner:  ".$personendaten['title'] . " " . $personendaten['firstname'] . " " . $personendaten['lastname'];
         $text[] = "Telefon: ".$personendaten['phonenumber'];
-        $text[] = "Hinweis: ".$personendaten['hinweis'];
+        $text[] = "Hinweis vom Kunden: ".$personendaten['hinweis'];
         $text[] = "";
 
         return $text;
@@ -713,6 +713,12 @@ class Front_Model_BestellungEmailAnbieter extends nook_ToolModel implements arra
                 $gebuchtesProgramm = $datenMailProgrammanbieter['programme'][$i];+// Preisvariante
                 $text[] = $gebuchtesProgramm['buchungsdaten']['anzahl'] . " * " . $gebuchtesProgramm['programmvariante']['preisvariante_de'];
 
+
+                $hinweis_prog = $datenMailProgrammanbieter['programme'][$i]['programmbeschreibung']['programmdetail_id'];
+
+                if($hinweis_prog !=""){
+                    $text[] = "Hinweis an den Programmanbieter: ".$datenMailProgrammanbieter['programme'][$i]['programmbeschreibung']['an_prog_1'];
+                }
 
 
             }else{// einzelnes gebuchtes Programm
