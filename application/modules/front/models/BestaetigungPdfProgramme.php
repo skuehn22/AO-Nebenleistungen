@@ -1047,6 +1047,10 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
             if ($assd[1] == "W2"){
                 $assd[0] = "AT-W2";
             }
+
+            if ($assd[1] == "G1"){
+                $assd[0] = "AT-G1";
+            }
         }
 
         try {
