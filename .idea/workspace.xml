@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +34,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="45" selection-start="8899" selection-end="8899" vertical-scroll-proportion="-12.411765" vertical-offset="4671" max-vertical-offset="8024">
+            <state line="319" column="53" selection-start="9312" selection-end="9312" vertical-scroll-proportion="0.6220807" vertical-offset="5130" max-vertical-offset="8024">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mail.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Zend/Mail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="442" column="22" selection-start="10216" selection-end="10223" vertical-scroll-proportion="-8.0" vertical-offset="7000" max-vertical-offset="21488">
               <folding />
             </state>
           </provider>
@@ -89,19 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Abstract.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Zend/Pdf/Canvas/Abstract.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1045" column="0" selection-start="35160" selection-end="35160" vertical-scroll-proportion="0.0" vertical-offset="17765" max-vertical-offset="20791">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WrapperPdf.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WrapperPdf.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="329" column="20" selection-start="11522" selection-end="11522" vertical-scroll-proportion="0.94959676" vertical-offset="5122" max-vertical-offset="16235">
+            <state line="329" column="20" selection-start="11522" selection-end="11522" vertical-scroll-proportion="-18.115385" vertical-offset="5122" max-vertical-offset="16235">
               <folding />
             </state>
           </provider>
@@ -2481,11 +2480,21 @@
           <line>128</line>
           <option name="timeStamp" value="1529" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php</url>
+          <line>321</line>
+          <option name="timeStamp" value="1530" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/library/Zend/Mail.php</url>
+          <line>443</line>
+          <option name="timeStamp" value="1531" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1530" />
+      <option name="time" value="1533" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -2495,13 +2504,6 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/ProgrammdetailProgrammvarianten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="466" selection-end="466" vertical-scroll-proportion="-4.3333335" vertical-offset="0" max-vertical-offset="4879">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="221" column="0" selection-start="7440" selection-end="7440" vertical-scroll-proportion="-6.3461537" vertical-offset="3507" max-vertical-offset="5338">
@@ -2787,16 +2789,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="45" selection-start="8899" selection-end="8899" vertical-scroll-proportion="-12.411765" vertical-offset="4671" max-vertical-offset="8024">
+        <state line="329" column="20" selection-start="11522" selection-end="11522" vertical-scroll-proportion="-18.115385" vertical-offset="5122" max-vertical-offset="16235">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
+    <entry file="file://$PROJECT_DIR$/library/Zend/Mail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="329" column="20" selection-start="11522" selection-end="11522" vertical-scroll-proportion="0.94959676" vertical-offset="5122" max-vertical-offset="16235">
+        <state line="442" column="22" selection-start="10216" selection-end="10223" vertical-scroll-proportion="-8.0" vertical-offset="7000" max-vertical-offset="21488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="319" column="53" selection-start="9312" selection-end="9312" vertical-scroll-proportion="0.6220807" vertical-offset="5130" max-vertical-offset="8024">
           <folding />
         </state>
       </provider>
