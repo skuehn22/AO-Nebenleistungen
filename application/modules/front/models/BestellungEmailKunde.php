@@ -122,7 +122,9 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
      */
     public function     setPdfProgrammBestaetigung($__pdfProgrammBestaetigung)
     {
-        $this->_pdfProgrammBestaetigung = $__pdfProgrammBestaetigung;
+        $help = 0;
+        $help = count($this->_pdfProgrammBestaetigung);
+        $this->_pdfProgrammBestaetigung[$help] = $__pdfProgrammBestaetigung;
 
         return;
     }
@@ -304,18 +306,22 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
         }
 
         // Programme Bestätigung
-        if (!empty($this->_pdfProgrammBestaetigung)) {
-            $handle = fopen($this->_pdfProgrammBestaetigung, 'rb');
-            $bestaetigungPdf = fread($handle, filesize($this->_pdfProgrammBestaetigung));
-            fclose($handle);
+        if (!empty($this->_pdfProgrammBestaetigung[0])) {
 
-            $bestaetigung = new Zend_Mime_Part($bestaetigungPdf);
-            $bestaetigung->type = 'application/pdf';
-            $bestaetigung->disposition = Zend_Mime::DISPOSITION_ATTACHMENT;
-            $bestaetigung->encoding = Zend_Mime::ENCODING_BASE64;
-            $bestaetigung->filename = "B_" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
+            for ($i = 1; $i <= count($this->_pdfProgrammBestaetigung); $i++) {
+                $handle = fopen($this->_pdfProgrammBestaetigung, 'rb');
+                $bestaetigungPdf = fread($handle, filesize($this->_pdfProgrammBestaetigung));
+                fclose($handle);
 
-            $this->_mail->addAttachment($bestaetigung);
+                $bestaetigung = new Zend_Mime_Part($bestaetigungPdf);
+                $bestaetigung->type = 'application/pdf';
+                $bestaetigung->disposition = Zend_Mime::DISPOSITION_ATTACHMENT;
+                $bestaetigung->encoding = Zend_Mime::ENCODING_BASE64;
+                $bestaetigung->filename = "B_" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
+
+                $this->_mail->addAttachment($bestaetigung);
+            }
+
         }
 
         // Übernachtungen Rechnung

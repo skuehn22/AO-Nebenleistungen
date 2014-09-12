@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,16 +29,25 @@
       <file leaf-file-name="BestaetigungPdfProgramme.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1086" column="6" selection-start="38940" selection-end="38940" vertical-scroll-proportion="-16.923077" vertical-offset="18022" max-vertical-offset="20604">
+            <state line="188" column="26" selection-start="5564" selection-end="5572" vertical-scroll-proportion="-5.745098" vertical-offset="2903" max-vertical-offset="20604">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestellungEmailAnbieter.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="312" column="45" selection-start="8899" selection-end="8899" vertical-scroll-proportion="-12.411765" vertical-offset="4671" max-vertical-offset="8024">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BestellungEmailAnbieter.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="707" column="0" selection-start="23288" selection-end="23288" vertical-scroll-proportion="0.33333334" vertical-offset="11890" max-vertical-offset="14416">
+            <state line="637" column="0" selection-start="21323" selection-end="21323" vertical-scroll-proportion="-6.3461537" vertical-offset="10664" max-vertical-offset="14416">
               <folding />
             </state>
           </provider>
@@ -46,7 +56,7 @@
       <file leaf-file-name="BuchungProgrammePdf.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BuchungProgrammePdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="14433">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="396.23077" vertical-offset="10302" max-vertical-offset="14433">
               <folding />
             </state>
           </provider>
@@ -64,7 +74,7 @@
       <file leaf-file-name="ProgrammstartController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="0" selection-start="5270" selection-end="5270" vertical-scroll-proportion="-5.1153846" vertical-offset="2689" max-vertical-offset="6256">
+            <state line="166" column="0" selection-start="5270" selection-end="5270" vertical-scroll-proportion="-8.653846" vertical-offset="2597" max-vertical-offset="6256">
               <folding />
             </state>
           </provider>
@@ -88,19 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Zend/Barcode/Renderer/Image.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="401" column="0" selection-start="12085" selection-end="12085" vertical-scroll-proportion="0.0" vertical-offset="6817" max-vertical-offset="8092">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WrapperPdf.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WrapperPdf.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="323" column="0" selection-start="11390" selection-end="11390" vertical-scroll-proportion="0.0" vertical-offset="5491" max-vertical-offset="16235">
+            <state line="329" column="20" selection-start="11522" selection-end="11522" vertical-scroll-proportion="0.94959676" vertical-offset="5122" max-vertical-offset="16235">
               <folding />
             </state>
           </provider>
@@ -109,7 +110,7 @@
       <file leaf-file-name="BestellungController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="475" column="0" selection-start="18289" selection-end="18289" vertical-scroll-proportion="-24.576923" vertical-offset="7436" max-vertical-offset="17782">
+            <state line="191" column="0" selection-start="7201" selection-end="7201" vertical-scroll-proportion="-6.3461537" vertical-offset="3082" max-vertical-offset="17782">
               <folding>
                 <marker date="1410506162653" expanded="false" signature="15649:15710" placeholder="..." />
                 <marker date="1410506162653" expanded="false" signature="16407:16432" placeholder="..." />
@@ -179,7 +180,6 @@
         <option value="$PROJECT_DIR$/public/tpl/Front_Warenkorb_Index_Programme.html" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Zusatzprodukte_Index.html" />
         <option value="$PROJECT_DIR$/application/modules/front/controllers/WarenkorbController.php" />
-        <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" />
         <option value="$PROJECT_DIR$/application/configs/application.ini" />
@@ -193,6 +193,7 @@
         <option value="$PROJECT_DIR$/application/configs/static.ini" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
       </list>
     </option>
   </component>
@@ -580,19 +581,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="-290" width="1696" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11666667" sideWeight="0.7780127" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
+      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3327381" sideWeight="0.7766323" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2326389" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5062631" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39248434" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11666667" sideWeight="0.22198732" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3327381" sideWeight="0.22164948" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.116071425" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2412,11 +2413,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php</url>
-          <line>764</line>
-          <option name="timeStamp" value="1452" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php</url>
           <line>300</line>
           <option name="timeStamp" value="1459" />
         </line-breakpoint>
@@ -2471,40 +2467,25 @@
           <option name="timeStamp" value="1482" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
-          <line>637</line>
-          <option name="timeStamp" value="1501" />
+          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php</url>
+          <line>290</line>
+          <option name="timeStamp" value="1521" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
-          <line>709</line>
-          <option name="timeStamp" value="1505" />
+          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php</url>
+          <line>308</line>
+          <option name="timeStamp" value="1523" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
-          <line>707</line>
-          <option name="timeStamp" value="1506" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
-          <line>716</line>
-          <option name="timeStamp" value="1507" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
-          <line>784</line>
-          <option name="timeStamp" value="1508" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php</url>
-          <line>786</line>
-          <option name="timeStamp" value="1509" />
+          <url>file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php</url>
+          <line>128</line>
+          <option name="timeStamp" value="1529" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1510" />
+      <option name="time" value="1530" />
     </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
@@ -2618,11 +2599,6 @@
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Bestellung_Index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="51" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1241" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="389" column="14" selection-start="11896" selection-end="11896" vertical-scroll-proportion="0.0" vertical-offset="6272" max-vertical-offset="7922" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/price/index.php">
@@ -2753,13 +2729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="323" column="0" selection-start="11390" selection-end="11390" vertical-scroll-proportion="0.0" vertical-offset="5491" max-vertical-offset="16235">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmstart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="46" selection-start="2873" selection-end="2899" vertical-scroll-proportion="-10.461538" vertical-offset="1326" max-vertical-offset="8381">
@@ -2774,23 +2743,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="0" selection-start="5270" selection-end="5270" vertical-scroll-proportion="-8.653846" vertical-offset="2597" max-vertical-offset="6256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BuchungProgrammePdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14433">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="396.23077" vertical-offset="10302" max-vertical-offset="14433">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="637" column="0" selection-start="21323" selection-end="21323" vertical-scroll-proportion="-6.3461537" vertical-offset="10664" max-vertical-offset="14416">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1086" column="6" selection-start="38940" selection-end="38940" vertical-scroll-proportion="-16.923077" vertical-offset="18022" max-vertical-offset="20604">
+        <state line="188" column="26" selection-start="5564" selection-end="5572" vertical-scroll-proportion="-5.745098" vertical-offset="2903" max-vertical-offset="20604">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="475" column="0" selection-start="18289" selection-end="18289" vertical-scroll-proportion="-24.576923" vertical-offset="7436" max-vertical-offset="17782">
+        <state line="191" column="0" selection-start="7201" selection-end="7201" vertical-scroll-proportion="-6.3461537" vertical-offset="3082" max-vertical-offset="17782">
           <folding>
             <marker date="1410506162653" expanded="false" signature="15649:15710" placeholder="..." />
             <marker date="1410506162653" expanded="false" signature="16407:16432" placeholder="..." />
@@ -2804,16 +2787,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="0" selection-start="5270" selection-end="5270" vertical-scroll-proportion="-5.1153846" vertical-offset="2689" max-vertical-offset="6256">
+        <state line="312" column="45" selection-start="8899" selection-end="8899" vertical-scroll-proportion="-12.411765" vertical-offset="4671" max-vertical-offset="8024">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="707" column="0" selection-start="23288" selection-end="23288" vertical-scroll-proportion="0.33333334" vertical-offset="11890" max-vertical-offset="14416">
+        <state line="329" column="20" selection-start="11522" selection-end="11522" vertical-scroll-proportion="0.94959676" vertical-offset="5122" max-vertical-offset="16235">
           <folding />
         </state>
       </provider>
