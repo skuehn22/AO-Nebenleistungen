@@ -28,7 +28,7 @@
       <file leaf-file-name="BestaetigungPdfProgramme.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="26" selection-start="5564" selection-end="5572" vertical-scroll-proportion="-5.745098" vertical-offset="2903" max-vertical-offset="20604">
+            <state line="990" column="45" selection-start="36548" selection-end="36548" vertical-scroll-proportion="-3.0784314" vertical-offset="16673" max-vertical-offset="20604">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="319" column="53" selection-start="9312" selection-end="9312" vertical-scroll-proportion="0.6220807" vertical-offset="5130" max-vertical-offset="8024">
+            <state line="323" column="0" selection-start="9446" selection-end="9446" vertical-scroll-proportion="0.477707" vertical-offset="5266" max-vertical-offset="8024">
               <folding />
             </state>
           </provider>
@@ -2766,13 +2766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="26" selection-start="5564" selection-end="5572" vertical-scroll-proportion="-5.745098" vertical-offset="2903" max-vertical-offset="20604">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="191" column="0" selection-start="7201" selection-end="7201" vertical-scroll-proportion="-6.3461537" vertical-offset="3082" max-vertical-offset="17782">
@@ -2803,9 +2796,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="990" column="45" selection-start="36548" selection-end="36548" vertical-scroll-proportion="-3.0784314" vertical-offset="16673" max-vertical-offset="20604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="319" column="53" selection-start="9312" selection-end="9312" vertical-scroll-proportion="0.6220807" vertical-offset="5130" max-vertical-offset="8024">
+        <state line="323" column="0" selection-start="9446" selection-end="9446" vertical-scroll-proportion="0.477707" vertical-offset="5266" max-vertical-offset="8024">
           <folding />
         </state>
       </provider>
