@@ -480,7 +480,7 @@ class Front_Model_WrapperPdf
             $registrierungsnummer = $this->ermittelnRegistrierungsnummer();
 
             $ablagePfad = $this->pfad . "/" . $prefix . "_" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
-            $pdfDateiName = $prefix . "_SCHLITTEN" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
+            $pdfDateiName = $prefix . "_" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
 
             $this->zpdf->save($ablagePfad);
 
