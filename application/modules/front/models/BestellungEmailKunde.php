@@ -394,7 +394,7 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
 //        else
 //            $this->_mail->addTo($this->_kundenDaten['email']);
 
-        $this->_mail->addTo("Kristina.Doerfel@aohostels.com");
+        $this->_mail->addTo("kuehn.sebastian@gmail.com");
 
         return $this;
     }
