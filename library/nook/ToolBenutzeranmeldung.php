@@ -27,8 +27,8 @@ class nook_ToolBenutzeranmeldung
 
         $this->_rolleId = $authUser['role_id'];
         $this->_userId = $authUser['userId'];
-        $this->_anbieter = $authUser['anbieter'];
-        $this->_companyId = $authUser['company_id'];
+       // $this->_anbieter = $authUser['anbieter'];
+       // $this->_companyId = $authUser['company_id'];
     }
 
     /**

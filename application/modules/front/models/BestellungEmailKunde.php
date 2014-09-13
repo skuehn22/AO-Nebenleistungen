@@ -122,9 +122,7 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
      */
     public function     setPdfProgrammBestaetigung($__pdfProgrammBestaetigung)
     {
-        $help = 0;
-        $help = count($this->_pdfProgrammBestaetigung);
-        $this->_pdfProgrammBestaetigung[$help] = $__pdfProgrammBestaetigung;
+        $this->_pdfProgrammBestaetigung = $__pdfProgrammBestaetigung;
 
         return;
     }
@@ -306,7 +304,7 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
         }
 
         // Programme Bestätigung
-        if (!empty($this->_pdfProgrammBestaetigung[0])) {
+        if (!empty($this->_pdfProgrammBestaetigung)) {
 
             for ($i = 1; $i <= count($this->_pdfProgrammBestaetigung); $i++) {
                 $handle = fopen($this->_pdfProgrammBestaetigung, 'rb');
