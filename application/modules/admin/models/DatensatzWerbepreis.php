@@ -113,7 +113,7 @@ class Admin_Model_DatensatzWerbepreis extends nook_Model_model{
         $data['durchlaeuferId'] = $rows[0]['rechnung_durchlaeufer_id'];
         if ($rows[0]['werbepreistyp']!=""){
           $data['werbepreistyp'] = $rows[0]['werbepreistyp'];
-        }
+        }else $data['werbepreistyp'] = "";
         $data['freiplatzregel'] = $rows[0]['freiplatzregel'];
         $data['personenzahlregel'] = $rows[0]['personenzahlregel'];
         $data['abfahrtszeit'] = $rows[0]['abfahrtszeit'];

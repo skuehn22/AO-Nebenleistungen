@@ -36,9 +36,9 @@ class nook_ToolBenutzername{
             $benutzername = "( ".$personendaten[0]['title']." ".$personendaten[0]['firstname']." ".$personendaten[0]['lastname']." )";
         }
 
-        if($personendaten[0]['lastname'])
-            return $benutzername;
-        else
+//        if($personendaten[0]['lastname'])
+//            return $benutzername;
+//        else
             return;
     }
 }

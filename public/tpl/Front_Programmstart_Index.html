@@ -33,7 +33,11 @@
             {include="Front_Programmstart_Buchungstyp"}
         </div>
         <div class="span-4 push-3 standardtext">
-            {function="translate('Preis ab')"}:  {function="translatePricing($value.werbepreis)"} {$curreny} {$value.werbepreistyp}
+            {function="translate('Preis ab')"}:  {function="translatePricing($value.werbepreis)"} {$curreny}
+            {if condition="$value.werbepreistyp"}
+                {$value.werbepreistyp}
+            {/if}
+
 
         </div>
         <div class="span-2">

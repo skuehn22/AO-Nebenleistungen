@@ -440,7 +440,7 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
                         <td style='padding-right: 8px;'><strong>Anzahl</strong></td>
                         <td style='padding-right: 8px;'><strong>Ticketname</strong></td>
                         <td style='padding-right: 8px;'><strong>Programmpreis</strong></td>
-                        <td style='padding-right: 8px;'><strong>VVK Gebühr</strong></td>
+
                      </tr>";
 
 
@@ -463,14 +463,14 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
 
             if ($mwst_ek == $mwst_vk)
             {
-                $text .= "<td>".number_format($vk,2)." ".$_SESSION['curreny']." (inkl. ".($mwst_ek*100)."% Mwst)</td>";
-                $text .= "<td></td>";
+                $text .= "<td>".number_format($vk,2)." ".$_SESSION['curreny']." </td>";
+
             }
 
             if ($mwst_ek != $mwst_vk)
             {
-                $text .= "<td>".number_format($ek,2)." ".$_SESSION['curreny']." (inkl. ".($mwst_ek*100)."% Mwst)</td>";
-                $text .= "<td>".number_format(($vk-$ek),2)." ".$_SESSION['curreny']." (inkl. 19% Mwst)</td>";
+                $text .= "<td>".number_format($ek,2)." ".$_SESSION['curreny']."</td>";
+
             }
 
             $text .= "</tr>";
