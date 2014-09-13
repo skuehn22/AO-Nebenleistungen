@@ -317,7 +317,7 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
                 $bestaetigung->type = 'application/pdf';
                 $bestaetigung->disposition = Zend_Mime::DISPOSITION_ATTACHMENT;
                 $bestaetigung->encoding = Zend_Mime::ENCODING_BASE64;
-                $bestaetigung->filename = "B_".$i."-" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
+                $bestaetigung->filename = "BB_".$i."-" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
 
                 $this->_mail->addAttachment($bestaetigung);
             }
