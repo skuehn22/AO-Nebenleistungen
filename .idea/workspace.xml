@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php" afterPath="$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nebenleistungen.iws" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="BestaetigungPdfProgramme.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="990" column="45" selection-start="36548" selection-end="36548" vertical-scroll-proportion="-3.0784314" vertical-offset="16673" max-vertical-offset="20604">
+            <state line="990" column="47" selection-start="36550" selection-end="36550" vertical-scroll-proportion="-3.0784314" vertical-offset="16673" max-vertical-offset="20604">
               <folding />
             </state>
           </provider>
@@ -38,7 +37,7 @@
       <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="319" column="109" selection-start="9346" selection-end="9368" vertical-scroll-proportion="-3.0784314" vertical-offset="5266" max-vertical-offset="8024">
+            <state line="321" column="43" selection-start="9402" selection-end="9415" vertical-scroll-proportion="-3.0784314" vertical-offset="5300" max-vertical-offset="8024">
               <folding />
             </state>
           </provider>
@@ -47,7 +46,34 @@
       <file leaf-file-name="Mail.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/Zend/Mail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="442" column="22" selection-start="10216" selection-end="10223" vertical-scroll-proportion="-8.0" vertical-offset="7000" max-vertical-offset="21488">
+            <state line="442" column="22" selection-start="10216" selection-end="10223" vertical-scroll-proportion="-7.6538463" vertical-offset="7009" max-vertical-offset="21488">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Zend/Mime/Message.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="20" selection-start="1664" selection-end="1664" vertical-scroll-proportion="-6.8461537" vertical-offset="706" max-vertical-offset="4658">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ids.ini" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/configs/ids.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="42" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="static.ini" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/configs/static.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="27" selection-start="935" selection-end="935" vertical-scroll-proportion="0.34" vertical-offset="561" max-vertical-offset="2295">
               <folding />
             </state>
           </provider>
@@ -71,37 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Programmstart.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/models/Programmstart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="46" selection-start="2873" selection-end="2899" vertical-scroll-proportion="-10.461538" vertical-offset="1326" max-vertical-offset="8381">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProgrammstartController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="0" selection-start="5270" selection-end="5270" vertical-scroll-proportion="-8.653846" vertical-offset="2597" max-vertical-offset="6256">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="static.ini" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/configs/static.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="46" selection-start="859" selection-end="859" vertical-scroll-proportion="-16.44" vertical-offset="269" max-vertical-offset="2295">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WrapperPdf.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WrapperPdf.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="480" column="0" selection-start="15731" selection-end="15731" vertical-scroll-proportion="0.50403225" vertical-offset="7910" max-vertical-offset="16235">
+            <state line="332" column="20" selection-start="11572" selection-end="11572" vertical-scroll-proportion="-5.509804" vertical-offset="5363" max-vertical-offset="16235">
               <folding />
             </state>
           </provider>
@@ -189,10 +188,10 @@
         <option value="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/Programmstart.php" />
         <option value="$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php" />
-        <option value="$PROJECT_DIR$/application/configs/static.ini" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailAnbieter.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
+        <option value="$PROJECT_DIR$/application/configs/static.ini" />
         <option value="$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php" />
       </list>
     </option>
@@ -215,10 +214,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1688" />
-    <option name="y" value="-290" />
-    <option name="width" value="1696" />
-    <option name="height" value="1066" />
+    <option name="x" value="1358" />
+    <option name="y" value="-140" />
+    <option name="width" value="1456" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -580,21 +579,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1688" y="-290" width="1696" height="1066" extended-state="6" />
+    <frame x="1358" y="-140" width="1456" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3327381" sideWeight="0.7766323" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
+      <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1625" sideWeight="0.77665997" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2326389" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39248434" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.384901" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3327381" sideWeight="0.22164948" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.116071425" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1625" sideWeight="0.22132796" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28333333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2505,13 +2504,6 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzPreisvarianten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="0" selection-start="7440" selection-end="7440" vertical-scroll-proportion="-6.3461537" vertical-offset="3507" max-vertical-offset="5338">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/tpl/Front_Personaldata_Index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="97" selection-start="909" selection-end="909" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1020" />
@@ -2629,11 +2621,6 @@
         <state line="160" column="50" selection-start="6228" selection-end="6228" vertical-scroll-proportion="-13.846154" vertical-offset="2360" max-vertical-offset="3621" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/configs/ids.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="42" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/.htpasswd">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890" />
@@ -2739,13 +2726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/configs/static.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="46" selection-start="859" selection-end="859" vertical-scroll-proportion="-16.44" vertical-offset="269" max-vertical-offset="2295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="166" column="0" selection-start="5270" selection-end="5270" vertical-scroll-proportion="-8.653846" vertical-offset="2597" max-vertical-offset="6256">
@@ -2783,30 +2763,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="442" column="22" selection-start="10216" selection-end="10223" vertical-scroll-proportion="-8.0" vertical-offset="7000" max-vertical-offset="21488">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="990" column="45" selection-start="36548" selection-end="36548" vertical-scroll-proportion="-3.0784314" vertical-offset="16673" max-vertical-offset="20604">
+        <state line="990" column="47" selection-start="36550" selection-end="36550" vertical-scroll-proportion="-3.0784314" vertical-offset="16673" max-vertical-offset="20604">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="319" column="109" selection-start="9346" selection-end="9368" vertical-scroll-proportion="-3.0784314" vertical-offset="5266" max-vertical-offset="8024">
+        <state line="321" column="43" selection-start="9402" selection-end="9415" vertical-scroll-proportion="-3.0784314" vertical-offset="5300" max-vertical-offset="8024">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="442" column="22" selection-start="10216" selection-end="10223" vertical-scroll-proportion="-7.6538463" vertical-offset="7009" max-vertical-offset="21488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Zend/Mime/Message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="20" selection-start="1664" selection-end="1664" vertical-scroll-proportion="-6.8461537" vertical-offset="706" max-vertical-offset="4658">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/configs/ids.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="42" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/WrapperPdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="480" column="0" selection-start="15731" selection-end="15731" vertical-scroll-proportion="0.50403225" vertical-offset="7910" max-vertical-offset="16235">
+        <state line="332" column="20" selection-start="11572" selection-end="11572" vertical-scroll-proportion="-5.509804" vertical-offset="5363" max-vertical-offset="16235">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/configs/static.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="27" selection-start="935" selection-end="935" vertical-scroll-proportion="0.34" vertical-offset="561" max-vertical-offset="2295">
           <folding />
         </state>
       </provider>
