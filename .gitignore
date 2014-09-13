@@ -56,16 +56,5 @@ public/tmp/tpl/**
 idea/workspace.xml
 /pdf/
 
-
-
-
-
-
-
-
-
-
-
 .idea/workspace.xml
-.idea/workspace.xml
-*.xml
+**/.idea/workspace.xml
