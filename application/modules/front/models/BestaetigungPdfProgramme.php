@@ -1201,7 +1201,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
             // einfügen Logo auf der neuen Seite
             $image = Zend_Pdf_Image::imageWithPath($this->_pfad . "/vorlagen/aohostel-logo.png");
-            $page->drawImage($image, 100, 100, 1, 1);
+            $page->drawImage($image, 0, 0, 0, 0);
 
             // aktueller Seitenzaehler
             $this->_seitennummer++;
