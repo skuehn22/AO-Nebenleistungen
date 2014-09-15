@@ -42,6 +42,8 @@ application/configs/static.ini
 application/configs/application.ini
 /application/configs/static.ini
 
+.htaccess
+
 
 public/tmp/tpl/*
 public/tmp/tpl/**
