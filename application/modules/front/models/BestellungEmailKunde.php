@@ -123,7 +123,7 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
     public function     setPdfProgrammBestaetigung($__pdfProgrammBestaetigung)
     {
         for ($i = 0; $i<count($__pdfProgrammBestaetigung); $i++) {
-            $this->_pdfProgrammBestaetigung[$i] = $__pdfProgrammBestaetigung[$i];
+            $this->_pdfProgrammBestaetigung[$i] = $__pdfProgrammBestaetigung;
         }
         return;
     }
