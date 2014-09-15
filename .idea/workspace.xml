@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/WarenkorbStep4.php" afterPath="$PROJECT_DIR$/application/modules/front/models/WarenkorbStep4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/static.ini" afterPath="$PROJECT_DIR$/application/configs/static.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.htaccess" afterPath="$PROJECT_DIR$/public/.htaccess" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,10 +52,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="398" column="50" selection-start="12272" selection-end="12272" vertical-scroll-proportion="0.332" vertical-offset="6600" max-vertical-offset="8024">
+            <state line="398" column="50" selection-start="12272" selection-end="12272" vertical-scroll-proportion="-3.254902" vertical-offset="6600" max-vertical-offset="8024">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.120567374" vertical-offset="0" max-vertical-offset="564">
               <folding />
             </state>
           </provider>
@@ -98,15 +105,6 @@
                 <marker date="1408720423139" expanded="true" signature="17273:17305" placeholder="delete from ..." />
                 <marker date="1408720423139" expanded="true" signature="18172:18199" placeholder="insert into ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VormerkpdfController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/VormerkpdfController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="221" column="39" selection-start="6476" selection-end="6476" vertical-scroll-proportion="-12.346154" vertical-offset="3436" max-vertical-offset="10591">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -185,7 +183,6 @@
         <option value="$PROJECT_DIR$/public/tpl/Admin_Datensatz_IndexPreisvarianten.js" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Personaldata_FormularPersonendaten.html" />
         <option value="$PROJECT_DIR$/public/tpl/Front_Programmdetail_Index.js" />
-        <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungErstellenPdfProgrammrechnungShadow.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/Programmstart.php" />
         <option value="$PROJECT_DIR$/application/modules/front/controllers/ProgrammstartController.php" />
@@ -202,6 +199,7 @@
         <option value="$PROJECT_DIR$/application/modules/front/models/WarenkorbStep4.php" />
         <option value="$PROJECT_DIR$/application/configs/static.ini" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
+        <option value="$PROJECT_DIR$/public/.htaccess" />
       </list>
     </option>
   </component>
@@ -284,24 +282,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nebenleistungen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tpl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2422,13 +2402,6 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/modules/admin/models/DatensatzWerbepreis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="42" selection-start="3426" selection-end="3426" vertical-scroll-proportion="-19.76923" vertical-offset="1356" max-vertical-offset="2890">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/ToolSprache.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="-5.423077" vertical-offset="386" max-vertical-offset="1258">
@@ -2790,7 +2763,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="398" column="50" selection-start="12272" selection-end="12272" vertical-scroll-proportion="0.332" vertical-offset="6600" max-vertical-offset="8024">
+        <state line="398" column="50" selection-start="12272" selection-end="12272" vertical-scroll-proportion="-3.254902" vertical-offset="6600" max-vertical-offset="8024">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="120" selection-end="120" vertical-scroll-proportion="0.120567374" vertical-offset="0" max-vertical-offset="564">
           <folding />
         </state>
       </provider>
