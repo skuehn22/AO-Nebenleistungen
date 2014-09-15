@@ -122,7 +122,8 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
      */
     public function     setPdfProgrammBestaetigung($__pdfProgrammBestaetigung)
     {
-        $this->_pdfProgrammBestaetigung = $__pdfProgrammBestaetigung;
+        $size = count($this->_pdfProgrammBestaetigung);
+        $this->_pdfProgrammBestaetigung[$size+1] = $__pdfProgrammBestaetigung;
 
         return;
     }
@@ -288,25 +289,26 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
     {
         $registrierungsnummer = $this->ermittelnRegistrierungsnummer();
 
-        // Programme Rechnung
-        if (!empty($this->_pdfprogrammrechnung)) {
-            $handle = fopen($this->_pdfprogrammrechnung, 'rb');
-            $rechnungPdf = fread($handle, filesize($this->_pdfprogrammrechnung));
-            fclose($handle);
-
-            $rechnung = new Zend_Mime_Part($rechnungPdf);
-            $rechnung->type = 'application/pdf';
-            $rechnung->disposition = Zend_Mime::DISPOSITION_ATTACHMENT;
-            $rechnung->encoding = Zend_Mime::ENCODING_BASE64;
-            $rechnung->filename = "P_" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
-
-            $this->_mail->addAttachment($rechnung);
-        }
+//        // Programme Rechnung
+//        if (!empty($this->_pdfprogrammrechnung)) {
+//            $handle = fopen($this->_pdfprogrammrechnung, 'rb');
+//            $rechnungPdf = fread($handle, filesize($this->_pdfprogrammrechnung));
+//            fclose($handle);
+//
+//            $rechnung = new Zend_Mime_Part($rechnungPdf);
+//            $rechnung->type = 'application/pdf';
+//            $rechnung->disposition = Zend_Mime::DISPOSITION_ATTACHMENT;
+//            $rechnung->encoding = Zend_Mime::ENCODING_BASE64;
+//            $rechnung->filename = "P_" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
+//
+//            $this->_mail->addAttachment($rechnung);
+//        }
 
         // Programme Bestätigung
         if (!empty($this->_pdfProgrammBestaetigung)) {
 
-            for ($i = 1; $i <= count($this->_pdfProgrammBestaetigung); $i++) {
+
+            for ($i = 0; $i <= count($this->_pdfProgrammBestaetigung); $i++) {
                 $handle = fopen($this->_pdfProgrammBestaetigung, 'rb');
                 $bestaetigungPdf = fread($handle, filesize($this->_pdfProgrammBestaetigung));
                 fclose($handle);
@@ -315,7 +317,7 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
                 $bestaetigung->type = 'application/pdf';
                 $bestaetigung->disposition = Zend_Mime::DISPOSITION_ATTACHMENT;
                 $bestaetigung->encoding = Zend_Mime::ENCODING_BASE64;
-                $bestaetigung->filename = "BB_".$i."-" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
+                $bestaetigung->filename = "B_".$i."-" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
 
                 $this->_mail->addAttachment($bestaetigung);
             }
