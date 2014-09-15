@@ -678,11 +678,16 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
             );
 
             /** Pdf der Programmbestätigung */
-            $namePdfProgrammBestaetigung = $this->erstellenPdfProgrammbestaetigung(
-                $fontTexte,
-                $model_emailAnbieter,
-                $aktuelleBuchung
-            );
+
+            for ($i = 0; $i < count($_SESSION['allePreise']); $i++) {
+                $namePdfProgrammBestaetigung = $this->erstellenPdfProgrammbestaetigung(
+                    $fontTexte,
+                    $model_emailAnbieter,
+                    $aktuelleBuchung,
+                    $_SESSION['allePreise'][$i][progname],
+                    $_SESSION['allePreise'][$i][programmdetails_id]
+                );
+            }
 
         }
     }
@@ -698,7 +703,9 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
     private function erstellenPdfProgrammbestaetigung(
         $fontTexte,
         $model_emailAnbieter,
-        $aktuelleBuchung
+        $aktuelleBuchung,
+        $docname,
+        $id
     ) {
         $toolRegistrierungsnummer = new nook_ToolRegistrierungsnummer();
         $registrierungsnummer = $toolRegistrierungsnummer
@@ -707,12 +714,14 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
 
         $model_pdfProgrammbestaetigungKunde = new Front_Model_BestaetigungPdfProgramme(); // Pdf der Bestätigung Programme an den Kunden
 
-        $namePdfProgrammBestaetigung = $model_pdfProgrammbestaetigungKunde
-            ->setRegistrierungsnummer($registrierungsnummer)
-            ->setDaten($model_emailAnbieter)
-            ->setSchriften($fontTexte)
-            ->setZaehler($aktuelleBuchung['zaehler'])
-            ->erstellePdf();
+
+            $namePdfProgrammBestaetigung = $model_pdfProgrammbestaetigungKunde
+                ->setRegistrierungsnummer($registrierungsnummer)
+                ->setDaten($model_emailAnbieter)
+                ->setSchriften($fontTexte)
+                ->setZaehler($aktuelleBuchung['zaehler'])
+                ->erstellePdf($docname, $id);
+
 
         return $namePdfProgrammBestaetigung;
     }

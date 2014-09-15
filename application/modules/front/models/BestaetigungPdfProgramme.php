@@ -174,21 +174,20 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
      *
      * @return mixed
      */
-    public function erstellePdf()
+    public function erstellePdf($name, $proId)
     {
 
-        for ($i = 0; $i < count($_SESSION['allePreise']); $i++) {
-            $namePdfProgrammBestaetigung = $this
-                ->_erstellenGrunddokument()
-                ->erstellenIcon() // erstellt das Icon der Offlinebuchung
-                ->_erstellenKundendaten()
-                ->_erstellenAnrede()
-                ->_erstellenProgrammblock($_SESSION['allePreise'][$i]['id'])
-                ->_hinweisAufAgb()
-                ->_erstellenGruss()
-                ->_savePdf($_SESSION['allePreise'][$i]['progname']);
-        }
+        $ghjsfbjshgfhsvbfmhsv ="sjkfgjsfgjkgf";
 
+        $namePdfProgrammBestaetigung = $this
+            ->_erstellenGrunddokument()
+            ->erstellenIcon() // erstellt das Icon der Offlinebuchung
+            ->_erstellenKundendaten()
+            ->_erstellenAnrede()
+            ->_erstellenProgrammblock($proId)
+            ->_hinweisAufAgb()
+            ->_erstellenGruss()
+            ->_savePdf($name);
 
 
         return $namePdfProgrammBestaetigung;
@@ -203,13 +202,21 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
     {
 
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
 
-       // $this->_abstand('half');
+
+        $this->_abstand('half');
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
 
         // Buchungshinweis
         $page = $this->erstelleBuchungshinweis($page);
-     //   $this->_abstand(true);
+        $this->_abstand(true);
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
         $gruss1 = "Gern stehen wir Ihnen für Rückfragen und Wünsche zur Verfügung.";
@@ -219,12 +226,20 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $this->_abstand(true);
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
         $gruss2 = "Mit freundlichen Grüßen";
         $gruss2 = translate($gruss2);
         $page->drawText($gruss2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
         $this->_abstand(true);
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
 
         $gruss3 = "Ihre A&O Reservierung";
         $page->drawText($gruss3, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
@@ -265,19 +280,35 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
             $this->_abstand();
             $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
+            if ($page == NULL){
+                $page = $_SESSION['pageinfo']->pages[0];
+            }
+
             for ($i = 0; $i < count($buchungshinweisArray); $i++) {
                 $page->drawText($buchungshinweisArray[$i], $this->_rechtsWert, $this->_hochWert, 'UTF-8');
                 $this->_abstand();
                 $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                if ($page == NULL){
+                    $page = $_SESSION['pageinfo']->pages[0];
+                }
             }
 
             $this->_abstand('half');
             $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
+            if ($page == NULL){
+                $page = $_SESSION['pageinfo']->pages[0];
+            }
+
             $hinweis2 = translate("Wir werden uns schnellstmöglich mit ihnen in Verbindung setzen.");
             $page->drawText($hinweis2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
             $this->_abstand('half');
             $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+            if ($page == NULL){
+                $page = $_SESSION['pageinfo']->pages[0];
+            }
         }
 
         return $page;
@@ -294,25 +325,36 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
-        //$this->_abstand('half');
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
+        $this->_abstand('half');
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
-        $agb1 = "Es gelten die allgemeinen Geschäftsbedingungen des Vertragspartners.";
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
+        $agb1 = "Es gelten die allgemeinen Geschäftsbedingungen.";
         $agb1 = translate($agb1);
         $page->drawText($agb1, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
         $this->_abstand();
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
-//        $agb2 = "akzeptiert haben. Sie können diese hier nochmals einsehen.";
-//        $agb2 = translate($agb2);
-//
-//        if($anzeigeSpracheId == 1)
-//            $agb2 .= " http://www.aohostels.com/de/";
-//        else
-//            $agb2 .= " http://www.aohostels.com/de/";
-//
-//        $page->drawText($agb2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
+        $agb2 = "Sie können diese hier nochmals einsehen.";
+        $agb2 = translate($agb2);
+        if($anzeigeSpracheId == 1)
+             $agb2 .= " http://www.aohostels.com/de/";
+        else
+             $agb2 .= " http://www.aohostels.com/de/";
+
+        $page->drawText($agb2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
         $this->_abstand('half');
 
@@ -329,6 +371,11 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $this->_abstand(true);
 
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
         $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
         $this->_font = $font;
         $page->setFont($font, $this->_fontTexte['text']['groesse']);
@@ -377,6 +424,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
             'UTF-8'
         );
         $page = $this->_setPageSchrift($page);
+        $page = $this->_setPageSchrift($page);
 
         // Datum mit Monatsnamen
         $datum = $this->erstellenBuchungsdatum();
@@ -384,7 +432,6 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $datum = translate("Berlin, den ").$datum;
         $page->drawText($datum, $this->_spalte6, $this->_hochWert, 'UTF-8');
         $this->_abstand('half');
-
 
         // Nummer
         $assd = $_SESSION['kundeninfo']['assd_nummer'];
@@ -417,12 +464,20 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $gebuchteProgramme = $this->_gebuchteProgramme;
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
         $allgemeineInformation = "vielen Dank für Ihre Programmbuchung, die wir Ihnen hiermit bestätigen.";
         $allgemeineInformation = translate($allgemeineInformation);
         $page->drawText($allgemeineInformation, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
         $this->_abstand(true);
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
 
         // Programmpunkt
         $programmpunkt = translate("Ihre gebuchten Programmpunkte");
@@ -433,70 +488,20 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $this->_abstand(true);
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
         /** @var Front_Model_Vertragspartner $frontModelVertragspartner */
         $frontModelVertragspartner = $this->getFrontModelVertragspartner();
         $frontModelVertragspartner->setBereich($this->condition_bereich_programme);
 
         // Schleife Programme
         for ($i = 0; $i < count($gebuchteProgramme); $i++) {
-            if ($gebuchteProgramme[$i]['id'] == $proID){
 
-            if($gebuchteProgramme[$i]['programmdetails_id'] == $gebuchteProgramme[$i-1]['programmdetails_id'] AND $gebuchteProgramme[$i]['datum'] == $gebuchteProgramme[$i-1]['datum'] AND $gebuchteProgramme[$i]['zeit'] == $gebuchteProgramme[$i-1]['zeit']){
+            $programm = $gebuchteProgramme[$i];
 
-                $programm = $gebuchteProgramme[$i];
-
-                // Programmvariante in Abhängigkeit der Anzeigesprache
-                if($anzeigeSprache == 1)
-                    $programmVariante = $programm['programmvariante']['preisvariante_de'];
-                else
-                    $programmVariante = $programm['programmvariante']['preisvariante_en'];
-
-                // Leistung
-                $leistung = $programm['anzahl'] . " x " . $programmVariante;
-                $page->drawText($leistung, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-                $this->_abstand();
-
-                if($gebuchteProgramme[$i]['programmdetails_id'] != $gebuchteProgramme[$i+1]['programmdetails_id']){
-                    // Vertragspartner
-                    $adresseVertragspartner = $frontModelVertragspartner
-                        ->setProgrammId($programm['programmdetails_id'])
-                        ->steuerungErmittlungAdresseVertragspartner()
-                        ->getAdresse();
-
-                    $this->_abstand('half');
-                    $vertragspartner = translate('Vertragspartner für diese Leistung ist');
-                    $page->drawText($vertragspartner.": ", $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-                    $this->_abstand();
-                    $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
-
-                    $page->drawText($adresseVertragspartner['company'].", ".$adresseVertragspartner['street'].", ".$adresseVertragspartner['zip']." ".$adresseVertragspartner['city'], $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-                    $this->_abstand();
-                    $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
-
-                    $page->drawText($adresseVertragspartner['country'], $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-                    $this->_abstand('half');
-                    $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
-
-                    // abweichende Stornobedingungen
-                    $ToolErmittlungAbweichendeStornofristenKosten = new nook_ToolErmittlungAbweichendeStornofristenKosten();
-                    $abweichendeStornofristen = $ToolErmittlungAbweichendeStornofristenKosten
-                        ->setProgrammId($programm['programmdetails_id'])
-                        ->ermittleStornofristenProgramm()
-                        ->getStornofristen();
-
-                    if (is_array($abweichendeStornofristen)) {
-
-                        // abweichende Stornokosten
-                        $page = $this->ermittlungAbweichendeStornokosten($page, $abweichendeStornofristen);
-                        $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
-                    }
-
-                }
-
-            }else{
-                $this->_abstand(half);
-                $programm = $gebuchteProgramme[$i];
-
+            if ($programm['programmdetails_id'] == $proID){
                 // verhindert die Übernahme der Buchungspauschale
                 $kontrolleBuchungspauschale = $this->kontrolleBuchungspauschale($programm['programmdetails_id']);
                 if (!empty($kontrolleBuchungspauschale)) {
@@ -522,13 +527,13 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
                 else
                     $programmName = $programm['programmbeschreibung']['progname_en'];
 
-                // Buchungstyp
-                $toolBuchungstyp = new nook_ToolBuchungstyp();
-
-                $buchungstyp = $toolBuchungstyp
-                    ->isValidProgrammId($programm['programmdetails_id'])
-                    ->setProgrammId($programm['programmdetails_id'])
-                    ->ermittleBuchungstypProgramm();
+//                // Buchungstyp
+//                $toolBuchungstyp = new nook_ToolBuchungstyp();
+//
+//                $buchungstyp = $toolBuchungstyp
+//                    ->isValidProgrammId($programm['programmdetails_id'])
+//                    ->setProgrammId($programm['programmdetails_id'])
+//                    ->ermittleBuchungstypProgramm();
 
                 // Programmvariante in Abhängigkeit der Anzeigesprache
                 if($anzeigeSprache == 1)
@@ -546,22 +551,15 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
                     $programmsprache = lcfirst($programmsprache);
                 }
 
-                // Programmname
-                $page = $this->_setPageSchrift($page, 'fett');
-
-                if ($programm['offlinebuchung'] == 1) {
-                    $page->drawText($programmName, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-                    $this->_abstand();
-                } else {
-                    $page->drawText($programmName, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-                    $this->_abstand();
-                }
-
                 // Datum
                 if ((!empty($programm['datum'])) and ($programm['datum'] != '0000-00-00')) {
                     $page->drawText($datum, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
                     $this->_abstand();
                     $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                    if ($page == NULL){
+                        $page = $_SESSION['pageinfo']->pages[0];
+                    }
                 }
 
                 // Zeit
@@ -576,13 +574,41 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
                         $page->drawText($programm['zeit'], $this->_rechtsWert, $this->_hochWert, 'UTF-8');
                         $this->_abstand('half');
                         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                        if ($page == NULL){
+                            $page = $_SESSION['pageinfo']->pages[0];
+                        }
                     }
 
+                }
+
+                // Icon Offlinebuchung ausgerichtet an Spalte 1
+                if ($programm['offlinebuchung'] == 1) {
+//                    $page->drawImage(
+//                        $this->iconOfflinebuchung,
+//                        $this->_rechtsWert,
+//                        $this->_hochWert,
+//                        $this->_rechtsWert + 8,
+//                        $this->_hochWert + 8
+//                    );
+                }
+
+                // Programmname
+                $page = $this->_setPageSchrift($page, 'fett');
+
+                if ($programm['offlinebuchung'] == 1) {
+                    $page->drawText($programmName, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
+                } else {
+                    $page->drawText($programmName, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
                 }
 
                 $page = $this->_setPageSchrift($page, 'normal');
                 $this->_abstand();
                 $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                if ($page == NULL){
+                    $page = $_SESSION['pageinfo']->pages[0];
+                }
 
                 // Programmsprache
                 if ($programmsprache) {
@@ -595,6 +621,10 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
                     );
                     $this->_abstand();
                     $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                    if ($page == NULL){
+                        $page = $_SESSION['pageinfo']->pages[0];
+                    }
                 }
 
                 // Leistung
@@ -603,6 +633,10 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
                 $this->_abstand();
                 $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                if ($page == NULL){
+                    $page = $_SESSION['pageinfo']->pages[0];
+                }
 
                 // 'tbl_programmbeschreibung' -> confirm1
                 if (!empty($programm['programmbeschreibung']['confirm_1'])) {
@@ -614,6 +648,10 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
                         $this->_abstand();
                         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                        if ($page == NULL){
+                            $page = $_SESSION['pageinfo']->pages[0];
+                        }
                     }
                 }
 
@@ -632,72 +670,96 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
                         $this->_abstand();
                         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                        if ($page == NULL){
+                            $page = $_SESSION['pageinfo']->pages[0];
+                        }
                     }
                 }
 
-                //$this->_abstand('half');
+                $this->_abstand('half');
                 $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
-                if($gebuchteProgramme[$i]['programmdetails_id'] != $gebuchteProgramme[$i+1]['programmdetails_id']){
-                    // Vertragspartner
-                    $adresseVertragspartner = $frontModelVertragspartner
-                        ->setProgrammId($programm['programmdetails_id'])
-                        ->steuerungErmittlungAdresseVertragspartner()
-                        ->getAdresse();
-
-                    $this->_abstand('half');
-                    $vertragspartner = translate('Vertragspartner für diese Leistung ist');
-                    $page->drawText($vertragspartner.": ", $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-                    $this->_abstand();
-                    $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
-
-                    $page->drawText($adresseVertragspartner['company'].", ".$adresseVertragspartner['street'].", ".$adresseVertragspartner['zip']." ".$adresseVertragspartner['city'], $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-                    $this->_abstand();
-                    $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
-
-                    $page->drawText($adresseVertragspartner['country'], $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-                    $this->_abstand('half');
-                    $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
-
-                    // abweichende Stornobedingungen
-                    $ToolErmittlungAbweichendeStornofristenKosten = new nook_ToolErmittlungAbweichendeStornofristenKosten();
-                    $abweichendeStornofristen = $ToolErmittlungAbweichendeStornofristenKosten
-                        ->setProgrammId($programm['programmdetails_id'])
-                        ->ermittleStornofristenProgramm()
-                        ->getStornofristen();
-
-                    if (is_array($abweichendeStornofristen)) {
-
-                        // abweichende Stornokosten
-                        $page = $this->ermittlungAbweichendeStornokosten($page, $abweichendeStornofristen);
-                        $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
-                    }
-
+                if ($page == NULL){
+                    $page = $_SESSION['pageinfo']->pages[0];
                 }
 
-                } // Ende Programme
+                // Vertragspartner
+                $adresseVertragspartner = $frontModelVertragspartner
+                    ->setProgrammId($programm['programmdetails_id'])
+                    ->steuerungErmittlungAdresseVertragspartner()
+                    ->getAdresse();
+
+                $vertragspartner = translate('Vertragspartner für diese Leistung ist');
+                $page->drawText($vertragspartner.": ", $this->_rechtsWert, $this->_hochWert, 'UTF-8');
+                $this->_abstand();
+                $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                if ($page == NULL){
+                    $page = $_SESSION['pageinfo']->pages[0];
+                }
+
+                $page->drawText($adresseVertragspartner['company'].", ".$adresseVertragspartner['street'].", ".$adresseVertragspartner['zip']." ".$adresseVertragspartner['city'], $this->_rechtsWert, $this->_hochWert, 'UTF-8');
+                $this->_abstand();
+                $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                if ($page == NULL){
+                    $page = $_SESSION['pageinfo']->pages[0];
+                }
+
+                $page->drawText($adresseVertragspartner['country'], $this->_rechtsWert, $this->_hochWert, 'UTF-8');
+                $this->_abstand('half');
+                $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                if ($page == NULL){
+                    $page = $_SESSION['pageinfo']->pages[0];
+                }
+
+                // abweichende Stornobedingungen
+                $ToolErmittlungAbweichendeStornofristenKosten = new nook_ToolErmittlungAbweichendeStornofristenKosten();
+                $abweichendeStornofristen = $ToolErmittlungAbweichendeStornofristenKosten
+                    ->setProgrammId($programm['programmdetails_id'])
+                    ->ermittleStornofristenProgramm()
+                    ->getStornofristen();
+
+                if (is_array($abweichendeStornofristen)) {
+
+                    // abweichende Stornokosten
+                    $page = $this->ermittlungAbweichendeStornokosten($page, $abweichendeStornofristen);
+                    $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+                    if ($page == NULL){
+                        $page = $_SESSION['pageinfo']->pages[0];
+                    }
+                }
             }
-      }
-
-
+        } // Ende Programme
 
         // Offlinebuchung
         $this->_blockBuchungstyp($gebuchteProgramme);
 
-        //$this->_abstand('half');
-        //$page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+        $this->_abstand('half');
+        $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
 
         // Storno Information des Programmes
-//        $stornoInformation1 = "Soweit nicht anders angegeben ist die Stornierung der gebuchten Programme bis zum 3. Tag vor der jeweiligen Programmdurchführung";
-//        $stornoInformation1 = translate($stornoInformation1);
-//        $page->drawText($stornoInformation1, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
+        //$stornoInformation1 = "Soweit nicht anders angegeben ist die Stornierung der gebuchten Programme bis zum 3. Tag vor der jeweiligen Programmdurchführung";
+       //$stornoInformation1 = translate($stornoInformation1);
+       // $page->drawText($stornoInformation1, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
-        //$this->_abstand();
-        //$page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+        $this->_abstand();
+        $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
-//        $stornoInformation2 = "kostenfrei. Danach werden 100% Stornokosten berechnet.";
-//        $stornoInformation2 = translate($stornoInformation2);
-//        $page->drawText($stornoInformation2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
+        //$stornoInformation2 = "kostenfrei. Danach werden 100% Stornokosten berechnet.";
+       //$stornoInformation2 = translate($stornoInformation2);
+       // $page->drawText($stornoInformation2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
         return $this;
     }
@@ -796,6 +858,10 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $this->_abstand('half');
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
         $toolPdf = new nook_ToolPdf();
         $toolPdf->setFont($this->_font)->setFontSize($this->_fontTexte['text']['groesse']);
         $toolPdf->setHPadding(0);
@@ -804,9 +870,9 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         // Ausrichtung an Spalte 1, Text mit Icon
         $rechtswert = $this->_spalte1;
 
-//        $textBuchungstyp = "Die mit ";
-//        $textBuchungstyp = translate($textBuchungstyp);
-//        $page->drawText($textBuchungstyp, $rechtswert, $this->_hochWert, 'UTF-8');
+       // $textBuchungstyp = "Die mit ";
+      //  $textBuchungstyp = translate($textBuchungstyp);
+      //  $page->drawText($textBuchungstyp, $rechtswert, $this->_hochWert, 'UTF-8');
 //        $rechtswert += 30;
 //
 //        $page->drawImage(
@@ -816,21 +882,29 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 //            $rechtswert + 8,
 //            $this->_hochWert + 8
 //        );
-        //$textBuchungstyp = " gekennzeichneten Programme sind noch in der Testphase. Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen";
-        //$textBuchungstyp = translate($textBuchungstyp);
-        //$rechtswert += 10;
+       // $textBuchungstyp = " gekennzeichneten Programme sind noch in der Testphase. Die Buchung wird erst rechtsverbindlich, wenn wir Ihnen";
+       // $textBuchungstyp = translate($textBuchungstyp);
+        $rechtswert += 10;
 
-        $page->drawText($textBuchungstyp, $rechtswert, $this->_hochWert, 'UTF-8');
+       $page->drawText($textBuchungstyp, $rechtswert, $this->_hochWert, 'UTF-8');
 
         $this->_abstand();
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
 
         //$textBuchungstyp = "innerhalb von max.3 Werktagen eine separate Bestätigung per E-mail schicken.";
-        $textBuchungstyp = translate($textBuchungstyp);
-        $page->drawText($textBuchungstyp, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
+       // $textBuchungstyp = translate($textBuchungstyp);
+       // $page->drawText($textBuchungstyp, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
         $this->_abstand();
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
 
         return $anzahlOfflinebuchungen;
     }
@@ -849,6 +923,10 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
         $this->_abstand();
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
 
         // normales Storno
         $einzelneStornofrist = translate('Stornofrist');
@@ -875,6 +953,10 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
             $this->_abstand();
             $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+            if ($page == NULL){
+                $page = $_SESSION['pageinfo']->pages[0];
+            }
         }
 
         $this->_abstand();
@@ -906,6 +988,10 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
+
         if ($this->_kundenDaten['title'] == 'Herr') {
             $anrede = translate("Sehr geehrter Herr");
         } else {
@@ -918,6 +1004,10 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
         $this->_abstand('half');
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
+
+        if ($page == NULL){
+            $page = $_SESSION['pageinfo']->pages[0];
+        }
 
         return $this;
     }
@@ -980,7 +1070,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
      *
      * @return string
      */
-    private function _savePdf($progname)
+    private function _savePdf($docname)
     {
 
         $registrierungsnummer = $this->ermittelnRegistrierungsnummer();
@@ -988,7 +1078,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         /** @var $newPdf Zend_pdf */
         $newPdf = $this->_newPdfBestaetigung;
 
-        $nameNeuePdfDatei = $this->_pfad . "/B_" . $registrierungsnummer . "_" . $this->zaehler . "_".$progname.".pdf";
+        $nameNeuePdfDatei = $this->_pfad . "/B_" . $registrierungsnummer . "_" . $this->zaehler . "_".$docname.".pdf";
         $dateiName = $newPdf->save($nameNeuePdfDatei);
 
         return $nameNeuePdfDatei;
@@ -1040,9 +1130,9 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
         $assd = explode("-", $assd);
 
         if ($assd[0] == "AT"){
-           if ($assd[1] == "W1"){
-               $assd[0] = "AT-W1";
-           }
+            if ($assd[1] == "W1"){
+                $assd[0] = "AT-W1";
+            }
 
             if ($assd[1] == "W2"){
                 $assd[0] = "AT-W2";
@@ -1055,10 +1145,11 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
         try {
             $this->_newPdfBestaetigung = Zend_Pdf::load($this->_pfad . "/vorlagen/".$assd[0].".pdf");
+            $_SESSION['pageinfo'] = Zend_Pdf::load($this->_pfad . "/vorlagen/".$assd[0].".pdf");
         }catch (Exception $e) {
             $this->_newPdfBestaetigung = Zend_Pdf::load($this->_pfad . "/vorlagen/default.pdf");
+            $_SESSION['pageinfo'] = Zend_Pdf::load($this->_pfad . "/vorlagen/".$assd[0].".pdf");
         }
-
 
         return $this;
     }
@@ -1103,7 +1194,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
             $this->_hochWert = $this->_obererRand;
 
-            //eine neue Seite zum Dokument, Schriftart und Schriftgröße als Standardwerte
+            // eine neue Seite zum Dokument, Schriftart und Schriftgröße als Standardwerte
             $page = $this->_newPdfBestaetigung->newPage(Zend_Pdf_Page::SIZE_A4);
             $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
             $this->_font = $font;
@@ -1111,7 +1202,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
             // einfügen Logo auf der neuen Seite
             $image = Zend_Pdf_Image::imageWithPath($this->_pfad . "/vorlagen/aohostel-logo.png");
-            $page->drawImage($image, 300, 720, 550, 804);
+            $page->drawImage($image, 100, 100, 0, 0);
 
             // aktueller Seitenzaehler
             $this->_seitennummer++;
