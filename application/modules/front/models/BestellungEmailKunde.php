@@ -122,9 +122,9 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
      */
     public function     setPdfProgrammBestaetigung($__pdfProgrammBestaetigung)
     {
-        $size = count($this->_pdfProgrammBestaetigung);
-        $this->_pdfProgrammBestaetigung[$size+1] = $__pdfProgrammBestaetigung;
-
+        for ($i = 0; $i<count($__pdfProgrammBestaetigung); $i++) {
+            $this->_pdfProgrammBestaetigung[$i] = $__pdfProgrammBestaetigung[$i];
+        }
         return;
     }
 
@@ -309,8 +309,8 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
 
 
             for ($i = 0; $i <= count($this->_pdfProgrammBestaetigung); $i++) {
-                $handle = fopen($this->_pdfProgrammBestaetigung, 'rb');
-                $bestaetigungPdf = fread($handle, filesize($this->_pdfProgrammBestaetigung));
+                $handle = fopen($this->_pdfProgrammBestaetigung[$i], 'rb');
+                $bestaetigungPdf = fread($handle, filesize($this->_pdfProgrammBestaetigung[$i]));
                 fclose($handle);
 
                 $bestaetigung = new Zend_Mime_Part($bestaetigungPdf);

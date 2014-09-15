@@ -680,7 +680,7 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
             /** Pdf der Programmbestätigung */
 
             for ($i = 0; $i < count($_SESSION['allePreise']); $i++) {
-                $namePdfProgrammBestaetigung = $this->erstellenPdfProgrammbestaetigung(
+                $namePdfProgrammBestaetigung[$i] = $this->erstellenPdfProgrammbestaetigung(
                     $fontTexte,
                     $model_emailAnbieter,
                     $aktuelleBuchung,
