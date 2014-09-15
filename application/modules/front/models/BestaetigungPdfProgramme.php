@@ -215,7 +215,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
         // Buchungshinweis
         $page = $this->erstelleBuchungshinweis($page);
-        $this->_abstand(true);
+        //$this->_abstand(true);
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
         $gruss1 = "Gern stehen wir Ihnen für Rückfragen und Wünsche zur Verfügung.";
@@ -293,7 +293,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
                 }
             }
 
-            $this->_abstand('half');
+            //$this->_abstand('half');
             $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
             if ($page == NULL){
@@ -302,7 +302,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
             $hinweis2 = translate("Wir werden uns schnellstmöglich mit ihnen in Verbindung setzen.");
             $page->drawText($hinweis2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
-            $this->_abstand('half');
+            //$this->_abstand('half');
             $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
             if ($page == NULL){
@@ -328,7 +328,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
             $page = $_SESSION['pageinfo']->pages[0];
         }
 
-        $this->_abstand('half');
+        //$this->_abstand('half');
         $page = $this->_newPdfBestaetigung->pages[$this->_seitennummer];
 
         if ($page == NULL){
@@ -958,7 +958,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
             }
         }
 
-        $this->_abstand();
+        //$this->_abstand();
 
         return $page;
     }

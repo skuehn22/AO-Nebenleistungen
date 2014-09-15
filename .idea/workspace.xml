@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65689ea9-c16f-4cb0-8700-c4319c053110" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" afterPath="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
     </list>
     <ignored path="Nebenleistungen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,25 @@
       <file leaf-file-name="BestaetigungPdfProgramme.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1080" column="0" selection-start="37182" selection-end="37182" vertical-scroll-proportion="-3.2941177" vertical-offset="18192" max-vertical-offset="22134">
+            <state line="721" column="38" selection-start="25376" selection-end="25392" vertical-scroll-proportion="-3.72549" vertical-offset="12067" max-vertical-offset="22134">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProgrammdetailStornofristenManager.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/models/ProgrammdetailStornofristenManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="20" selection-start="642" selection-end="642" vertical-scroll-proportion="-7.5" vertical-offset="247" max-vertical-offset="1105">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToolErmittlungAbweichendeStornofristenKosten.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/nook/ToolErmittlungAbweichendeStornofristenKosten.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="196" column="5" selection-start="5814" selection-end="5814" vertical-scroll-proportion="-14.653846" vertical-offset="2815" max-vertical-offset="3366">
               <folding />
             </state>
           </provider>
@@ -38,7 +55,7 @@
       <file leaf-file-name="BestellungEmailKunde.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="289" column="0" selection-start="7882" selection-end="7882" vertical-scroll-proportion="0.33205375" vertical-offset="4740" max-vertical-offset="8024">
+            <state line="310" column="0" selection-start="8731" selection-end="8731" vertical-scroll-proportion="0.332" vertical-offset="5104" max-vertical-offset="8024">
               <folding />
             </state>
           </provider>
@@ -48,15 +65,6 @@
         <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/VormerkpdfController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="221" column="39" selection-start="6476" selection-end="6476" vertical-scroll-proportion="-12.346154" vertical-offset="3436" max-vertical-offset="10591">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Abstract.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Zend/Pdf/Canvas/Abstract.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="250" column="0" selection-start="6619" selection-end="6619" vertical-scroll-proportion="-6.5384617" vertical-offset="3774" max-vertical-offset="20485">
               <folding />
             </state>
           </provider>
@@ -98,19 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Font.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Zend/Pdf/Font.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="467" column="0" selection-start="11697" selection-end="11697" vertical-scroll-proportion="-6.3846154" vertical-offset="7450" max-vertical-offset="12223">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BestellungController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="0" selection-start="6801" selection-end="6801" vertical-scroll-proportion="-3.3921568" vertical-offset="2904" max-vertical-offset="15300">
+            <state line="181" column="0" selection-start="6801" selection-end="6801" vertical-scroll-proportion="-3.254902" vertical-offset="2911" max-vertical-offset="15300">
               <folding>
                 <element signature="n#erstellenPdfProgrammrechnung#0;n#Front_BestellungController#0;n#!!top" expanded="false" />
                 <element signature="n#versendenEmailAnProgrammanbieter#0;n#Front_BestellungController#0;n#!!top" expanded="false" />
@@ -195,9 +194,9 @@
         <option value="$PROJECT_DIR$/application/configs/static.ini" />
         <option value="$PROJECT_DIR$/application/modules/front/models/WarenkorbStep4.php" />
         <option value="$PROJECT_DIR$/application/configs/application.ini" />
-        <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
         <option value="$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php" />
         <option value="$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php" />
       </list>
     </option>
   </component>
@@ -489,14 +488,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="-290" width="1696" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32261905" sideWeight="0.778481" order="5" side_tool="true" content_ui="tabs" x="2358" y="236" width="408" height="265" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2326389" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34029227" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34029227" sideWeight="0.5451389" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2418,20 +2417,6 @@
     </find-history>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/modules/front/models/BuchungProgrammePdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="3449" selection-end="3449" vertical-scroll-proportion="88.26923" vertical-offset="3723" max-vertical-offset="14433">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/nook/ToolBenutzeranmeldung.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="629" selection-end="629" vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="1819">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/nook/ToolBenutzername.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="5" selection-start="1021" selection-end="1021" vertical-scroll-proportion="-22.384615" vertical-offset="132" max-vertical-offset="833">
@@ -2756,14 +2741,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestaetigungPdfProgramme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1080" column="0" selection-start="37182" selection-end="37182" vertical-scroll-proportion="-3.2941177" vertical-offset="18192" max-vertical-offset="22134">
+        <state line="721" column="38" selection-start="25376" selection-end="25392" vertical-scroll-proportion="-3.72549" vertical-offset="12067" max-vertical-offset="22134">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/models/ProgrammdetailStornofristenManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="20" selection-start="642" selection-end="642" vertical-scroll-proportion="-7.5" vertical-offset="247" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/nook/ToolErmittlungAbweichendeStornofristenKosten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="196" column="5" selection-start="5814" selection-end="5814" vertical-scroll-proportion="-14.653846" vertical-offset="2815" max-vertical-offset="3366">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/BestellungController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="0" selection-start="6801" selection-end="6801" vertical-scroll-proportion="-3.3921568" vertical-offset="2904" max-vertical-offset="15300">
+        <state line="181" column="0" selection-start="6801" selection-end="6801" vertical-scroll-proportion="-3.254902" vertical-offset="2911" max-vertical-offset="15300">
           <folding>
             <element signature="n#erstellenPdfProgrammrechnung#0;n#Front_BestellungController#0;n#!!top" expanded="false" />
             <element signature="n#versendenEmailAnProgrammanbieter#0;n#Front_BestellungController#0;n#!!top" expanded="false" />
@@ -2783,7 +2782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/models/BestellungEmailKunde.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="0" selection-start="7882" selection-end="7882" vertical-scroll-proportion="0.33205375" vertical-offset="4740" max-vertical-offset="8024">
+        <state line="310" column="0" selection-start="8731" selection-end="8731" vertical-scroll-proportion="0.332" vertical-offset="5104" max-vertical-offset="8024">
           <folding />
         </state>
       </provider>
