@@ -443,11 +443,28 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
                         <td style='padding-right: 8px;'><strong>Anzahl</strong></td>
                         <td style='padding-right: 8px;'><strong>Ticketname</strong></td>
                         <td style='padding-right: 8px;'><strong>Programmpreis</strong></td>
+                        <td style='padding-right: 8px;'><strong>Summe Programm</strong></td>
 
                      </tr>";
-
+        $summe = 0;
 
         for ($i = 0; $i<count($_SESSION['allePreise']); $i++) {
+
+
+
+            if ($_SESSION['allePreise'][$i]['programmdetails_id'] == $_SESSION['allePreise'][$i-1]['programmdetails_id'] AND $_SESSION['allePreise'][$i]['datum'] == $_SESSION['allePreise'][$i-1]['datum'] ){
+                $summe = $summe + ($_SESSION['allePreise'][$i]['vk']*$_SESSION['allePreise'][$i]['anzahl']);
+                if ($_SESSION['allePreise'][$i]['programmdetails_id'] != $_SESSION['allePreise'][$i+1]['programmdetails_id']){
+                    $summe_ausgeben = TRUE;
+                }
+            }else{
+
+                $summe = $_SESSION['allePreise'][$i]['vk']*$_SESSION['allePreise'][$i]['anzahl'];
+                if ($_SESSION['allePreise'][$i-1]['programmdetails_id'] != null AND $_SESSION['allePreise'][$i+1]['programmdetails_id'] != $_SESSION['allePreise'][$i]['programmdetails_id']){
+                    $summe_ausgeben = TRUE;
+                }
+
+            }
 
 
             $text .= "<tr>
@@ -456,25 +473,34 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
                         <td>".$_SESSION['allePreise'][$i]['varName']."</td>
                     ";
 
-            $mwst_ek = number_format($_SESSION['allePreise'][$i]['mwst_ek'],2);
-            $mwst_vk = number_format($_SESSION['allePreise'][$i]['mwst_vk'],2);
-            $ek = (number_format($_SESSION['allePreise'][$i]['ek'],2)*$_SESSION['allePreise'][$i]['anzahl']);
+            //$mwst_ek = number_format($_SESSION['allePreise'][$i]['mwst_ek'],2);
+            //$mwst_vk = number_format($_SESSION['allePreise'][$i]['mwst_vk'],2);
+            //$ek = (number_format($_SESSION['allePreise'][$i]['ek'],2)*$_SESSION['allePreise'][$i]['anzahl']);
             $vk = ($_SESSION['allePreise'][$i]['vk']*$_SESSION['allePreise'][$i]['anzahl']);
             $vk = str_replace(array('.', ','), array('', '.'), $vk);
+            $text .= "<td>".number_format($vk,2)." ".$_SESSION['curreny']." </td>";
             //$vk=number_format($vk, 2, ',', '.');
 
 
-            if ($mwst_ek == $mwst_vk)
+//            if ($mwst_ek == $mwst_vk)
+//            {
+//                $text .= "<td>".number_format($vk,2)." ".$_SESSION['curreny']." </td>";
+//
+//            }
+//
+//            if ($mwst_ek != $mwst_vk)
+//            {
+//                $text .= "<td>".number_format($ek,2)." ".$_SESSION['curreny']."</td>";
+//
+//            }
+
+            if ($summe_ausgeben)
             {
-                $text .= "<td>".number_format($vk,2)." ".$_SESSION['curreny']." </td>";
+                $text .= "<td>".number_format($summe,2)." ".$_SESSION['curreny']."</td>";
+                $summe = 0;
+                $summe_ausgeben = FALSE;
 
-            }
-
-            if ($mwst_ek != $mwst_vk)
-            {
-                $text .= "<td>".number_format($ek,2)." ".$_SESSION['curreny']."</td>";
-
-            }
+            }else $text .= "<td></td>";
 
             $text .= "</tr>";
 
