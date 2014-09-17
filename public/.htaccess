@@ -1,7 +1,4 @@
-AuthType Basic
-AuthName "Password Protected Area"
-AuthUserFile /www/htdocs/w0122706/public/.htpasswd
-Require valid-user
+
 
 SetEnv APPLICATION_ENV production
 

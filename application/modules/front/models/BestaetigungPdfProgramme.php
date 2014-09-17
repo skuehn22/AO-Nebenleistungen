@@ -346,16 +346,16 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
             $page = $_SESSION['pageinfo']->pages[0];
         }
 
-        $agb2 = "Sie können diese hier nochmals einsehen.";
-        $agb2 = translate($agb2);
-        if($anzeigeSpracheId == 1)
-             $agb2 .= " http://www.aohostels.com/de/";
-        else
-             $agb2 .= " http://www.aohostels.com/de/";
+        //$agb2 = "Sie können diese hier nochmals einsehen.";
+        //$agb2 = translate($agb2);
+       // if($anzeigeSpracheId == 1)
+        //     $agb2 .= " http://www.aohostels.com/de/";
+        //else
+         //    $agb2 .= " http://www.aohostels.com/de/";
 
-        $page->drawText($agb2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
+       // $page->drawText($agb2, $this->_rechtsWert, $this->_hochWert, 'UTF-8');
 
-        $this->_abstand('half');
+       // $this->_abstand('half');
 
         return $this;
     }
@@ -417,7 +417,7 @@ class Front_Model_BestaetigungPdfProgramme extends nook_ToolModel implements arr
 
         $page = $this->_setPageSchrift($page, 'fett', 'ueberschrift');
         $page->drawText(
-            'Programmbestätigung / Voucher',
+            'Voucher',
             $this->_rechtsWert,
             $this->_hochWert,
             'UTF-8'

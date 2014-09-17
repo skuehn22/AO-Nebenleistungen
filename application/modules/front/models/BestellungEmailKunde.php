@@ -308,16 +308,16 @@ class Front_Model_BestellungEmailKunde extends nook_ToolModel implements arrayac
         if (!empty($this->_pdfProgrammBestaetigung)) {
 
 
-            for ($i = 0; $i <= count($this->_pdfProgrammBestaetigung); $i++) {
-                $handle = fopen($this->_pdfProgrammBestaetigung[$i], 'rb');
-                $bestaetigungPdf = fread($handle, filesize($this->_pdfProgrammBestaetigung[$i]));
+            for ($i = 0; $i <= count($_SESSION['pdf']); $i++) {
+                $handle = fopen($_SESSION['pdf'][$i], 'rb');
+                $bestaetigungPdf = fread($handle, filesize($_SESSION['pdf'][$i]));
                 fclose($handle);
 
                 $bestaetigung = new Zend_Mime_Part($bestaetigungPdf);
                 $bestaetigung->type = 'application/pdf';
                 $bestaetigung->disposition = Zend_Mime::DISPOSITION_ATTACHMENT;
                 $bestaetigung->encoding = Zend_Mime::ENCODING_BASE64;
-                $bestaetigung->filename = "B_".$i."-" . $registrierungsnummer . "_" . $this->zaehler . ".pdf";
+                $bestaetigung->filename = "B_".$i."-" . $_SESSION['allePreise'][$i]['progname'] . "_" . $this->zaehler . ".pdf";
 
                 $this->_mail->addAttachment($bestaetigung);
             }

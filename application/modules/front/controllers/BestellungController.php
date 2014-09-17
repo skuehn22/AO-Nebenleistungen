@@ -179,7 +179,10 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
             // Pdf Programme - Bestätigung
             if (!empty($namePdfProgrammBestaetigung) and empty($notschalter['programmbuchung']))
             {
-                $model_emailKunde->setPdfProgrammBestaetigung($namePdfProgrammBestaetigung);
+                //$namePdfProgrammBestaetigung = $pfad . "/" . $namePdfProgrammRechnung;
+                for ($i = 0; $i < count($namePdfProgrammBestaetigung); $i++) {
+                  $model_emailKunde->setPdfProgrammBestaetigung($namePdfProgrammBestaetigung[$i]);
+                }
             }
 
             // Pdf Übernachtung Rechnung
@@ -680,12 +683,23 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
             /** Pdf der Programmbestätigung */
 
             for ($i = 0; $i < count($_SESSION['allePreise']); $i++) {
+
+                $_SESSION['pdf'][$i] = $this->erstellenPdfProgrammbestaetigung(
+                    $fontTexte,
+                    $model_emailAnbieter,
+                    $aktuelleBuchung,
+                    $_SESSION['allePreise'][$i][progname],
+                    $_SESSION['allePreise'][$i][programmdetails_id],
+                    $i
+                );
+
                 $namePdfProgrammBestaetigung[$i] = $this->erstellenPdfProgrammbestaetigung(
                     $fontTexte,
                     $model_emailAnbieter,
                     $aktuelleBuchung,
                     $_SESSION['allePreise'][$i][progname],
-                    $_SESSION['allePreise'][$i][programmdetails_id]
+                    $_SESSION['allePreise'][$i][programmdetails_id],
+                    $i
                 );
             }
 
@@ -705,7 +719,8 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
         $model_emailAnbieter,
         $aktuelleBuchung,
         $docname,
-        $id
+        $id,
+        $i
     ) {
         $toolRegistrierungsnummer = new nook_ToolRegistrierungsnummer();
         $registrierungsnummer = $toolRegistrierungsnummer
@@ -715,7 +730,7 @@ class Front_BestellungController extends Zend_Controller_Action implements nook_
         $model_pdfProgrammbestaetigungKunde = new Front_Model_BestaetigungPdfProgramme(); // Pdf der Bestätigung Programme an den Kunden
 
 
-            $namePdfProgrammBestaetigung = $model_pdfProgrammbestaetigungKunde
+            $namePdfProgrammBestaetigung[$i] = $model_pdfProgrammbestaetigungKunde
                 ->setRegistrierungsnummer($registrierungsnummer)
                 ->setDaten($model_emailAnbieter)
                 ->setSchriften($fontTexte)
